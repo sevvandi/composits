@@ -25,6 +25,8 @@
 #' out
 #'
 #'@importFrom dplyr %>%
+#'@importFrom stats frequency quantile supsmu ts var
+#' @importFrom rlang .data
 #'
 #'@export
 uv_tsout_ens <- function(x, frequency=1, dates=NULL){
@@ -66,7 +68,7 @@ uv_tsout_ens <- function(x, frequency=1, dates=NULL){
     len <- length(x)
 
     end_dt <- as.Date(Sys.Date())
-    start_dt <- end_dt - as.difftime((len-1), unit="days")                      # We need to check this: Currently frequency seens to be weekly
+    start_dt <- end_dt - as.difftime((len-1), units="days")                      # We need to check this: Currently frequency seens to be weekly
     date <- seq(start_dt, end_dt, by="days")
     df <- cbind.data.frame(date, x)
     df[ ,1] <- as.Date(df[ ,1])
@@ -76,7 +78,7 @@ uv_tsout_ens <- function(x, frequency=1, dates=NULL){
   tryCatch({
     anomalize_out <- tbl_x %>%
       anomalize::time_decompose(x) %>%
-      anomalize::anomalize(remainder, method = c("gesd"), max_anoms = 0.1) %>%  # Modifying parameters
+      anomalize::anomalize(.data$remainder, method = c("gesd"), max_anoms = 0.1) %>%  # Modifying parameters
       anomalize::time_recompose()
     anomalize_o <- which(anomalize_out$anomaly=="Yes")
   },error = function(c){

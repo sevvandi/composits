@@ -23,5 +23,8 @@ Imports:
     otsad,
     tsoutliers,
     forecast,
-    anomalize
+    anomalize,
+    dplyr,
+    tibble,
+    rlang
 RoxygenNote: 6.1.1

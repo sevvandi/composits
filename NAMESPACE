@@ -2,3 +2,9 @@
 
 export(uv_tsout_ens)
 importFrom(dplyr,"%>%")
+importFrom(rlang,.data)
+importFrom(stats,frequency)
+importFrom(stats,quantile)
+importFrom(stats,supsmu)
+importFrom(stats,ts)
+importFrom(stats,var)

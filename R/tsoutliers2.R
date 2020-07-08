@@ -10,7 +10,7 @@ tsoutliers2 <- function (x, iterate = 2, lambda = NULL)
   missng <- is.na(x)
   nmiss <- sum(missng)
   if (nmiss > 0L) {
-    xx <- na.interp(x, lambda = lambda)
+    xx <- forecast::na.interp(x, lambda = lambda)
   }
   else {
     xx <- x
@@ -23,12 +23,12 @@ tsoutliers2 <- function (x, iterate = 2, lambda = NULL)
     lambda <- attr(xx, "lambda")
   }
   if (freq > 1 && n > 2 * freq) {
-    fit <- mstl(xx, robust = TRUE)
-    rem <- remainder(fit)
-    detrend <- xx - trendcycle(fit)
+    fit <- forecast::mstl(xx, robust = TRUE)
+    rem <- forecast::remainder(fit)
+    detrend <- xx - forecast::trendcycle(fit)
     strength <- 1 - var(rem)/var(detrend)
     if (strength >= 0.6) {
-      xx <- seasadj(fit)
+      xx <- forecast::seasadj(fit)
     }
   }
   tt <- 1:n
