@@ -8,4 +8,60 @@ $[0K[3G[?25h[?25l$ git remote add origin https://github.com/sevvandi/compos
 [0K[?25h[?25l
 [0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
 $[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0K[?25h
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/55F93E59.[0K[?25l
+The file will have its original line endings in your working directory.[0K[47G[?25h[?25l
+warning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/INDEX.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/s-F6CAB296/27340ABF.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/s-F6CAB296/27340ABF-contents[0K.
+[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K[1G[?25h[?25l
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25hf[0Ki[0Kr[0Ks[0Kt[0K[24G[?25l$ git commit -m "first c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K"[0K[?25l
+[0K[?25h[master (root-commit) fb3108e] first commit[0K[?25l
+ 14 files changed, 117 insertions(+)[0K
+ create mode 100644 .Rbuildignore[0K
+ create mode 100644 .Rproj.user/F9A5C86C/console06/1A95FD[0K
+ create mode 100644 .Rproj.user/F9A5C86C/console06/INDEX001[0K
+ create mode 100644 .Rproj.user/F9A5C86C/sources/prop/55F93E59[0K
+ create mode 100644 .Rproj.user/F9A5C86C/sources/prop/INDEX[0K
+ create mode 100644 .Rproj.user/F9A5C86C/sources/s-F6CAB296/27340ABF[0K
+ create mode 100644 .Rproj.user/F9A5C86C/sources/s-F6CAB296/27340ABF-contents[0K
+ create mode 100644 .Rproj.user/F9A5C86C/sources/s-F6CAB296/lock_file[0K
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names[0K
+ create mode 100644 DESCRIPTION[0K
+ create mode 100644 NAMESPACE[0K
+ create mode 100644 R/hello.R[0K
+ create mode 100644 composits.Rproj[0K
+ create mode 100644 man/hello.Rd[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[7G[?25h[8G[?25l$ git pu[0K[?25hs[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[19G[?25h[20G[?25l$ git push origin ma[0K[?25hs[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hEnumerating objects: 24, done.[0K[?25l
+Counting objects:  75% (18/24)[0K[1G[?25hCounting objects: 100% (24/24), done.[0K[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (15/15), done.[0K
+Writing objects: 100% (24/24), 2.81 KiB | 319.00 KiB/s, done.[0K
+Total 24 (delta 0), reused 0 (delta 0)[0K
+[0K[?25herror: RPC failed; HTTP 404 curl 22 The requested URL returned error: 404 Not Found[0K[?25l
+fatal: The remote end hung up unexpectedly[0K
+fatal: The remote end hung up unexpectedly[0K
+Everything up-to-date[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git push origin master[0K[?25h[?25l
+[0K[?25hEnumerating objects: 24, done.[0K[?25l
+Counting objects: 100% (24/24), done.[0K
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (15/15), done.[0K
+Writing objects:  66% (16/24)[0K[1G[?25hWriting objects: 100% (24/24), 2.81 KiB | 179.00 KiB/s, done.[0K[?25l
+Total 24 (delta 0), reused 0 (delta 0)[0K
+[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
+ * [new branch]      master -> master[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K[?25h[?25l
+]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0Ka[0K[8G[7G[?25l$ git[0K[?25h[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h
