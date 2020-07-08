@@ -10,7 +10,7 @@ Author: c(
   person("Ursula", "Laa", email = "Ursula.Laa@monash.edu",
   role = c("aut"), comment = c(ORCID = "0000-0002-0337-0395")),
   person("Ruben", "Maya", email = "Ruben.LoaizaMaya@monash.edu",
-  role = c("ctb"), comment = c(ORCID = "0000-0002-0337-0395"))
+  role = c("aut"), comment = c(ORCID = "0000-0002-0337-0395"))
   )
 Maintainer: Sevvandi Kandanaarachchi <sevvandik@gmail.com>
 Description: A compositional, multivariate and univariate time series uutlier ensemble. 
