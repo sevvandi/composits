@@ -1,4 +1,4 @@
-#' Performs multivariate time series outlier ensemble.
+#' Performs multivariate time series outlier ensembling.
 #'
 #' @param x A  data frame or a matrix object containing a multivariate time series
 #' @param m1 Variable indicating dimension reduction methods. Default is set to using all 4 methods: PCA, DOBIN, ICS and ICA.

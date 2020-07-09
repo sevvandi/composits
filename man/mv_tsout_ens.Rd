@@ -2,7 +2,7 @@
 % Please edit documentation in R/multivariate_tsout_ensemble.R
 \name{mv_tsout_ens}
 \alias{mv_tsout_ens}
-\title{Performs multivariate time series outlier ensemble.}
+\title{Performs multivariate time series outlier ensembling.}
 \usage{
 mv_tsout_ens(x, m1 = NULL, ncomp = 2, sds = 1, rept = 1,
   compr = 1, rat = 0.05, fast = TRUE)
@@ -38,7 +38,7 @@ A list with the following components:
 \item{\code{outmat4D}}{A 4D array with outlier scores organised by outlier method, decomposition method, components for each decomposition method and time.}
 }
 \description{
-Performs multivariate time series outlier ensemble.
+Performs multivariate time series outlier ensembling.
 }
 \examples{
 set.seed(100)
