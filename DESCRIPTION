@@ -26,5 +26,9 @@ Imports:
     anomalize,
     dplyr,
     tibble,
-    rlang
+    rlang,
+    pracma,
+    dobin,
+    ICS,
+    fastICA
 RoxygenNote: 6.1.1
