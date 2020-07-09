@@ -21,11 +21,23 @@ uses the packages *forecast*, *tsoutliers*, *anomalize* and *otsad*.
 
 <!-- ``` -->
 
-And the development version from [GitHub](https://github.com/) with:
+As this is a private repo you need to generate a token (PAT) to install
+this using *install\_github*. This is explained at
+<http://devtools.r-lib.org/reference/install_github>. And the
+development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("sevvandi/composits")
+devtools::install_github("sevvandi/composits", auth_token ='yourtoken')
+```
+
+Or you can do the following on your RStudio Terminal after you pull the
+repo.
+
+``` r
+cd ..
+R CMD build composits
+R CMD INSTALL composits_0.0.0.9000.tar.gz
 ```
 
 ## Example

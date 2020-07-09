@@ -1131,4 +1131,116 @@ $[0K[3G[?25h[?25l$ git push origin master[0K[?25h[?25l$ git commit -m "
 [0K[?25h[?25l
 [0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
 $[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
-[0K[?25h
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l$ git push origin master[0K[?25h[?25l$ git commit -m "add readme"[0K[?25h[28G[27G[26G[25G[24G[23G[22G[21G[20G[19G[18G[17G[18G[?25l$ git commit -m "dd readme"[0K[18G[?25h[?25l$ git commit -m "d readme"[0K[18G[?25h[?25l$ git commit -m " readme"[0K[18G[?25h[?25l$ git commit -m "u readme"[0K[19G[?25h[?25l$ git commit -m "up readme"[0K[20G[?25h[?25l$ git commit -m "upd readme"[0K[21G[?25h[?25l$ git commit -m "upda readme"[0K[22G[?25h[?25l$ git commit -m "updat readme"[0K[23G[?25h[?25l$ git commit -m "update readme"[0K[24G[?25h[?25l$ git commit -m "update  readme"[0K[25G[?25h[?25l
+[0K[?25h[master bd232ec] update  readme[0K[?25l
+ 3 files changed, 68 insertions(+), 2 deletions(-)[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git commit -m "update  readme"[0K[?25h[?25l$ git commit -m "update  readme[0K[?25h[?25l$ git commit -m "update  readm[0K[?25h[?25l$ git commit -m "update  read[0K[?25h[?25l$ git add .[0K[?25h[?25l$ git push origin master[0K[?25h[?25l
+[0K[?25hEnumerating objects: 15, done.[0K[?25l
+Counting objects: 100% (15/15), done.[0K
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (8/8), done.[0K
+Writing objects: 100% (8/8), 1.43 KiB | 731.00 KiB/s, done.[0K
+Total 8 (delta 4), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[0K[?25l
+[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
+   35da99d..bd232ec  master -> master[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[0m[1;1H[2J[?25l[0m                                                  $ git commit -m "update  readme"[0K
+[master bd232ec] update  readme[0K
+ 3 files changed, 68 insertions(+), 2 deletions(-)[0K
+[0K
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0K
+[0m$ git push origin master[0K
+Enumerating objects: 15, done.[0K
+Counting objects: 100% (15/15), done.[0K
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (8/8), done.[0K
+Writing objects: 100% (8/8), 1.43 KiB | 731.00 KiB/s, done.[0K
+Total 8 (delta 4), reused 0 (delta 0)[0K
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.[0K
+To https://github.com/sevvandi/composits.git[0K
+   35da99d..bd232ec  master -> master[0K
+[0K
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0K
+[0m$[0K[3G[?25h[?25l$ git push origin master[0K[?25h[?25l$ git commit -m "update  read[0K[?25h[?25l$ git add .[0K[?25h[?25l$ git push origin master[0K[?25h[?25l$ git commit -m "add readme"[0K[?25h[?25l$ git add .[0K[?25h[?25l$ cd composits[0K[12G[?25h[15G[?25l$ git add .[0K[?25h[?25l$ R CMD INSTALL composits_0.0.0.9000.tar.gz[0K[45G[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[1A[?25h[?25l
+
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0m[0K[1A[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h[?25l.[0K[7G[?25h[8G[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K[?25h[?25l
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kp[0Ko[0Ksits[0K[?25l
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+[0K[?25h* preparing 'composits':[0K[?25l
+* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
+[0K[?25h* checking for empty or unneeded directories[0K[?25l
+* building 'composits_0.0.0.9000.tar.gz'[0K
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD I[0K[?25hN[0KS[0KT[0KA[0KL[0KL[0K[17G[?25l$ R CMD INSTALL c[0K[?25ho[0Km[0Kposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[45G[?25l
+[0K[?25h* installing to library 'C:/Users/Sevvandi/Documents/R/win-library/3.6'[0K[?25l
+[0K[?25h* installing *source* package 'composits' ...[0K[?25l
+[0K[?25h** using staged installation[0K[?25l
+[0K[?25h** R[0K[?25l
+[0K[?25h** byte-compile and prepare package for lazy loading[0K[?25l
+[0K[?25h** help[0K[?25l
+[0K[?25h*** installing help indices[0K[?25l
+[0K[?25h  converting help for package 'composits'[0K[?25l
+    finding HTML links ...[0K[?25h done[0K[?25l
+    get_coords                              html[0K[51G[?25h[?25l
+    mv_tsout_ens                            html[0K[51G[?25h[?25l
+    uv_tsout_ens                            h[0K[43G[?25h[?25l    uv_tsout_ens                            html[0K[51G[?25h[?25l
+** building package indices[0K
+[0K[?25h** testing if installed package can be loaded from temporary location[0K[?25l
+*** arch - i386[0K
+[0K[?25h*** arch - x64[0K[?25l
+[0K[?25h** testing if installed package can be loaded from final location[0K[?25l
+*** arch - i386[0K
+[0K[?25h*** arch - x64[0K[?25l
+[0K[?25h** testing if installed package keeps a record of temporary installation path[0K[?25l
+[0K[?25h* DONE (composits)[0K[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0K[?25lt[0K[5G[?25h[6G[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
+[0K[?25hfatal: not a git repository (or any of the parent directories): .git[0K[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Kmposits[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0K[?25ld[0K[9G[?25h[10G[11G[?25l$ git add .[0K[?25h
