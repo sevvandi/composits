@@ -1,0 +1,54 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# composits
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of composits is to ...
+
+## Installation
+
+<!-- You can install the released version of composits from [CRAN](https://CRAN.R-project.org) with: -->
+
+<!-- ``` r -->
+<!-- install.packages("composits") -->
+<!-- ``` -->
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("sevvandi/composits")
+```
+## Example
+
+```{r example}
+library(composits)
+set.seed(100)
+n <- 600
+x <- sample(1:100, n, replace=TRUE)
+x[25] <- 200
+x[320] <- 300
+x2 <- sample(1:100, n, replace=TRUE)
+x3 <- sample(1:100, n, replace=TRUE)
+X <- cbind.data.frame(x, x2, x3)
+x4 <- sample(1:100, n, replace=TRUE)
+X <- cbind.data.frame(x, x2, x3, x4)
+out <- mv_tsout_ens(X)
+out$all
+```
+
