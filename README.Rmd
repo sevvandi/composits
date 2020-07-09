@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of composits is to ...
+The goal of *composits* is to find outliers in compositional, multivariate and univariate time series. It is an ensemble method that uses the packages *forecast*, *tsoutliers*, *anomalize* and *otsad*. 
 
 ## Installation
 
@@ -50,5 +50,6 @@ x4 <- sample(1:100, n, replace=TRUE)
 X <- cbind.data.frame(x, x2, x3, x4)
 out <- mv_tsout_ens(X)
 out$all
+out$outliers
 ```
 

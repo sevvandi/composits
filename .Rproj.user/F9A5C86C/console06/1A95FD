@@ -1104,4 +1104,31 @@ $[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Kmposits
 [0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
 [0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
 $[0K[3G[?25h[?25l$ g[0K[?25h[?25li[0K[4G[?25h[5G[?25l$ git[0K[?25h[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/INDEX.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Kit[0K[14G[?25l$ git commit -[0K[?25hm[0K"[0K[?25l$ git commit -m[0K[?25h[17G[?25l$ git commit -m "[0K[?25ha[0Kd[0Kd[0K[?25l$ git commit -m "ad[0K[?25h[?25l$ git commit -m "a[0K[?25h[?25l$ git commit -m "[0K[?25ha[0Kd[0Kd[0K[22G[?25l$ git commit -m "add re[0K[?25ha[0Kd[0Km[0Ke[0K"[0K[?25l
+[0K[?25h[master 35da99d] add readme[0K[?25l
+ 5 files changed, 221 insertions(+), 1 deletion(-)[0K
+ create mode 100644 README.Rmd[0K
+ create mode 100644 README.md[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25h[?25lu[0K[8G[?25h[9G[?25l$ git pus[0K[?25hh[0K[12G[?25l$ git push o[0K[12G[?25h[13G[?25l$ git push or[0K[13G[?25h[14G[?25l$ git push ori[0K[?25hg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hEnumerating objects: 21, done.[0K[?25l
+Counting objects: 100% (21/21), done.[0K
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (11/11), done.[0K
+Writing objects: 100% (12/12), 3.40 KiB | 696.00 KiB/s, done.[0K
+Total 12 (delta 3), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (3/3), completed with 3 local objects.[0K[?25l
+[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
+   77315b3..35da99d  master -> master[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git push origin master[0K[?25h[?25l$ git commit -m "add readme"[0K[?25h[?25l$ git add .[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
 [0K[?25h

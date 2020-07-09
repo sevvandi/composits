@@ -7,7 +7,9 @@
 
 <!-- badges: end -->
 
-The goal of composits is to …
+The goal of *composits* is to find outliers in compositional,
+multivariate and univariate time series. It is an ensemble method that
+uses the packages *forecast*, *tsoutliers*, *anomalize* and *otsad*.
 
 ## Installation
 
@@ -106,4 +108,40 @@ out$all
 #> res     320           2          3           3 0.6082453 0.7074787
 #>          ICA forecast tsoutliers otsad anomalize
 #> res 0.684276      0.5       0.75     0      0.75
+out$outliers
+#> $Indices
+#> [1] 320
+#> 
+#> $Total_Score
+#> [1] 2
+#> 
+#> $Num_Coords
+#> [1] 3
+#> 
+#> $Num_Methods
+#> [1] 3
+#> 
+#> $DOBIN
+#> [1] 0.6082453
+#> 
+#> $PCA
+#> [1] 0.7074787
+#> 
+#> $ICA
+#> [1] 0.684276
+#> 
+#> $forecast
+#> [1] 0.5
+#> 
+#> $tsoutliers
+#> [1] 0.75
+#> 
+#> $otsad
+#> [1] 0
+#> 
+#> $anomalize
+#> [1] 0.75
+#> 
+#> $gapscore1
+#> [1] 2
 ```
