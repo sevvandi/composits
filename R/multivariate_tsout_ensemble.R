@@ -101,10 +101,18 @@ mv_tsout_ens <- function(x, m1 =NULL, ncomp=2,  sds=1, rept=1, compr=1, rat=0.05
     outthres <- merge(outthres1, outthres2)
   }
 
-
+  outthres <- as.data.frame(outthres)
+  gp1 <- which(colnames(outthres) %in% c("gapscore1"))
+  if(length(gp1)>0){
+    colnames(outthres)[gp1] <- "Gap_Score_1"
+  }
+  gp2 <- which(colnames(outthres) %in% c("gapscore2"))
+  if(length(gp2)>0){
+    colnames(outthres)[gp2] <- "Gap_Score_2"
+  }
 
   out <- list()
-  out$outliers <- outthres
+  out$outliers <- as.data.frame(outthres)
   out$all<- res
   out$outmat <- out1$outmat
   out$wts <- out1$wts

@@ -3,6 +3,7 @@
 export(apportion_scores_comp)
 export(apportion_scores_mv)
 export(comp_tsout_ens)
+export(draw_table)
 export(get_coords)
 export(mv_tsout_ens)
 export(uv_tsout_ens)

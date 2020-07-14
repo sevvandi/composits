@@ -1276,4 +1276,99 @@ error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
 fatal: updating files failed[0K
 [0K[?25h[?25l
 [0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git add .[0K[?25h
+$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/INDEX.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25ha[0Kd[0Kd[0K[22G[?25l$ git commit -m "add a[0K[?25hp[0Ko[0Ko[0Kr[0Kt[0Ki[0K[?25l$ git commit -m "add apoort[0K[29G[?25h[28G[?25l$ git commit -m "add apoor[0K[?25h[?25l$ git commit -m "add apoo[0K[?25h[?25l$ git commit -m "add apo[0K[?25h[?25l$ git commit -m "add ap[0K[?25hp[0Ko[0Kr[0Kt[0Ki[0Ko[0Kn[0K[32G[?25l$ git commit -m "add apportion s[0K[?25hc[0Ko[0Kr[0Ke[0Ks[0K[39G[?25l$ git commit -m "add apportion scores f[0K[39G[?25h[40G[?25l$ git commit -m "add apportion scores fu[0K[?25hn[0Kc[0Kt[0Ki[0Ko[0Kn[0Ka[0Kl[0Ki[0Kt[0Ky[0K"[0K[?25l
+[0K[?25h[master 1844bce] add apportion scores functionality[0K[?25l
+ 7 files changed, 359 insertions(+)[0K
+ create mode 100644 R/apportion_scores_comp.R[0K
+ create mode 100644 R/apportion_scores_multivariate.R[0K
+ create mode 100644 man/apportion_scores_comp.Rd[0K
+ create mode 100644 man/apportion_scores_mv.Rd[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0K[?25l$ git co[0K[?25h[?25l$ git c[0K[?25h[?25l$ git[0K[7G[?25h[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hEnumerating objects: 27, done.[0K[?25l
+Counting objects:  92% (25/27)[0K[2G[?25h[?25lCounting objects: 100% (27/27), done.[0K
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (15/15), done.[0K
+Writing objects: 100% (16/16), 3.75 KiB | 639.00 KiB/s, done.[0K
+Total 16 (delta 7), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (7/7), completed with 5 local objects.[0K[?25l
+[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
+   efa1ccb..1844bce  master -> master[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[?25l$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kp[0Ko[0Ks[0Ki[0Kt[0Ks[0K[?25l
+[0K[?25h* checking for file 'composits/DESCRIPTION' ...[0K OK[0K[?25l
+[0K[?25h* preparing 'composits':[0K[?25l
+* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
+* ch[0K[2G[?25h[?25l* checking for empty or unneeded directories[0K
+* building 'composits_0.0.0.9000.tar.gz'[0K
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25hh[0Ke[0Kc[0Kk[0K[15G[?25l$ R CMD check c[0K[?25ho[0Km[0Kposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[43G[?25l
+[0K[?25h* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K[?25l
+* using R version 3.6.1 (2019-07-05)[0K
+* using platform: x86_64-w64-mingw32 (64-bit)[0K
+* using session charset: ISO8859-1[0K
+[0K[?25h[?25l* checkin[0K[8G[?25h[?25l* checking for file 'composits/DESCRIPTION' ... OK[0K
+* checking extension type ... Package[0K
+* this is package 'composits' version '0.0.0.9000'[0K
+* package encoding: UTF-8[0K
+* checking package namespace information ...[0K[?25h OK[0K[?25l
+* checking package dependencies ...[0K[?25h OK[0K[?25l
+* checking if this is a source package[0K[38G[?25h[?25l* checking if this is a source package ... OK[0K
+* checking if there is a namespace ... OK[0K
+[0K[?25h[?25l* checking for executable files[0K[31G[?25h[?25l* checking for executable files ...[0K[?25h OK[0K[?25l
+* checking for hidden files and directories ... OK[0K
+* ch[0K[2G[?25h[?25l* checking for portable file names ... OK[0K
+* checking whether package 'composits' can be installed ...[0K[?25h OK[0K[?25l
+* checking installed package size ...[0K[?25h OK[0K[?25l
+* checking package directory ... OK[0K
+* checking DESCRIPTION[0K[22G[?25h[?25l* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+* checking top-level files ... OK[0K
+* checking for left-over files ... OK[0K
+* checking index information ... OK[0K
+* checking[0K[9G[?25h[?25l* checking package subdirectories ...[0K[?25h OK[0K[?25l
+* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
+* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
+* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
+* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whether the package can b[0K[34G[?25h[?25l* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking lo[0K[12G[?25h[?25l* checking loading without being on the library search pa[0K[56G[?25h[?25l* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
+* checking dependencies in R code ...[0K[?25h OK[0K[?25l
+* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
+* checking replacement functions ...[0K[?25h OK[0K[?25l
+* checking foreign function calls ...[0K[?25h OK[0K[?25l
+* checking R c[0K[13G[?25h[?25l* checking R code for possible problems ...[0K[?25h OK[0K[?25l
+* checking Rd files ...[0K[?25h[?25l OK[0K[24G[?25h[?25l
+* checking Rd metadata ...[0K[?25h OK[0K[?25l
+* checking Rd cross-references ...[0K[?25h OK[0K[?25l
+* checking for missing documentation[0K[34G[?25h[?25l* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
+* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
+* checking Rd[0K[13G[?25h[?25l* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
+* checking Rd contents ...[0K[?25h OK[0K[?25l
+* checking for[0K[13G[?25h[?25l* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
+* checking[0K[9G[?25h[?25l* checking examples ...[0K[?25h OK[0K[?25l
+* checking PDF version of manual ...[0K[?25h OK[0K[?25l
+* DONE[0K
+[0K
+Status: OK[0K
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Km[0Kposits[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h

@@ -30,5 +30,7 @@ Imports:
     pracma,
     dobin,
     ICS,
-    fastICA
+    fastICA,
+    gridExtra,
+    grid
 RoxygenNote: 6.1.1
