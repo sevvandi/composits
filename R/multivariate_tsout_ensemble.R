@@ -43,7 +43,11 @@ mv_tsout_ens <- function(x, m1 =NULL, ncomp=2,  sds=1, rept=1, compr=1, rat=0.05
     m1 <- 1:4
   }
   if(fast){
-    m1 <- c(1,2,4)
+    if(is.null(m1)){
+      m1 <- c(1,2,4)
+    }else{
+      m1 <- intersect(m1, c(1,2,4))
+    }
   }
   out1 <- tsout_ensemble(x, m1, ncomp,  sds) # wts,
   res <- out1$all

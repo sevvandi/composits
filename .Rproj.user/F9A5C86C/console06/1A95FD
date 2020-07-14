@@ -1,269 +1,4 @@
-[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0m[0K
-$[0K[3G[?25h[?25l$ git init[0K[?25h[?25l
-[0K[?25hInitialized empty Git repository in C:/Users/Sevvandi/Documents/repos/composits/.git/[0K[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git remote add origin https://github.com/sevvandi/composits.git[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/55F93E59.[0K[?25l
-The file will have its original line endings in your working directory.[0K[47G[?25h[?25l
-warning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/INDEX.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/s-F6CAB296/27340ABF.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/s-F6CAB296/27340ABF-contents[0K.
-[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K[1G[?25h[?25l
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25hf[0Ki[0Kr[0Ks[0Kt[0K[24G[?25l$ git commit -m "first c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K"[0K[?25l
-[0K[?25h[master (root-commit) fb3108e] first commit[0K[?25l
- 14 files changed, 117 insertions(+)[0K
- create mode 100644 .Rbuildignore[0K
- create mode 100644 .Rproj.user/F9A5C86C/console06/1A95FD[0K
- create mode 100644 .Rproj.user/F9A5C86C/console06/INDEX001[0K
- create mode 100644 .Rproj.user/F9A5C86C/sources/prop/55F93E59[0K
- create mode 100644 .Rproj.user/F9A5C86C/sources/prop/INDEX[0K
- create mode 100644 .Rproj.user/F9A5C86C/sources/s-F6CAB296/27340ABF[0K
- create mode 100644 .Rproj.user/F9A5C86C/sources/s-F6CAB296/27340ABF-contents[0K
- create mode 100644 .Rproj.user/F9A5C86C/sources/s-F6CAB296/lock_file[0K
- create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names[0K
- create mode 100644 DESCRIPTION[0K
- create mode 100644 NAMESPACE[0K
- create mode 100644 R/hello.R[0K
- create mode 100644 composits.Rproj[0K
- create mode 100644 man/hello.Rd[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[7G[?25h[8G[?25l$ git pu[0K[?25hs[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[19G[?25h[20G[?25l$ git push origin ma[0K[?25hs[0Kt[0Ke[0Kr[0K[?25l
-[0K[?25hEnumerating objects: 24, done.[0K[?25l
-Counting objects:  75% (18/24)[0K[1G[?25hCounting objects: 100% (24/24), done.[0K[?25l
-Delta compression using up to 4 threads.[0K
-Compressing objects: 100% (15/15), done.[0K
-Writing objects: 100% (24/24), 2.81 KiB | 319.00 KiB/s, done.[0K
-Total 24 (delta 0), reused 0 (delta 0)[0K
-[0K[?25herror: RPC failed; HTTP 404 curl 22 The requested URL returned error: 404 Not Found[0K[?25l
-fatal: The remote end hung up unexpectedly[0K
-fatal: The remote end hung up unexpectedly[0K
-Everything up-to-date[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git push origin master[0K[?25h[?25l
-[0K[?25hEnumerating objects: 24, done.[0K[?25l
-Counting objects: 100% (24/24), done.[0K
-Delta compression using up to 4 threads.[0K
-Compressing objects: 100% (15/15), done.[0K
-Writing objects:  66% (16/24)[0K[1G[?25hWriting objects: 100% (24/24), 2.81 KiB | 179.00 KiB/s, done.[0K[?25l
-Total 24 (delta 0), reused 0 (delta 0)[0K
-[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
- * [new branch]      master -> master[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K[?25h[?25l
-]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0Ka[0K[8G[7G[?25l$ git[0K[?25h[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/INDEX.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m '[0K[?25h[?25l$ git commit -m[0K[17G[?25h[?25l$ git commit -m "[0K[?25ha[0Kd[0Kd[0K[22G[?25l$ git commit -m "add u[0K[?25hv[0K_[0Kt[0Ks[0Ko[0Ku[0Kt[0K_[0Ke[0Kn[0Ks[0K[35G[?25l$ git commit -m "add uv_tsout_ens f[0K[?25hu[0Kn[0Kc[0Kt[0Ki[0Ko[0Kn[0K"[0K[43G[42G[41G[39G[38G[36G[35G[34G[33G[32G[31G[30G[29G[28G[27G[26G[25G[24G[23G[22G[44G[?25l
-[0K[?25h[master 7f3bb51] add uv_tsout_ens function[0K[?25l
- 14 files changed, 902 insertions(+), 52 deletions(-)[0K
- rewrite .Rproj.user/F9A5C86C/console06/INDEX001 (100%)[0K
- delete mode 100644 .Rproj.user/F9A5C86C/sources/s-F6CAB296/27340ABF[0K
- delete mode 100644 .Rproj.user/F9A5C86C/sources/s-F6CAB296/27340ABF-contents[0K
- delete mode 100644 .Rproj.user/F9A5C86C/sources/s-F6CAB296/lock_file[0K
- create mode 100644 .gitignore[0K
- rewrite DESCRIPTION (86%)[0K
- create mode 100644 LICENSE.md[0K
- create mode 100644 R/tsoutliers2.R[0K
- create mode 100644 R/univariate_tsout_ensemble.R[0K
- create mode 100644 man/uv_tsout_ens.Rd[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
-[0K[?25hEnumerating objects: 34, done.[0K[?25l
-Counting objects:  44% (15/34)[0K[1G[?25hCounting objects: 100% (34/34), done.[0K[?25l
-Delta compression using up to 4 threads.[0K
-Compressing objects: 100% (17/17), done.[0K
-Writing objects: 100% (20/20), 17.68 KiB | 1.77 MiB/s, done.[0K
-Total 20 (delta 1), reused 0 (delta 0)[0K
-[0K[?25hremote: Resolving deltas: 100% (1/1), completed with 1 local object.[0K[?25l
-[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
-   fb3108e..7f3bb51  master -> master[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ d[0K[?25he[0Kv[0K[?25l$ de[0K[?25h[?25l$ d[0K[?25h[?25l$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/INDEX.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25ha[0Kd[0Kd[0K[22G[?25l$ git commit -m "add R[0K[?25hu[0K[?25lb[0K[24G[?25h[25G[?25l$ git commit -m "add Rube[0K[?25hn[0K[28G[?25l$ git commit -m "add Ruben a[0K[?25hs[0K[31G[?25l$ git commit -m "add Ruben as a[0K[?25hu[0Kt[0Kh[0Ko[0Kr[0K[?25l"[0K[37G[?25h[38G[37G[36G[35G[34G[33G[31G[30G[29G[28G[27G[26G[25G[24G[23G[22G[21G[20G[19G[18G[?25l$ git commit -m "dd Ruben as author"[0K[18G[?25h[?25l$ git commit -m "d Ruben as author"[0K[18G[?25h[?25l$ git commit -m " Ruben as author"[0K[18G[?25h[?25l$ git commit -m "Ruben as author"[0K[18G[?25h[?25l$ git commit -m "uben as author"[0K[18G[?25h[?25l$ git commit -m "ben as author"[0K[18G[?25h[?25l$ git commit -m "en as author"[0K[18G[?25h[?25l$ git commit -m "n as author"[0K[18G[?25h[?25l$ git commit -m " as author"[0K[18G[?25h[?25l$ git commit -m "as author"[0K[18G[?25h[?25l$ git commit -m "s author"[0K[18G[?25h[?25l$ git commit -m " author"[0K[18G[?25h[?25l$ git commit -m "u author"[0K[19G[?25h[?25l$ git commit -m "up author"[0K[20G[?25h[?25l$ git commit -m "upd author"[0K[21G[?25h[?25l$ git commit -m "upda author"[0K[22G[?25h[?25l$ git commit -m "updat author"[0K[23G[?25h[?25l$ git commit -m "update author"[0K[24G[?25h[?25l$ git commit -m "update  author"[0K[25G[?25h[26G[27G[28G[30G[31G[32G[?25l$ git commit -m "update  authors"[0K[33G[?25h[?25l
-[0K[?25h[master 5b716ce] update  authors[0K[?25l
- 3 files changed, 38 insertions(+), 2 deletions(-)[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0K[?25lh[0K[10G[?25h[11G[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
-[0K[?25hEnumerating objects: 19, done.[0K[?25l
-Counting objects: 100% (19/19), done.[0K
-Delta compression using up to 4 threads.[0K
-Compressing objects:  66% (6/9)[0K[1G[?25hCompressing objects: 100% (9/9), done.[0K[?25l
-Writing objects: 100% (10/10), 1.47 KiB | 502.00 KiB/s, done.[0K
-Total 10 (delta 4), reused 0 (delta 0)[0K
-[0K[?25h[?25lremote: Resolving deltas:  50% (2/4)[0K[1G[?25hremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[0K[?25l
-[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
-   7f3bb51..5b716ce  master -> master[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25hu[0Kp[0Kd[0Ka[0Kt[0Ke[0K[25G[?25l$ git commit -m "update a[0K[?25hu[0Kt[0Kh[0Ko[0Kr[0Ks[0K"[0K[?25l
-[0K[?25h[master 2e3b72b] update authors[0K[?25l
- 2 files changed, 23 insertions(+), 2 deletions(-)[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
-[0K[?25hEnumerating objects: 13, done.[0K[?25l
-Counting objects: 100% (13/13), done.[0K
-Delta compression using up to 4 threads.[0K
-Compressing objects: 100% (7/7), done.[0K
-Writing objects: 100% (7/7), 1.14 KiB | 582.00 KiB/s, done.[0K
-Total 7 (delta 3), reused 0 (delta 0)[0K
-[0K[?25hremote: Resolving deltas: 100% (3/3), completed with 3 local objects.[0K[?25l
-[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
-   5b716ce..2e3b72b  master -> master[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25h[?25l$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kp[0Ko[0Ks[0Ki[0Kt[0Ks[0K[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-[0K[?25h[?25l* prepari[0K[8G[?25h[?25l* preparing 'composits':[0K
-* checking DESCRIPTION meta-information ... OK[0K
-[0K[?25h[?25l* ch[0K[3G[?25h[?25l* checking for LF line-endings in source and make files and shell scripts[0K
-* checking for empty or unneeded directories[0K
-[0K[?25h* building 'composits_0.0.0.9000.tar.gz'[0K[?25l
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25hh[0Ke[0Kc[0Kk[0K[?25l$ R CMD chec[0K[?25h[?25l$ R CMD che[0K[?25h[?25l$ R CMD ch[0K[12G[?25h[11G[?25l$ R CMD c[0K[?25h[?25l$ R CMD[0K[9G[?25h[?25l$ R CMD c[0K[9G[?25h[10G[?25l$ R CMD ch[0K[?25he[0Kc[0Kk[0K[15G[?25l$ R CMD check c[0K[?25ho[0Km[0Kposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[43G[?25l
-[0K[?25h* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K[?25l
-* using R version 3.6.1 (2019-07-05)[0K
-* using platform: x86_64-w64-mingw32 (64-bit)[0K
-* using session charset: ISO8859-[0K[32G[?25h[?25l* using session charset: ISO8859-1[0K
-[0K[?25h* checking for file 'composits/DESCRIPTION' ...[0K OK[0K[?25l
-* checking extension type ... Package[0K
-* this is package 'composits' version '0.0.0.9000'[0K
-* package encoding: UTF-8[0K
-* checking package namespace information ... OK[0K
-[0K[?25h* checking package dependencies ...[0K ERROR[0K[?25l
-Namespace dependency not required: 'dplyr'[0K[?25h[?25l
-[0K
-See section 'The DESCRIPTION file' in the 'Writing R Extensions'[0K
-manual.[0K
-* DONE[0K
-[0K
-Status: 1 ERROR[0K
-See[0K
-  'C:/Users/Sevvandi/Docume[0K[26G[?25h[?25l  'C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00check.log'[0K
-for details.[0K
-[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25hh[0Ke[0K[?25l$ R CMD ch[0K[?25h[?25l$ R CMD c[0K[?25h[?25l$ R CMD[0K[9G[?25h[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kp[0Ko[0Ks[0Ki[0Kt[0Ks[0K[?25l
-[0K[?25h[?25l* checking for file 'c[0K[21G[?25h[?25l* checking for file 'composits/DESCRIPTION' ... OK[0K
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION meta-information ... OK[0K
-[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
-* checking for empty or unneeded directories[0K
-[0K[?25h* building 'composits_0.0.0.9000.tar.gz'[0K[?25l
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R CMD build composits[0K[?25h[?25l$ R CMD check composits_0.0.0.9000.tar.gz[0K[43G[?25h[?25l
-[0K[?25h[?25l* us[0K[3G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Do[0K[42G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K
-* using R version 3.6.1 (2019-07-05)[0K
-* using platform: x86_64-w64-mingw32 (64-[0K[40G[?25h[?25l* using platform: x86_64-w64-mingw32 (64-bit)[0K
-* using session charset: ISO8859-1[0K
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-* checking extension type ... Package[0K
-* this is package 'composits' version '0.0.0.9000'[0K
-* package encoding: UTF-8[0K
-* checking package namespace informati[0K[36G[?25h[?25l* checking package namespace information ... OK[0K
-* checking package dependencies ...[0K[?25h OK[0K[?25l
-* checking if this is a[0K[23G[?25h[?25l* checking if this is a source package ... OK[0K
-* checking if there is a namespace ... OK[0K
-[0K[?25h[?25l* chec[0K[5G[?25h[?25l* checking for executable files ...[0K[?25h OK[0K[?25l
-* checking for hidden files and directories ... OK[0K
-* checking for portable file names ... OK[0K
-[0K[?25h* checking whether package 'composits' can be installed ...[0K OK[0K[?25l
-* checking installed package size ...[0K[?25h OK[0K[?25l
-* checking package directory ... OK[0K
-* checking DESCRIPTION meta-information ...[0K[?25h[?25l OK[0K[45G[?25h[?25l
-* checking top-level files ... OK[0K
-* checking for left-over files ... OK[0K
-* checking index information ... OK[0K
-* checking package subdirectories ...[0K[?25h OK[0K[?25l
-* checking R file[0K[16G[?25h[?25l* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
-* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
-* chec[0K[5G[?25h[?25l* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
-* che[0K[3G[?25h[?25l* checking whether the package can be loaded with[0K[?25h stated dependencies ...[0K OK[0K[?25l
-* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checkin[0K[8G[?25h[?25l* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checki[0K[7G[?25h[?25l* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-[0K[?25h* checking loading without being on the library search path ...[0K OK[0K[?25l
-* checking[0K[9G[?25h[?25l* checking dependencies in R code ...[0K[?25h WARNING[0K[?25l
-'::' or ':::' import not declared from: 'tibble'[0K
-* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
-* checking rep[0K[13G[?25h[?25l* checking replacement functions ...[0K[?25h OK[0K[?25l
-* checking foreign function calls ...[0K[?25h OK[0K[?25l
-* checking R code for possible proble[0K[36G[?25h[?25l* checking R code for possible problems ...[0K[?25h NOTE[0K[?25l
-uv_tsout_ens: warning in as.difftime((len - 1), unit = "days"): partial[0K
-  argument match of 'unit' to 'units'[0K
-tsoutliers2: no visible global function definition for 'frequency'[0K
-tsoutliers2: no visible global function d[0K[40G[?25h[?25ltsoutliers2: no visible global function definition for 'na.interp'[0K
-tsoutliers2: no visible global function definition for 'mstl'[0K
-tsoutliers2: no visible global function definition for 'remainder'[0K
-tsoutliers2: no visible global function definition for '[0K[55G[?25h[?25ltsoutliers2: no visible global function definition for 'trendcycle'[0K
-tsoutliers2: no visible global function definition for 'var'[0K
-tsoutliers2: no visible global function definition for 'seasadj'[0K
-tsoutliers2: no visible global function definition for 'supsmu'[0K
-tsoutliers2: no v[0K[?25hisible global function definition for 'quantile'[0K[?25l
-uv_tsout_ens: no visible global function definition for 'ts'[0K
-uv_tsout_ens: no visible binding for[0K[35G[?25h[?25luv_tsout_ens: no visible binding for global variable 'remainder'[0K
-Undefined global functions or variables:[0K
-  frequency mstl na.interp quantile remainder seasadj supsmu trendcycle[0K
-  ts var[0K
-Consider adding[0K
-  importFrom("stats", "frequency", "quantile", "s[0K[48G[?25h[?25l  importFrom("stats", "frequency", "quantile", "supsmu", "ts", "var")[0K
-to your NAMESPACE file.[0K
-* checking Rd files ...[0K[?25h OK[0K[?25l
-* checking Rd metadata ...[0K[?25h OK[0K[?25l
-* checking Rd cross-references ...[0K[?25h OK[0K[?25l
-* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
-* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
-* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
-* checking Rd contents ...[0K[?25h OK[0K[?25l
-* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
-* checking examples ...[0K[?25h ERROR[0K[?25l
-Running examples in 'composits-Ex.R' failed[0K
-The error most likely occurred in:[0K
-[0K
-> ### Name: hello[0K
-> ### Title: Hell[0K[16G[?25h[?25l> ### Title: Hello, World![0K
-> ### Aliases: hello[0K
->[0K
-> ### ** Examples[0K
->[0K
-> hello()[0K
-Error in hello() : could not find function "hello"[0K
+
 Execution halted[0K
 * checking[0K[10G[?25h[?25l* checking PDF version of manual ...[0K[?25h OK[0K[?25l
 * DONE[0K
@@ -1243,4 +978,114 @@ $[0K[3G[?25h[?25l$ g[0K[?25hi[0K[?25lt[0K[5G[?25h[6G[7G[?25l$ gi
 $[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Kmposits[0K[?25l
 [0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
 [0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0K[?25ld[0K[9G[?25h[10G[11G[?25l$ git add .[0K[?25h
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0K[?25ld[0K[9G[?25h[10G[11G[?25l$ git add .[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[7G[?25h[8G[?25l$ git co[0K[?25hm[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25hu[0Kp[0Kd[0Ka[0Kt[0Ke[0K[25G[?25l$ git commit -m "update r[0K[?25he[0Ka[0Kd[0Km[0Ke[0K[?25l"[0K[31G[?25h[32G[?25l
+[0K[?25h[master 0bcb7c8] update readme[0K[?25l
+ 4 files changed, 139 insertions(+), 6 deletions(-)[0K
+ rewrite .Rproj.user/F9A5C86C/console06/INDEX001 (70%)[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[19G[?25h[20G[?25l$ git push origin ma[0K[?25hs[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hEnumerating objects: 17, done.[0K[?25l
+Counting objects: 100% (17/17), done.[0K
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (9/9), done.[0K
+Writing objects: 100% (9/9), 1.95 KiB | 499.00 KiB/s, done.[0K
+Total 9 (delta 5), reused 0 (delta 0)[0K
+[0K[?25h[?25lremote: Resolving deltas:  80% (4/5)[0K[1G[?25hremote: Resolving deltas: 100% (5/5), completed with 5 local objects.[0K[?25l
+[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
+   bd232ec..0bcb7c8  master -> master[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Kl[0Kl[0K[12G[?25l$ git pull o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git pull origin m[0K[?25ha[0Ks[0Kt[0Ker[0K[?25l
+[0K[?25hFrom https://github.com/sevvandi/composits[0K[?25l
+ * branch            master     -> FETCH_HEAD[0K
+[0K[?25hAlready up to date.[0K[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kp[0Ko[0Ks[0Ki[0Kt[0Ks[0K[?25l
+[0K[?25h[?25l* checking for file '[0K[19G[?25h[?25l* checking for file 'composits/DESCRIPTION' ... OK[0K
+[0K[?25h* preparing 'composits':[0K[?25l
+* checking DESCRIPTION meta[0K[26G[?25h[?25l* checking DESCRIPTION meta-information ... OK[0K
+[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
+* checkin[0K[8G[?25h[?25l* checking for empty or unneeded directories[0K
+* building 'composits_0.0.0.9000.tar.gz'[0K
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25hh[0Ke[0K[?25lc[0K[12G[?25h[13G[?25l$ R CMD check[0K[?25h[15G[?25l$ R CMD check c[0K[?25ho[0Km[0Kposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[43G[?25l
+[0K[?25h[?25l* using log directory 'C[0K[23G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K
+* usi[0K[3G[?25h[?25l* using R version 3.6.1 (2019-07-05)[0K
+* using platform: x86_64-w64-mingw32[0K[35G[?25h[?25l* using platform: x86_64-w64-mingw32 (64-bit)[0K
+* using session charset: ISO8859-1[0K
+[0K[?25h[?25l* checking for file '[0K[20G[?25h[?25l* checking for file 'composits/DESCRIPTION' ... OK[0K
+* checking extension type ... Package[0K
+* this is package 'composits' version '0.0.0.9000'[0K
+* package encoding: UTF-8[0K
+* checking package namespace information ...[0K[?25h OK[0K[?25l
+* checking package dependencies ...[0K[?25h OK[0K[?25l
+* checking if this is a source package ... OK[0K
+* checking if there is a namespace ..[0K[36G[?25h[?25l* checking if there is a namespace ... OK[0K
+[0K[?25h* checking for executable files ...[0K OK[0K[?25l
+* checking for hidden files and directories ... OK[0K
+* checking for portable file names ...[0K[?25h OK[0K[?25l
+* checking whether package 'composits' can be installed ...[0K[?25h OK[0K[?25l
+* checki[0K[7G[?25h[?25l* checking installed package size ...[0K[?25h OK[0K[?25l
+* checking package directory ... OK[0K
+* check[0K[6G[?25h[?25l* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+* checking top-level files ... OK[0K
+* checking for left-over files ...[0K[?25h OK[0K[?25l
+* checking index information ... OK[0K
+* checking package subdirectories ...[0K[?25h OK[0K[?25l
+* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
+* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
+* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
+* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking whether the namespace can be lo[0K[41G[?25h[?25l* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
+* checking depe[0K[14G[?25h[?25l* checking dependencies in R code ...[0K[?25h OK[0K[?25l
+* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
+* checking replacement functions ...[0K[?25h OK[0K[?25l
+* checking foreign function calls ...[0K[?25h OK[0K[?25l
+* checking R[0K[10G[?25h[?25l* checking R code for possible problems ...[0K[?25h OK[0K[?25l
+* checking Rd f[0K[13G[?25h[?25l* checking Rd files ...[0K[?25h OK[0K[?25l
+* checking Rd metadata ...[0K[25G[?25h[27G[?25l* checking Rd metadata ... OK[0K
+* checking Rd cross-references ...[0K[?25h OK[0K[?25l
+* checking for missing documentation entr[0K[40G[?25h[?25l* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
+* checking fo[0K[13G[?25h[?25l* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
+* checking Rd[0K[13G[?25h[?25l* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
+* checking Rd contents ...[0K[?25h OK[0K[?25l
+* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
+* checki[0K[7G[?25h[?25l* checking examples ...[0K[?25h[?25l OK[0K[26G[?25h[?25l
+* checking PDF version of manual ...[0K[?25h OK[0K[?25l
+* DONE[0K
+[0K
+Status: OK[0K
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[6G[?25h[7G[?25l$ cd co[0K[?25hm[0Kposits[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
+[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
+error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
+fatal: updating files failed[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
+[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
+error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
+fatal: updating files failed[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K[20G[?25h[?25l
+$[0K[3G[?25h[?25l$ git add .[0K[?25h

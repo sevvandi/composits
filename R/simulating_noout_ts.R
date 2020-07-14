@@ -61,7 +61,11 @@ no_outlier_scores_2 <- function(x, ncomp, outobj, rat=0.1, m1){
   # If outobj$outliers does not have any records then use outobj$all
   lenout <- dim(outobj$all)[1]
   if(lenout==0){
-    return(0)
+    ret <- list()
+    ret$thres1 <- 0
+    ret$thres2 <- 0
+    ret$ens <- 0
+    return(ret)
   }
   lenall <- dim(x)[1]
   ratio <- lenout/lenall
