@@ -32,6 +32,7 @@
 uv_tsout_ens <- function(x, frequency=1, dates=NULL){
   if(class(x)=="ts"){
     frequency = frequency(x)
+    xts <- x
   }else{
     # x is a vector
     xts <- ts(x, frequency = frequency)
@@ -57,7 +58,7 @@ uv_tsout_ens <- function(x, frequency=1, dates=NULL){
 
   # OUTLIERS FROM otsad PACKAGE
   tryCatch({
-    otsad_out <- otsad::CpTsSdEwma(data = x, n.train = 10, m = 20, l=3)         # Change method Reduce training data
+    otsad_out <- otsad::CpTsSdEwma(data = xts, n.train = 10, m = 20, l=3)         # Change method Reduce training data
     otsad_o <- which(otsad_out$is.anomaly==1)
   },error = function(c){
     print("Error in computing outliers CpTsSdEwma for one component otsad!")

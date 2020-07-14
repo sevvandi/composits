@@ -4,10 +4,12 @@
 \alias{draw_table}
 \title{Draws table from comp_tsout_ens or mv_tsout_ens output.}
 \usage{
-draw_table(obj)
+draw_table(obj, uniq_dates = NULL)
 }
 \arguments{
 \item{obj}{The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.}
+
+\item{uniq_dates}{An optional parameter to pass in the dates for the dataset.}
 }
 \value{
 Draws a table using R packages \code{grid} and \code{gridExtra}.

@@ -65,7 +65,7 @@ mv_tsout_ens <- function(x, m1 =NULL, ncomp=2,  sds=1, rept=1, compr=1, rat=0.05
 
 
     stars <-  (outthres1$Total_Score - thres2)/gap
-    stars <- floor(stars)
+    stars <- ceiling(stars)
     stars[stars < 0] <- 0
     outthres1$gapscore1 <- stars
   }
@@ -83,7 +83,7 @@ mv_tsout_ens <- function(x, m1 =NULL, ncomp=2,  sds=1, rept=1, compr=1, rat=0.05
 
 
       stars <-  (outthres2[ ,2] - thres2)/gap
-      stars <- floor(stars)
+      stars <- ceiling(stars)
       stars[stars < 0] <- 0
       outthres2$gapscore2 <- stars
     }else{

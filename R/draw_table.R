@@ -1,6 +1,7 @@
 #' Draws table from comp_tsout_ens or mv_tsout_ens output.
 #'
 #' @param obj The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.
+#' @param uniq_dates An optional parameter to pass in the dates for the dataset.
 #' @return Draws a table using R packages \code{grid} and \code{gridExtra}.
 #'
 #' @examples
@@ -17,9 +18,12 @@
 #' draw_table(out)
 #'
 #' @export
-draw_table <- function(obj){
+draw_table <- function(obj, uniq_dates=NULL){
   # obj is the output from comp_tsout_ens or mv_tsout_ens
   out <- obj$outliers
+  if(!is.null(uniq_dates)){
+    out$Indices <- uniq_dates[out$Indices]
+  }
 
   col_names <- colnames(obj$outliers)
   col_coords <- which(col_names %in% c("DOBIN", "PCA", "ICA", "ICS"))
@@ -30,7 +34,7 @@ draw_table <- function(obj){
   out2 <- out1[order(out1[ ,12], decreasing=TRUE), ]
 
   # Round coords and final score to 2 decimals
-  for(kk in c(2:5,12)){
+  for(kk in c(2:dim(out2)[2] )){
     out2[ ,kk] <- round(out2[ ,kk], 2)
   }
 
@@ -80,7 +84,7 @@ draw_table <- function(obj){
 
   ind_max <- 1
   rowsmax <- ind_max + 1
-  colsmax <- rep(13, length(rowsmax))
+  colsmax <- rep((dim(out)[2]+1), length(rowsmax))
 
 
   for(kk in 1:length(ind_max)){
