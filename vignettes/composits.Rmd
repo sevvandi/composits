@@ -1,0 +1,55 @@
+---
+title: "Introduction to composits"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{composits}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(composits)
+library(ggplot2)
+library(forecast)
+library(dplyr)
+```
+
+The goal of *composits* is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the outlier detection methods from R packages *forecast*, *tsoutliers*, *anomalize* and *otsad*. 
+
+## Univariate time series outliers
+This example uses a univariate time series containing the daily gold prices from the R package *forecast*.
+
+```{r univaraite1}
+gold2 <- forecast::na.interp(gold)
+out <- uv_tsout_ens(gold2)
+inds <- names(which(table(out$outliers) > 2))
+
+ts_gold <- dplyr::as_tibble(gold2) %>% mutate(t = 1:length(gold2)) %>% rename(value = x)
+ggplot(ts_gold, aes(x=t, y=value)) +
+  geom_line() +
+  geom_vline(xintercept =as.numeric(inds), color="red", alpha=0.8, size=0.1, linetype ='dashed') + ylab("Gold prices") + 
+  theme_bw()
+```
+
+The red dashed vertical lines show the time points that have been picked by 3 or more outlier detection methods. 
+
+
+Next we look at the quarterly production of woollen yarn in Australia. This time series is also taken from the R package *forecast*. 
+
+```{r univariate2}
+out <- uv_tsout_ens(woolyrnq)
+inds <- names(which(table(out$outliers) > 2))
+
+ts_wool <- dplyr::as_tibble(woolyrnq) %>% mutate(t = 1:length(woolyrnq)) %>% rename(value = x)
+ggplot(ts_wool, aes(x=t, y=value)) +
+  geom_line() +
+  geom_vline(xintercept =as.numeric(inds), color="red", alpha=0.8, size=0.1, linetype ='dashed') + ylab("Woollen Yarn Production") + 
+  theme_bw()
+```
