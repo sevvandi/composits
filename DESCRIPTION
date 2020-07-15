@@ -32,5 +32,7 @@ Imports:
     ICS,
     fastICA,
     gridExtra,
-    grid
+    grid,
+    ggplot2,
+    tidyr
 RoxygenNote: 6.1.1

@@ -76,6 +76,7 @@ tsout_ensemble_1M <- function(x, pre=0, ncomp = NULL){ #, wts = NULL
   if(ercoords){
     # Error in computing coordinates - Returning zeros or empty vectors
     print("Its HERE!!!")
+    wts <- 1/(1:ncomp)
     result <- list()
     result$summary <-  c()
     result$tab <- out_indices
