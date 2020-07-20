@@ -9,6 +9,8 @@ plot_decomposed(obj, X, method = "pca")
 \arguments{
 \item{obj}{The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.}
 
+\item{X}{The data matrix used as input to \code{comp_tsout_ens} or \code{mv_tsout_ens}.}
+
 \item{method}{The decomposition method, choose between "pca" (default), "dobin", "ics" or "ica".}
 }
 \value{

@@ -1,6 +1,7 @@
 #' Plot decomposed time series from comp_tsout_ens or mv_tsout_ens output.
 #'
 #' @param obj The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.
+#' @param X The data matrix used as input to \code{comp_tsout_ens} or \code{mv_tsout_ens}.
 #' @param method The decomposition method, choose between "pca" (default), "dobin", "ics" or "ica".
 #' @return A ggplot showing the time series from the selected decomposition method.
 #'
@@ -19,7 +20,7 @@
 #'
 #' @export
 plot_decomposed <- function(obj, X, method = "pca"){
-  loading_mat <- out[[paste0(method, "_loadings")]]
+  loading_mat <- obj[[paste0(method, "_loadings")]]
   if(! is.matrix(loading_mat)){
     print(paste0("Error: loadings for method ", method, " not found!"))
     return(NULL)
