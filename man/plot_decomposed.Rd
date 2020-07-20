@@ -4,12 +4,12 @@
 \alias{plot_decomposed}
 \title{Plot decomposed time series from comp_tsout_ens or mv_tsout_ens output.}
 \usage{
-plot_decomposed(obj, X, method = "pca")
+plot_decomposed(obj, X = NULL, method = "pca")
 }
 \arguments{
 \item{obj}{The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.}
 
-\item{X}{The data matrix used as input to \code{comp_tsout_ens} or \code{mv_tsout_ens}.}
+\item{X}{The data matrix used as input to \code{mv_tsout_ens} (not needed if \code{obj} is output from \code{comp_tsout_ens}).}
 
 \item{method}{The decomposition method, choose between "pca" (default), "dobin", "ics" or "ica".}
 }
@@ -29,7 +29,12 @@ x2 <- sample(1:100, n, replace=TRUE)
 x3 <- sample(1:100, n, replace=TRUE)
 x4 <- sample(1:100, n, replace=TRUE)
 X <- cbind.data.frame(x, x2, x3, x4)
-out <- mv_tsout_ens(X, compr=2, fast=FALSE)
-plot_decomposed(out, X, method = "pca")
+
+out1 <- mv_tsout_ens(X, compr=2, fast=FALSE)
+plot_decomposed(out1, X = X, method = "pca")
+
+X <- X/rowSums(X)
+out2 <- comp_tsout_ens(X, compr=2, fast=FALSE)
+plot_decomposed(out2)
 
 }
