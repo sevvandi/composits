@@ -3,6 +3,7 @@
 #' @param obj The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.
 #' @param X The data matrix used as input to \code{mv_tsout_ens} (not needed if \code{obj} is output from \code{comp_tsout_ens}).
 #' @param method The dimension reduction method to apply before running the tour (if \code{NULL} tour on the full data space).
+#' @param edges Set to "all" to connect points by time index, "outlying" to connect tagged outliers to previous and following points.
 #' @param max_frames The maximum number of bases to generate in the grand tour (default is Inf).
 #'
 #' @examples \donttest{
@@ -27,7 +28,7 @@
 #' }
 #'
 #' @export
-animate_ts_ensemble <- function(obj=NULL, X = NULL, method = NULL, max_frames = Inf){
+animate_ts_ensemble <- function(obj=NULL, X = NULL, method = NULL, edges = NULL, max_frames = Inf){
   # check that we have the right input
   if (is.null(X)){
     if (is.null(obj$comp_coords)){
@@ -56,5 +57,16 @@ animate_ts_ensemble <- function(obj=NULL, X = NULL, method = NULL, max_frames = 
   # color for tourr highlights outliers
   col <- rep("black", nrow(X))
   col[obj$outliers[,"Indices"]] <- "red"
-  tourr::animate_xy(X, col=col, axes="bottomleft", max_frames = max_frames)
+
+  if(!is.null(edges)){
+    if(edges == "outlying"){
+      idx <- obj$outliers[,"Indices"]
+      edges <- matrix(c(idx-1, idx, idx, idx+1), ncol = 2)
+    }
+    else if(edges == "all"){
+      edges <- matrix(c(1:nrow(X)-1, 2:nrow(X)), ncol = 2)
+    }
+    else edges = NULL
+  }
+  tourr::animate_xy(X, col=col, edges = edges, axes="bottomleft", max_frames = max_frames)
 }
