@@ -8,7 +8,7 @@ Authors@R: c(
   person("Patricia", "Menendez", email = "Patricia.Menendez@monash.edu",
   role = c("aut"), comment = c(ORCID = "0000-0002-0337-0396")), 
   person("Ursula", "Laa", email = "Ursula.Laa@monash.edu",
-  role = c("aut"), comment = c(ORCID = "0000-0002-0337-0397")),
+  role = c("aut"), comment = c(ORCID = "0000-0002-0249-6439")),
   person("Ruben", "Maya", email = "Ruben.LoaizaMaya@monash.edu",
   role = c("aut"), comment = c(ORCID = "0000-0002-0337-0398"))
   )
