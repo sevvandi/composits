@@ -1,0 +1,42 @@
+#' Show tour animation of the data points.
+#'
+#' @param obj The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.
+#' @param X The data matrix used as input to \code{mv_tsout_ens} (not needed if \code{obj} is output from \code{comp_tsout_ens}).
+#' @param max_frames The maximum number of bases to generate in the grand tour (default is Inf).
+#'
+#' @examples \donttest{
+#' set.seed(100)
+#' n <- 600
+#' x <- sample(1:100, n, replace=TRUE)
+#' x[25] <- 200
+#' x[320] <- 300
+#' x2 <- sample(1:100, n, replace=TRUE)
+#' x3 <- sample(1:100, n, replace=TRUE)
+#' x4 <- sample(1:100, n, replace=TRUE)
+#' X <- cbind.data.frame(x, x2, x3, x4)
+#'
+#' animate_ts_ensemble(X = X, max_frames = 10)
+#'
+#' out1 <- mv_tsout_ens(X, compr=2, fast=FALSE)
+#' animate_ts_ensemble(out1, X, max_frames = 10)
+#'
+#' X <- X/rowSums(X)
+#' out2 <- comp_tsout_ens(X, compr=2, fast=FALSE)
+#' animate_ts_ensemble(out2, max_frames = 10)
+#' }
+#'
+#' @export
+animate_ts_ensemble <- function(obj=NULL, X = NULL, max_frames = Inf){
+  # check that we have the right input
+  if (is.null(X)){
+    if (is.null(obj$comp_coords)){
+      print(paste0("Error: Need either data input X or output from comp_tsout_ens in obj to run."))
+      return(NULL)
+    }
+    X <- obj$comp_coords
+  }
+  # color for tourr highlights outliers
+  col <- rep("black", nrow(X))
+  col[obj$outliers[,"Indices"]] <- "red"
+  tourr::animate_xy(X, col=col, axes="off", max_frames = max_frames)
+}
