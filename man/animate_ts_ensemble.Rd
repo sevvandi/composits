@@ -4,12 +4,14 @@
 \alias{animate_ts_ensemble}
 \title{Show tour animation of the data points.}
 \usage{
-animate_ts_ensemble(obj = NULL, X = NULL, max_frames = Inf)
+animate_ts_ensemble(obj = NULL, X = NULL, method = NULL, max_frames = Inf)
 }
 \arguments{
 \item{obj}{The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.}
 
 \item{X}{The data matrix used as input to \code{mv_tsout_ens} (not needed if \code{obj} is output from \code{comp_tsout_ens}).}
+
+\item{method}{The dimension reduction method to apply before running the tour (if \code{NULL} tour on the full data space).}
 
 \item{max_frames}{The maximum number of bases to generate in the grand tour (default is Inf).}
 }
@@ -34,8 +36,8 @@ out1 <- mv_tsout_ens(X, compr=2, fast=FALSE)
 animate_ts_ensemble(out1, X, max_frames = 10)
 
 X <- X/rowSums(X)
-out2 <- comp_tsout_ens(X, compr=2, fast=FALSE)
-animate_ts_ensemble(out2, max_frames = 10)
+out2 <- comp_tsout_ens(X, ncomp = 3, compr=2, fast=FALSE)
+animate_ts_ensemble(out2, method = "dobin", max_frames = 10)
 }
 
 }
