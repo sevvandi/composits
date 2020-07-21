@@ -49,7 +49,7 @@ plot_decomposed <- function(obj, X = NULL, method = "pca"){
   colnames(ts_proj) <- paste0(method, "_", 1:ncol(loading_mat))
   ts_proj <- tibble::as_tibble(ts_proj) %>%
     dplyr::mutate(t = 1:nrow(X)) %>%
-    tidyr::pivot_longer(-.data$t, values_to = "value")
+    tidyr::pivot_longer(-.data$t, values_to = "value", names_to = "name")
 
   ggplot2::ggplot(ts_proj, ggplot2::aes(x=.data$t, y=.data$value)) +
     ggplot2::geom_line() +
