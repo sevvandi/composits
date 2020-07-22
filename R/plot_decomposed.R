@@ -146,6 +146,19 @@ plot_biplot <- function(obj, X = NULL, method = "pca"){
 #' @param X The data matrix used as input to \code{mv_tsout_ens} (not needed if \code{obj} is output from \code{comp_tsout_ens}).
 #' @return A ggplot showing the time series with facets by decomposition method.
 #'
+#' @examples
+#' set.seed(100)
+#' n <- 600
+#' x <- sample(1:100, n, replace=TRUE)
+#' x[25] <- 200
+#' x[320] <- 300
+#' x2 <- sample(1:100, n, replace=TRUE)
+#' x3 <- sample(1:100, n, replace=TRUE)
+#' x4 <- sample(1:100, n, replace=TRUE)
+#' X <- cbind.data.frame(x, x2, x3, x4)
+#' out <- mv_tsout_ens(X, m1=c(1,2,4), compr=2)
+#' plot_decomposed_all(out, X=X)
+#'
 #' @importFrom dplyr %>%
 #' @importFrom rlang .data
 #' @export
@@ -168,7 +181,7 @@ plot_decomposed_all <- function(obj, X = NULL){
   colnames(ts_dobin) <- paste0("dobin", 1:ncomp)
   ts_ica <- as.matrix(X) %*% obj$ica_loadings
   colnames(ts_ica) <- paste0("ica", 1:ncomp)
-  if (!is.null(obj$ics_loadings)){
+  if (!is.na(obj$ics_loadings)){
     ts_ics <- as.matrix(X) %*% obj$ics_loadings
     colnames(ts_ics) <- paste0("ics", 1:ncomp)
   }
@@ -183,6 +196,6 @@ plot_decomposed_all <- function(obj, X = NULL){
     ggplot2::ggplot(ggplot2::aes(x = .data$t, y = .data$value, color = .data$component)) +
     ggplot2::geom_line() +
     ggplot2::geom_vline(xintercept = obj$outliers[,"Indices"], color="red", alpha=0.8, size=0.1) +
-    ggplot2::facet_wrap(~.data$method, ncol = 2, scales = "free") +
+    ggplot2::facet_wrap(~method, ncol = 2, scales = "free") +  # .data$
     ggplot2::theme_bw()
 }
