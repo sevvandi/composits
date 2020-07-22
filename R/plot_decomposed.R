@@ -58,7 +58,7 @@ plot_decomposed <- function(obj, X = NULL, method = "pca"){
   ggplot2::ggplot(ts_proj, ggplot2::aes(x=.data$t, y=.data$value)) +
     ggplot2::geom_line() +
     ggplot2::geom_vline(xintercept = obj$outliers[,"Indices"], color="red", alpha=0.8, size=0.1) +
-    ggplot2::facet_wrap(~name, ncol = 2) +  #  ggplot2::facet_wrap(~.data$name, ncol = 2) +
+    ggplot2::facet_wrap(~name, ncol = 2) +
     ggplot2::theme_bw()
 }
 
@@ -181,7 +181,7 @@ plot_decomposed_all <- function(obj, X = NULL){
   colnames(ts_dobin) <- paste0("dobin", 1:ncomp)
   ts_ica <- as.matrix(X) %*% obj$ica_loadings
   colnames(ts_ica) <- paste0("ica", 1:ncomp)
-  if (!is.na(obj$ics_loadings)){
+  if (is.matrix(obj$ics_loadings)){
     ts_ics <- as.matrix(X) %*% obj$ics_loadings
     colnames(ts_ics) <- paste0("ics", 1:ncomp)
   }
@@ -196,6 +196,6 @@ plot_decomposed_all <- function(obj, X = NULL){
     ggplot2::ggplot(ggplot2::aes(x = .data$t, y = .data$value, color = .data$component)) +
     ggplot2::geom_line() +
     ggplot2::geom_vline(xintercept = obj$outliers[,"Indices"], color="red", alpha=0.8, size=0.1) +
-    ggplot2::facet_wrap(~method, ncol = 2, scales = "free") +  # .data$
+    ggplot2::facet_wrap(~method, ncol = 2, scales = "free") +
     ggplot2::theme_bw()
 }
