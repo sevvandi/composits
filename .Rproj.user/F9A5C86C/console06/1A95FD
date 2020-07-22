@@ -1316,4 +1316,114 @@ $[0K[3G[?25h[?25l$ p[0K[?25hw[0Kd[0K[?25l
 /c/Users/Sevvandi/Documents/repos/composits[0K
 [0K[?25h[?25l
 [0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ pwd[0K[?25h[?25l$ git add .[0K[?25h
+$[0K[3G[?25h[?25l$ pwd[0K[?25h[?25l$ git add .[0K[?25h[?25l
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/INDEX.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in docs/articles/composits.html.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in docs/index.html.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in docs/articles/composits_files/kePrint-0.0.1/kePr[0Ki[?25l
+nt.js.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25ha[0Kd[0Kd[0K[22G[?25l$ git commit -m "add d[0K[?25hr[0Ka[0Kw[0K_[0Kt[0Ka[0Kb[0Kl[0Ke[0K_[0Kh[0Ki[0K[?25l$ git commit -m "add draw_table_h[0K[?25ht[0Km[0Kl[0K"[0K[?25l
+[0K[?25h[master f321666] add draw_table_html[0K[?25l
+ 67 files changed, 2201 insertions(+), 834 deletions(-)[0K
+ rewrite .Rproj.user/F9A5C86C/console06/INDEX001 (85%)[0K
+ create mode 100644 docs/articles/composits_files/figure-html/multivariate1-1.png[0K
+ create mode 100644 docs/articles/composits_files/figure-html/multivariate1-10.png[0K
+ create mode 100644 docs/articles/composits_files/figure-html/multivariate1-11.png[0K
+ create mode 100644 docs/articles/composits_files/figure-html/multivariate1-12.png[0K
+ create mode 100644 docs/articles/composits_files/figure-html/multivariate1-2.png[0K
+ create mode 100644 docs/articles/composits_files/figure-html/multivariate1-3.png[0K
+ create mode 100644 docs/articles/composits_files/figure-html/multivariate1-4.png[0K
+ create mode 100644 docs/articles/composits_files/figure-html/multivariate1-5.png[0K
+ create mode 100644 docs/articles/composits_files/figure-html/multivariate1-6.png[0K
+ create mode 100644 docs/articles/composits_files/figure-html/multivariate1-7.png[0K
+ create mode 100644 docs/articles/composits_files/figure-html/multivariate1-8.png[0K
+ create mode 100644 docs/articles/composits_files/figure-html/multivariate1-9.png[0K
+ create mode 100644 docs/articles/composits_files/kePrint-0.0.1/kePrint.js[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-1.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-10.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-11.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-12.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-13.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-14.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-15.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-16.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-17.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-18.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-19.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-2.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-20.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-21.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-22.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-23.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-24.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-25.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-26.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-27.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-28.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-29.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-3.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-30.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-31.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-32.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-33.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-4.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-5.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-6.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-7.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-8.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble-9.png[0K
+ create mode 100644 docs/reference/animate_ts_ensemble.html[0K
+ create mode 100644 docs/reference/draw_table_html.html[0K
+ create mode 100644 docs/reference/plot_biplot-1.png[0K
+ create mode 100644 docs/reference/plot_biplot-2.png[0K
+ create mode 100644 docs/reference/plot_biplot.html[0K
+ create mode 100644 docs/reference/plot_decomposed-1.png[0K
+ create mode 100644 man/draw_table_html.Rd[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K[48G[?25h[?25l
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
+ [0;31m! [rejected]       [0m master -> master (fetch first)[0K
+[0;31merror: failed to push some refs to 'https://github.com/sevvandi/composits.git'[0m[0K
+[0K[?25h[0;33mhint: Updates were rejected because the remote contains work that you do[0m[0K[?25l
+[0;33mhint: not have locally. This is usually caused by another repository pushing[0m[0K
+[0;33mhint: to the same ref. You may want to first integrate the remote changes[0m[0K
+[0;33mhint: (e.g., 'git pull ...') before pushing again.[0m[0K
+[0;33mhint: See the 'Note about fast-forwards' in 'git push --help' for details.[0m[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Kl[0Kl[0K[12G[?25l$ git pull o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git pull origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hremote: Enumerating objects: 22, done.[0K[?25l
+remote: Counting objects: 100% (17/17), done.[0K
+[0K[?25hremote: Compressing objects: 100% (3/3), done.[0K[?25l
+remote: Total 10 (delta 7), reused 10 (delta 7), pack-reused 0[0K
+[0K[?25h[?25lUnpacking objects:  20% (2/10)[0K[1G[?25h[?25lUnpacking objects:  40% (4/10)[0K[1G[?25h[?25lUnpacking objects:  80% (8/10)[0K[1G[?25hUnpacking objects: 100% (10/10), done.[0K[?25l
+[0K[?25hFrom https://github.com/sevvandi/composits[0K[?25l
+ * branch            master     -> FETCH_HEAD[0K
+   38d9e08..dfc7a2f  master     -> origin/master[0K
+[0K[?25hAuto-merging R/plot_decomposed.R[0K[?25l
+Auto-merging NAMESPACE[0K
+Auto-merging DESCRIPTION[0K
+[0K[?25hMerge made by the 'recursive' strategy.[0K[?25l
+[0K[?25h DESCRIPTION                |  4 [0;32m++[0;31m--[0m[0K[?25l
+ NAMESPACE                  |  1 [0;32m+[0m[0K
+ R/plot_decomposed.R        | 53 [0;32m+++++++++++++++++++++++++++++++++++++++++++++[0;31m-[0m[0K
+ man/plot_decomposed.Rd     |  3 [0;32m++[0;31m-[0m[0K
+ man/plot_decomposed_all.Rd | 19 [0;32m+++++++++++++++++[0m[0K
+ 5 files changed, 76 insertions(+), 4 deletions(-)[0K
+ create mode 100644 man/plot_decomposed_all.Rd[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git pull origin master[0K[?25h[?25l$[0K[3G[?25h[?25l$ R[0K[?25h[?25l$[0K[4G[?25h[3G[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Km[0Kposits[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h
