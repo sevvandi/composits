@@ -2,7 +2,7 @@
 #'
 #' @param obj The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.
 #' @param X The data matrix used as input to \code{mv_tsout_ens} (not needed if \code{obj} is output from \code{comp_tsout_ens}).
-#' @param method The decomposition method, choose between "pca" (default), "dobin", "ics" or "ica".
+#' @param method The decomposition method, choose between "pca" (default), "dobin", "ics", "ica" or "all" for complete set of methods.
 #' @return A ggplot showing the time series from the selected decomposition method.
 #'
 #' @importFrom dplyr %>%
@@ -21,6 +21,7 @@
 #'
 #' out1 <- mv_tsout_ens(X, compr=2, fast=FALSE)
 #' plot_decomposed(out1, X = X, method = "pca")
+#' plot_decomposed(out1, X = X, method = "all")
 #'
 #' X <- X/rowSums(X)
 #' out2 <- comp_tsout_ens(X, compr=2, fast=FALSE)
@@ -28,6 +29,9 @@
 #'
 #' @export
 plot_decomposed <- function(obj, X = NULL, method = "pca"){
+  if(method == "all"){
+    return(plot_decomposed_all(obj, X))
+  }
   # initial check that loadings for requested method are in obj
   loading_mat <- obj[[paste0(method, "_loadings")]]
   if(! is.matrix(loading_mat)){
@@ -134,4 +138,51 @@ plot_biplot <- function(obj, X = NULL, method = "pca"){
     ggplot2::theme_bw() +
     ggplot2::coord_fixed() +
     ggplot2::theme(legend.position = "none")
+}
+
+#' Plot all decomposed time series from comp_tsout_ens or mv_tsout_ens output.
+#'
+#' @param obj The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.
+#' @param X The data matrix used as input to \code{mv_tsout_ens} (not needed if \code{obj} is output from \code{comp_tsout_ens}).
+#' @return A ggplot showing the time series with facets by decomposition method.
+#'
+#' @importFrom dplyr %>%
+#' @importFrom rlang .data
+#' @export
+plot_decomposed_all <- function(obj, X = NULL){
+  # for comp_tsout_ens we can get data from obj$comp_coords
+  # otherwise data needs to be passe in as matrix X
+  if(is.null(obj$comp_coords)){
+    if(is.null(X)){
+      print(paste0("Error: need data matrix X to plot mv_tsout_ens output."))
+      return(NULL)
+    }
+  }
+  else{
+    X <- obj$comp_coords
+  }
+  ncomp <- ncol(obj$pca_loadings)
+  ts_pca <- as.matrix(X) %*% obj$pca_loadings
+  colnames(ts_pca) <- paste0("pca", 1:ncomp)
+  ts_dobin <- as.matrix(X) %*% obj$dobin_loadings
+  colnames(ts_dobin) <- paste0("dobin", 1:ncomp)
+  ts_ica <- as.matrix(X) %*% obj$ica_loadings
+  colnames(ts_ica) <- paste0("ica", 1:ncomp)
+  if (!is.null(obj$ics_loadings)){
+    ts_ics <- as.matrix(X) %*% obj$ics_loadings
+    colnames(ts_ics) <- paste0("ics", 1:ncomp)
+  }
+  else ts_ics <- NULL
+
+  tibble::as_tibble(cbind(ts_pca, ts_dobin, ts_ica, ts_ics)) %>%
+    dplyr::mutate(t = 1:length(ts_pca[,1])) %>%
+    tidyr::pivot_longer(-.data$t,
+                 names_to = c("method", "component"),
+                 names_pattern = "(?<Alpha>[a-zA-Z]*)(?<Numeric>[0-9]*)",
+                 values_to = "value") %>%
+    ggplot2::ggplot(ggplot2::aes(x = .data$t, y = .data$value, color = .data$component)) +
+    ggplot2::geom_line() +
+    ggplot2::geom_vline(xintercept = obj$outliers[,"Indices"], color="red", alpha=0.8, size=0.1) +
+    ggplot2::facet_wrap(~.data$method, ncol = 2, scales = "free") +
+    ggplot2::theme_bw()
 }
