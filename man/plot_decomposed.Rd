@@ -11,7 +11,7 @@ plot_decomposed(obj, X = NULL, method = "pca")
 
 \item{X}{The data matrix used as input to \code{mv_tsout_ens} (not needed if \code{obj} is output from \code{comp_tsout_ens}).}
 
-\item{method}{The decomposition method, choose between "pca" (default), "dobin", "ics" or "ica".}
+\item{method}{The decomposition method, choose between "pca" (default), "dobin", "ics", "ica" or "all" for complete set of methods.}
 }
 \value{
 A ggplot showing the time series from the selected decomposition method.
@@ -32,6 +32,7 @@ X <- cbind.data.frame(x, x2, x3, x4)
 
 out1 <- mv_tsout_ens(X, compr=2, fast=FALSE)
 plot_decomposed(out1, X = X, method = "pca")
+plot_decomposed(out1, X = X, method = "all")
 
 X <- X/rowSums(X)
 out2 <- comp_tsout_ens(X, compr=2, fast=FALSE)
