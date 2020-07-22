@@ -53,3 +53,16 @@ ggplot(ts_wool, aes(x=t, y=value)) +
   geom_vline(xintercept =as.numeric(inds), color="red", alpha=0.8, size=0.1, linetype ='dashed') + ylab("Woollen Yarn Production") + 
   theme_bw()
 ```
+
+
+## Multivariate time series outliers
+This example includes EU stock market data from the package *datasets*. It contains the daily closing prices of 4 European stock indices: Germany DAX, Switzerland SMI, France CAC, and UK FTSE. 
+
+```{r multivariate1}
+stpart <- EuStockMarkets[1:600, ]
+out <- mv_tsout_ens(stpart, fast=TRUE)
+out$outliers
+draw_table_html(out)
+# plot_decomposed(obj=out, X = stpart)
+animate_ts_ensemble(out, X= stpart,  max_frames = 1)
+```

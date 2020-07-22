@@ -54,7 +54,7 @@ plot_decomposed <- function(obj, X = NULL, method = "pca"){
   ggplot2::ggplot(ts_proj, ggplot2::aes(x=.data$t, y=.data$value)) +
     ggplot2::geom_line() +
     ggplot2::geom_vline(xintercept = obj$outliers[,"Indices"], color="red", alpha=0.8, size=0.1) +
-    ggplot2::facet_wrap(~.data$name, ncol = 2) +
+    ggplot2::facet_wrap(~name, ncol = 2) +  #  ggplot2::facet_wrap(~.data$name, ncol = 2) +
     ggplot2::theme_bw()
 }
 

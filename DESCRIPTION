@@ -34,8 +34,9 @@ Imports:
     gridExtra,
     grid,
     ggplot2,
-    tidyr
-RoxygenNote: 7.1.0
+    tidyr,
+    kableExtra
+RoxygenNote: 7.1.1
 Suggests: 
     knitr,
     rmarkdown,

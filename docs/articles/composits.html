@@ -60,7 +60,7 @@
 
       
 
-      </header><script src="composits_files/header-attrs-2.1/header-attrs.js"></script><div class="row">
+      </header><script src="composits_files/header-attrs-2.1/header-attrs.js"></script><script src="composits_files/kePrint-0.0.1/kePrint.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1>Introduction to composits</h1>
@@ -116,12 +116,12 @@
 <span id="cb2-14"><a href="#cb2-14"></a><span class="co">#&gt; Don't know how to automatically pick scale for object of type ts. Defaulting to continuous.</span></span></code></pre></div>
 <p><img src="composits_files/figure-html/univaraite1-1.png" width="700"></p>
 <p>The red dashed vertical lines show the time points that have been picked by 3 or more outlier detection methods.</p>
-<p>Next we look at the quarterly production of woollen yarn in Australia. This time series is also from the R package <em>forecast</em>.</p>
+<p>Next we look at the quarterly production of woollen yarn in Australia. This time series is also taken from the R package <em>forecast</em>.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>out &lt;-<span class="st"> </span><span class="kw"><a href="../reference/uv_tsout_ens.html">uv_tsout_ens</a></span>(woolyrnq)</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="co">#&gt; trend = 15 days</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co">#&gt; trend = 22 days</span></span>
 <span id="cb3-6"><a href="#cb3-6"></a>inds &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/names.html">names</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/which.html">which</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/table.html">table</a></span>(out<span class="op">$</span>outliers) <span class="op">&gt;</span><span class="st"> </span><span class="dv">2</span>))</span>
 <span id="cb3-7"><a href="#cb3-7"></a></span>
 <span id="cb3-8"><a href="#cb3-8"></a>ts_wool &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/reexports.html">as_tibble</a></span>(woolyrnq) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">t =</span> <span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(woolyrnq)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rename</span>(<span class="dt">value =</span> x)</span>
@@ -132,6 +132,288 @@
 <span id="cb3-13"><a href="#cb3-13"></a><span class="co">#&gt; Don't know how to automatically pick scale for object of type ts. Defaulting to continuous.</span></span></code></pre></div>
 <p><img src="composits_files/figure-html/univariate2-1.png" width="700"></p>
 </div>
+<div id="multivariate-time-series-outliers" class="section level2">
+<h2 class="hasAnchor">
+<a href="#multivariate-time-series-outliers" class="anchor"></a>Multivariate time series outliers</h2>
+<p>This example includes EU stock market data from the package <em>datasets</em>. It contains the daily closing prices of 4 European stock indices: Germany DAX, Switzerland SMI, France CAC, and UK FTSE.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>stpart &lt;-<span class="st"> </span>EuStockMarkets[<span class="dv">1</span><span class="op">:</span><span class="dv">600</span>, ]</span>
+<span id="cb4-2"><a href="#cb4-2"></a>out &lt;-<span class="st"> </span><span class="kw"><a href="../reference/mv_tsout_ens.html">mv_tsout_ens</a></span>(stpart, <span class="dt">fast=</span><span class="ot">TRUE</span>)</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb4-20"><a href="#cb4-20"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb4-21"><a href="#cb4-21"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb4-22"><a href="#cb4-22"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb4-23"><a href="#cb4-23"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb4-24"><a href="#cb4-24"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb4-25"><a href="#cb4-25"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb4-26"><a href="#cb4-26"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb4-27"><a href="#cb4-27"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb4-28"><a href="#cb4-28"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb4-29"><a href="#cb4-29"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb4-30"><a href="#cb4-30"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb4-31"><a href="#cb4-31"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb4-32"><a href="#cb4-32"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb4-33"><a href="#cb4-33"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb4-34"><a href="#cb4-34"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb4-35"><a href="#cb4-35"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb4-36"><a href="#cb4-36"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb4-37"><a href="#cb4-37"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb4-38"><a href="#cb4-38"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb4-39"><a href="#cb4-39"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb4-40"><a href="#cb4-40"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb4-41"><a href="#cb4-41"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb4-42"><a href="#cb4-42"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb4-43"><a href="#cb4-43"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb4-44"><a href="#cb4-44"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb4-45"><a href="#cb4-45"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb4-46"><a href="#cb4-46"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb4-47"><a href="#cb4-47"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb4-48"><a href="#cb4-48"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb4-49"><a href="#cb4-49"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb4-50"><a href="#cb4-50"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb4-51"><a href="#cb4-51"></a>out<span class="op">$</span>outliers</span>
+<span id="cb4-52"><a href="#cb4-52"></a><span class="co">#&gt;    Indices Total_Score Num_Coords Num_Methods     DOBIN       PCA</span></span>
+<span id="cb4-53"><a href="#cb4-53"></a><span class="co">#&gt; 11      36      1.6928          3           3 0.5460645 0.6552774</span></span>
+<span id="cb4-54"><a href="#cb4-54"></a><span class="co">#&gt; 20     205      0.8160          3           2 0.2733508 0.4059739</span></span>
+<span id="cb4-55"><a href="#cb4-55"></a><span class="co">#&gt; 32     316      1.4400          3           2 0.4710592 0.6156465</span></span>
+<span id="cb4-56"><a href="#cb4-56"></a><span class="co">#&gt; 41     331      1.5008          3           3 0.2728727 0.4093091</span></span>
+<span id="cb4-57"><a href="#cb4-57"></a><span class="co">#&gt;          ICA forecast tsoutliers otsad anomalize Gap_Score_1</span></span>
+<span id="cb4-58"><a href="#cb4-58"></a><span class="co">#&gt; 11 0.4914581        0      1.248 0.320    0.1248           2</span></span>
+<span id="cb4-59"><a href="#cb4-59"></a><span class="co">#&gt; 20 0.1366754        0      0.624 0.192    0.0000           0</span></span>
+<span id="cb4-60"><a href="#cb4-60"></a><span class="co">#&gt; 32 0.3532944        0      1.248 0.192    0.0000           1</span></span>
+<span id="cb4-61"><a href="#cb4-61"></a><span class="co">#&gt; 41 0.8186182        0      1.248 0.128    0.1248           1</span></span>
+<span id="cb4-62"><a href="#cb4-62"></a><span class="kw">draw_table_html</span>(out)</span></code></pre></div>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; overflow-x: scroll; width:1000px; ">
+<table class="table table table-striped">
+<thead><tr>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Indices
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+DOBIN
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+PCA
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+ICA
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Num_Coords
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+forecast
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+tsoutliers
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+otsad
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+anomalize
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Num_Methods
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Gap_Score_1
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Total_Score
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+inds
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.55</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.66</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.49</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">1.25</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.32</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.12</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: pink !important;">1.69</span>
+</td>
+<td style="text-align:left;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+331
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.27</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.41</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.82</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">1.25</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.13</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.12</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.5</span>
+</td>
+<td style="text-align:left;">
+41
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+316
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.47</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.62</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.35</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">1.25</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.19</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.44</span>
+</td>
+<td style="text-align:left;">
+32
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+205
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.27</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.41</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.14</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.62</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.19</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0.82</span>
+</td>
+<td style="text-align:left;">
+20
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># plot_decomposed(obj=out, X = stpart)</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="kw"><a href="../reference/animate_ts_ensemble.html">animate_ts_ensemble</a></span>(out, <span class="dt">X=</span> stpart,  <span class="dt">max_frames =</span> <span class="dv">1</span>)</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co">#&gt; Using half_range 1.1</span></span></code></pre></div>
+<p><img src="composits_files/figure-html/multivariate1-1.png" width="700"><img src="composits_files/figure-html/multivariate1-2.png" width="700"></p>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -141,6 +423,7 @@
 <a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
 <li><a href="#univariate-time-series-outliers">Univariate time series outliers</a></li>
+      <li><a href="#multivariate-time-series-outliers">Multivariate time series outliers</a></li>
       </ul>
 </div>
       </div>

@@ -1,777 +1,4 @@
 
-$[0K[3G[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[1A[?25h[?25l
-
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0m[0K[1A[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h[?25l.[0K[7G[?25h[8G[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K[?25h[?25l
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kp[0Ko[0Ksits[0K[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
-[0K[?25h* checking for empty or unneeded directories[0K[?25l
-* building 'composits_0.0.0.9000.tar.gz'[0K
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD I[0K[?25hN[0KS[0KT[0KA[0KL[0KL[0K[17G[?25l$ R CMD INSTALL c[0K[?25ho[0Km[0Kposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[45G[?25l
-[0K[?25h* installing to library 'C:/Users/Sevvandi/Documents/R/win-library/3.6'[0K[?25l
-[0K[?25h* installing *source* package 'composits' ...[0K[?25l
-[0K[?25h** using staged installation[0K[?25l
-[0K[?25h** R[0K[?25l
-[0K[?25h** byte-compile and prepare package for lazy loading[0K[?25l
-[0K[?25h** help[0K[?25l
-[0K[?25h*** installing help indices[0K[?25l
-[0K[?25h  converting help for package 'composits'[0K[?25l
-    finding HTML links ...[0K[?25h done[0K[?25l
-    get_coords                              html[0K[51G[?25h[?25l
-    mv_tsout_ens                            html[0K[51G[?25h[?25l
-    uv_tsout_ens                            h[0K[43G[?25h[?25l    uv_tsout_ens                            html[0K[51G[?25h[?25l
-** building package indices[0K
-[0K[?25h** testing if installed package can be loaded from temporary location[0K[?25l
-*** arch - i386[0K
-[0K[?25h*** arch - x64[0K[?25l
-[0K[?25h** testing if installed package can be loaded from final location[0K[?25l
-*** arch - i386[0K
-[0K[?25h*** arch - x64[0K[?25l
-[0K[?25h** testing if installed package keeps a record of temporary installation path[0K[?25l
-[0K[?25h* DONE (composits)[0K[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0K[?25lt[0K[5G[?25h[6G[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0K[?25hfatal: not a git repository (or any of the parent directories): .git[0K[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Kmposits[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0K[?25ld[0K[9G[?25h[10G[11G[?25l$ git add .[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[7G[?25h[8G[?25l$ git co[0K[?25hm[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25hu[0Kp[0Kd[0Ka[0Kt[0Ke[0K[25G[?25l$ git commit -m "update r[0K[?25he[0Ka[0Kd[0Km[0Ke[0K[?25l"[0K[31G[?25h[32G[?25l
-[0K[?25h[master 0bcb7c8] update readme[0K[?25l
- 4 files changed, 139 insertions(+), 6 deletions(-)[0K
- rewrite .Rproj.user/F9A5C86C/console06/INDEX001 (70%)[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[19G[?25h[20G[?25l$ git push origin ma[0K[?25hs[0Kt[0Ke[0Kr[0K[?25l
-[0K[?25hEnumerating objects: 17, done.[0K[?25l
-Counting objects: 100% (17/17), done.[0K
-Delta compression using up to 4 threads.[0K
-Compressing objects: 100% (9/9), done.[0K
-Writing objects: 100% (9/9), 1.95 KiB | 499.00 KiB/s, done.[0K
-Total 9 (delta 5), reused 0 (delta 0)[0K
-[0K[?25h[?25lremote: Resolving deltas:  80% (4/5)[0K[1G[?25hremote: Resolving deltas: 100% (5/5), completed with 5 local objects.[0K[?25l
-[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
-   bd232ec..0bcb7c8  master -> master[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Kl[0Kl[0K[12G[?25l$ git pull o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git pull origin m[0K[?25ha[0Ks[0Kt[0Ker[0K[?25l
-[0K[?25hFrom https://github.com/sevvandi/composits[0K[?25l
- * branch            master     -> FETCH_HEAD[0K
-[0K[?25hAlready up to date.[0K[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kp[0Ko[0Ks[0Ki[0Kt[0Ks[0K[?25l
-[0K[?25h[?25l* checking for file '[0K[19G[?25h[?25l* checking for file 'composits/DESCRIPTION' ... OK[0K
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION meta[0K[26G[?25h[?25l* checking DESCRIPTION meta-information ... OK[0K
-[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
-* checkin[0K[8G[?25h[?25l* checking for empty or unneeded directories[0K
-* building 'composits_0.0.0.9000.tar.gz'[0K
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25hh[0Ke[0K[?25lc[0K[12G[?25h[13G[?25l$ R CMD check[0K[?25h[15G[?25l$ R CMD check c[0K[?25ho[0Km[0Kposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[43G[?25l
-[0K[?25h[?25l* using log directory 'C[0K[23G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K
-* usi[0K[3G[?25h[?25l* using R version 3.6.1 (2019-07-05)[0K
-* using platform: x86_64-w64-mingw32[0K[35G[?25h[?25l* using platform: x86_64-w64-mingw32 (64-bit)[0K
-* using session charset: ISO8859-1[0K
-[0K[?25h[?25l* checking for file '[0K[20G[?25h[?25l* checking for file 'composits/DESCRIPTION' ... OK[0K
-* checking extension type ... Package[0K
-* this is package 'composits' version '0.0.0.9000'[0K
-* package encoding: UTF-8[0K
-* checking package namespace information ...[0K[?25h OK[0K[?25l
-* checking package dependencies ...[0K[?25h OK[0K[?25l
-* checking if this is a source package ... OK[0K
-* checking if there is a namespace ..[0K[36G[?25h[?25l* checking if there is a namespace ... OK[0K
-[0K[?25h* checking for executable files ...[0K OK[0K[?25l
-* checking for hidden files and directories ... OK[0K
-* checking for portable file names ...[0K[?25h OK[0K[?25l
-* checking whether package 'composits' can be installed ...[0K[?25h OK[0K[?25l
-* checki[0K[7G[?25h[?25l* checking installed package size ...[0K[?25h OK[0K[?25l
-* checking package directory ... OK[0K
-* check[0K[6G[?25h[?25l* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-* checking top-level files ... OK[0K
-* checking for left-over files ...[0K[?25h OK[0K[?25l
-* checking index information ... OK[0K
-* checking package subdirectories ...[0K[?25h OK[0K[?25l
-* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
-* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
-* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
-* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking whether the namespace can be lo[0K[41G[?25h[?25l* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
-* checking depe[0K[14G[?25h[?25l* checking dependencies in R code ...[0K[?25h OK[0K[?25l
-* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
-* checking replacement functions ...[0K[?25h OK[0K[?25l
-* checking foreign function calls ...[0K[?25h OK[0K[?25l
-* checking R[0K[10G[?25h[?25l* checking R code for possible problems ...[0K[?25h OK[0K[?25l
-* checking Rd f[0K[13G[?25h[?25l* checking Rd files ...[0K[?25h OK[0K[?25l
-* checking Rd metadata ...[0K[25G[?25h[27G[?25l* checking Rd metadata ... OK[0K
-* checking Rd cross-references ...[0K[?25h OK[0K[?25l
-* checking for missing documentation entr[0K[40G[?25h[?25l* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
-* checking fo[0K[13G[?25h[?25l* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
-* checking Rd[0K[13G[?25h[?25l* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
-* checking Rd contents ...[0K[?25h OK[0K[?25l
-* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
-* checki[0K[7G[?25h[?25l* checking examples ...[0K[?25h[?25l OK[0K[26G[?25h[?25l
-* checking PDF version of manual ...[0K[?25h OK[0K[?25l
-* DONE[0K
-[0K
-Status: OK[0K
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[6G[?25h[7G[?25l$ cd co[0K[?25hm[0Kposits[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
-error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
-fatal: updating files failed[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
-[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
-error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
-fatal: updating files failed[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K[20G[?25h[?25l
-$[0K[3G[?25h[?25l$ git add .[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/INDEX.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25ha[0Kd[0Kd[0K[22G[?25l$ git commit -m "add f[0K[?25hu[0Kn[0Kc[0Kt[0Ki[0Ko[0Kn[0K[31G[?25l$ git commit -m "add function comp_tsout_ens[0K[?25h"[0K[?25l
-[0K[?25h[master efa1ccb] add function comp_tsout_ens[0K[?25l
- 8 files changed, 225 insertions(+), 270 deletions(-)[0K
- rewrite .Rproj.user/F9A5C86C/console06/INDEX001 (84%)[0K
- create mode 100644 R/composite_tsout_ensemble.R[0K
- create mode 100644 man/comp_tsout_ens.Rd[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[?25ha[0Ks[0Kt[0K[?25le[0K[23G[?25h[24G[?25l$ git push origin master[0K[?25h[?25l
-[0K[?25hEnumerating objects: 30, done.[0K[?25l
-Counting objects: 100% (30/30), done.[0K
-Delta compression using up to 4 threads.[0K
-Compressing objects: 100% (16/16), done.[0K
-Writing objects: 100% (17/17), 6.41 KiB | 1.28 MiB/s, done.[0K
-Total 17 (delta 9), reused 0 (delta 0)[0K
-[0K[?25h[?25lremote: Resolving deltas:  55% (5/9)[0K[1G[?25hremote: Resolving deltas: 100% (9/9), completed with 8 local objects.[0K[?25l
-[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
-   0bcb7c8..efa1ccb  master -> master[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ p[0K[?25hw[0Kd[0K[?25l
-/c/Users/Sevvandi/Documents/repos/composits[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K[21G[?25h[?25l
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kposits[0K[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION meta-information ... OK[0K
-[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
-* checking for empty or unneeded directories[0K
-[0K[?25h* building 'composits_0.0.0.9000.tar.gz'[0K[?25l
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25hh[0Ke[0Kc[0Kk[0K[15G[?25l$ R CMD check c[0K[?25ho[0Kmposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[43G[?25l
-[0K[?25h* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K[?25l
-* using R[0K[7G[?25h[?25l* using R version 3.6.1 (2019-07-05)[0K
-* using platform: x86_64-w64-mingw32 (64-bit)[0K
-* using session charset: ISO8859-1[0K
-[0K[?25h* checking for file 'composits/DESCRIPTION' ...[0K OK[0K[?25l
-* checking extension type ... Package[0K
-* this is package 'composits' version '0.0.0.9000'[0K
-[0K[?25h* package encoding: UTF-8[0K[?25l
-* checking package namespace information ... OK[0K
-* checking package dependencies ...[0K[?25h OK[0K[?25l
-* checking if this is a source package ... OK[0K
-* checking if there is a namespa[0K[31G[?25h[?25l* checking if there is a namespace ... OK[0K
-[0K[?25h[?25l* checking for executable files[0K[31G[?25h[?25l* checking for executable files ...[0K[?25h OK[0K[?25l
-* checking for hidden files and directories ...[0K[?25h OK[0K[?25l
-* checking for portable[0K[23G[?25h[?25l* checking for portable file names ... OK[0K
-[0K[?25h* checking whether package 'composits' can be installed ...[0K OK[0K[?25l
-* checking installed package size ...[0K[?25h[?25l OK[0K[39G[?25h[?25l
-* checking package directory ... OK[0K
-* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-* checking top-level files ... OK[0K
-* checking for left-over files ... OK[0K
-* check[0K[6G[?25h[?25l* checking index information ... OK[0K
-* checking package subdirectories ...[0K[?25h OK[0K[?25l
-* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
-* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
-* checking whether the package can be loaded ...[0K[48G[?25h[49G[?25l* checking whether the package can be loaded ... OK[0K
-* checking whether the package can be[0K[35G[?25h[?25l* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking whether the namespace can be[0K[38G[?25h[?25l* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the namespace c[0K[32G[?25h[?25l* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking loading without being on the l[0K[39G[?25h[?25l* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
-* checking dependencies in R code ...[0K[?25h OK[0K[?25l
-* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
-* checking replacement functions ...[0K[?25h OK[0K[?25l
-* checking foreign[0K[17G[?25h[?25l* checking foreign function calls ...[0K[?25h[?25l O[0K[38G[?25h[?25l* checking foreign function calls ... OK[0K
-* checking R code for possible problems ...[0K[?25h OK[0K[?25l
-* checking Rd files ...[0K[?25h OK[0K[?25l
-* checking Rd metadata ...[0K[?25h OK[0K[?25l
-* checking Rd cross-references ...[0K[?25h OK[0K[?25l
-* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
-* checking for code/docume[0K[25G[?25h[?25l* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
-* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
-* checking Rd contents ...[0K[?25h OK[0K[?25l
-* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
-* chec[0K[5G[?25h[?25l* checking examples ..[0K[22G[?25h[?25l* checking examples ...[0K[?25h OK[0K[?25l
-* checking PDF ver[0K[17G[?25h[?25l* checking PDF version of manual ...[0K[?25h OK[0K[?25l
-* DONE[0K
-[0K[?25h[?25l
-Status: OK[0K
-[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Km[0Kp[0Ko[0Ksits[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l$ git add[0K[11G[?25h[10G[?25l$ git ad[0K[?25h[?25l$ gi[0K[?25h[?25l$[0K[4G[?25h[3G[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kposits[0K[?25l
-[0K[?25h[?25l* checking for f[0K[15G[?25h[?25l* checking for file 'composits/DESCRIPTION' ... OK[0K
-[0K[?25h* preparing 'composits':[0K[?25l
-* che[0K[3G[?25h[?25l* checking DESCRIPTION meta-information ... OK[0K
-[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
-* checking for empty or unneeded directories[0K
-* building 'composits_0.0.0.9000.tar.gz'[0K
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R CMD build composits[0K[?25h[?25l$ cd ..[0K[?25h[?25l$ cd composits[0K[?25h[?25l$ cd ..[0K[?25h[?25l$ R CMD build composits[0K[?25h[?25l$ cd ..[0K[?25h[?25l$ cd composits[0K[?25h[?25l$ R CMD check composits_0.0.0.9000.tar.gz[0K[43G[?25h[?25l
-[0K[?25h[?25l* using log director[0K[19G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/compos[0K[63G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K
-* using R version 3.6.1 (2019-07-05)[0K
-* using platform: x86_64-w64-mingw3[0K[34G[?25h[?25l* using platform: x86_64-w64-mingw32 (64-bit)[0K
-* using session charset: ISO8859-1[0K
-[0K[?25h[?25l* checking for file 'composits/DESCRIPTION' ... OK[0K[49G[?25h[?25l
-* checking extension type ... Package[0K
-* this is package 'composits' version '0.0.0.9000'[0K
-* package encoding: UTF-8[0K
-* checking package namespace information ...[0K[?25h OK[0K[?25l
-* checking package dependencies ...[0K[?25h OK[0K[?25l
-* checking if this is a source package[0K[38G[?25h[?25l* checking if this is a source package ... OK[0K
-* checking if there is a namespace ... OK[0K
-[0K[?25h* checking for executable files ...[0K OK[0K[?25l
-* checking for hidden files and directories ... OK[0K
-* checking for portable file names ...[0K[?25h OK[0K[?25l
-* checking whether package 'composits' can be installed ...[0K[?25h OK[0K[?25l
-* checking installed package size ...[0K[?25h[?25l OK[0K[39G[?25h[?25l
-* checking package directory ... OK[0K
-* checking DE[0K[?25hSCRIPTION meta-information ...[0K OK[0K[?25l
-* checking top-level files ... OK[0K
-* checking for left-over files ... OK[0K
-* checking index information ...[0K[?25h OK[0K[?25l
-* checking package subdirectories ...[0K[?25h OK[0K[?25l
-* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
-* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
-* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
-* checking whether the package can be loaded with stated depen[0K[61G[?25h[?25l* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the package can b[0K[34G[?25h[?25l* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking whether the n[0K[23G[?25h[?25l* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether[0K[16G[?25h[?25l* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking loadin[0K[16G[?25h[?25l* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
-* checking dependencies in R code ...[0K[?25h OK[0K[?25l
-* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
-* checking replacement functions ...[0K[?25h OK[0K[?25l
-* checking foreign function calls ...[0K[?25h OK[0K[?25l
-* checking R code for possible problems ...[0K[?25h OK[0K[?25l
-* checking Rd files ...[0K[?25h OK[0K[?25l
-* checking Rd metadata ...[0K[?25h OK[0K[?25l
-* checking Rd cross-references ...[0K[?25h OK[0K[?25l
-* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
-* checking for code/documentat[0K[29G[?25h[?25l* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
-* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
-* checking Rd contents ...[0K[?25h OK[0K[?25l
-* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
-* checking examples ...[0K[?25h OK[0K[?25l
-[0K[?25h* checking PDF version of manual ...[0K OK[0K[?25l
-* D[0K[2G[?25h[?25l* DONE[0K
-[0K
-Status: OK[0K
-[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd r[0K[?25he[0K[?25l
-bash: cd: re: No such file or directory[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd r[0K[?25he[0Kp[0Ko[0Ks[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Km[0Kp[0Ko[0Ksits[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
-error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
-fatal: updating files failed[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
-[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
-error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
-fatal: updating files failed[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/INDEX.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25ha[0Kd[0Kd[0K[22G[?25l$ git commit -m "add a[0K[?25hp[0Ko[0Ko[0Kr[0Kt[0Ki[0K[?25l$ git commit -m "add apoort[0K[29G[?25h[28G[?25l$ git commit -m "add apoor[0K[?25h[?25l$ git commit -m "add apoo[0K[?25h[?25l$ git commit -m "add apo[0K[?25h[?25l$ git commit -m "add ap[0K[?25hp[0Ko[0Kr[0Kt[0Ki[0Ko[0Kn[0K[32G[?25l$ git commit -m "add apportion s[0K[?25hc[0Ko[0Kr[0Ke[0Ks[0K[39G[?25l$ git commit -m "add apportion scores f[0K[39G[?25h[40G[?25l$ git commit -m "add apportion scores fu[0K[?25hn[0Kc[0Kt[0Ki[0Ko[0Kn[0Ka[0Kl[0Ki[0Kt[0Ky[0K"[0K[?25l
-[0K[?25h[master 1844bce] add apportion scores functionality[0K[?25l
- 7 files changed, 359 insertions(+)[0K
- create mode 100644 R/apportion_scores_comp.R[0K
- create mode 100644 R/apportion_scores_multivariate.R[0K
- create mode 100644 man/apportion_scores_comp.Rd[0K
- create mode 100644 man/apportion_scores_mv.Rd[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0K[?25l$ git co[0K[?25h[?25l$ git c[0K[?25h[?25l$ git[0K[7G[?25h[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
-[0K[?25hEnumerating objects: 27, done.[0K[?25l
-Counting objects:  92% (25/27)[0K[2G[?25h[?25lCounting objects: 100% (27/27), done.[0K
-Delta compression using up to 4 threads.[0K
-Compressing objects: 100% (15/15), done.[0K
-Writing objects: 100% (16/16), 3.75 KiB | 639.00 KiB/s, done.[0K
-Total 16 (delta 7), reused 0 (delta 0)[0K
-[0K[?25hremote: Resolving deltas: 100% (7/7), completed with 5 local objects.[0K[?25l
-[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
-   efa1ccb..1844bce  master -> master[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[?25l$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kp[0Ko[0Ks[0Ki[0Kt[0Ks[0K[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ...[0K OK[0K[?25l
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
-* ch[0K[2G[?25h[?25l* checking for empty or unneeded directories[0K
-* building 'composits_0.0.0.9000.tar.gz'[0K
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25hh[0Ke[0Kc[0Kk[0K[15G[?25l$ R CMD check c[0K[?25ho[0Km[0Kposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[43G[?25l
-[0K[?25h* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K[?25l
-* using R version 3.6.1 (2019-07-05)[0K
-* using platform: x86_64-w64-mingw32 (64-bit)[0K
-* using session charset: ISO8859-1[0K
-[0K[?25h[?25l* checkin[0K[8G[?25h[?25l* checking for file 'composits/DESCRIPTION' ... OK[0K
-* checking extension type ... Package[0K
-* this is package 'composits' version '0.0.0.9000'[0K
-* package encoding: UTF-8[0K
-* checking package namespace information ...[0K[?25h OK[0K[?25l
-* checking package dependencies ...[0K[?25h OK[0K[?25l
-* checking if this is a source package[0K[38G[?25h[?25l* checking if this is a source package ... OK[0K
-* checking if there is a namespace ... OK[0K
-[0K[?25h[?25l* checking for executable files[0K[31G[?25h[?25l* checking for executable files ...[0K[?25h OK[0K[?25l
-* checking for hidden files and directories ... OK[0K
-* ch[0K[2G[?25h[?25l* checking for portable file names ... OK[0K
-* checking whether package 'composits' can be installed ...[0K[?25h OK[0K[?25l
-* checking installed package size ...[0K[?25h OK[0K[?25l
-* checking package directory ... OK[0K
-* checking DESCRIPTION[0K[22G[?25h[?25l* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-* checking top-level files ... OK[0K
-* checking for left-over files ... OK[0K
-* checking index information ... OK[0K
-* checking[0K[9G[?25h[?25l* checking package subdirectories ...[0K[?25h OK[0K[?25l
-* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
-* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
-* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
-* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the package can b[0K[34G[?25h[?25l* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking lo[0K[12G[?25h[?25l* checking loading without being on the library search pa[0K[56G[?25h[?25l* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
-* checking dependencies in R code ...[0K[?25h OK[0K[?25l
-* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
-* checking replacement functions ...[0K[?25h OK[0K[?25l
-* checking foreign function calls ...[0K[?25h OK[0K[?25l
-* checking R c[0K[13G[?25h[?25l* checking R code for possible problems ...[0K[?25h OK[0K[?25l
-* checking Rd files ...[0K[?25h[?25l OK[0K[24G[?25h[?25l
-* checking Rd metadata ...[0K[?25h OK[0K[?25l
-* checking Rd cross-references ...[0K[?25h OK[0K[?25l
-* checking for missing documentation[0K[34G[?25h[?25l* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
-* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
-* checking Rd[0K[13G[?25h[?25l* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
-* checking Rd contents ...[0K[?25h OK[0K[?25l
-* checking for[0K[13G[?25h[?25l* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
-* checking[0K[9G[?25h[?25l* checking examples ...[0K[?25h OK[0K[?25l
-* checking PDF version of manual ...[0K[?25h OK[0K[?25l
-* DONE[0K
-[0K
-Status: OK[0K
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Km[0Kposits[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/INDEX.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K[1G[?25h[?25l
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25ha[0Kd[0Kd[0K[22G[?25l$ git commit -m "add d[0K[?25h[?25l$ git commit -m "add[0K[23G[?25h[22G[?25l$ git commit -m "add f[0K[?25hu[0Kn[0Kc[0Kt[0Ki[0Ko[0Kn[0K[31G[?25l$ git commit -m "add function d[0K[?25hr[0Ka[0Kw[0K_[0Kt[0Ka[0Kb[0Kl[0Ke[0K[42G[?25l$ git commit -m "add function draw_table a[0K[?25hn[0Kd[0K[46G[?25l$ git commit -m "add function draw_table and c[0K[?25hh[0Ke[0Kc[0Kk[0Ke[0Kd[0K"[0K[?25l
-[0K[?25h[master 1e23969] add function draw_table and checked[0K[?25l
- 8 files changed, 246 insertions(+), 4 deletions(-)[0K
- create mode 100644 R/draw_table.R[0K
- create mode 100644 R/utils.R[0K
- create mode 100644 man/draw_table.Rd[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
-[0K[?25hEnumerating objects: 30, done.[0K[?25l
-Counting objects: 100% (30/30), done.[0K
-Delta compression using up to 4 threads.[0K
-Compressing objects:  68% (11/16)[0K[1G[?25hCompressing objects: 100% (16/16), done.[0K[?25l
-Writing objects: 100% (17/17), 3.64 KiB | 745.00 KiB/s, done.[0K
-Total 17 (delta 8), reused 0 (delta 0)[0K
-[0K[?25hremote: Resolving deltas: 100% (8/8), completed with 8 local objects.[0K[?25l
-[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
-   1844bce..1e23969  master -> master[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD I[0K[?25hN[0KS[0KT[0KA[0KL[0KL[0K[17G[?25l$ R CMD INSTALL c[0K[?25ho[0Km[0Kposits.Rproj[0K[33G[32G[?25l$ R CMD INSTALL composits.Rpro[0K[?25h[?25l$ R CMD INSTALL composits.Rpr[0K[?25h[?25l$ R CMD INSTALL composits.Rp[0K[?25h[?25l$ R CMD INSTALL composits.R[0K[?25h[?25l$ R CMD INSTALL composits.[0K[?25h[?25l$ R CMD INSTALL composits[0K[?25h_[0K0[0K[?25l$ R CMD INSTALL composits_[0K[?25h[?25l$ R CMD INSTALL composits[0K[?25h[?25l$ R CMD INSTALL composit[0K[?25h[?25l$ R CMD INSTALL composi[0K[?25h[?25l$ R CMD INSTALL compos[0K[24G[?25h[23G[?25l$ R CMD INSTALL co[0K[20G[?25h[19G[?25l$ R CMD INSTALL c[0K[?25h[?25l$ R CMD INSTALL[0K[?25h[?25l$ R CMD INSTAL[0K[?25h[?25l$ R CMD INSTA[0K[?25h[?25l$ R CMD I[0K[11G[?25h[10G[?25l$ R CMD[0K[9G[?25h[8G[?25l$ R CM[0K[?25h[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD I[0K[?25hN[0KS[0KT[0KA[0K[?25lL[0K[14G[?25h[15G[?25l$ R CMD INSTALL[0K[?25h[17G[?25l$ R CMD INSTALL c[0K[?25ho[0Km[0Kposits.Rproj[0K[33G[32G[?25l$ R CMD INSTALL composits.Rpro[0K[?25h[?25l$ R CMD INSTALL composits.Rpr[0K[?25h[?25l$ R CMD INSTALL composits.R[0K[?25h[?25l$ R CMD INSTALL composits.[0K[?25h[?25l$ R CMD INSTALL composit[0K[?25h[?25l$ R CMD INSTALL composi[0K[?25h[?25l$ R CMD INSTALL compos[0K[?25h[?25l$ R CMD INSTALL comp[0K[?25h[?25l$ R CMD INSTALL com[0K[?25h[?25l$ R CMD INSTALL co[0K[?25h[?25l$ R CMD INSTALL c[0K[?25h[?25l$ R CMD INSTALL[0K[17G[?25h[16G[?25l$ R CMD INSTAL[0K[?25h[?25l$ R CMD INST[0K[?25h[?25l$ R CMD INS[0K[?25h[?25l$ R CMD IN[0K[?25h[?25l$ R CMD[0K[10G[?25h[8G[?25l$ R CM[0K[?25h[?25l$ R C[0K[?25h[?25l$ R[0K[5G[?25h[?25l$[0K[3G[?25h[?25l$ git push origin master[0K[?25h[?25l$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD I[0K[?25hN[0KS[0KT[0KA[0K[?25lL[0K[14G[?25h[15G[?25l$ R CMD INSTALL[0K[?25h[17G[?25l$ R CMD INSTALL c[0K[17G[?25h[18G[?25l$ R CMD INSTALL co[0K[?25hm[0Kposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[45G[?25l
-[0K[?25h[?25l* in[0K[3G[?25h[?25l* installing to library 'C:/Users/Sevvandi/Documents/R/win-library/3.6'[0K
-[0K[?25h* installing *source* package 'composits' ...[0K[?25l
-[0K[?25h** using staged installation[0K[?25l
-[0K[?25h** R[0K[?25l
-[0K[?25h** byte-compile and prepare package for lazy loading[0K[?25l
-[0K[?25h** help[0K[?25l
-[0K[?25h*** installing help indices[0K[?25l
-[0K[?25h  converting help for package 'composits'[0K[?25l
-    finding HTML links ...[0K[?25h done[0K[?25l
-    apportio[0K[11G[?25h[?25l    apportion_scores_comp                   html[0K
-    apportion_scores_mv[0K[29G[?25h[?25l    apportion_scores_mv                     html[0K
-    comp_tsout_ens[0K[28G[?25h[?25l    comp_tsout_ens                          html[0K[51G[?25h[?25l
-    draw_table                              html[0K[51G[?25h[?25l
-    get_coords[0K[23G[?25h[?25l    get_coords                              html[0K[51G[?25h[?25l
-    mv_tsout_ens[0K[34G[?25h[?25l    mv_tsout_ens                            html[0K[51G[?25h[?25l
-    uv_tsout_ens                            html[0K[51G[?25h[?25l
-** building package indices[0K
-[0K[?25h** testing if installed package can be loaded from temporary location[0K[?25l
-*** arch[0K[7G[?25h[?25l*** arch - i386[0K
-[0K[?25h*** arch - x64[0K[?25l
-[0K[?25h[?25l** testing if installed package can be loa[0K[40G[?25h[?25l** testing if installed package can be loaded from final location[0K
-*** arch - i386[0K[13G[?25h[?25l
-[0K[?25h*** arch - x64[0K[?25l
-[0K[?25h** testing if installed package keeps a record of temporary installation path[0K[?25l
-* DONE (composits)[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-[?25l$ c[0K[?25hd[0K ..[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0K[?25lposits[0K[18G[?25h[24G[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION meta-information ... OK[0K
-[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
-* checking for empty or unneeded directories[0K
-[0K[?25h* building 'composits_0.0.0.9000.tar.gz'[0K[?25l
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25hh[0Ke[0Kc[0Kk[0K[15G[?25l$ R CMD check c[0K[?25ho[0Km[0Kposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[43G[?25l
-[0K[?25h[?25l* using log directory 'C:/Users/Sevvandi/Document[0K[48G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K
-* using R version 3.6.1 (2019-07-05)[0K
-* using platform: x86_64-w64-mingw32 (64-[0K[40G[?25h[?25l* using platform: x86_64-w64-mingw32 (64-bit)[0K
-* using session charset: ISO8859-1[0K
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-* checking extension type ... Package[0K
-* this is package 'composits' version '0.0.0.9000'[0K
-* package encoding: UTF-8[0K
-* c[0K[2G[?25h[?25l* checking package namespace information ... OK[0K
-* checking package dependencies ...[0K[?25h OK[0K[?25l
-* checking if this is a source package ... OK[0K
-* checking if there is[0K[21G[?25h[?25l* checking if there is a namespace ... OK[0K
-[0K[?25h* checking for executable files ...[0K OK[0K[?25l
-* checking for hidden files and directories ... OK[0K[50G[?25h[?25l
-* checking for portable file names ... OK[0K
-* checking whether package 'composits' can be installed ...[0K[?25h OK[0K[?25l
-* checking installed package size ...[0K[?25h OK[0K[?25l
-* checking package directory ... OK[0K
-* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-* checking top-level files ...[0K[?25h OK[0K[?25l
-* checking for left-over files ... OK[0K
-* checking index information ... OK[0K
-* checking package subdirectories ...[0K[?25h OK[0K[?25l
-* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
-* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
-* ch[0K[3G[?25h[?25l* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
-* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the package can b[0K[34G[?25h[?25l* checking whether the package can be unloaded cleanly ...[0K[?25h[?25l OK[0K[60G[?25h[?25l
-* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h[?25l O[0K[76G[?25h[?25l* checking whether the namespace can be loaded with stated dependencies ... OK[0K
-* checking whether t[0K[?25hhe namespace can be unloaded cleanly ...[0K OK[0K[?25l
-[0K[?25h[?25l* checking loadin[0K[15G[?25h[?25l* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
-* checking dependencies in R code ...[0K[?25h OK[0K[?25l
-* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
-* checking replacement functions ...[0K[?25h OK[0K[?25l
-* checking foreign function calls ...[0K[?25h OK[0K[?25l
-* checking R code for possible problems ...[0K[?25h OK[0K[?25l
-* checking Rd files ...[0K[?25h OK[0K[?25l
-* checking Rd[0K[12G[?25h[?25l* checking Rd metadata ...[0K[?25h OK[0K[?25l
-* checking Rd cross-references ...[0K[?25h OK[0K[?25l
-* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
-* checking for code/documentation mismatches ...[0K[?25h WARNING[0K[?25l
-Codoc mismatches from documentation object 'd[0K[43G[?25h[?25lCodoc mismatches from documentation object 'draw_table':[0K
-draw_table[0K
-  Code: function(obj, uniq_dates = NULL)[0K
-  Docs: function(obj)[0K
-  Argument names in code not in docs:[0K
-    uniq_date[0K[12G[?25h[?25l    uniq_dates[0K
-[0K
-[0K[?25h[?25l* checking Rd \usage sect[0K[24G[?25h[?25l* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
-* checking Rd contents ...[0K[?25h OK[0K[?25l
-* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
-* checking examples ...[0K[?25h OK[0K[?25l
-[0K[?25h* checking PDF version of manual ...[0K OK[0K[?25l
-* DONE[0K
-[0K
-Status: 1 WARNING[0K
-See[0K
-  'C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00check.log'[0K
-for details.[0K
-[0K
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ d[0K[?25he[0Kv[0Kt[0Ko[0Ko[0Kl[0Ks[0K:[0K:[0Kl[0Ko[0Ka[0Kd[0K_[0Ka[0Kl[0Kl[0K([0K[?25l
-bash: syntax error near unexpected token `newline'[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K[20G[?25h[?25l
-$[0K[3G[?25h[?25l$ devtools::load_all([0K[?25h[?25l$[0K[3G[?25h[?25l$ devtools::load_all([0K[?25h[?25l$ R CMD check composits_0.0.0.9000.tar.gz[0K[43G[?25h[?25l$ R CMD build composits[0K[?25h[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION meta-information ... OK[0K
-[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
-[0K[?25h* checking for empty or unneeded directories[0K[?25l
-* buildin[0K[8G[?25h[?25l* building 'composits_0.0.0.9000.tar.gz'[0K
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R CMD build composits[0K[?25h[?25l$ devtools::load_all([0K[?25h[?25l$ R CMD check composits_0.0.0.9000.tar.gz[0K[43G[?25h[?25l
-[0K[?25h[?25l* using log directory 'C:/Users/Sevvandi/D[0K[41G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K
-* using R version 3.6.1 (2019-07-05)[0K
-* using platform: x86_64-w64-mingw32 (64-bit)[0K
-* using session charset: ISO8859-1[0K
-[0K[?25h* checking for file 'composits/DESCRIPTION' ...[0K OK[0K[?25l
-* checking extension type ... Package[0K
-* this is package 'composits' version '0.0.0.9000'[0K
-* package encoding: UTF-8[0K
-* checking package namespace information ...[0K[?25h OK[0K[?25l
-* checking package dependencies ...[0K[?25h OK[0K[?25l
-[0K[?25h* checking if this is a source package ... OK[0K[?25l
-* checking if there is a namespace ... OK[0K
-[0K[?25h* checking for executable files ...[0K OK[0K[?25l
-* checking for hidden files and directories ... OK[0K
-* checking for port[0K[17G[?25h[?25l* checking for portable file names ... OK[0K
-* checking whether package 'composits' can be installed ...[0K[?25h OK[0K[?25l
-* checking installed package size ...[0K[?25h OK[0K[?25l
-* checking package directory ... OK[0K
-* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-[0K[?25h* checking top-level files ... OK[0K[?25l
-* checking for left-over files ... OK[0K
-* check[0K[5G[?25h[?25l* checking index information ... OK[0K
-* checking package subdirectories ...[0K[?25h OK[0K[?25l
-* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
-* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
-* checking whether the package can be loaded ...[0K[?25h[?25l OK[0K[50G[?25h[?25l
-* checking whether the package can be loaded with[0K[48G[?25h[?25l* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
-* checking dependencies in R code ...[0K[?25h OK[0K[?25l
-* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
-* checking replacement functions ...[0K[?25h OK[0K[?25l
-* checking foreign function calls ...[0K[?25h OK[0K[?25l
-* checking R code for possible problems ...[0K[?25h OK[0K[?25l
-* checking Rd files ...[0K[?25h OK[0K[?25l
-* checking Rd[0K[12G[?25h[?25l* checking Rd metadata ...[0K[?25h OK[0K[?25l
-* checking Rd cross-references ...[0K[?25h OK[0K[?25l
-* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
-* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
-* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
-* checking Rd contents ...[0K[?25h OK[0K[?25l
-* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
-[0K[?25h* checking examples ...[0K OK[0K[?25l
-* checking PDF version of manual ...[0K[?25h OK[0K[?25l
-* DONE[0K
-[0K
-Status:[0K[6G[?25h[?25lStatus: OK[0K
-[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD I[0K[?25hN[0KS[0KT[0KA[0KL[0KL[0K[17G[?25l$ R CMD INSTALL c[0K[?25ho[0Km[0Kposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[45G[?25l
-[0K[?25h* installing to library 'C:/Users/Sevvandi/Documents/R/win-library/3.6'[0K[?25l
-[0K[?25h* installing *source* package 'composits' ...[0K[?25l
-[0K[?25h** using staged installation[0K[?25l
-[0K[?25h** R[0K[?25l
-[0K[?25h** byte-compile and prepare package for lazy loading[0K[?25l
-[0K[?25h** help[0K[?25l
-[0K[?25h*** installing help indices[0K[?25l
-[0K[?25h  converting help for package 'composits'[0K[?25l
-    finding HTML links ...[0K[?25h done[0K[?25l
-    apportion_scores_comp                   html[0K[51G[?25h[?25l
-    apportion_scores_mv                     html[0K[51G[?25h[?25l
-    comp_tsout_ens                          html[0K[51G[?25h[?25l
-    draw_tab[0K[11G[?25h[?25l    draw_table                              html[0K[51G[?25h[?25l
-    get_coords                              html[0K
-    mv_tsout_ens                            html[0K[51G[?25h[?25l
-    uv_tsout_ens                            html[0K[51G[?25h[?25l
-** building package i[0K[20G[?25h[?25l** building package indices[0K
-[0K[?25h** testing if installed package can be loaded from temporary location[0K[?25l
-*** arch - i386[0K
-[0K[?25h*** arch - x64[0K[?25l
-[0K[?25h[?25l** testing if installed[0K[23G[?25h[?25l** testing if installed package can be loaded from final location[0K
-*** arch - i386[0K
-[0K[?25h*** arch - x64[0K[?25l
-[0K[?25h** testing if installed package keeps a record of temporary installation path[0K[?25l
-* DO[0K[3G[?25h[?25l* DONE (composits)[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Km[0Kposits[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25h[?25l$ R CMD[0K[10G[?25h[9G[?25l$ R CMD c[0K[?25h[?25l$ R CMD[0K[9G[?25h[8G[?25l$ R CM[0K[?25h[?25l$ R C[0K[?25h[?25l$ R[0K[5G[?25h[?25l$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kposits[0K[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION meta-information ... OK[0K
-[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
-* checking for empty or unneeded directories[0K
-[0K[?25h* building 'composits_0.0.0.9000.tar.gz'[0K[?25l
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25hh[0Ke[0Kc[0Kk[0K[15G[?25l$ R CMD check c[0K[?25ho[0Km[0Kposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[43G[?25l
-[0K[?25h[?25l* using log directory 'C:/Users/Sevvandi/[0K[40G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K
-* using R version 3.6.1 (2019-07-05)[0K
-*[0K[3G[?25h[?25l* using platform: x86_64-w64-mingw32 (64-bit)[0K
-* using session charset:[0K[23G[?25h[?25l* using session charset: ISO8859-1[0K
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-* checking[0K[10G[?25h[?25l* checking extension type ... Package[0K
-* this is package 'composits' version '0.0.0.9000'[0K
-* package encoding: UTF-8[0K
-* checking package namespace information ...[0K[?25h OK[0K[?25l
-* checking package dependencies ...[0K[?25h OK[0K[?25l
-* checking if this is a source package ... OK[0K
-* checking if the[0K[16G[?25h[?25l* checking if there is a namespace ... OK[0K
-[0K[?25h* checking for executable files ...[0K OK[0K[?25l
-* checking for hid[0K[16G[?25h[?25l* checking for hidden files and directories ... OK[0K
-* checking for portable file names ...[0K[?25h OK[0K[?25l
-* checking whether package 'composits' can be installed ...[0K[?25h OK[0K[?25l
-* checking installed package size ...[0K[?25h OK[0K[?25l
-* checking package directory ... OK[0K
-* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-* checking top-level files ... OK[0K
-* checking for left-over files ... OK[0K
-* checking index information ... OK[0K
-* checking package subdirectories ...[0K[?25h OK[0K[?25l
-* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
-* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
-* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
-* checking whether the package can be loaded with stated dependencies ..[0K[71G[?25h[?25l* checking whether the package can be loaded with stated dependencies ...[0K[?25h[?25l O[0K[74G[?25h[?25l* checking whether the package can be loaded with stated dependencies ... OK[0K
-* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
-* checking dep[0K[13G[?25h[?25l* checking dependencies in R code ...[0K[?25h OK[0K[?25l
-* checking S3 generic/method consist[0K[34G[?25h[?25l* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
-* che[0K[4G[?25h[?25l* checking replacement functions ...[0K[?25h OK[0K[?25l
-* checking foreign function calls ...[0K[?25h OK[0K[?25l
-* checking R code for possible problems ...[0K[?25h OK[0K[?25l
-* checking Rd files ...[0K[?25h OK[0K[?25l
-* checking Rd metadata ...[0K[?25h OK[0K[?25l
-* checking Rd cross-references ...[0K[?25h OK[0K[?25l
-* checking for missing documentation ent[0K[39G[?25h[?25l* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
-* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
-* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
-* checking Rd contents ...[0K[?25h OK[0K[?25l
-*[0K[1G[?25h* checking for unstated dependencies in examples ...[0K OK[0K[?25l
-* checking examples ...[0K[?25h OK[0K[?25l
-* checking PDF version of[0K[24G[?25h[?25l* checking PDF version of manual ...[0K[?25h OK[0K[?25l
-* DONE[0K
-[0K
-Status: OK[0K
-[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R CMD check composits_0.0.0.9000.tar.gz[0K[43G[?25h[?25l$ R CMD build composits[0K[?25h[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ...[0K OK[0K[?25l
-[0K[?25h* preparing 'composits':[0K[?25l
-[0K[?25h* checking DESCRIPTION meta-information ... OK[0K[?25l
-[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
-* checking for empty or unneeded directories[0K
-[0K[?25h* building 'composits_0.0.0.9000.tar.gz'[0K[?25l
-[0K[?25h[?25l
-[0K[?25h[?25l
 [0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
 $[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0Kd[0K[9G[?25l$ R CMd I[0K[?25hN[0KS[0KT[0KA[0KL[0KL[0K[17G[?25l$ R CMd INSTALL c[0K[?25ho[0Km[0Kposits[0K_[0K0.0.0.9000.tar.gz[0K[45G[?25l
 [0K[?25h[?25lARGUMENT 'CMd'[0K[12G[?25h]0;Rterm (64-bit)[?25lARGUMENT 'CMd' __ignored__[0K
@@ -1097,4 +324,996 @@ for details.[0K
 $[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Kmposits[0K[?25l
 [0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
 [0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/INDEX.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in docs/articles/composits.html.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in docs/articles/composits_files/header-attrs-2.[0K1[?25l
+/header-attrs.js.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in docs/docsearch.css.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in docs/docsearch.js.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/index.html.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/link.svg.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in docs/pkgdown.css.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/pkgdown.js.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25ha[0Kd[0Kd[0K[22G[?25l$ git commit -m "add p[0K[?25hk[0Kg[0Kd[0Ko[0Kw[0Kn[0K"[0K[?25l
+[0K[?25h[master e035765] add pkgdown[0K[?25l
+ 37 files changed, 4250 insertions(+), 152 deletions(-)[0K
+ rewrite .Rproj.user/F9A5C86C/console06/INDEX001 (85%)[0K
+ create mode 100644 _pkgdown.yml[0K
+ create mode 100644 docs/404.html[0K
+ create mode 100644 docs/LICENSE.html[0K
+ create mode 100644 docs/articles/composits.html[0K
+ create mode 100644 docs/articles/composits_files/figure-html/univaraite1-1.png[0K
+ create mode 100644 docs/articles/composits_files/figure-html/univariate2-1.png[0K
+ create mode 100644 docs/articles/composits_files/header-attrs-2.1/header-attrs.js[0K
+ create mode 100644 docs/articles/index.html[0K
+ create mode 100644 docs/authors.html[0K
+ create mode 100644 docs/docsearch.css[0K
+ create mode 100644 docs/docsearch.js[0K
+ create mode 100644 docs/index.html[0K
+ create mode 100644 docs/link.svg[0K
+ create mode 100644 docs/pkgdown.css[0K
+ create mode 100644 docs/pkgdown.js[0K
+ create mode 100644 docs/pkgdown.yml[0K
+ create mode 100644 docs/reference/apportion_scores_comp.html[0K
+ create mode 100644 docs/reference/apportion_scores_mv.html[0K
+ create mode 100644 docs/reference/comp_tsout_ens.html[0K
+ create mode 100644 docs/reference/draw_table-1.png[0K
+ create mode 100644 docs/reference/draw_table.html[0K
+ create mode 100644 docs/reference/get_coords.html[0K
+ create mode 100644 docs/reference/index.html[0K
+ create mode 100644 docs/reference/mv_tsout_ens.html[0K
+ create mode 100644 docs/reference/plot_decomposed.html[0K
+ create mode 100644 docs/reference/uv_tsout_ens-1.png[0K
+ create mode 100644 docs/reference/uv_tsout_ens.html[0K
+ create mode 100644 vignettes/.gitignore[0K
+ create mode 100644 vignettes/composits.Rmd[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hEnumerating objects: 65, done.[0K[?25l
+Counting objects:  58% (38/65)[0K[1G[?25hCounting objects: 100% (65/65), done.[0K[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (46/46), done.[0K
+Writing objects:  33% (17/51)[0K[1G[?25hWriting objects: 100% (51/51), 101.52 KiB | 3.90 MiB/s, done.[0K[?25l
+Total 51 (delta 17), reused 0 (delta 0)[0K
+[0K[?25h[?25lremote: Resolving deltas:  82% (14/17)[0K[1G[?25h[?25lremote: Resolving deltas:  88% (15/17)[0K[1G[?25hremote: Resolving deltas: 100% (17/17), completed with 6 local objects.[0K[?25l
+[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
+   c471b97..e035765  master -> master[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l[2A                                                                                      [0;32mSevvandi@[0KP
+rushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m                              $[0K
+[?25l$[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0K[?25lt[0K[5G[?25h[6G[7G[?25l$ git o[0K[?25h[?25l$ git[0K[7G[?25h[?25l$ git p[0K[?25hu[0Kl[0Kl[0K[12G[?25l$ git pull o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git pull origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hfatal: not a git repository (or any of the parent directories): .git[0K[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25h[?25lo[0K[7G[?25h[8G[?25l$ cd com[0K[?25hposits[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ cd composits[0K[?25h[?25l$ git pull origin master[0K[?25h[?25l
+[0K[?25hremote: Enumerating objects: 53, done.[0K[?25l
+remote: Counting objects:  81% (43/53)[0K[?25h[?25lremote: Counting objects: 100% (53/53), done.[0K
+remote: Compressing objects: 100% (26/26), done.[0K
+remote: Total 45 (delta 34), reused 30 (delta 19), pack-reused 0[0K
+[0K[?25h[?25lUnpacking objects:   6% (3/45)[0K[1G[?25h[?25lUnpacking objects:  13% (6/45)[0K[1G[?25h[?25lUnpacking objects:  20% (9/45)[0K[1G[?25h[?25lUnpacking objects:  28% (13/45)[0K[1G[?25h[?25lUnpacking objects:  33% (15/45)[0K[1G[?25h[?25lUnpacking objects:  42% (19/45)[0K[1G[?25h[?25lUnpacking objects:  46% (21/45)[0K[1G[?25h[?25lUnpacking objects:  57% (26/45)[0K[1G[?25h[?25lUnpacking objects:  68% (31/45)[0K[1G[?25h[?25lUnpacking objects:  75% (34/45)[0K[1G[?25h[?25lUnpacking objects:  82% (37/45)[0K[1G[?25h[?25lUnpacking objects:  91% (41/45)[0K[1G[?25hUnpacking objects: 100% (45/45), done.[0K[?25l
+[0K[?25hFrom https://github.com/sevvandi/composits[0K[?25l
+ * branch            master     -> FETCH_HEAD[0K
+   e035765..74aa64d  master     -> origin/master[0K
+[0K[?25hUpdating e035765..74aa64d[0K[?25l
+Fast-forward[0K
+[0K[?25h DESCRIPTION                |   7 [0;32m+[0;31m--[0m[0K[?25l
+ NAMESPACE                  |   2 [0;32m+[0m[0K
+ R/animate_ts_ensemble.R    |  72 [0;32m+++++++++++++++++++++++++++++[0m[0K
+ R/plot_decomposed.R        | 113 [0;32m++++++++++++++++++++++++++++++++++++++++++[0;31m---[0m[0K
+ man/animate_ts_ensemble.Rd |  51 [0;32m++++++++++++++++++++[0m[0K
+ man/comp_tsout_ens.Rd      |  12 [0;32m++++[0;31m-[0m[0K
+ man/mv_tsout_ens.Rd        |  12 [0;32m++++[0;31m-[0m[0K
+ man/plot_biplot.Rd         |  43 [0;32m+++++++++++++++++[0m[0K
+ man/plot_decomposed.Rd     |  13 [0;32m++++[0;31m--[0m[0K
+ 9 files changed, 308 insertions(+), 17 deletions(-)[0K
+ create mode 100644 R/animate_ts_ensemble.R[0K
+ create mode 100644 man/animate_ts_ensemble.Rd[0K
+ create mode 100644 man/plot_biplot.Rd[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K[48G[?25h[?25l
+$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kposits[0K[?25l
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+[0K[?25h* preparing 'composits':[0K[?25l
+* check[0K[5G[?25h[?25l* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+[0K[?25h* installing the package to build vignettes[0K[?25l
+[0K[?25h* creating vignettes ...[0K OK[0K[?25l
+[0K[?25h[?25l* checking for LF line-endings in source an[0K[42G[?25h[?25l* checking for LF line-endings in source and make files and shell scripts[0K
+* checking for empty or unneeded directories[0K
+[0K[?25h* building 'composits_0.0.0.9000.tar.gz'[0K[?25l
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25hh[0Ke[0Kc[0Kk[0K[15G[?25l$ R CMD check c[0K[?25ho[0Km[0Kp[0Ko[0Ks[0Ki[0Kt[0Ks[0K[?25l
+[0K[?25h* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K[?25l
+* using R version 3.6.1 (2019-07-05)[0K
+* using p[0K[7G[?25h[?25l* using platform: x86_64-w64-mingw32 (64-bit)[0K
+* using session charset: ISO8859-1[0K
+* checking for file 'composits/DESCRIPTION' ... ERROR[0K
+Required field missing or empty:[0K
+  'Aut[0K[5G[?25h[?25l  'Author'[0K
+* DONE[0K
+[0K
+Status: 1 ERROR[0K
+See[0K
+  'C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00check.log'[0K
+for details.[0K
+[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R CMD check composits[0K[?25h_[0K0[0K.0.0.9000.tar.gz[0K[43G[?25l
+[0K[?25h[?25l* using log direct[0K[17G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/[0K[56G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K
+* using R version 3.6.1 (2019-07-0[0K[33G[?25h[?25l* using R version 3.6.1 (2019-07-05)[0K
+* using platform: x86_64-w64-mingw32 (64-bit[0K[43G[?25h[?25l* using platform: x86_64-w64-mingw32 (64-bit)[0K
+* using session charset: ISO8859-1[0K
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+* checking extension type[0K[25G[?25h[?25l* checking extension type ... Package[0K
+* this is package 'composits' version '0.0.0.9000'[0K
+* package encoding: UTF-8[0K
+* checking package namespace information ... OK[0K
+* checking package dependencies ...[0K[?25h OK[0K[?25l
+* checking if this is a source package ...[0K[?25h OK[0K[?25l
+* checking if there is a namespace ... OK[0K
+[0K[?25h[?25l* chec[0K[4G[?25h[?25l* checking for executable files ...[0K[?25h[?25l OK[0K[37G[?25h[?25l
+* checking for hidden files and directories ... OK[0K[50G[?25h[?25l
+* checking for portable file names ... OK[0K
+* checking whether package 'composits' can be installed ...[0K[?25h OK[0K[?25l
+* checking[0K[9G[?25h[?25l* checking installed packa[0K[?25hge size ...[0K OK[0K[?25l
+* checking package directory ... OK[0K
+* checking 'build' directory ... OK[0K
+* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+* checking top-level files ... OK[0K
+* checking for[0K[13G[?25h[?25l* checking for left-over files ... OK[0K
+* checking index information ...[0K[?25h OK[0K[?25l
+* checking package subdirectories ...[0K[?25h OK[0K[?25l
+* checking R files[0K[16G[?25h[?25l* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
+* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
+* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
+* checking whet[0K[14G[?25h[?25l* checking whether the package can be loaded with stated dependen[0K[64G[?25h[?25l* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking whether the namespace ca[0K[34G[?25h[?25l* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whet[0K[13G[?25h[?25l* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking loading without being on the[0K[38G[?25h[?25l* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
+* checking dependencies in R[0K[28G[?25h[?25l* checking dependencies in R code ...[0K[?25h OK[0K[?25l
+* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
+* checking repl[0K[13G[?25h[?25l* checking replacement functions ...[0K[?25h OK[0K[?25l
+* checking foreign function calls ...[0K[?25h OK[0K[?25l
+* checking R cod[0K[15G[?25h[?25l* checking R code for possible problems ...[0K[?25h OK[0K[?25l
+* checking Rd files ...[0K[?25h OK[0K[?25l
+* checking Rd me[0K[15G[?25h[?25l* checking Rd metadata ...[0K[?25h OK[0K[?25l
+* checking Rd cross-references ...[0K[?25h OK[0K[?25l
+* checking for[0K[14G[?25h[?25l* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
+* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
+* checking Rd \usage sections ...[0K[?25h[?25l O[0K[34G[?25h[?25l* checking Rd \usage sections ... OK[0K
+* checking Rd contents ...[0K[?25h OK[0K[?25l
+* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
+[0K[?25h* checking installed files from 'inst/doc' ...[0K OK[0K[?25l
+* checking files in 'vignettes' ... OK[0K
+* ch[0K[3G[?25h[?25l* checking examples ...[0K[?25h ERROR[0K[?25l
+Running examples in 'composits-Ex.R' failed[0K
+The error most likely occurred in:[0K
+[0K
+> ### Name: plot_decomp[0K[22G[?25h[?25l> ### Name: plot_decomposed[0K
+> ### Title: Plot decomposed time series from comp_tsout_ens or mv_tsout_ens[0K
+> ###   output.[0K
+> ### Aliases: plot_decomposed[0K
+>[0K
+> ### ** Examples[0K
+>[0K
+> set.seed(100)[0K
+> n <- 600[0K
+> x <- sample(1:100, n, repla[0K[28G[?25h[?25l> x <- sample(1:100, n, replace=TRUE)[0K
+> x[25] <- 200[0K
+> x[320] <- 300[0K
+> x2 <- sample(1:100, n, replace=TRUE)[0K
+> x3 <- sample(1:100, n, replace=TRUE)[0K
+> x4 <- sample(1:100, n, replace=TRUE)[0K
+> X <- cbind.data.frame(x, x2, x3, x4)[0K
+>[0K
+> out1 <- mv_tsout_ens(X, compr=2, fast=FALSE)[0K
+Conver[0K[5G[?25h[?25lConverting from tbl_df to tbl_time.[0K
+Auto-index message: index = date[0K
+frequency = 7 days[0K
+trend = 91 days[0K
+Converting from tbl_df to tbl_time.[0K
+Auto-index message: index = date[0K
+frequency = 7 days[0K
+trend = 91 days[0K
+Converting from tbl_df to tbl_t[0K[30G[?25h[?25lConverting from tbl_df to tbl_time.[0K
+Auto-index message: index = date[0K
+frequency = 7 days[0K
+trend = 91 days[0K
+Converting from tbl_df to tbl_time.[0K
+Auto-index message: index = date[0K
+frequency = 7 days[0K
+tren[0K[3G[?25h[?25ltrend = 91 days[0K
+Converting from tbl_df to tbl_time.[0K
+Auto-index message: index = date[0K
+frequency = 7 days[0K
+trend = 91 days[0K
+Converting from tbl_df to tbl_time.[0K
+Auto-index message: index = date[0K
+frequency = 7 days[0K
+trend[0K[3G[?25h[?25ltrend = 91 days[0K
+Converting from tbl_df to tbl_time.[0K
+Auto-index message: index = date[0K
+frequency = 7 days[0K
+trend = 91 days[0K
+Converting from tbl_df to tbl_time.[0K
+Auto-index messag[0K[15G[?25h[?25lAuto-index message: index = date[0K
+frequency = 7 days[0K
+trend = 91 days[0K
+Converting from tbl_df to tbl_time.[0K
+Auto-index message: index = date[0K
+frequency = 7 days[0K
+trend = 91 days[0K
+Converting from tbl_df to tbl_time.[0K
+Auto-index message: index = date[0K
+freque[0K[4G[?25h[?25lfrequency = 7 days[0K
+trend = 91 days[0K
+Converting from tbl_df to tbl_time.[0K
+Auto-index message: index = date[0K
+frequency = 7 days[0K
+trend = 91 days[0K
+Converting from tbl_df to tbl_time.[0K
+Auto-index message: index = date[0K
+fre[0K[1G[?25hfrequency = 7 days[0K[?25l
+trend = 91 days[0K
+Converting from tbl_df to tbl_time.[0K
+Auto-index message: index = date[0K
+frequency = 7 days[0K
+trend = 91 days[0K
+Converting from tbl_df to tbl_time.[0K
+Auto-index[0K[9G[?25h[?25lAuto-index message: index = date[0K
+frequency = 7 days[0K
+trend = 91 days[0K
+Converting from tbl_df to tbl_time.[0K
+Auto-index message: index = date[0K
+frequency = 7 days[0K
+trend = 91 days[0K
+Converting from tbl_df to tbl_time.[0K
+Auto-index mess[0K[14G[?25h[?25lAuto-index message: index = date[0K
+frequency = 7 days[0K
+trend = 91 days[0K
+> plot_decomposed(out1, X = X, method = "pca")[0K
+Error: Column `name` not found in `.data`[0K
+Backtrace:[0K
+?[90[0K[3G[?25h[?25l?[90m     ?[39mx[0K
+?[90m  1. ?[39m+-(function (x, ...) ...[0K
+?[90m  2. ?[39m+-ggplot2:::print.ggplot(x)[0K
+?[90m  3. ?[39m| +-ggplot2::ggplot_build(x)[0K
+?[90m  4. ?[39m| \-ggplot2:::ggplot_build.[0K[41G[?25h[?25l?[90m  4. ?[39m| \-ggplot2:::ggplot_build.ggplot(x)[0K
+?[90m  5. ?[39m|   \-layout$setup(data, plot$data, plot$plot_env)[0K
+?[90m  6. ?[39m|     \-ggplot2:::f(..., self = self)[0K
+?[90m  7. ?[39m|       \-self$facet$compute_layout(data, self$facet_params)[0K
+?[90m  8. ?[39m|         \-gg[0K[28G[?25h[?25l?[90m  8. ?[39m|         \-ggplot2:::f(...)[0K
+?[90m  9. ?[39m|           +-ggplot2:::unrowname(...)[0K
+?[90m 10. ?[39m|           | \-base::is.data.frame(x)[0K
+?[90m 11. ?[39m|           \-ggplot2::combine_vars(data, p[0K[57G[?25h[?25l?[90m 11. ?[39m|           \-ggplot2::combine_vars(data, params$plot_env, vars, drop = params$d[0Kr
+op)[0K
+?[90m 12. ?[39m|             +-ggplot2:::compact(lapply(data, eval_facets, facets = vars, env =[0K
+env))[0K
+?[90m 13. ?[39m|             | \-base::vapply(x, is.null, logical(1))[0K
+?[90m 14. ?[39m|             \[0K[29G[?25h[?25l?[90m 14. ?[39m|             \-base::lapply(data, eval_facets, facets = vars, env = env)[0K
+?[90m 15. ?[39m|               \-ggplot2::[0K
+Execution halted[0K
+* checking for unstated dependen[0K[31G[?25h[?25l* checking for unstated dependencies in vignettes ...[0K[?25h OK[0K[?25l
+* checking package vignettes in 'inst/doc' ...[0K[?25h OK[0K[?25l
+* checking running R code from vignettes ...[0K
+[0K[?25h  'composits.Rmd'using 'UTF-8'... OK[0K[?25l
+ NONE[0K
+* checking re-building of vignette outputs ...[0K[?25h OK[0K[?25l
+* checking PDF version of manual ...[0K[?25h OK[0K[?25l
+* DONE[0K
+[0K
+Stat[0K[3G[?25h[?25lStatus: 1 ERROR[0K
+See[0K
+  'C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00check.log'[0K
+for details.[0K
+[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l[17A[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+[0K
+                                    Execution halted[0K
+* checking for unstated dependencies in vignettes ... OK[0K
+* checking package vignettes in 'inst/doc' ... OK[0K
+* checking running R code from vignettes ...[0K
+  'composits.Rmd'using 'UTF-8'... OK[0K
+ NONE[0K
+* checking re-building of vignette outputs ... OK[0K
+* checking PDF version of manual ... OK[0K
+* DONE[0K
+[0K
+Status: 1 ERROR[0K
+See[0K
+  'C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00check.log'[0K
+for details.[0K
+[0K
+[0K
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0K
+[0m$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[7G[?25l$ cd  c[0K[?25ho[0Km[0Kposits[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Kl[0Kl[0K[12G[?25l$ git pull o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git pull origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hremote: Enumerating objects: 7, done.[0K[?25l
+remote: Counting objects: 100% (7/7), done.[0K
+remote: Compressing objects: 100% (1/1), done.[0K
+remote: Total 4 (delta 3), reused 4 (delta 3), pack-reused 0[0K
+[0K[?25h[?25lUnpacking objects:  25% (1/4)[0K[1G[?25hUnpacking objects: 100% (4/4), done.[0K[?25l
+[0K[?25hFrom https://github.com/sevvandi/composits[0K[?25l
+ * branch            master     -> FETCH_HEAD[0K
+[0K[?25h   74aa64d..f18e59e  master     -> origin/master[0K[?25l
+[0K[?25hUpdating 74aa64d..f18e59e[0K[?25l
+Fast-forward[0K
+ R/plot_decomposed.R | 2 [0;32m+[0;31m-[0m[0K
+ 1 file changed, 1 insertion(+), 1 deletion(-)[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git pull origin master[0K[?25h[?25l
+[0K[?25hFrom https://github.com/sevvandi/composits[0K[?25l
+ * branch            master     -> FETCH_HEAD[0K
+[0K[?25hAlready up to date.[0K[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git pull origin master[0K[?25h[?25l
+[0K[?25hFrom https://github.com/sevvandi/composits[0K[?25l
+ * branch            master     -> FETCH_HEAD[0K
+[0K[?25hAlready up to date.[0K[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kposits.Rproj[0K[31G[30G[?25l$ R CMD build composits.Rpro[0K[?25h[?25l$ R CMD build composits.Rpr[0K[?25h[?25l$ R CMD build composits.Rp[0K[?25h[?25l$ R CMD build composits.R[0K[?25h[?25l$ R CMD build composits.[0K[?25h[?25l$ R CMD build composits[0K[?25h[?25l$ R CMD build composit[0K[?25hs[0K[?25l
+[0K[?25h ERROR[0K[?25l
+cannot change to directory 'composits'[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ cd ..[0K[3G[?25h[8G[?25l$ R CMD build composits[0K[?25h[?25l
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+[0K[?25h* preparing 'composits':[0K[?25l
+* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+[0K[?25h* installing the package to build vignettes[0K[?25l
+[0K[?25h* creating vignettes ...[0K[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+[?25l$ pwd[0K[?25h[?25l$ exit[0K[?25h[?25l$ git push[0K[7G[?25h[11G[?25l$ git commit -m "resolved conflict"[0K[?25h[?25l$ git add .[0K[?25h[?25l$ git pull[0K[8G[?25h[11G[?25l$ git push[0K[?25h[?25l$ git pull[0K[?25h[12G[?25l$ git pull o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git pull origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hFrom https://github.com/sevvandi/composits[0K[?25l
+ * branch            master     -> FETCH_HEAD[0K
+[0K[?25hAlready up to date.[0K[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l[8A                                                                                    [0;32mSevv[0Ka
+ndi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m                            $ git pul[0Kl
+ origin master                                                            From https://g[0Ki
+thub.com/sevvandi/composits[0K
+ * branch            master     -> FETCH_HEAD[0K
+Already up to date.[0K
+                                                                                    [0;32mSevv[0Ka
+ndi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m                            $[0K
+[0K[1A[82G[?25h[?25l$[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25h[?25l$ R CMD[0K[9G[?25h[8G[?25l$ R CM[0K[?25h[?25l$ R C[0K[?25h[?25l$ R[0K[5G[?25h[4G[?25l$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kposits[0K[?25l
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+[0K[?25h* preparing 'composits':[0K[?25l
+* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+[0K[?25h* installing the package to build vignettes[0K[?25l
+[0K[?25h[?25l* creati[0K[6G[?25h[?25l* creating vignettes ...[0K[?25h OK[0K[?25l
+[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
+* checking for e[0K[15G[?25h[?25l* checking for empty or unneeded directories[0K
+* building 'composits_0.0.0.9000.tar.gz'[0K
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+[?25l$ R[0K[?25h CM[0KD[0K[9G[8G[?25l$ R CM[0K[?25h[?25l$ R C[0K[?25h[?25l$ R[0K[5G[?25h[4G[?25l$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kposits[0K[?25l
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+[0K[?25h* preparing 'composits':[0K[?25l
+* checking DESCRIPTION meta-information ...[0K[43G[?25h[?25l* checking DESCRIPTION meta-information ... OK[0K
+[0K[?25h[?25l* install[0K[7G[?25h[?25l* installing the package to build vignettes[0K
+[0K[?25h* creating vignettes ...[0K OK[0K[?25l
+[0K[?25h[?25l* checking for[0K[14G[?25h[?25l* checking for LF line-endings in source and make files and shell scripts[0K
+* checking for empty or unneeded directories[0K
+[0K[?25h* building 'composits_0.0.0.9000.tar.gz'[0K[?25l
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K[21G[?25h[?25l
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0Kd[0K[9G[?25l$ R CMd c[0K[?25hh[0Ke[0Kc[0Kk[0K[15G[?25l$ R CMd check c[0K[?25ho[0Kmposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[43G[?25l
+[0K[?25hARGUMENT 'CMd' __ignored__[0K[?25l
+[0K
+ARGUMENT 'check' __ignored__[0K
+[0K
+ARGUMENT 'compos[0K[14G[?25h]0;Rterm (64-bit)[?25lARGUMENT 'composits_0.0.0.9000.tar.gz' __ignored__[0K
+[0K
+[0K[?25h[?25l
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"[0K
+Copyright (C) 2019 The R Foundation for St[0K[41G[?25h[?25lCopyright (C) 2019 The R Foundation for Statistical Computing[0K
+Platform: x86_64-w64-mingw32/x64 (64-bit)[0K
+[0K
+R is free software and comes[0K[?25h with ABSOLUTELY NO WARRANTY.[0K[?25l
+You are welcome to redistribute it under certain conditions.[0K
+Type 'license()'[0K[15G[?25h[?25lType 'license()' or 'licence()' for distribution details.[0K
+[0K
+  Natural language support but running in an English locale[0K
+[0K
+R is a collaborative project with many contributors.[0K
+Type 'contributors()' for more information and[0K
+'citation()' on how to cite R or R packages in pu[0K[47G[?25h[?25l'citation()' on how to cite R or R packages in publications.[0K
+[0K
+Type 'demo()' for some demos, 'help()' for on-line help, or[0K
+'help.start()' for an HTML browser interface to help.[0K
+Type 'q()' to quit R.[0K
+[0K
+[0K[?25h>[0K[3G[?25l> q[0K[?25h([0K)[0K[?25l
+Save workspace image? [y/n/c]:[0K[32G[?25h[?25lSave workspace image? [y/n/c]: n[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R CMd check composits_0.0.0.9000.tar.gz[0K[43G[?25h[42G[41G[40G[39G[38G[36G[35G[33G[31G[30G[29G[28G[27G[26G[25G[24G[23G[22G[21G[20G[19G[17G[16G[14G[13G[12G[10G[9G[?25l$ R CMd heck composits_0.0.0.9000.tar.gz[0K[9G[?25h[?25l$ R CMd eck composits_0.0.0.9000.tar.gz[0K[9G[?25h[?25l$ R CMd ck composits_0.0.0.9000.tar.gz[0K[9G[?25h[?25l$ R CMd k composits_0.0.0.9000.tar.gz[0K[9G[?25h[?25l$ R CMd  composits_0.0.0.9000.tar.gz[0K[9G[?25h[?25l$ R CMd C composits_0.0.0.9000.tar.gz[0K[10G[?25h[?25l$ R CMd CH composits_0.0.0.9000.tar.gz[0K[11G[?25h[?25l$ R CMd CHE composits_0.0.0.9000.tar.gz[0K[12G[?25h[?25l$ R CMd CHEC composits_0.0.0.9000.tar.gz[0K[13G[?25h[?25l$ R CMd CHECK composits_0.0.0.9000.tar.gz[0K[14G[?25h[?25l$ R CMd CHECK  composits_0.0.0.9000.tar.gz[0K[15G[?25h[?25l
+[0K[?25h[?25lARGUMENT 'CMd' __ign[0K[18G[?25h]0;Rterm (64-bit)[?25lARGUMENT 'CMd' __ignored__[0K
+[0K
+ARGUMENT 'CHECK' __ignored__[0K
+[0K
+ARGUMENT 'composits_0.0.0.9000.tar.gz' __ignored__[0K
+[0K
+[0K[?25h[?25l
+R version 3.6.1 (2019-07-05) -[0K[29G[?25h[?25lR version 3.6.1 (2019-07-05) -- "Action of the Toes"[0K
+Copyright (C) 2019 The R Foundation for Statistical Computing[0K
+Platform: x86_64-w64-mingw32/x64 (64-bit)[0K
+[0K
+R is free software and comes with ABSOLUTELY NO WARRANTY.[0K
+You are welcome to redistrib[0K[27G[?25h[?25lYou are welcome to redistribute it under certain conditions.[0K
+Type 'license()' or 'licence()' for distribution details.[0K
+[0K
+  Natural language support but running in an English locale[0K
+[0K
+R i[0K[2G[?25h[?25lR is a collaborative project with many contributors.[0K
+Type 'contributors()' for more information and[0K
+'citation()' on how to cite R or R packages in publications.[0K
+[0K
+Type 'demo()' for some demos, 'help()' for on-line help, or[0K
+'help.s[0K[6G[?25h[?25l'help.start()' for an HTML browser interface to help.[0K
+Type 'q()' to quit R.[0K
+[0K
+[0K[?25h>[0K[3G[?25l> q()[0K[?25h[?25l>[0K[3G[?25h[?25l> q[0K[?25h([0K)[0K[?25l
+Save workspace image? [y/n/c]:[0K[32G[?25h[?25lSave workspace image? [y/n/c]: n[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ p[0K[?25hw[0Kd[0K[?25l
+/c/Users/Sevvandi/Documents/repos[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ l[0K[?25hs[0K[?25l
+[0K[?25hFFT            SharpsFlats2              composits.Rcheck             malaria[0K[?25l
+Outlier-Basis  SharpsFlats_0.1.0.tar.gz  composits_0.0.0.9000.tar.gz  nlout[0K
+SKSite         airt                      datagen                      nlout_0.1.0.tar.gz[0K
+SKSite_1       bushfires                 dobin                        outselect[0K
+SharpsFlats    composits                 eventstream                  ssoutliers_private[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD C[0K[?25hH[0KE[0KC[0KK[0K[15G[?25l$ R CMD CHECK c[0K[?25ho[0Km[0Kposits[0K_[0K0[0K[?25l$ R CMD CHECK composits_[0K[?25h[?25l$ R CMD CHECK composits[0K[?25h[?25l$ R CMD CHECK composit[0K[?25h[?25l$ R CMD CHECK composi[0K[?25h[?25l$ R CMD CHECK compos[0K[?25h[?25l$ R CMD CHECK compo[0K[?25h[?25l$ R CMD CHECK com[0K[19G[?25h[?25l$ R CMD CHECK co[0K[18G[?25h[17G[?25l$ R CMD CHECK[0K[15G[?25h[14G[?25l$ R CMD CHEC[0K[?25h[?25l$ R CMD CHE[0K[?25h[?25l$ R CMD CH[0K[?25h[?25l$ R CMD C[0K[?25h[?25l$ R CMD[0K[9G[?25h[8G[?25l$ R C[0K[?25h[?25l$ R[0K[5G[?25h[4G[?25l$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25hh[0Ke[0Kc[0Kk[0K[15G[?25l$ R CMD check c[0K[?25ho[0Km[0Kposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[43G[?25l
+[0K[?25h[?25l* using log directory 'C:/Users/S[0K[32G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K
+* using R version 3.6.1 (2019-07-05)[0K
+* using platform: x[0K[18G[?25h[?25l* using platform: x86_64-w64-mingw32 (64-bit)[0K
+* using session charset: ISO8859-1[0K
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+* checking extension type ... Package[0K
+* th[0K[3G[?25h[?25l* this is package 'composits' version '0.0.0.9000'[0K
+* package encoding: UTF-8[0K
+* checking package namespace information ...[0K[?25h OK[0K[?25l
+* checking package dependencies ...[0K[?25h OK[0K[?25l
+* checking if this is a source package ... OK[0K
+* checking if there is a namespace ... OK[0K
+[0K[?25h[?25l* checking for exe[0K[17G[?25h[?25l* checking for executable files ...[0K[?25h OK[0K[?25l
+[0K[?25h* checking for hidden files and directories ... OK[0K[?25l
+* checking for portable file names ... OK[0K
+* checking whether package '[0K[26G[?25h[?25l* checking whether package 'composits' can be installed ...[0K[?25h OK[0K[?25l
+* c[0K[2G[?25h[?25l* checking installed package size ...[0K[?25h OK[0K[?25l
+* checking package directory ...[0K[31G[?25h[?25l* checking package directory ... OK[0K
+* checking 'build' directory ... OK[0K
+* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+* checking top-level files ...[0K[?25h OK[0K[?25l
+* checking for left-over files ... OK[0K
+* checking index information ...[0K[?25h OK[0K[?25l
+* checking package subdirectories ...[0K[?25h OK[0K[?25l
+[0K[?25h* checking R files for non-ASCII characters ...[0K OK[0K[?25l
+* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
+* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
+* checking whether the packa[0K[27G[?25h[?25l* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* c[0K[3G[?25h[?25l* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking loading w[0K[19G[?25h[?25l* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
+* checking dependencies in R code ...[0K[?25h OK[0K[?25l
+* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
+* checking replacement[0K[21G[?25h[?25l* checking replacement functions ...[0K[?25h OK[0K[?25l
+* checking foreign function calls ...[0K[?25h OK[0K[?25l
+* checking R code for possible problems ...[0K[?25h NOTE[0K[?25l
+draw_table_html: no visible binding for global variable '.'[0K
+draw_table_html: no visible binding for global variable 'DOBIN'[0K
+draw_table_html: no visible binding for global variable 'ICA'[0K
+draw_table_html: no visible binding for global variable 'ICS'[0K
+draw_table_ht[0K[12G[?25h[?25ldraw_table_html: no visible binding for global variable 'PCA'[0K
+draw_table_html: no visible binding for global variable 'forecast'[0K
+draw_table_html: no visible binding for global variable 'tsoutliers'[0K
+draw_table_html: no visible binding[0K[34G[?25h[?25ldraw_table_html: no visible binding for global variable 'anomalize'[0K
+draw_table_html: no visible binding for global variable 'otsad'[0K
+draw_table_html: no visible binding for global variable 'Total_Score'[0K
+Undefined global functions or variables:[0K
+  . DOBIN ICA ICS P[0K[18G[?25h[?25l  . DOBIN ICA ICS PCA Total_Score anomalize forecast otsad tsoutliers[0K
+* checking Rd files ...[0K[?25h OK[0K[?25l
+* checking Rd metadata ...[0K[?25h OK[0K[?25l
+* checking Rd cross-references ...[0K[?25h OK[0K[?25l
+* ch[0K[2G[?25h[?25l* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
+* checking for code/[0K[19G[?25h[?25l* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
+* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
+* checking Rd content[0K[20G[?25h[?25l* checking Rd contents ...[0K[?25h OK[0K[?25l
+* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
+[0K[?25h* checking installed files from 'inst/doc' ...[0K OK[0K[?25l
+* checking files in 'vignettes' ...[0K[?25h OK[0K[?25l
+* checking examples ...[0K[?25h ERROR[0K[?25l
+Running examples in 'composits-Ex.R' failed[0K
+The error most likely occurred in:[0K
+[0K
+> ### Name: plot_decomposed[0K
+> ### Title: Plot[0K[15G[?25h[?25l> ### Title: Plot decomposed time series from comp_tsout_ens or mv_tsout_ens[0K
+> ###   output.[0K
+> ### Aliases: plot_decomposed[0K
+>[0K
+> ### ** Examples[0K
+>[0K
+> set.seed(100)[0K
+> n <- 600[0K
+> x <- sample(1:100, n, replace=TRUE)[0K
+> x[25] <- 200[0K
+>[0K[3G[?25h[?25l> x[320] <- 300[0K
+> x2 <- sample(1:100, n, replace=TRUE)[0K
+> x3 <- sample(1:100, n, replace=TRUE)[0K
+> x4 <- sample(1:100, n, replace=TRUE)[0K
+> X <- cbind.data.frame(x[0K[23G[?25h[?25l> X <- cbind.data.frame(x, x2, x3, x4)[0K
+>[0K
+> out1 <- mv_tsout_ens(X, compr=2, fast=FALSE)[0K
+[1] "Error in computing outliers for one component anomalize!"[0K
+[1] "Error in computing outliers for one component anomalize!"[0K
+[1][0K[3G[?25h[?25l[1] "Error in computing outliers for one component anomalize!"[0K
+[1] "Error in computing outliers for one component anomalize!"[0K
+[1] "Error in computing outliers for one component[0K[49G[?25h[?25l[1] "Error in computing outliers for one component anomalize!"[0K
+[1] "Error in computing outliers for one component anomalize!"[0K
+[1] "Error in computing outliers for one component anomalize!"[0K
+[1] "Error in computing outliers for one component anomalize!"[0K
+[1] "Error in computing outlie[0K[29G[?25h[?25l[1] "Error in computing outliers for one component anomalize!"[0K
+[1] "Error in computing outliers for one component anomalize!"[0K
+[1] "Error in computing outliers for one component anomalize!"[0K
+[1] "Error i[0K[10G[?25h[?25l[1] "Error in computing outliers for one component anomalize!"[0K
+[1] "Error in computing outliers for one component anomalize!"[0K
+[1] "Error in computing outliers for one component anomalize!"[0K
+[1][0K[2G[?25h[?25l[1] "Error in computing outliers for one component anomalize!"[0K
+[1] "Error in computing outliers for one component anomalize!"[0K
+> plot_decomposed(out1, X = X, method = "pca")[0K
+Error: Column `name` not found in `.data`[0K
+Backtrace:[0K
+?[90m     ?[[0K[10G[?25h[?25l?[90m     ?[39mx[0K
+?[90m  1. ?[39m+-(function (x, ...) ...[0K
+?[90m  2. ?[39m+-ggplot2:::print.ggplot(x)[0K
+?[90m  3. ?[39m| +-ggplot2::ggplot_build(x)[0K
+?[90m  4. ?[39m| \-ggplot2:::ggplot_build.ggplot(x)[0K
+?[9[0K[2G[?25h[?25l?[90m  5. ?[39m|   \-layout$setup(data, plot$data, plot$plot_env)[0K
+?[90m  6. ?[39m|     \-ggplot2:::f(..., self = self)[0K
+?[90m  7. ?[39m|       \-self$facet$compute_layout(data, self$facet_params)[0K
+?[90m  8. ?[39m|         \-ggplot2:::f(...)[0K
+?[90m  9. ?[39m|[0K[18G[?25h[?25l?[90m  9. ?[39m|           +-ggplot2:::unrowname(...)[0K
+?[90m 10. ?[39m|           | \-base::is.data.frame(x)[0K
+?[90m 11. ?[39m|           \-ggplot2::combine_vars(data, params$plot_env, vars, drop = p[0Ka
+ram[0K[2G[?25h[?25lrams$drop)[0K
+?[90m 12. ?[39m|             +-ggplot2:::compact(lapply(data, eval_facets, facets = vars[0K,
+ env = env))[0K
+?[90m 13. ?[39m|             | \-base::vapply(x, is.null, logical(1))[0K
+?[90m 14. ?[39m|             \-base::lapply(data, eval_facets, facets =[0K[71G[?25h[?25l?[90m 14. ?[39m|             \-base::lapply(data, eval_facets, facets = vars, env = env)[0K
+?[90m 15. ?[39m|               \-ggplot2::[0K
+Execution halted[0K
+[0K[?25h* checking for unstated dependencies in vignettes ...[0K OK[0K[?25l
+* checking package vignettes in 'inst/doc' ... OK[0K
+[0K[?25h* checking running R code from vignettes ...[0K[?25l
+[0K[?25h  'composits.Rmd'using 'UTF-8'... OK[0K[?25l
+ NONE[0K
+* checking re-building of vignette outputs ...[0K[?25h OK[0K[?25l
+* checking PDF version of manual ...[0K[?25h OK[0K[?25l
+* DONE[0K
+[0K
+[0K[?25hStatus: 1 ERROR, 1 NOTE[0K[?25l
+See[0K
+  'C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00check.log'[0K
+for details.[0K
+[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Kl[0Kl[0K[12G[?25l$ git pull o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git pull origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hremote: Enumerating objects: 5, done.[0K[?25l
+remote: Counting objects: 100% (5/5), done.[0K
+remote: Compressing objects: 100% (1/1), done.[0K
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0[0K
+[0K[?25hUnpacking objects: 100% (3/3), done.[0K[?25l
+[0K[?25h[?25lFrom https://github.com/sevvandi/composits[0K
+ * branch            master     -> FETCH_HEAD[0K[1A[2G[?25h[?25l
+
+   f18e59e..38d9e08  master     -> origin/master[0K
+[0K[?25herror: Your local changes to the following files would be overwritten by merge:[0K[?25l
+        DESCRIPTION[0K
+Please commit your changes or stash them before you merge.[0K
+Aborting[0K
+Updating f18e59e..38d9e08[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25h[?25lu[0K[10G[?25h[11G[?25l$ R CMD bui[0K[?25hl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kposits.Rproj[0K[31G[30G[?25l$ R CMD build composits.Rpro[0K[?25h[?25l$ R CMD build composits.Rpr[0K[?25h[?25l$ R CMD build composits.Rp[0K[?25h[?25l$ R CMD build composits.[0K[?25h[?25l$ R CMD build composits[0K[?25h[?25l$ R CMD build composit[0K[?25hs[0K[?25l
+[0K[?25h ERROR[0K[?25l
+cannot change to directory 'comp[0K[31G[?25h[?25lcannot change to directory 'composits'[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ cd ..[0K[?25h[?25l$ R CMD build composits[0K[?25h[?25l
+[0K[?25h[?25l* checking for file 'composits/DESCRIPTI[0K[39G[?25h[?25l* checking for file 'composits/DESCRIPTION' ... OK[0K
+[0K[?25h[?25l* pr[0K[2G[?25h[?25l* preparing 'composits':[0K
+* checking DESCRIPTION meta-information ... OK[0K
+[0K[?25h* installing the package to build vignettes[0K[?25l
+[0K[?25h* creating vignettes ...[0K OK[0K[?25l
+[0K[?25h[?25l* c[0K[1G[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
+[0K[?25h* checking for empty or unneeded directories[0K[?25l
+[0K[?25h[?25l* b[0K[2G[?25h[?25l* building 'composits_0.0.0.9000.tar.gz'[0K
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25hh[0Ke[0Kc[0Kk[0K[15G[?25l$ R CMD check c[0K[?25hom[0Kposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[43G[?25l
+[0K[?25h* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K[?25l
+* using R version 3.6.1 (2019-07-05)[0K
+[0K[?25h* using platform: x86_64-w64-mingw32 (64-bit)[0K[?25l
+* using session charset: ISO8859-1[0K
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+* checking extension type ... Package[0K
+* this is[0K[9G[?25h[?25l* this is package 'composits' version '0.0.0.9000'[0K
+* package encoding: UTF-8[0K
+* checking package namespace information ... OK[0K
+* checking package dependencies ...[0K[?25h OK[0K[?25l
+* checking if this is a source package ... OK[0K
+* checking if there is[0K[22G[?25h[?25l* checking if there is a namespace ... OK[0K
+[0K[?25h* checking for executable files ...[0K OK[0K[?25l
+* checking for hidden files and directories ... OK[0K
+* checking for portable file names ... OK[0K
+[0K[?25h* checking whether package 'composits' can be installed ...[0K OK[0K[?25l
+* checking installed package size ...[0K[?25h OK[0K[?25l
+* checking package directory ... OK[0K
+* checking 'build' directory ..[0K[30G[?25h[?25l* checking 'build' directory ... OK[0K
+* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+* checking top-level files ... OK[0K
+* checking for left-o[0K[19G[?25h[?25l* checking for left-over files ... OK[0K
+* checking index information ...[0K[?25h OK[0K[?25l
+* checking package subdirectories ...[0K[?25h OK[0K[?25l
+* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
+* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
+* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
+* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whether the package c[0K[31G[?25h[?25l* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whet[0K[13G[?25h[?25l* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking l[0K[10G[?25h[?25l* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
+* checking dependencies in R code ...[0K[?25h OK[0K[?25l
+* checking S3 gen[0K[16G[?25h[?25l* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
+* checking replacement functions ...[0K[?25h OK[0K[?25l
+* checking foreign function calls ...[0K[?25h OK[0K[?25l
+* checking R code for possible problems ...[0K[?25h NOTE[0K[?25l
+draw_table_html: no visible binding for global variable '.'[0K
+draw_table_html: no v[0K[20G[?25h[?25ldraw_table_html: no visible binding for global variable 'ICA'[0K
+draw_table_html: no visible binding for global variable 'ICS'[0K[60G[?25h[?25l
+draw_table_html: no visible binding for global variable 'PCA'[0K
+draw_table_html: no visible binding for global variable 'forecast'[0K
+draw_table_html: no visible binding for global variable 'tsoutliers'[0K
+dra[0K[3G[?25h[?25ldraw_table_html: no visible binding for global variable 'anomalize'[0K
+draw_table_html:[0K[?25h no visible binding for global variable 'otsad'[0K[?25l
+draw_tab[0K[?25hle_html: no visible binding for global variable 'Total_Score'[0K[?25l
+dr[0K[2G[?25h[?25ldraw_table_html: no visible binding for global variable 'DOBIN'[0K
+Undefined global functions or variables[0K[38G[?25h[?25lUndefined global functions or variables:[0K
+  . DOBIN ICA ICS PCA Total_Score anomalize forecast otsad tsoutliers[0K
+* checking Rd files ...[0K[?25h OK[0K[?25l
+* checking Rd metadata ...[0K[?25h OK[0K[?25l
+* checking Rd cross-references ...[0K[?25h OK[0K[?25l
+* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
+* checking for code/documentation mismat[0K[39G[?25h[?25l* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
+* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
+* checking Rd contents ...[0K[?25h OK[0K[?25l
+* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
+[0K[?25h* checking installed files from 'inst/doc' ... OK[0K[?25l
+* checking files in 'vignettes' ...[0K[?25h OK[0K[?25l
+* checking examples ...[0K[?25h OK[0K[?25l
+* checking for unstated dependencies in vignettes ...[0K[?25h OK[0K[?25l
+* checking package vignettes in 'inst/doc' ...[0K[?25h OK[0K[?25l
+* checking running R code from vignettes ...[0K
+[0K[?25h  'composits.Rmd'using 'UTF-8'... OK[0K[?25l
+ NONE[0K
+* checking re-building of vignette outputs ...[0K[?25h OK[0K[?25l
+* checking PDF version of manual ...[0K[?25h OK[0K[?25l
+* DONE[0K
+[0K
+Status: 1 NOTE[0K
+See[0K
+  'C:/Users/S[0K[12G[?25h[?25l  'C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00check.log'[0K
+for details.[0K
+[0K
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R CMD check composits_0.0.0.9000.tar.gz[0K[43G[?25h[?25l$ R CMD build composits[0K[?25h[?25l
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+[0K[?25h* preparing 'composits':[0K[?25l
+* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+[0K[?25h[?25l* in[0K[3G[?25h[?25l* installing the package to build vignettes[0K
+[0K[?25h* creating vignettes ...[0K OK[0K[?25l
+[0K[?25h[?25l* checking for LF line-endings in source and make files and shell scripts[0K[72G[?25h[?25l
+* checking for empty or unneeded directories[0K
+[0K[?25h* building 'composits_0.0.0.9000.tar.gz'[0K[?25l
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R CMD build composits[0K[?25h[?25l$ R CMD check composits_0.0.0.9000.tar.gz[0K[43G[?25h[?25l
+[0K[?25h[?25l* using log[0K[10G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K
+* using R version 3.6.1 (2019-07-05)[0K
+* using platform: x86_64-w64-mingw32 (64-bit)[0K
+* using session c[0K[16G[?25h[?25l* using session charset: ISO8859-1[0K
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+* checking extension type ... Package[0K
+* this is package 'composits' version '0.0.0.9000'[0K
+* package encoding: UTF-8[0K
+* checking package namespace information ...[0K[?25h OK[0K[?25l
+* checking package dependencies ...[0K[?25h OK[0K[?25l
+* checkin[0K[8G[?25h[?25l* checking if this is a source package ... OK[0K
+* checking if there is a namespace ... OK[0K
+[0K[?25h[?25l* checking for executable file[0K[29G[?25h[?25l* checking for executable files ...[0K[?25h OK[0K[?25l
+* checking for hidden files and directori[0K[40G[?25h[?25l* checking for hidden files and directories ... OK[0K
+* checking for portable file names ...[0K[?25h OK[0K[?25l
+* checking whether package 'composits' can be installed ...[0K[?25h OK[0K[?25l
+* checking installed package size ...[0K[?25h OK[0K[?25l
+* checking package directory ... OK[0K
+* checking 'build' directory ... OK[0K
+* checking DESCRIPTION meta-inf[0K[30G[?25h[?25l* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+* checking top-level files ... OK[0K
+* checking for left-over files ...[0K[?25h OK[0K[?25l
+* checking index information ...[0K[?25h[?25l OK[0K[35G[?25h[?25l
+* checking package subdirectories ...[0K[?25h OK[0K[?25l
+* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
+* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
+* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
+* checking whether the package can be loaded wit[0K[47G[?25h[?25l* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
+* checking dependencies in R code ...[0K[?25h OK[0K[?25l
+* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
+* checking replacement functions ...[0K[?25h OK[0K[?25l
+* checking foreign function calls ...[0K[?25h OK[0K[?25l
+* checking R code for possible problems ...[0K[?25h NOTE[0K[?25l
+draw_table_html: no visible binding for global variable '.[0K[57G[?25h[?25ldraw_table_html: no visible binding for global variable '.'[0K
+draw_table_html: no visible binding for global variable 'ICA'[0K
+draw_table_html: no visible binding for global variable 'ICS'[0K
+draw_table_html: no visible binding for global variable 'PCA'[0K
+draw_table_html: no vi[0K[20G[?25h[?25ldraw_table_html: no visible binding for global variable 'forecast'[0K
+dra[0K[1G[?25hdraw_table_html: no visible binding for global variable 'tsoutliers'[0K[?25l
+draw_table_html: no visible binding for global variable 'anomalize'[0K
+draw_table_html: no visible binding for global variable 'otsad'[0K
+draw_table_html: no[0K[19G[?25h[?25ldraw_table_html: no visible binding for global variable 'Total_Score'[0K
+Undefined global functions or variables:[0K
+  . ICA ICS PCA Total_Score anomalize f[0K[38G[?25h[?25l  . ICA ICS PCA Total_Score anomalize forecast otsad tsoutliers[0K
+* checking Rd files ...[0K[?25h OK[0K[?25l
+* checking Rd metadata ...[0K[?25h OK[0K[?25l
+* checking Rd cross-references ...[0K[?25h[?25l OK[0K[36G[?25h[?25l
+* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
+* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
+* checking Rd \usag[0K[18G[?25h[?25l* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
+* checking Rd contents ...[0K[?25h OK[0K[?25l
+* checking for unstated dependencies[0K[35G[?25h[?25l* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
+* checking installed files from 'inst/doc' ...[0K[?25h OK[0K[?25l
+* checking files in 'vignettes' ...[0K[?25h OK[0K[?25l
+* checking examples ...[0K[?25h OK[0K[?25l
+[0K[?25h* checking for unstated dependencies in vignettes ...[0K OK[0K[?25l
+[0K[?25h* checking package vignettes in 'inst/doc' ... OK[0K[?25l
+* checking r[0K[11G[?25h[?25l* checking running R code from vignettes ...[0K
+[0K[?25h  'composits.Rmd'using 'UTF-8'... OK[0K[?25l
+ NONE[0K
+[0K[?25h* checking re-building of vignette outputs ...[0K OK[0K[?25l
+* checking PDF version of manual ...[0K[?25h OK[0K[?25l
+* DONE[0K
+[0K
+Status: 1 NOTE[0K
+See[0K
+  'C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00check.log'[0K
+for details.[0K
+[0K
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R CMD check composits_0.0.0.9000.tar.gz[0K[43G[?25h[?25l$ R CMD build composits[0K[?25h[?25l
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+[0K[?25h* preparing 'composits':[0K[?25l
+* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+[0K[?25h* installing the package to build vignettes[0K[?25l
+[0K[?25h* creating vignettes ...[0K OK[0K[?25l
+[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
+[0K[?25h* checking for empty or unneeded directories[0K[?25l
+[0K[?25h* building 'composits_0.0.0.9000.tar.gz'[0K[?25l
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R CMD build composits[0K[?25h[?25l$ R CMD check composits_0.0.0.9000.tar.gz[0K[43G[?25h[?25l
+[0K[?25h* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K[?25l
+* using R version 3.6.1 (2019-07-05)[0K
+* using platform: x86_64-w6[0K[26G[?25h[?25l* using platform: x86_64-w64-mingw32 (64-bit)[0K
+* using session charset: ISO8859-1[0K
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+* checking extension type ... Package[0K
+* this is package 'c[0K[19G[?25h[?25l* this is package 'composits' version '0.0.0.9000'[0K
+* package encoding: UTF-8[0K
+* checking package namespace information ... OK[0K
+* c[0K[3G[?25h[?25l* checking package dependencies ...[0K[?25h OK[0K[?25l
+* checking if this is a source package ... OK[0K
+* checking if there is a namespace ...[0K[?25h OK[0K[?25l
+[0K[?25h* checking for executable files ...[0K OK[0K[?25l
+* checking for hidden files and directories ...[0K[?25h OK[0K[?25l
+* checking for portable file names ... OK[0K
+* checking whether package 'composits' can[0K[41G[?25h[?25l* checking whether package 'composits' can be installed ...[0K[?25h OK[0K[?25l
+* checking installed package size ...[0K[?25h[?25l O[0K[38G[?25h[?25l* checking installed package size ... OK[0K
+* checking package directory ... OK[0K
+* checking 'build' directory ... OK[0K
+* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+* checking top-level files ... OK[0K
+* checking for left-over files ... OK[0K
+* checking[0K[9G[?25h[?25l* checking index information ...[0K[?25h OK[0K[?25l
+* checking package subdirectories ...[0K[?25h OK[0K[?25l
+* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
+* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
+* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
+* checking whether the package can be loaded with s[0K[50G[?25h[?25l* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whether the namespace can be unloaded cle[0K[50G[?25h[?25l* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
+* checking dependencies in R code ...[0K[?25h[?25l O[0K[38G[?25h[?25l* checking dependencies in R code ... OK[0K
+* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
+* checking replacement functions ...[0K[?25h OK[0K[?25l
+* checking foreign function calls ...[0K[?25h OK[0K[?25l
+* checking R code for possible problems ...[0K[?25h OK[0K[?25l
+* checking Rd files ...[0K[?25h OK[0K[?25l
+* checking Rd metadata ...[0K[?25h OK[0K[?25l
+* checking Rd cross-references ...[0K[?25h OK[0K[?25l
+* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
+* checking for c[0K[14G[?25h[?25l* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
+* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
+* checking Rd contents ...[0K[?25h OK[0K[?25l
+* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
+[0K[?25h* checking installed files from 'inst/doc' ...[0K OK[0K[?25l
+* checking files in 'vignettes' ... OK[0K
+* checking example[0K[17G[?25h[?25l* checking examples ...[0K[?25h OK[0K[?25l
+* c[0K[2G[?25h[?25l* checking for unstated dependencies in vignettes ...[0K[?25h OK[0K[?25l
+* checking package vignettes in 'inst/doc' ... OK[0K
+* chec[0K[5G[?25h[?25l* checking running R code from vignettes ...[0K
+[0K[?25h  'composits.Rmd'using 'UTF-8'... OK[0K[?25l
+ NONE[0K
+* checking re-building of vign[0K[29G[?25h[?25l* checking re-building of vignette outputs ...[0K[?25h OK[0K[?25l
+* checking PDF version of manual ...[0K[?25h OK[0K[?25l
+* DONE[0K
+[0K
+Status: OK[0K
+[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Km[0Kposits[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K[?25h[?25l
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
+[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
+error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
+fatal: updating files failed[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
+[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
+error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
+fatal: updating files failed[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[3G[?25h[12G[?25l
+[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
+error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
+fatal: updating files failed[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
+[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
+error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
+fatal: updating files failed[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[3G[?25h[12G[?25l
+[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
+error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
+fatal: updating files failed[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ p[0K[?25hw[0Kd[0K[?25l
+/c/Users/Sevvandi/Documents/repos/composits[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ pwd[0K[?25h[?25l$ git add .[0K[?25h

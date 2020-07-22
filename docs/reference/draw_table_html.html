@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Performs composite time series outlier ensembling. — comp_tsout_ens • composits</title>
+<title>Draws an html table from comp_tsout_ens or mv_tsout_ens output. — draw_table_html • composits</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Performs composite time series outlier ensembling. — comp_tsout_ens" />
-<meta property="og:description" content="Performs composite time series outlier ensembling." />
+<meta property="og:title" content="Draws an html table from comp_tsout_ens or mv_tsout_ens output. — draw_table_html" />
+<meta property="og:description" content="Draws an html table from comp_tsout_ens or mv_tsout_ens output." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -103,75 +103,33 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Performs composite time series outlier ensembling.</h1>
+    <h1>Draws an html table from comp_tsout_ens or mv_tsout_ens output.</h1>
     
-    <div class="hidden name"><code>comp_tsout_ens.Rd</code></div>
+    <div class="hidden name"><code>draw_table_html.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Performs composite time series outlier ensembling.</p>
+    <p>Draws an html table from comp_tsout_ens or mv_tsout_ens output.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>comp_tsout_ens</span>(<span class='no'>x</span>, <span class='kw'>m1</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>ncomp</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>sds</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>rept</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-  <span class='kw'>compr</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>rat</span> <span class='kw'>=</span> <span class='fl'>0.05</span>, <span class='kw'>fast</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    <pre class="usage"><span class='fu'>draw_table_html</span>(<span class='no'>obj</span>, <span class='kw'>uniq_dates</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>A  data frame or a matrix object containing a multivariate time series</p></td>
+      <th>obj</th>
+      <td><p>The output from <code>comp_tsout_ens</code> or <code>mv_tsout_ens</code> functions.</p></td>
     </tr>
     <tr>
-      <th>m1</th>
-      <td><p>Variable indicating dimension reduction methods. Default is set to using all 4 methods: PCA, DOBIN, ICS and ICA.</p></td>
-    </tr>
-    <tr>
-      <th>ncomp</th>
-      <td><p>The number of components for each dimension reduction method. Default is set to 2.</p></td>
-    </tr>
-    <tr>
-      <th>sds</th>
-      <td><p>The random seed for generating a no-outlier time series.</p></td>
-    </tr>
-    <tr>
-      <th>rept</th>
-      <td><p>The number of repetitions for generating a no-outlier time series.</p></td>
-    </tr>
-    <tr>
-      <th>compr</th>
-      <td><p>To adjust for multiple testing, the results of the ensemble are compared with the results of a time series without outliers. If <code>compr =1</code>, a time series is simulated as in <code>simulate_comp_ts</code> without outliers. If <code>compr = 2</code>, the top outliers are removed from the outlier series and interpolated values are used for those time points. If <code>compr = 3</code> both methods of simulation are used for comparison.</p></td>
-    </tr>
-    <tr>
-      <th>rat</th>
-      <td><p>A comparison is done with the outliers removed time series. The variable <code>rat</code> denotes the ratio of outliers to be removed as a proportion of the whole dataset for this comparison.</p></td>
-    </tr>
-    <tr>
-      <th>fast</th>
-      <td><p>For faster computation skip ICS decomposition method.</p></td>
+      <th>uniq_dates</th>
+      <td><p>An optional parameter to pass in the dates for the dataset.</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>A list with the following components:</p>
-<dt><code>outliers</code></dt><dd><p>The outliers detected from the multivariate ensemble after comparing with the comparison time series without outliers.</p></dd>
-<dt><code>all</code></dt><dd><p>All the outliers detected from the multivariate ensemble.</p></dd>
-<dt><code>outmat</code></dt><dd><p>A matrix with outlier scores organised by outlier method.</p></dd>
-<dt><code>wts</code></dt><dd><p>The weights of the outlier detection methods.</p></dd>
-<dt><code>pca_loadings</code></dt><dd><p>The basis vectors from PCA.</p></dd>
-<dt><code>dobin_loadings</code></dt><dd><p>The basis vectors from DOBIN. See R package <code>dobin</code> for more details.</p></dd>
-<dt><code>ics_loadings</code></dt><dd><p>The basis vectors from ICS. See R package <code>ICS</code> for more details.</p></dd>
-<dt><code>ica_loadings</code></dt><dd><p>The basis vectors from Independent Component Analysis.</p></dd>
-<dt><code>decomp_wts</code></dt><dd><p>Each decomposition method has several components. For example if <code>ncomp</code>=2, then there are 2 PC components, 2 DOBIn components, etc ... The weight of each component is given different and depends on the decomposition method. These weights are given in <code>decomp_wts</code>.</p></dd>
-<dt><code>outmat4D</code></dt><dd><p>A 4D array with outlier scores organised by outlier method, decomposition method, components for each decomposition method and time.</p></dd>
- <dt><code>comp_loadings</code></dt><dd><p>The unconstrained basis vectors on the simplex.</p></dd>
- <dt><code>comp_coords</code></dt><dd><p>The unconstrained coordinates of the composite time series data.</p></dd>
-
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># Note - This example needs to be updated using the simulation function.</span>
-<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>100</span>)
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>100</span>)
 <span class='no'>n</span> <span class='kw'>&lt;-</span> <span class='fl'>600</span>
 <span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span>:<span class='fl'>100</span>, <span class='no'>n</span>, <span class='kw'>replace</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
 <span class='no'>x</span>[<span class='fl'>25</span>] <span class='kw'>&lt;-</span> <span class='fl'>200</span>
@@ -180,8 +138,7 @@
 <span class='no'>x3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span>:<span class='fl'>100</span>, <span class='no'>n</span>, <span class='kw'>replace</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
 <span class='no'>x4</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span>:<span class='fl'>100</span>, <span class='no'>n</span>, <span class='kw'>replace</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
 <span class='no'>X</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind.data.frame</a></span>(<span class='no'>x</span>, <span class='no'>x2</span>, <span class='no'>x3</span>, <span class='no'>x4</span>)
-<span class='no'>X</span> <span class='kw'>&lt;-</span> <span class='no'>X</span>/<span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowSums</a></span>(<span class='no'>X</span>)
-<span class='no'>out</span> <span class='kw'>&lt;-</span> <span class='fu'>comp_tsout_ens</span>(<span class='no'>X</span>, <span class='kw'>compr</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>fast</span><span class='kw'>=</span><span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+<span class='no'>out</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='mv_tsout_ens.html'>mv_tsout_ens</a></span>(<span class='no'>X</span>, <span class='kw'>compr</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>fast</span><span class='kw'>=</span><span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
@@ -197,14 +154,63 @@
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
-#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='input'>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='input'><span class='fu'>draw_table_html</span>(<span class='no'>out</span>)</div><div class='output co'>#&gt; &lt;div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; "&gt;&lt;table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+#&gt;  &lt;thead&gt;
+#&gt;   &lt;tr&gt;
+#&gt;    &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Indices &lt;/th&gt;
+#&gt;    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; DOBIN &lt;/th&gt;
+#&gt;    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; PCA &lt;/th&gt;
+#&gt;    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; ICS &lt;/th&gt;
+#&gt;    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; ICA &lt;/th&gt;
+#&gt;    &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Num_Coords &lt;/th&gt;
+#&gt;    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; forecast &lt;/th&gt;
+#&gt;    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; tsoutliers &lt;/th&gt;
+#&gt;    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; otsad &lt;/th&gt;
+#&gt;    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; anomalize &lt;/th&gt;
+#&gt;    &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Num_Methods &lt;/th&gt;
+#&gt;    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; Total_Score &lt;/th&gt;
+#&gt;    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; inds &lt;/th&gt;
+#&gt;   &lt;/tr&gt;
+#&gt;  &lt;/thead&gt;
+#&gt; &lt;tbody&gt;
+#&gt;   &lt;tr&gt;
+#&gt;    &lt;td style="text-align:right;"&gt; 320 &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;"&gt;0.56&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;"&gt;0.65&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;"&gt;0.9&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;"&gt;0.63&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;"&gt;0.75&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;"&gt;1&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;"&gt;0&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;"&gt;1&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: pink !important;"&gt;2.75&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; 2 &lt;/td&gt;
+#&gt;   &lt;/tr&gt;
+#&gt;   &lt;tr&gt;
+#&gt;    &lt;td style="text-align:right;"&gt; 25 &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;"&gt;0&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;"&gt;0&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;"&gt;0.5&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;"&gt;0&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;"&gt;0&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;"&gt;0.25&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;"&gt;0&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;"&gt;0.25&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;"&gt;0.5&lt;/span&gt; &lt;/td&gt;
+#&gt;    &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+#&gt;   &lt;/tr&gt;
+#&gt; &lt;/tbody&gt;
+#&gt; &lt;/table&gt;&lt;/div&gt;</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 
