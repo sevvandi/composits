@@ -75,31 +75,26 @@
     
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(composits)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(ggplot2)</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(forecast)</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co">#&gt; Registered S3 method overwritten by 'xts':</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="co">#&gt;   method     from</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="co">#&gt;   as.zoo.xts zoo</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co">#&gt; Registered S3 method overwritten by 'quantmod':</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co">#&gt;   method            from</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#&gt;   as.zoo.data.frame zoo</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="co">#&gt; Registered S3 methods overwritten by 'forecast':</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="co">#&gt;   method             from    </span></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="co">#&gt;   fitted.fracdiff    fracdiff</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="co">#&gt;   residuals.fracdiff fracdiff</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dplyr)</span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="co">#&gt; </span></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="co">#&gt; Attaching package: 'dplyr'</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="co">#&gt; The following objects are masked from 'package:stats':</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a><span class="co">#&gt; </span></span>
-<span id="cb1-19"><a href="#cb1-19"></a><span class="co">#&gt;     filter, lag</span></span>
-<span id="cb1-20"><a href="#cb1-20"></a><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
-<span id="cb1-21"><a href="#cb1-21"></a><span class="co">#&gt; </span></span>
-<span id="cb1-22"><a href="#cb1-22"></a><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span></code></pre></div>
-<p>The goal of <em>composits</em> is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the outlier detection methods from R packages <em>forecast</em>, <em>tsoutliers</em>, <em>anomalize</em> and <em>otsad</em>.</p>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co">#&gt; Warning: package 'ggplot2' was built under R version 3.6.3</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(forecast)</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dplyr)</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co">#&gt; </span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co">#&gt; Attaching package: 'dplyr'</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">#&gt; The following objects are masked from 'package:stats':</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#&gt; </span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co">#&gt;     filter, lag</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co">#&gt; </span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tidyr)</span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="co">#&gt; Warning: package 'tidyr' was built under R version 3.6.3</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(stringr)</span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(rnaturalearthdata)</span></code></pre></div>
+<p>The goal of <em>composits</em> is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the outlier detection methods from R packages , ,  and .</p>
 <div id="univariate-time-series-outliers" class="section level2">
 <h2 class="hasAnchor">
 <a href="#univariate-time-series-outliers" class="anchor"></a>Univariate time series outliers</h2>
-<p>This example uses a univariate time series containing the daily gold prices from the R package <em>forecast</em>.</p>
+<p>This example uses a univariate time series containing the daily gold prices from the R package .</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>gold2 &lt;-<span class="st"> </span>forecast<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/forecast/man/na.interp.html">na.interp</a></span>(gold)</span>
 <span id="cb2-2"><a href="#cb2-2"></a>out &lt;-<span class="st"> </span><span class="kw"><a href="../reference/uv_tsout_ens.html">uv_tsout_ens</a></span>(gold2)</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
@@ -111,93 +106,99 @@
 <span id="cb2-9"><a href="#cb2-9"></a>ts_gold &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/reexports.html">as_tibble</a></span>(gold2) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">t =</span> <span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(gold2)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rename</span>(<span class="dt">value =</span> x)</span>
 <span id="cb2-10"><a href="#cb2-10"></a><span class="kw">ggplot</span>(ts_gold, <span class="kw">aes</span>(<span class="dt">x=</span>t, <span class="dt">y=</span>value)) <span class="op">+</span></span>
 <span id="cb2-11"><a href="#cb2-11"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span><span class="kw"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span>(inds), <span class="dt">color=</span><span class="st">"red"</span>, <span class="dt">alpha=</span><span class="fl">0.8</span>, <span class="dt">size=</span><span class="fl">0.1</span>, <span class="dt">linetype =</span><span class="st">'dashed'</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">"Gold prices"</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span><span class="kw"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span>(inds), <span class="dt">color=</span><span class="st">"red"</span>, <span class="dt">alpha=</span><span class="fl">0.8</span>, <span class="dt">size=</span><span class="fl">0.5</span>, <span class="dt">linetype =</span><span class="st">'dashed'</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">"Gold prices"</span>) <span class="op">+</span><span class="st"> </span></span>
 <span id="cb2-13"><a href="#cb2-13"></a><span class="st">  </span><span class="kw">theme_bw</span>()</span>
 <span id="cb2-14"><a href="#cb2-14"></a><span class="co">#&gt; Don't know how to automatically pick scale for object of type ts. Defaulting to continuous.</span></span></code></pre></div>
-<p><img src="composits_files/figure-html/univaraite1-1.png" width="700"></p>
+<p><img src="composits_files/figure-html/univaraite1-1.png" width="768"></p>
 <p>The red dashed vertical lines show the time points that have been picked by 3 or more outlier detection methods.</p>
-<p>Next we look at the quarterly production of woollen yarn in Australia. This time series is also taken from the R package <em>forecast</em>.</p>
+<p>Next we look at the quarterly production of woollen yarn in Australia. This time series is also taken from the R package .</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>out &lt;-<span class="st"> </span><span class="kw"><a href="../reference/uv_tsout_ens.html">uv_tsout_ens</a></span>(woolyrnq)</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="co">#&gt; trend = 22 days</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co">#&gt; trend = 23 days</span></span>
 <span id="cb3-6"><a href="#cb3-6"></a>inds &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/names.html">names</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/which.html">which</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/table.html">table</a></span>(out<span class="op">$</span>outliers) <span class="op">&gt;</span><span class="st"> </span><span class="dv">2</span>))</span>
 <span id="cb3-7"><a href="#cb3-7"></a></span>
 <span id="cb3-8"><a href="#cb3-8"></a>ts_wool &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/reexports.html">as_tibble</a></span>(woolyrnq) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">t =</span> <span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(woolyrnq)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rename</span>(<span class="dt">value =</span> x)</span>
 <span id="cb3-9"><a href="#cb3-9"></a><span class="kw">ggplot</span>(ts_wool, <span class="kw">aes</span>(<span class="dt">x=</span>t, <span class="dt">y=</span>value)) <span class="op">+</span></span>
 <span id="cb3-10"><a href="#cb3-10"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
-<span id="cb3-11"><a href="#cb3-11"></a><span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span><span class="kw"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span>(inds), <span class="dt">color=</span><span class="st">"red"</span>, <span class="dt">alpha=</span><span class="fl">0.8</span>, <span class="dt">size=</span><span class="fl">0.1</span>, <span class="dt">linetype =</span><span class="st">'dashed'</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">"Woollen Yarn Production"</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span><span class="kw"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span>(inds), <span class="dt">color=</span><span class="st">"red"</span>, <span class="dt">alpha=</span><span class="fl">0.8</span>, <span class="dt">size=</span><span class="fl">0.5</span>, <span class="dt">linetype =</span><span class="st">'dashed'</span>) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">"Woollen Yarn Production"</span>) <span class="op">+</span><span class="st"> </span></span>
 <span id="cb3-12"><a href="#cb3-12"></a><span class="st">  </span><span class="kw">theme_bw</span>()</span>
 <span id="cb3-13"><a href="#cb3-13"></a><span class="co">#&gt; Don't know how to automatically pick scale for object of type ts. Defaulting to continuous.</span></span></code></pre></div>
-<p><img src="composits_files/figure-html/univariate2-1.png" width="700"></p>
+<p><img src="composits_files/figure-html/univariate2-1.png" width="768"></p>
 </div>
 <div id="multivariate-time-series-outliers" class="section level2">
 <h2 class="hasAnchor">
 <a href="#multivariate-time-series-outliers" class="anchor"></a>Multivariate time series outliers</h2>
-<p>This example includes EU stock market data from the package <em>datasets</em>. It contains the daily closing prices of 4 European stock indices: Germany DAX, Switzerland SMI, France CAC, and UK FTSE.</p>
+<p>This example includes EU stock market data from the package <em>datasets</em>. It contains the daily closing prices of 4 European stock indices: Germany DAX, Switzerland SMI, France CAC, and UK FTSE. First we plot the data.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>stpart &lt;-<span class="st"> </span>EuStockMarkets[<span class="dv">1</span><span class="op">:</span><span class="dv">600</span>, ]</span>
-<span id="cb4-2"><a href="#cb4-2"></a>out &lt;-<span class="st"> </span><span class="kw"><a href="../reference/mv_tsout_ens.html">mv_tsout_ens</a></span>(stpart, <span class="dt">fast=</span><span class="ot">TRUE</span>)</span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb4-12"><a href="#cb4-12"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb4-13"><a href="#cb4-13"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb4-14"><a href="#cb4-14"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb4-15"><a href="#cb4-15"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb4-16"><a href="#cb4-16"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb4-17"><a href="#cb4-17"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb4-18"><a href="#cb4-18"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb4-19"><a href="#cb4-19"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb4-20"><a href="#cb4-20"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb4-21"><a href="#cb4-21"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb4-22"><a href="#cb4-22"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb4-23"><a href="#cb4-23"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb4-24"><a href="#cb4-24"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb4-25"><a href="#cb4-25"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb4-26"><a href="#cb4-26"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb4-27"><a href="#cb4-27"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb4-28"><a href="#cb4-28"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb4-29"><a href="#cb4-29"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb4-30"><a href="#cb4-30"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb4-31"><a href="#cb4-31"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb4-32"><a href="#cb4-32"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb4-33"><a href="#cb4-33"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb4-34"><a href="#cb4-34"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb4-35"><a href="#cb4-35"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb4-36"><a href="#cb4-36"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb4-37"><a href="#cb4-37"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb4-38"><a href="#cb4-38"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb4-39"><a href="#cb4-39"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb4-40"><a href="#cb4-40"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb4-41"><a href="#cb4-41"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb4-42"><a href="#cb4-42"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb4-43"><a href="#cb4-43"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb4-44"><a href="#cb4-44"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb4-45"><a href="#cb4-45"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb4-46"><a href="#cb4-46"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb4-47"><a href="#cb4-47"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb4-48"><a href="#cb4-48"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb4-49"><a href="#cb4-49"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb4-50"><a href="#cb4-50"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb4-51"><a href="#cb4-51"></a>out<span class="op">$</span>outliers</span>
-<span id="cb4-52"><a href="#cb4-52"></a><span class="co">#&gt;    Indices Total_Score Num_Coords Num_Methods     DOBIN       PCA</span></span>
-<span id="cb4-53"><a href="#cb4-53"></a><span class="co">#&gt; 11      36      1.6928          3           3 0.5460645 0.6552774</span></span>
-<span id="cb4-54"><a href="#cb4-54"></a><span class="co">#&gt; 20     205      0.8160          3           2 0.2733508 0.4059739</span></span>
-<span id="cb4-55"><a href="#cb4-55"></a><span class="co">#&gt; 32     316      1.4400          3           2 0.4710592 0.6156465</span></span>
-<span id="cb4-56"><a href="#cb4-56"></a><span class="co">#&gt; 41     331      1.5008          3           3 0.2728727 0.4093091</span></span>
-<span id="cb4-57"><a href="#cb4-57"></a><span class="co">#&gt;          ICA forecast tsoutliers otsad anomalize Gap_Score_1</span></span>
-<span id="cb4-58"><a href="#cb4-58"></a><span class="co">#&gt; 11 0.4914581        0      1.248 0.320    0.1248           2</span></span>
-<span id="cb4-59"><a href="#cb4-59"></a><span class="co">#&gt; 20 0.1366754        0      0.624 0.192    0.0000           0</span></span>
-<span id="cb4-60"><a href="#cb4-60"></a><span class="co">#&gt; 32 0.3532944        0      1.248 0.192    0.0000           1</span></span>
-<span id="cb4-61"><a href="#cb4-61"></a><span class="co">#&gt; 41 0.8186182        0      1.248 0.128    0.1248           1</span></span>
-<span id="cb4-62"><a href="#cb4-62"></a><span class="kw">draw_table_html</span>(out)</span></code></pre></div>
+<span id="cb4-2"><a href="#cb4-2"></a>stpart &lt;-<span class="st"> </span>EuStockMarkets[<span class="dv">1</span><span class="op">:</span><span class="dv">600</span>, ]</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">as_tibble</span>(stpart) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">t =</span> <span class="dv">1</span><span class="op">:</span><span class="kw">n</span>())   <span class="op">%&gt;%</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="dt">cols=</span><span class="dv">1</span><span class="op">:</span><span class="dv">4</span>)  <span class="op">%&gt;%</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>( ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="dt">x =</span> t, <span class="dt">y =</span> value, <span class="dt">color =</span> name)) <span class="op">+</span><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span>() <span class="op">+</span><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span>() </span></code></pre></div>
+<p><img src="composits_files/figure-html/multivariate1-1.png" width="768"></p>
+<p>Then we find multivariate outliers. To find the multivariate outliers, first we decompose the time series to univariate outliers by using Principle Component Analysis (PCA), Independent Component Analysis (ICA), DOBIN (Distance based Outlier BasIs using Neighbours) and ICS (Invariant Coordinate Selection) decomposition methods. The  option leaves out ICS decomposition. Then for a selected number of components (default being 2) we find outliers using the univariate time series ensemble. The outliers are given in the table below.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>out &lt;-<span class="st"> </span><span class="kw"><a href="../reference/mv_tsout_ens.html">mv_tsout_ens</a></span>(stpart, <span class="dt">fast=</span><span class="ot">TRUE</span>)</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb5-19"><a href="#cb5-19"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb5-20"><a href="#cb5-20"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb5-21"><a href="#cb5-21"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb5-22"><a href="#cb5-22"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb5-23"><a href="#cb5-23"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb5-24"><a href="#cb5-24"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb5-25"><a href="#cb5-25"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb5-26"><a href="#cb5-26"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb5-27"><a href="#cb5-27"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb5-28"><a href="#cb5-28"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb5-29"><a href="#cb5-29"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb5-30"><a href="#cb5-30"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb5-31"><a href="#cb5-31"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb5-32"><a href="#cb5-32"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb5-33"><a href="#cb5-33"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb5-34"><a href="#cb5-34"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb5-35"><a href="#cb5-35"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb5-36"><a href="#cb5-36"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb5-37"><a href="#cb5-37"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb5-38"><a href="#cb5-38"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb5-39"><a href="#cb5-39"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb5-40"><a href="#cb5-40"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb5-41"><a href="#cb5-41"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb5-42"><a href="#cb5-42"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb5-43"><a href="#cb5-43"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb5-44"><a href="#cb5-44"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb5-45"><a href="#cb5-45"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb5-46"><a href="#cb5-46"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb5-47"><a href="#cb5-47"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb5-48"><a href="#cb5-48"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb5-49"><a href="#cb5-49"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb5-50"><a href="#cb5-50"></a>out<span class="op">$</span>outliers</span>
+<span id="cb5-51"><a href="#cb5-51"></a><span class="co">#&gt;    Indices Total_Score Num_Coords Num_Methods     DOBIN       PCA</span></span>
+<span id="cb5-52"><a href="#cb5-52"></a><span class="co">#&gt; 11      36      1.6928          3           3 0.5460645 0.6552774</span></span>
+<span id="cb5-53"><a href="#cb5-53"></a><span class="co">#&gt; 20     205      0.8160          3           2 0.2733508 0.4059739</span></span>
+<span id="cb5-54"><a href="#cb5-54"></a><span class="co">#&gt; 32     316      1.4400          3           2 0.4710592 0.6156465</span></span>
+<span id="cb5-55"><a href="#cb5-55"></a><span class="co">#&gt; 41     331      1.5008          3           3 0.2728727 0.4093091</span></span>
+<span id="cb5-56"><a href="#cb5-56"></a><span class="co">#&gt;          ICA forecast tsoutliers otsad anomalize Gap_Score_1</span></span>
+<span id="cb5-57"><a href="#cb5-57"></a><span class="co">#&gt; 11 0.4914581        0      1.248 0.320    0.1248           2</span></span>
+<span id="cb5-58"><a href="#cb5-58"></a><span class="co">#&gt; 20 0.1366754        0      0.624 0.192    0.0000           0</span></span>
+<span id="cb5-59"><a href="#cb5-59"></a><span class="co">#&gt; 32 0.3532944        0      1.248 0.192    0.0000           1</span></span>
+<span id="cb5-60"><a href="#cb5-60"></a><span class="co">#&gt; 41 0.8186182        0      1.248 0.128    0.1248           1</span></span>
+<span id="cb5-61"><a href="#cb5-61"></a><span class="kw"><a href="../reference/draw_table_html.html">draw_table_html</a></span>(out)</span></code></pre></div>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; overflow-x: scroll; width:1000px; ">
 <table class="table table table-striped">
 <thead><tr>
@@ -236,9 +237,6 @@ Gap_Score_1
 </th>
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
 Total_Score
-</th>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
-inds
 </th>
 </tr></thead>
 <tbody>
@@ -279,9 +277,6 @@ inds
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: pink !important;">1.69</span>
 </td>
-<td style="text-align:left;">
-11
-</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -319,9 +314,6 @@ inds
 </td>
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.5</span>
-</td>
-<td style="text-align:left;">
-41
 </td>
 </tr>
 <tr>
@@ -361,9 +353,6 @@ inds
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.44</span>
 </td>
-<td style="text-align:left;">
-32
-</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -402,17 +391,463 @@ inds
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0.82</span>
 </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The decomposed time series is shown in the figure below.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw"><a href="../reference/plot_decomposed_all.html">plot_decomposed_all</a></span>(<span class="dt">obj=</span>out, <span class="dt">X =</span> stpart)</span></code></pre></div>
+<p><img src="composits_files/figure-html/mvout2-1.png" width="768"></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># animate_ts_ensemble(out, X= stpart,  max_frames = 1)</span></span></code></pre></div>
+<p>The decomposition above shows three decomposition methods. If you want to plot only one method, you can use the \texttt{plot_decomposed} function. The outlying time-points are shown in the figure above and below.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw"><a href="../reference/plot_decomposed.html">plot_decomposed</a></span>(<span class="dt">obj=</span>out, <span class="dt">X =</span> stpart,  <span class="dt">method =</span> <span class="st">"pca"</span>)</span></code></pre></div>
+<p><img src="composits_files/figure-html/mvout3-1.png" width="768"></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># animate_ts_ensemble(out, X= stpart,  max_frames = 1)</span></span></code></pre></div>
+</div>
+<div id="composite-time-series-outliers" class="section level2">
+<h2 class="hasAnchor">
+<a href="#composite-time-series-outliers" class="anchor"></a>Composite time series outliers</h2>
+<p>For this example we use daily mortality counts in Spain organised by state. The dataset records mortality counts from the 18th of April 2018 until the 5th of May 2020. To make the data compositional we divide the state counts by the total count for each day.</p>
+<p>Compositional data live on a simplex, because the sums add up to a constant. Before analysing such data, it is important to make the data unconstrained. We make the data unconstrained by using a coordinate transformation called the <em>null space coordinate transformation</em>. We use the multivariate outlier detection ensemble discussed above on these unconstrained data. More details are available in our paper.</p>
+<p>First let us load this data and plot it.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="st">'spanish_morte'</span>)</span>
+<span id="cb10-2"><a href="#cb10-2"></a>df &lt;-<span class="st"> </span>spanish_morte[[<span class="dv">1</span>]]</span>
+<span id="cb10-3"><a href="#cb10-3"></a>uniq_dates &lt;-<span class="st"> </span>spanish_morte[[<span class="dv">2</span>]]</span>
+<span id="cb10-4"><a href="#cb10-4"></a>df2 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/cbind.html">cbind.data.frame</a></span>(uniq_dates, df)</span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="kw">as_tibble</span>(df2) <span class="op">%&gt;%</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="dt">cols=</span><span class="dv">2</span><span class="op">:</span><span class="dv">20</span>)  <span class="op">%&gt;%</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>( ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="dt">x =</span> uniq_dates, <span class="dt">y =</span> value, <span class="dt">color =</span> name)) <span class="op">+</span><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span>() <span class="op">+</span><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span>() </span></code></pre></div>
+<p><img src="composits_files/figure-html/composite1-1.png" width="768"></p>
+<p>Next we find the outliers using compositional time series outlier ensemble.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>out &lt;-<span class="st"> </span><span class="kw"><a href="../reference/comp_tsout_ens.html">comp_tsout_ens</a></span>(df, <span class="dt">fast=</span><span class="ot">FALSE</span>)</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-6"><a href="#cb11-6"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-7"><a href="#cb11-7"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-8"><a href="#cb11-8"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-9"><a href="#cb11-9"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-10"><a href="#cb11-10"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-11"><a href="#cb11-11"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-12"><a href="#cb11-12"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-13"><a href="#cb11-13"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-14"><a href="#cb11-14"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-15"><a href="#cb11-15"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-16"><a href="#cb11-16"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-17"><a href="#cb11-17"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-18"><a href="#cb11-18"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-19"><a href="#cb11-19"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-20"><a href="#cb11-20"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-21"><a href="#cb11-21"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-22"><a href="#cb11-22"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-23"><a href="#cb11-23"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-24"><a href="#cb11-24"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-25"><a href="#cb11-25"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-26"><a href="#cb11-26"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-27"><a href="#cb11-27"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-28"><a href="#cb11-28"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-29"><a href="#cb11-29"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-30"><a href="#cb11-30"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-31"><a href="#cb11-31"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-32"><a href="#cb11-32"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-33"><a href="#cb11-33"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-34"><a href="#cb11-34"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-35"><a href="#cb11-35"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-36"><a href="#cb11-36"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-37"><a href="#cb11-37"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-38"><a href="#cb11-38"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-39"><a href="#cb11-39"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-40"><a href="#cb11-40"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-41"><a href="#cb11-41"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-42"><a href="#cb11-42"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-43"><a href="#cb11-43"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-44"><a href="#cb11-44"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-45"><a href="#cb11-45"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-46"><a href="#cb11-46"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-47"><a href="#cb11-47"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-48"><a href="#cb11-48"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-49"><a href="#cb11-49"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-50"><a href="#cb11-50"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb11-51"><a href="#cb11-51"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb11-52"><a href="#cb11-52"></a></span>
+<span id="cb11-53"><a href="#cb11-53"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb11-54"><a href="#cb11-54"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb11-55"><a href="#cb11-55"></a></span>
+<span id="cb11-56"><a href="#cb11-56"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb11-57"><a href="#cb11-57"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb11-58"><a href="#cb11-58"></a></span>
+<span id="cb11-59"><a href="#cb11-59"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb11-60"><a href="#cb11-60"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb11-61"><a href="#cb11-61"></a><span class="co">#&gt; Warning in locate.outliers.oloop(y = y, fit = fit, types = types, cval =</span></span>
+<span id="cb11-62"><a href="#cb11-62"></a><span class="co">#&gt; cval, : stopped when 'maxit.oloop = 4' was reached</span></span>
+<span id="cb11-63"><a href="#cb11-63"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-64"><a href="#cb11-64"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-65"><a href="#cb11-65"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-66"><a href="#cb11-66"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-67"><a href="#cb11-67"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb11-68"><a href="#cb11-68"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb11-69"><a href="#cb11-69"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb11-70"><a href="#cb11-70"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb11-71"><a href="#cb11-71"></a></span>
+<span id="cb11-72"><a href="#cb11-72"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb11-73"><a href="#cb11-73"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb11-74"><a href="#cb11-74"></a></span>
+<span id="cb11-75"><a href="#cb11-75"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb11-76"><a href="#cb11-76"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb11-77"><a href="#cb11-77"></a><span class="co">#&gt; Warning in locate.outliers.oloop(y = y, fit = fit, types = types, cval =</span></span>
+<span id="cb11-78"><a href="#cb11-78"></a><span class="co">#&gt; cval, : stopped when 'maxit.oloop = 4' was reached</span></span>
+<span id="cb11-79"><a href="#cb11-79"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-80"><a href="#cb11-80"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-81"><a href="#cb11-81"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-82"><a href="#cb11-82"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-83"><a href="#cb11-83"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-84"><a href="#cb11-84"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-85"><a href="#cb11-85"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-86"><a href="#cb11-86"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-87"><a href="#cb11-87"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb11-88"><a href="#cb11-88"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb11-89"><a href="#cb11-89"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb11-90"><a href="#cb11-90"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb11-91"><a href="#cb11-91"></a>out<span class="op">$</span>outliers</span>
+<span id="cb11-92"><a href="#cb11-92"></a><span class="co">#&gt;    Indices Total_Score Num_Coords Num_Methods     DOBIN       PCA</span></span>
+<span id="cb11-93"><a href="#cb11-93"></a><span class="co">#&gt; 2      695    2.120801          3           3 0.0000000 0.5166784</span></span>
+<span id="cb11-94"><a href="#cb11-94"></a><span class="co">#&gt; 4      697    2.043603          3           3 0.0000000 0.6421355</span></span>
+<span id="cb11-95"><a href="#cb11-95"></a><span class="co">#&gt; 9      702    2.036455          3           4 0.0000000 0.5396272</span></span>
+<span id="cb11-96"><a href="#cb11-96"></a><span class="co">#&gt; 10     703    2.508935          3           3 0.0000000 0.8194186</span></span>
+<span id="cb11-97"><a href="#cb11-97"></a><span class="co">#&gt; 11     704    2.472480          4           4 0.2796322 0.8432410</span></span>
+<span id="cb11-98"><a href="#cb11-98"></a><span class="co">#&gt;          ICS       ICA  forecast tsoutliers     otsad anomalize</span></span>
+<span id="cb11-99"><a href="#cb11-99"></a><span class="co">#&gt; 2  0.8209934 0.7831288 0.0000000  0.7912795 0.8791994 0.4503217</span></span>
+<span id="cb11-100"><a href="#cb11-100"></a><span class="co">#&gt; 4  0.8247397 0.5767273 0.0000000  0.2637598 0.8791994 0.9006433</span></span>
+<span id="cb11-101"><a href="#cb11-101"></a><span class="co">#&gt; 9  1.0941922 0.4026352 0.2930665  0.2637598 0.8791994 0.6004289</span></span>
+<span id="cb11-102"><a href="#cb11-102"></a><span class="co">#&gt; 10 0.8743195 0.8151969 0.8791994  0.0000000 0.8791994 0.7505361</span></span>
+<span id="cb11-103"><a href="#cb11-103"></a><span class="co">#&gt; 11 0.7204347 0.6291724 0.8791994  0.2637598 0.8791994 0.4503217</span></span>
+<span id="cb11-104"><a href="#cb11-104"></a><span class="co">#&gt;    Gap_Score_1</span></span>
+<span id="cb11-105"><a href="#cb11-105"></a><span class="co">#&gt; 2            0</span></span>
+<span id="cb11-106"><a href="#cb11-106"></a><span class="co">#&gt; 4            0</span></span>
+<span id="cb11-107"><a href="#cb11-107"></a><span class="co">#&gt; 9            0</span></span>
+<span id="cb11-108"><a href="#cb11-108"></a><span class="co">#&gt; 10           0</span></span>
+<span id="cb11-109"><a href="#cb11-109"></a><span class="co">#&gt; 11           0</span></span>
+<span id="cb11-110"><a href="#cb11-110"></a><span class="kw"><a href="../reference/draw_table_html.html">draw_table_html</a></span>(out, uniq_dates)</span></code></pre></div>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; ">
+<table class="table table table-striped">
+<thead><tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Indices
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+DOBIN
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+PCA
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+ICS
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+ICA
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Num_Coords
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+forecast
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+tsoutliers
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+otsad
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+anomalize
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Num_Methods
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Gap_Score_1
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Total_Score
+</th>
+</tr></thead>
+<tbody>
+<tr>
 <td style="text-align:left;">
-20
+2020-03-20
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.82</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.87</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.82</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.88</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.88</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.75</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: pink !important;">2.51</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-21
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.28</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.84</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.72</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.63</span>
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.88</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.26</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.88</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.45</span>
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">2.47</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-12
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.52</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.82</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.78</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.79</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.88</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.45</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">2.12</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-14
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.64</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.82</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.58</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.26</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.88</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.9</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">2.04</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-19
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.54</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">1.09</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.4</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.29</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.26</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.88</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.6</span>
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">2.04</span>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># plot_decomposed(obj=out, X = stpart)</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="kw"><a href="../reference/animate_ts_ensemble.html">animate_ts_ensemble</a></span>(out, <span class="dt">X=</span> stpart,  <span class="dt">max_frames =</span> <span class="dv">1</span>)</span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="co">#&gt; Using half_range 1.1</span></span></code></pre></div>
-<p><img src="composits_files/figure-html/multivariate1-1.png" width="700"><img src="composits_files/figure-html/multivariate1-2.png" width="700"></p>
+<p>The table above shows the outlying dates and the associated scores. The outlying dates correspond to the COVID-19 outbreak. We can see the decomposed univariate time series in the following plot and the spike around mid March in 2020.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw"><a href="../reference/plot_decomposed_all.html">plot_decomposed_all</a></span>(<span class="dt">obj=</span>out, <span class="dt">X =</span> df)</span></code></pre></div>
+<p><img src="composits_files/figure-html/composite3-1.png" width="768"></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># animate_ts_ensemble(out, X= df,  max_frames = 1)</span></span></code></pre></div>
+<p>Next we apportion the outlying scores back to the states. This is another coordinate transformation from the outlier score space to the original coordinate space.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>apportioned &lt;-<span class="st"> </span><span class="kw"><a href="../reference/apportion_scores_comp.html">apportion_scores_comp</a></span>(out)</span>
+<span id="cb14-2"><a href="#cb14-2"></a>apportioned1 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/cbind.html">cbind.data.frame</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(df), apportioned<span class="op">$</span>scores_out)</span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="kw"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(apportioned1)[<span class="dv">1</span>] &lt;-<span class="st"> 'reg'</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="kw"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(apportioned1)[<span class="dv">2</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/dim.html">dim</a></span>(apportioned1)[<span class="dv">2</span>]] &lt;-<span class="st">  </span><span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(uniq_dates[out<span class="op">$</span>outliers<span class="op">$</span>Indices])</span>
+<span id="cb14-5"><a href="#cb14-5"></a>apportioned1</span>
+<span id="cb14-6"><a href="#cb14-6"></a><span class="co">#&gt;    reg 2020-03-12 2020-03-14 2020-03-19 2020-03-20 2020-03-21</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a><span class="co">#&gt; 1   AN 0.15055958 0.17335622 0.21902052 0.31210341 0.48378219</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a><span class="co">#&gt; 2   AR 0.03003061 0.03034766 0.03785814 0.03226527 0.10542713</span></span>
+<span id="cb14-9"><a href="#cb14-9"></a><span class="co">#&gt; 3   AS 0.08404859 0.10677569 0.12881391 0.13010713 0.13180330</span></span>
+<span id="cb14-10"><a href="#cb14-10"></a><span class="co">#&gt; 4   IB 0.02493671 0.04400215 0.05520004 0.05744338 0.07131965</span></span>
+<span id="cb14-11"><a href="#cb14-11"></a><span class="co">#&gt; 5   CN 0.11443559 0.17682907 0.23092405 0.21282314 0.22606829</span></span>
+<span id="cb14-12"><a href="#cb14-12"></a><span class="co">#&gt; 6   CB 0.12494091 0.17539031 0.23695759 0.18748619 0.18794817</span></span>
+<span id="cb14-13"><a href="#cb14-13"></a><span class="co">#&gt; 7   CL 0.09809916 0.18792644 0.22940334 0.24460654 0.26134899</span></span>
+<span id="cb14-14"><a href="#cb14-14"></a><span class="co">#&gt; 8   CM 0.39111714 0.54834064 0.67458818 0.65027637 0.59629654</span></span>
+<span id="cb14-15"><a href="#cb14-15"></a><span class="co">#&gt; 9   CT 0.52616585 0.29441268 0.20691674 0.35121367 0.31358123</span></span>
+<span id="cb14-16"><a href="#cb14-16"></a><span class="co">#&gt; 10  VC 0.15687845 0.20303355 0.21097511 0.27190170 0.25994077</span></span>
+<span id="cb14-17"><a href="#cb14-17"></a><span class="co">#&gt; 11  EX 0.03280486 0.03161331 0.03573184 0.03662403 0.03905331</span></span>
+<span id="cb14-18"><a href="#cb14-18"></a><span class="co">#&gt; 12  GA 0.15576387 0.21458688 0.25538417 0.27598653 0.27694030</span></span>
+<span id="cb14-19"><a href="#cb14-19"></a><span class="co">#&gt; 13  MD 0.56892650 0.73580970 0.72663215 1.02100521 0.96624263</span></span>
+<span id="cb14-20"><a href="#cb14-20"></a><span class="co">#&gt; 14  MC 0.04788760 0.07889489 0.09041971 0.10313026 0.12306151</span></span>
+<span id="cb14-21"><a href="#cb14-21"></a><span class="co">#&gt; 15  NC 0.03750631 0.05831556 0.07883114 0.06577324 0.06619862</span></span>
+<span id="cb14-22"><a href="#cb14-22"></a><span class="co">#&gt; 16  PV 0.09435077 0.11296348 0.14153485 0.12558104 0.12817648</span></span>
+<span id="cb14-23"><a href="#cb14-23"></a><span class="co">#&gt; 17  RI 0.05176816 0.10546210 0.15239376 0.11231582 0.12570481</span></span>
+<span id="cb14-24"><a href="#cb14-24"></a><span class="co">#&gt; 18  CE 0.08834749 0.11816627 0.16161807 0.12329326 0.12182697</span></span>
+<span id="cb14-25"><a href="#cb14-25"></a><span class="co">#&gt; 19  ML 0.06078399 0.09923577 0.14096056 0.10435005 0.11601745</span></span></code></pre></div>
+<p>Next we plot this using the map of Spain.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>df3 &lt;-<span class="st"> </span>apportioned1 <span class="op">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="kw">mutate</span>(<span class="dt">reg =</span> <span class="kw">str_replace</span>(reg, <span class="st">"RI"</span>, <span class="st">"LO"</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">reg =</span> <span class="kw">str_replace</span>(reg, <span class="st">"NC"</span>, <span class="st">"NA"</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">reg =</span> <span class="kw">str_replace</span>(reg, <span class="st">"MC"</span>, <span class="st">"MU"</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="op">-</span>reg, <span class="dt">names_to =</span> <span class="st">"date"</span>, <span class="dt">values_to =</span> <span class="st">"score"</span>)</span>
+<span id="cb15-6"><a href="#cb15-6"></a></span>
+<span id="cb15-7"><a href="#cb15-7"></a></span>
+<span id="cb15-8"><a href="#cb15-8"></a>spain &lt;-<span class="st"> </span>rnaturalearth<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/rnaturalearth/man/ne_states.html">ne_states</a></span>(<span class="dt">country =</span> <span class="st">"spain"</span>, <span class="dt">returnclass =</span> <span class="st">"sf"</span>)</span>
+<span id="cb15-9"><a href="#cb15-9"></a>sp_regions &lt;-<span class="st"> </span>spain <span class="op">%&gt;%</span></span>
+<span id="cb15-10"><a href="#cb15-10"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">reg =</span> <span class="kw">str_sub</span>(code_hasc, <span class="dv">4</span>, <span class="dv">5</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb15-11"><a href="#cb15-11"></a><span class="st">  </span><span class="kw">group_by</span>(reg) <span class="op">%&gt;%</span></span>
+<span id="cb15-12"><a href="#cb15-12"></a><span class="st">  </span><span class="kw">summarise</span>()</span>
+<span id="cb15-13"><a href="#cb15-13"></a></span>
+<span id="cb15-14"><a href="#cb15-14"></a><span class="co"># combine map info with data</span></span>
+<span id="cb15-15"><a href="#cb15-15"></a><span class="co"># XXX dropping Canary islands for now</span></span>
+<span id="cb15-16"><a href="#cb15-16"></a>sp_data &lt;-<span class="st"> </span><span class="kw">inner_join</span>(sp_regions, df3, <span class="dt">by=</span><span class="st">"reg"</span>) <span class="op">%&gt;%</span></span>
+<span id="cb15-17"><a href="#cb15-17"></a><span class="st">  </span><span class="kw"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span>(reg <span class="op">!=</span><span class="st"> "CN"</span>)</span>
+<span id="cb15-18"><a href="#cb15-18"></a></span>
+<span id="cb15-19"><a href="#cb15-19"></a><span class="co">#template for drawing map</span></span>
+<span id="cb15-20"><a href="#cb15-20"></a>sp_data <span class="op">%&gt;%</span></span>
+<span id="cb15-21"><a href="#cb15-21"></a><span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
+<span id="cb15-22"><a href="#cb15-22"></a><span class="st">  </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>score)) <span class="op">+</span></span>
+<span id="cb15-23"><a href="#cb15-23"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb15-24"><a href="#cb15-24"></a><span class="st">  </span><span class="kw">scale_fill_distiller</span>(<span class="dt">palette =</span> <span class="st">"YlOrBr"</span>, <span class="dt">direction =</span> <span class="dv">1</span>) <span class="op">+</span></span>
+<span id="cb15-25"><a href="#cb15-25"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>date, <span class="dt">ncol=</span><span class="dv">3</span>)</span></code></pre></div>
+<p><img src="composits_files/figure-html/composite5-1.png" width="768"></p>
+<p>See our <a href="https://sevvandi.github.io/composits/index.html">website</a> or our paper <span class="citation">(Kandanaarachchi et al. 2020)</span> *** for more examples.</p>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1 class="hasAnchor">
+<a href="#references" class="anchor"></a>References</h1>
+<div id="refs" class="references hanging-indent">
+<div id="ref-composits">
+<p>Kandanaarachchi, Sevvandi, Patricia Menendez, Ruben Loaiza-Maya, and Ursula Laa. 2020. “Outliers in Compositional Time Series Data.” Working Paper. <a href="TBA">TBA</a>.</p>
+</div>
+</div>
 </div>
   </div>
 
@@ -424,6 +859,8 @@ inds
       <ul class="nav nav-pills nav-stacked">
 <li><a href="#univariate-time-series-outliers">Univariate time series outliers</a></li>
       <li><a href="#multivariate-time-series-outliers">Multivariate time series outliers</a></li>
+      <li><a href="#composite-time-series-outliers">Composite time series outliers</a></li>
+      <li><a href="#references">References</a></li>
       </ul>
 </div>
       </div>
@@ -433,7 +870,7 @@ inds
 
 
       <footer><div class="copyright">
-  <p>Developed by Sevvandi Kandanaarachchi, Patricia Menendez, Ursula Laa, Ruben Maya.</p>
+  <p>Developed by Sevvandi Kandanaarachchi, Patricia Menendez, Ursula Laa, Ruben Loaiza-Maya.</p>
 </div>
 
 <div class="pkgdown">

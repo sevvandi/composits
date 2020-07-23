@@ -6,6 +6,18 @@
 #' \item{\code{scores_ori}}{The apportioned outlier scores.}
 #' \item{\code{scores_scaled}}{The apportioned outlier scores rescaled so that the sum of the multivariate outlier scores is equal to the total outlier score at that time point.}
 #'
+#' @examples
+#' n <- 600
+#' x <- sample(1:100, n, replace=TRUE)
+#' x[25] <- 200
+#' x[320] <- 300
+#' x2 <- sample(1:100, n, replace=TRUE)
+#' x3 <- sample(1:100, n, replace=TRUE)
+#' x4 <- sample(1:100, n, replace=TRUE)
+#' X <- cbind.data.frame(x, x2, x3, x4)
+#' out <- mv_tsout_ens(X, compr=2, fast=FALSE)
+#' apportioned <- apportion_scores_mv(out)
+#'
 #' @export
 apportion_scores_mv <- function(obj){
   # obj is a mv_tsout_ens output

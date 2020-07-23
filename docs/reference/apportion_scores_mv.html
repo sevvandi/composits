@@ -130,12 +130,39 @@
 <dt><code>scores_scaled</code></dt><dd><p>The apportioned outlier scores rescaled so that the sum of the multivariate outlier scores is equal to the total outlier score at that time point.</p></dd>
 
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>n</span> <span class='kw'>&lt;-</span> <span class='fl'>600</span>
+<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span>:<span class='fl'>100</span>, <span class='no'>n</span>, <span class='kw'>replace</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
+<span class='no'>x</span>[<span class='fl'>25</span>] <span class='kw'>&lt;-</span> <span class='fl'>200</span>
+<span class='no'>x</span>[<span class='fl'>320</span>] <span class='kw'>&lt;-</span> <span class='fl'>300</span>
+<span class='no'>x2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span>:<span class='fl'>100</span>, <span class='no'>n</span>, <span class='kw'>replace</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
+<span class='no'>x3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span>:<span class='fl'>100</span>, <span class='no'>n</span>, <span class='kw'>replace</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
+<span class='no'>x4</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span>:<span class='fl'>100</span>, <span class='no'>n</span>, <span class='kw'>replace</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
+<span class='no'>X</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind.data.frame</a></span>(<span class='no'>x</span>, <span class='no'>x2</span>, <span class='no'>x3</span>, <span class='no'>x4</span>)
+<span class='no'>out</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='mv_tsout_ens.html'>mv_tsout_ens</a></span>(<span class='no'>X</span>, <span class='kw'>compr</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>fast</span><span class='kw'>=</span><span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='input'><span class='no'>apportioned</span> <span class='kw'>&lt;-</span> <span class='fu'>apportion_scores_mv</span>(<span class='no'>out</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
@@ -144,7 +171,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Sevvandi Kandanaarachchi, Patricia Menendez, Ursula Laa, Ruben Maya.</p>
+  <p>Developed by Sevvandi Kandanaarachchi, Patricia Menendez, Ursula Laa, Ruben Loaiza-Maya.</p>
 </div>
 
 <div class="pkgdown">

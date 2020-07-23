@@ -127,7 +127,7 @@
     </tr>
     <tr>
       <th>method</th>
-      <td><p>The decomposition method, choose between "pca" (default), "dobin", "ics" or "ica".</p></td>
+      <td><p>The decomposition method, choose between "pca" (default), "dobin", "ics", "ica" or "all" for complete set of methods.</p></td>
     </tr>
     </table>
 
@@ -162,7 +162,7 @@
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
-#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='input'><span class='fu'>plot_decomposed</span>(<span class='no'>out1</span>, <span class='kw'>X</span> <span class='kw'>=</span> <span class='no'>X</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"pca"</span>)</div><div class='output co'>#&gt; <span class='error'>Error: Column `name` not found in `.data`</span></div><div class='input'>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='input'><span class='fu'>plot_decomposed</span>(<span class='no'>out1</span>, <span class='kw'>X</span> <span class='kw'>=</span> <span class='no'>X</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"pca"</span>)</div><div class='img'><img src='plot_decomposed-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>plot_decomposed</span>(<span class='no'>out1</span>, <span class='kw'>X</span> <span class='kw'>=</span> <span class='no'>X</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"all"</span>)</div><div class='img'><img src='plot_decomposed-2.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='no'>X</span> <span class='kw'>&lt;-</span> <span class='no'>X</span>/<span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowSums</a></span>(<span class='no'>X</span>)
 <span class='no'>out2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='comp_tsout_ens.html'>comp_tsout_ens</a></span>(<span class='no'>X</span>, <span class='kw'>compr</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>fast</span><span class='kw'>=</span><span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
@@ -180,7 +180,7 @@
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
-#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='input'><span class='fu'>plot_decomposed</span>(<span class='no'>out2</span>)</div><div class='output co'>#&gt; <span class='error'>Error: Column `name` not found in `.data`</span></div><div class='img'><img src='plot_decomposed-1.png' alt='' width='700' height='433' /></div><div class='input'>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='input'><span class='fu'>plot_decomposed</span>(<span class='no'>out2</span>)</div><div class='img'><img src='plot_decomposed-3.png' alt='' width='700' height='433' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -197,7 +197,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Sevvandi Kandanaarachchi, Patricia Menendez, Ursula Laa, Ruben Maya.</p>
+  <p>Developed by Sevvandi Kandanaarachchi, Patricia Menendez, Ursula Laa, Ruben Loaiza-Maya.</p>
 </div>
 
 <div class="pkgdown">

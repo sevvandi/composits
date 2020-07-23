@@ -11,9 +11,23 @@ apportion_scores_comp(obj)
 }
 \value{
 A list with the following components:
-\item{\code{scores_ori}}{The apportioned outlier scores.}
-\item{\code{scores_scaled}}{The apportioned outlier scores rescaled so that the sum of the composite outlier scores is equal to the total outlier score at that time point.}
+\item{\code{scores_out}}{The apportioned scores for outliers for timepoints in \code{mv_tsout_ens$outliers} or \code{comp_tsout_ens$outliers}.}
+\item{\code{scores_all}}{The apportioned scores for outliers for timepoints in \code{mv_tsout_ens$all} or \code{comp_tsout_ens$all}.}
 }
 \description{
 Apportions outlier scores to composites.
+}
+\examples{
+n <- 600
+x <- sample(1:100, n, replace=TRUE)
+x[25] <- 200
+x[320] <- 300
+x2 <- sample(1:100, n, replace=TRUE)
+x3 <- sample(1:100, n, replace=TRUE)
+x4 <- sample(1:100, n, replace=TRUE)
+X <- cbind.data.frame(x, x2, x3, x4)
+X <- X/rowSums(X)
+out <- comp_tsout_ens(X, compr=2, fast=FALSE)
+apportioned <- apportion_scores_comp(out)
+
 }
