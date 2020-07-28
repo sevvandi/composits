@@ -115,15 +115,28 @@ The decomposed time series is shown in the figure below.
 
 ```{r mvout2}
 plot_decomposed_all(obj=out, X = stpart)
-# animate_ts_ensemble(out, X= stpart,  max_frames = 1)
 ```
+
+```{r mvani1, eval=F, echo=T}
+animate_ts_ensemble(out, X= stpart,  max_frames = 100)
+```
+
+```{r mvani2, eval=F, echo=F}
+library(animation)
+saveGIF(
+  animate_ts_ensemble(out, X= stpart,  max_frames = 100),
+  movie.name = "mvani.gif", interval=0.2)
+```
+
+<img src="mvani.gif" width = "90%"/>
+
 
 The decomposition above shows three decomposition methods. If you want to plot only one method, you can use the \texttt{plot_decomposed} function. The outlying time-points are shown in the figure above and below. 
 
 ```{r mvout3}
 plot_decomposed(obj=out, X = stpart,  method = "pca")
-# animate_ts_ensemble(out, X= stpart,  max_frames = 1)
 ```
+
 
 ## Composite time series outliers
 For this example we use daily mortality counts in Spain organised by state. The dataset records mortality counts from the 18th of April 2018 until the 5th of May 2020. To make the data compositional we divide the state counts by the total count for each day. 
@@ -156,6 +169,19 @@ The table above shows the outlying dates and the associated scores. The outlying
 plot_decomposed_all(obj=out, X = df)
 # animate_ts_ensemble(out, X= df,  max_frames = 1)
 ```
+
+```{r compani1, eval=F, echo=T}
+animate_ts_ensemble(out, X= df,  max_frames = 100)
+```
+
+```{r compani2, eval=F, echo=F}
+library(animation)
+saveGIF(
+  animate_ts_ensemble(out, X= df,  max_frames = 100),
+  movie.name = "compani.gif", interval=0.2)
+```
+
+<img src="compani.gif" width = "90%"/>
 
 Next we apportion the outlying scores back to the states. This is another coordinate transformation from the outlier score space to the original coordinate space. 
 
