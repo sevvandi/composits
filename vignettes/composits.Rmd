@@ -57,10 +57,10 @@ library(stringr)
 library(rnaturalearthdata)
 ```
 
-The goal of *composits* is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the outlier detection methods from R packages ``` r forecast ```, ``` r tsoutliers ```, ``` r anomalize ``` and ```` r otsad ```. 
+The goal of *composits* is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the outlier detection methods from R packages ``` forecast ```, ``` tsoutliers ```, ``` anomalize ``` and ```otsad ```. 
 
 ## Univariate time series outliers
-This example uses a univariate time series containing the daily gold prices from the R package \texttt{forecast}.
+This example uses a univariate time series containing the daily gold prices from the R package ```forecast```.
 
 ```{r univaraite1}
 gold2 <- forecast::na.interp(gold)
@@ -77,7 +77,7 @@ ggplot(ts_gold, aes(x=t, y=value)) +
 The red dashed vertical lines show the time points that have been picked by 3 or more outlier detection methods. 
 
 
-Next we look at the quarterly production of woollen yarn in Australia. This time series is also taken from the R package ``` r forecast ```. 
+Next we look at the quarterly production of woollen yarn in Australia. This time series is also taken from the R package ```forecast```. 
 
 ```{r univariate2}
 out <- uv_tsout_ens(woolyrnq)
@@ -102,7 +102,7 @@ as_tibble(stpart) %>% mutate(t = 1:n())   %>%
   ggplot2::ggplot( ggplot2::aes(x = t, y = value, color = name)) +  ggplot2::geom_line() +  ggplot2::theme_bw() 
 ```
 
-Then we find multivariate outliers. To find the multivariate outliers, first we decompose the time series to univariate outliers by using Principle Component Analysis (PCA), Independent Component Analysis (ICA), DOBIN (Distance based Outlier BasIs using Neighbours) and ICS (Invariant Coordinate Selection) decomposition methods. The ``` r fast=TRUE ``` option leaves out ICS decomposition. Then for a selected number of components (default being 2) we find outliers using the univariate time series ensemble.  The outliers are given in the table below. 
+Then we find multivariate outliers. To find the multivariate outliers, first we decompose the time series to univariate outliers by using Principle Component Analysis (PCA), Independent Component Analysis (ICA), DOBIN (Distance based Outlier BasIs using Neighbours) and ICS (Invariant Coordinate Selection) decomposition methods. The ```fast=TRUE ``` option leaves out ICS decomposition. Then for a selected number of components (default being 2) we find outliers using the univariate time series ensemble.  The outliers are given in the table below. 
 
 
 ```{r mvout1}
@@ -131,7 +131,7 @@ saveGIF(
 <img src="mvani.gif" width = "90%"/>
 
 
-The decomposition above shows three decomposition methods. If you want to plot only one method, you can use the \texttt{plot_decomposed} function. The outlying time-points are shown in the figure above and below. 
+The decomposition above shows three decomposition methods. If you want to plot only one method, you can use the ```plot_decomposed``` function. The outlying time-points are shown in the figure above and below. 
 
 ```{r mvout3}
 plot_decomposed(obj=out, X = stpart,  method = "pca")

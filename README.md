@@ -9,8 +9,8 @@
 
 The goal of *composits* is to find outliers in compositional,
 multivariate and univariate time series. It is an outlier ensemble
-method that uses the packages *forecast*, *tsoutliers*, *anomalize* and
-*otsad*.
+method that uses the packages `forecast`, `tsoutliers`, `anomalize` and
+`otsad`.
 
 ## Installation
 

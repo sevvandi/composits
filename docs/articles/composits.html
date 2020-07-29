@@ -90,11 +90,11 @@
 <span id="cb1-15"><a href="#cb1-15"></a><span class="co">#&gt; Warning: package 'tidyr' was built under R version 3.6.3</span></span>
 <span id="cb1-16"><a href="#cb1-16"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(stringr)</span>
 <span id="cb1-17"><a href="#cb1-17"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(rnaturalearthdata)</span></code></pre></div>
-<p>The goal of <em>composits</em> is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the outlier detection methods from R packages , ,  and .</p>
+<p>The goal of <em>composits</em> is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the outlier detection methods from R packages <code>forecast</code>, <code>tsoutliers</code>, <code>anomalize</code> and <code>otsad</code>.</p>
 <div id="univariate-time-series-outliers" class="section level2">
 <h2 class="hasAnchor">
 <a href="#univariate-time-series-outliers" class="anchor"></a>Univariate time series outliers</h2>
-<p>This example uses a univariate time series containing the daily gold prices from the R package .</p>
+<p>This example uses a univariate time series containing the daily gold prices from the R package <code>forecast</code>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>gold2 &lt;-<span class="st"> </span>forecast<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/forecast/man/na.interp.html">na.interp</a></span>(gold)</span>
 <span id="cb2-2"><a href="#cb2-2"></a>out &lt;-<span class="st"> </span><span class="kw"><a href="../reference/uv_tsout_ens.html">uv_tsout_ens</a></span>(gold2)</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
@@ -111,12 +111,12 @@
 <span id="cb2-14"><a href="#cb2-14"></a><span class="co">#&gt; Don't know how to automatically pick scale for object of type ts. Defaulting to continuous.</span></span></code></pre></div>
 <p><img src="composits_files/figure-html/univaraite1-1.png" width="768"></p>
 <p>The red dashed vertical lines show the time points that have been picked by 3 or more outlier detection methods.</p>
-<p>Next we look at the quarterly production of woollen yarn in Australia. This time series is also taken from the R package .</p>
+<p>Next we look at the quarterly production of woollen yarn in Australia. This time series is also taken from the R package <code>forecast</code>.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>out &lt;-<span class="st"> </span><span class="kw"><a href="../reference/uv_tsout_ens.html">uv_tsout_ens</a></span>(woolyrnq)</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="co">#&gt; trend = 23 days</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co">#&gt; trend = 59.5 days</span></span>
 <span id="cb3-6"><a href="#cb3-6"></a>inds &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/names.html">names</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/which.html">which</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/table.html">table</a></span>(out<span class="op">$</span>outliers) <span class="op">&gt;</span><span class="st"> </span><span class="dv">2</span>))</span>
 <span id="cb3-7"><a href="#cb3-7"></a></span>
 <span id="cb3-8"><a href="#cb3-8"></a>ts_wool &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/reexports.html">as_tibble</a></span>(woolyrnq) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">t =</span> <span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(woolyrnq)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rename</span>(<span class="dt">value =</span> x)</span>
@@ -137,7 +137,7 @@
 <span id="cb4-4"><a href="#cb4-4"></a><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="dt">cols=</span><span class="dv">1</span><span class="op">:</span><span class="dv">4</span>)  <span class="op">%&gt;%</span></span>
 <span id="cb4-5"><a href="#cb4-5"></a><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>( ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="dt">x =</span> t, <span class="dt">y =</span> value, <span class="dt">color =</span> name)) <span class="op">+</span><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span>() <span class="op">+</span><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span>() </span></code></pre></div>
 <p><img src="composits_files/figure-html/multivariate1-1.png" width="768"></p>
-<p>Then we find multivariate outliers. To find the multivariate outliers, first we decompose the time series to univariate outliers by using Principle Component Analysis (PCA), Independent Component Analysis (ICA), DOBIN (Distance based Outlier BasIs using Neighbours) and ICS (Invariant Coordinate Selection) decomposition methods. The  option leaves out ICS decomposition. Then for a selected number of components (default being 2) we find outliers using the univariate time series ensemble. The outliers are given in the table below.</p>
+<p>Then we find multivariate outliers. To find the multivariate outliers, first we decompose the time series to univariate outliers by using Principle Component Analysis (PCA), Independent Component Analysis (ICA), DOBIN (Distance based Outlier BasIs using Neighbours) and ICS (Invariant Coordinate Selection) decomposition methods. The <code>fast=TRUE</code> option leaves out ICS decomposition. Then for a selected number of components (default being 2) we find outliers using the univariate time series ensemble. The outliers are given in the table below.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>out &lt;-<span class="st"> </span><span class="kw"><a href="../reference/mv_tsout_ens.html">mv_tsout_ens</a></span>(stpart, <span class="dt">fast=</span><span class="ot">TRUE</span>)</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
@@ -398,11 +398,11 @@ Total_Score
 <p>The decomposed time series is shown in the figure below.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw"><a href="../reference/plot_decomposed_all.html">plot_decomposed_all</a></span>(<span class="dt">obj=</span>out, <span class="dt">X =</span> stpart)</span></code></pre></div>
 <p><img src="composits_files/figure-html/mvout2-1.png" width="768"></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># animate_ts_ensemble(out, X= stpart,  max_frames = 1)</span></span></code></pre></div>
-<p>The decomposition above shows three decomposition methods. If you want to plot only one method, you can use the \texttt{plot_decomposed} function. The outlying time-points are shown in the figure above and below.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw"><a href="../reference/animate_ts_ensemble.html">animate_ts_ensemble</a></span>(out, <span class="dt">X=</span> stpart,  <span class="dt">max_frames =</span> <span class="dv">100</span>)</span></code></pre></div>
+<p><img src="mvani.gif" width="90%"></p>
+<p>The decomposition above shows three decomposition methods. If you want to plot only one method, you can use the <code>plot_decomposed</code> function. The outlying time-points are shown in the figure above and below.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw"><a href="../reference/plot_decomposed.html">plot_decomposed</a></span>(<span class="dt">obj=</span>out, <span class="dt">X =</span> stpart,  <span class="dt">method =</span> <span class="st">"pca"</span>)</span></code></pre></div>
 <p><img src="composits_files/figure-html/mvout3-1.png" width="768"></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># animate_ts_ensemble(out, X= stpart,  max_frames = 1)</span></span></code></pre></div>
 </div>
 <div id="composite-time-series-outliers" class="section level2">
 <h2 class="hasAnchor">
@@ -410,125 +410,125 @@ Total_Score
 <p>For this example we use daily mortality counts in Spain organised by state. The dataset records mortality counts from the 18th of April 2018 until the 5th of May 2020. To make the data compositional we divide the state counts by the total count for each day.</p>
 <p>Compositional data live on a simplex, because the sums add up to a constant. Before analysing such data, it is important to make the data unconstrained. We make the data unconstrained by using a coordinate transformation called the <em>null space coordinate transformation</em>. We use the multivariate outlier detection ensemble discussed above on these unconstrained data. More details are available in our paper.</p>
 <p>First let us load this data and plot it.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="st">'spanish_morte'</span>)</span>
-<span id="cb10-2"><a href="#cb10-2"></a>df &lt;-<span class="st"> </span>spanish_morte[[<span class="dv">1</span>]]</span>
-<span id="cb10-3"><a href="#cb10-3"></a>uniq_dates &lt;-<span class="st"> </span>spanish_morte[[<span class="dv">2</span>]]</span>
-<span id="cb10-4"><a href="#cb10-4"></a>df2 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/cbind.html">cbind.data.frame</a></span>(uniq_dates, df)</span>
-<span id="cb10-5"><a href="#cb10-5"></a><span class="kw">as_tibble</span>(df2) <span class="op">%&gt;%</span></span>
-<span id="cb10-6"><a href="#cb10-6"></a><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="dt">cols=</span><span class="dv">2</span><span class="op">:</span><span class="dv">20</span>)  <span class="op">%&gt;%</span></span>
-<span id="cb10-7"><a href="#cb10-7"></a><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>( ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="dt">x =</span> uniq_dates, <span class="dt">y =</span> value, <span class="dt">color =</span> name)) <span class="op">+</span><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span>() <span class="op">+</span><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span>() </span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="st">'spanish_morte'</span>)</span>
+<span id="cb9-2"><a href="#cb9-2"></a>df &lt;-<span class="st"> </span>spanish_morte[[<span class="dv">1</span>]]</span>
+<span id="cb9-3"><a href="#cb9-3"></a>uniq_dates &lt;-<span class="st"> </span>spanish_morte[[<span class="dv">2</span>]]</span>
+<span id="cb9-4"><a href="#cb9-4"></a>df2 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/cbind.html">cbind.data.frame</a></span>(uniq_dates, df)</span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="kw">as_tibble</span>(df2) <span class="op">%&gt;%</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="dt">cols=</span><span class="dv">2</span><span class="op">:</span><span class="dv">20</span>)  <span class="op">%&gt;%</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>( ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="dt">x =</span> uniq_dates, <span class="dt">y =</span> value, <span class="dt">color =</span> name)) <span class="op">+</span><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span>() <span class="op">+</span><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span>() </span></code></pre></div>
 <p><img src="composits_files/figure-html/composite1-1.png" width="768"></p>
 <p>Next we find the outliers using compositional time series outlier ensemble.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>out &lt;-<span class="st"> </span><span class="kw"><a href="../reference/comp_tsout_ens.html">comp_tsout_ens</a></span>(df, <span class="dt">fast=</span><span class="ot">FALSE</span>)</span>
-<span id="cb11-2"><a href="#cb11-2"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-5"><a href="#cb11-5"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-6"><a href="#cb11-6"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-7"><a href="#cb11-7"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-8"><a href="#cb11-8"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-9"><a href="#cb11-9"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-10"><a href="#cb11-10"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-11"><a href="#cb11-11"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-12"><a href="#cb11-12"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-13"><a href="#cb11-13"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-14"><a href="#cb11-14"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-15"><a href="#cb11-15"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-16"><a href="#cb11-16"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-17"><a href="#cb11-17"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-18"><a href="#cb11-18"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-19"><a href="#cb11-19"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-20"><a href="#cb11-20"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-21"><a href="#cb11-21"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-22"><a href="#cb11-22"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-23"><a href="#cb11-23"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-24"><a href="#cb11-24"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-25"><a href="#cb11-25"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-26"><a href="#cb11-26"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-27"><a href="#cb11-27"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-28"><a href="#cb11-28"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-29"><a href="#cb11-29"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-30"><a href="#cb11-30"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-31"><a href="#cb11-31"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-32"><a href="#cb11-32"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-33"><a href="#cb11-33"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-34"><a href="#cb11-34"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-35"><a href="#cb11-35"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-36"><a href="#cb11-36"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-37"><a href="#cb11-37"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-38"><a href="#cb11-38"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-39"><a href="#cb11-39"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-40"><a href="#cb11-40"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-41"><a href="#cb11-41"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-42"><a href="#cb11-42"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-43"><a href="#cb11-43"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-44"><a href="#cb11-44"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-45"><a href="#cb11-45"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-46"><a href="#cb11-46"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-47"><a href="#cb11-47"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-48"><a href="#cb11-48"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-49"><a href="#cb11-49"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-50"><a href="#cb11-50"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb11-51"><a href="#cb11-51"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb11-52"><a href="#cb11-52"></a></span>
-<span id="cb11-53"><a href="#cb11-53"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb11-54"><a href="#cb11-54"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb11-55"><a href="#cb11-55"></a></span>
-<span id="cb11-56"><a href="#cb11-56"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb11-57"><a href="#cb11-57"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb11-58"><a href="#cb11-58"></a></span>
-<span id="cb11-59"><a href="#cb11-59"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb11-60"><a href="#cb11-60"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb11-61"><a href="#cb11-61"></a><span class="co">#&gt; Warning in locate.outliers.oloop(y = y, fit = fit, types = types, cval =</span></span>
-<span id="cb11-62"><a href="#cb11-62"></a><span class="co">#&gt; cval, : stopped when 'maxit.oloop = 4' was reached</span></span>
-<span id="cb11-63"><a href="#cb11-63"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-64"><a href="#cb11-64"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-65"><a href="#cb11-65"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-66"><a href="#cb11-66"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-67"><a href="#cb11-67"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb11-68"><a href="#cb11-68"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb11-69"><a href="#cb11-69"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb11-70"><a href="#cb11-70"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb11-71"><a href="#cb11-71"></a></span>
-<span id="cb11-72"><a href="#cb11-72"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb11-73"><a href="#cb11-73"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb11-74"><a href="#cb11-74"></a></span>
-<span id="cb11-75"><a href="#cb11-75"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb11-76"><a href="#cb11-76"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb11-77"><a href="#cb11-77"></a><span class="co">#&gt; Warning in locate.outliers.oloop(y = y, fit = fit, types = types, cval =</span></span>
-<span id="cb11-78"><a href="#cb11-78"></a><span class="co">#&gt; cval, : stopped when 'maxit.oloop = 4' was reached</span></span>
-<span id="cb11-79"><a href="#cb11-79"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-80"><a href="#cb11-80"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-81"><a href="#cb11-81"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-82"><a href="#cb11-82"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-83"><a href="#cb11-83"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-84"><a href="#cb11-84"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-85"><a href="#cb11-85"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-86"><a href="#cb11-86"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-87"><a href="#cb11-87"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb11-88"><a href="#cb11-88"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb11-89"><a href="#cb11-89"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb11-90"><a href="#cb11-90"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb11-91"><a href="#cb11-91"></a>out<span class="op">$</span>outliers</span>
-<span id="cb11-92"><a href="#cb11-92"></a><span class="co">#&gt;    Indices Total_Score Num_Coords Num_Methods     DOBIN       PCA</span></span>
-<span id="cb11-93"><a href="#cb11-93"></a><span class="co">#&gt; 2      695    2.120801          3           3 0.0000000 0.5166784</span></span>
-<span id="cb11-94"><a href="#cb11-94"></a><span class="co">#&gt; 4      697    2.043603          3           3 0.0000000 0.6421355</span></span>
-<span id="cb11-95"><a href="#cb11-95"></a><span class="co">#&gt; 9      702    2.036455          3           4 0.0000000 0.5396272</span></span>
-<span id="cb11-96"><a href="#cb11-96"></a><span class="co">#&gt; 10     703    2.508935          3           3 0.0000000 0.8194186</span></span>
-<span id="cb11-97"><a href="#cb11-97"></a><span class="co">#&gt; 11     704    2.472480          4           4 0.2796322 0.8432410</span></span>
-<span id="cb11-98"><a href="#cb11-98"></a><span class="co">#&gt;          ICS       ICA  forecast tsoutliers     otsad anomalize</span></span>
-<span id="cb11-99"><a href="#cb11-99"></a><span class="co">#&gt; 2  0.8209934 0.7831288 0.0000000  0.7912795 0.8791994 0.4503217</span></span>
-<span id="cb11-100"><a href="#cb11-100"></a><span class="co">#&gt; 4  0.8247397 0.5767273 0.0000000  0.2637598 0.8791994 0.9006433</span></span>
-<span id="cb11-101"><a href="#cb11-101"></a><span class="co">#&gt; 9  1.0941922 0.4026352 0.2930665  0.2637598 0.8791994 0.6004289</span></span>
-<span id="cb11-102"><a href="#cb11-102"></a><span class="co">#&gt; 10 0.8743195 0.8151969 0.8791994  0.0000000 0.8791994 0.7505361</span></span>
-<span id="cb11-103"><a href="#cb11-103"></a><span class="co">#&gt; 11 0.7204347 0.6291724 0.8791994  0.2637598 0.8791994 0.4503217</span></span>
-<span id="cb11-104"><a href="#cb11-104"></a><span class="co">#&gt;    Gap_Score_1</span></span>
-<span id="cb11-105"><a href="#cb11-105"></a><span class="co">#&gt; 2            0</span></span>
-<span id="cb11-106"><a href="#cb11-106"></a><span class="co">#&gt; 4            0</span></span>
-<span id="cb11-107"><a href="#cb11-107"></a><span class="co">#&gt; 9            0</span></span>
-<span id="cb11-108"><a href="#cb11-108"></a><span class="co">#&gt; 10           0</span></span>
-<span id="cb11-109"><a href="#cb11-109"></a><span class="co">#&gt; 11           0</span></span>
-<span id="cb11-110"><a href="#cb11-110"></a><span class="kw"><a href="../reference/draw_table_html.html">draw_table_html</a></span>(out, uniq_dates)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>out &lt;-<span class="st"> </span><span class="kw"><a href="../reference/comp_tsout_ens.html">comp_tsout_ens</a></span>(df, <span class="dt">fast=</span><span class="ot">FALSE</span>)</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-10"><a href="#cb10-10"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-11"><a href="#cb10-11"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-13"><a href="#cb10-13"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-14"><a href="#cb10-14"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-15"><a href="#cb10-15"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-16"><a href="#cb10-16"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-17"><a href="#cb10-17"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-18"><a href="#cb10-18"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-19"><a href="#cb10-19"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-20"><a href="#cb10-20"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-21"><a href="#cb10-21"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-22"><a href="#cb10-22"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-23"><a href="#cb10-23"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-24"><a href="#cb10-24"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-25"><a href="#cb10-25"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-26"><a href="#cb10-26"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-27"><a href="#cb10-27"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-28"><a href="#cb10-28"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-29"><a href="#cb10-29"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-30"><a href="#cb10-30"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-31"><a href="#cb10-31"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-32"><a href="#cb10-32"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-33"><a href="#cb10-33"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-34"><a href="#cb10-34"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-35"><a href="#cb10-35"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-36"><a href="#cb10-36"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-37"><a href="#cb10-37"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-38"><a href="#cb10-38"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-39"><a href="#cb10-39"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-40"><a href="#cb10-40"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-41"><a href="#cb10-41"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-42"><a href="#cb10-42"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-43"><a href="#cb10-43"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-44"><a href="#cb10-44"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-45"><a href="#cb10-45"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-46"><a href="#cb10-46"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-47"><a href="#cb10-47"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-48"><a href="#cb10-48"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-49"><a href="#cb10-49"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-50"><a href="#cb10-50"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb10-51"><a href="#cb10-51"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb10-52"><a href="#cb10-52"></a></span>
+<span id="cb10-53"><a href="#cb10-53"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb10-54"><a href="#cb10-54"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb10-55"><a href="#cb10-55"></a></span>
+<span id="cb10-56"><a href="#cb10-56"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb10-57"><a href="#cb10-57"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb10-58"><a href="#cb10-58"></a></span>
+<span id="cb10-59"><a href="#cb10-59"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb10-60"><a href="#cb10-60"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb10-61"><a href="#cb10-61"></a><span class="co">#&gt; Warning in locate.outliers.oloop(y = y, fit = fit, types = types, cval =</span></span>
+<span id="cb10-62"><a href="#cb10-62"></a><span class="co">#&gt; cval, : stopped when 'maxit.oloop = 4' was reached</span></span>
+<span id="cb10-63"><a href="#cb10-63"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-64"><a href="#cb10-64"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-65"><a href="#cb10-65"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-66"><a href="#cb10-66"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-67"><a href="#cb10-67"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb10-68"><a href="#cb10-68"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb10-69"><a href="#cb10-69"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb10-70"><a href="#cb10-70"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb10-71"><a href="#cb10-71"></a></span>
+<span id="cb10-72"><a href="#cb10-72"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb10-73"><a href="#cb10-73"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb10-74"><a href="#cb10-74"></a></span>
+<span id="cb10-75"><a href="#cb10-75"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
+<span id="cb10-76"><a href="#cb10-76"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
+<span id="cb10-77"><a href="#cb10-77"></a><span class="co">#&gt; Warning in locate.outliers.oloop(y = y, fit = fit, types = types, cval =</span></span>
+<span id="cb10-78"><a href="#cb10-78"></a><span class="co">#&gt; cval, : stopped when 'maxit.oloop = 4' was reached</span></span>
+<span id="cb10-79"><a href="#cb10-79"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-80"><a href="#cb10-80"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-81"><a href="#cb10-81"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-82"><a href="#cb10-82"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-83"><a href="#cb10-83"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-84"><a href="#cb10-84"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-85"><a href="#cb10-85"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-86"><a href="#cb10-86"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-87"><a href="#cb10-87"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-88"><a href="#cb10-88"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-89"><a href="#cb10-89"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-90"><a href="#cb10-90"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-91"><a href="#cb10-91"></a>out<span class="op">$</span>outliers</span>
+<span id="cb10-92"><a href="#cb10-92"></a><span class="co">#&gt;    Indices Total_Score Num_Coords Num_Methods     DOBIN       PCA</span></span>
+<span id="cb10-93"><a href="#cb10-93"></a><span class="co">#&gt; 2      695    2.120801          3           3 0.0000000 0.5166784</span></span>
+<span id="cb10-94"><a href="#cb10-94"></a><span class="co">#&gt; 4      697    2.043603          3           3 0.0000000 0.6421355</span></span>
+<span id="cb10-95"><a href="#cb10-95"></a><span class="co">#&gt; 9      702    2.036455          3           4 0.0000000 0.5396272</span></span>
+<span id="cb10-96"><a href="#cb10-96"></a><span class="co">#&gt; 10     703    2.508935          3           3 0.0000000 0.8194186</span></span>
+<span id="cb10-97"><a href="#cb10-97"></a><span class="co">#&gt; 11     704    2.472480          4           4 0.2796322 0.8432410</span></span>
+<span id="cb10-98"><a href="#cb10-98"></a><span class="co">#&gt;          ICS       ICA  forecast tsoutliers     otsad anomalize</span></span>
+<span id="cb10-99"><a href="#cb10-99"></a><span class="co">#&gt; 2  0.8209934 0.7831288 0.0000000  0.7912795 0.8791994 0.4503217</span></span>
+<span id="cb10-100"><a href="#cb10-100"></a><span class="co">#&gt; 4  0.8247397 0.5767273 0.0000000  0.2637598 0.8791994 0.9006433</span></span>
+<span id="cb10-101"><a href="#cb10-101"></a><span class="co">#&gt; 9  1.0941922 0.4026352 0.2930665  0.2637598 0.8791994 0.6004289</span></span>
+<span id="cb10-102"><a href="#cb10-102"></a><span class="co">#&gt; 10 0.8743195 0.8151969 0.8791994  0.0000000 0.8791994 0.7505361</span></span>
+<span id="cb10-103"><a href="#cb10-103"></a><span class="co">#&gt; 11 0.7204347 0.6291724 0.8791994  0.2637598 0.8791994 0.4503217</span></span>
+<span id="cb10-104"><a href="#cb10-104"></a><span class="co">#&gt;    Gap_Score_1</span></span>
+<span id="cb10-105"><a href="#cb10-105"></a><span class="co">#&gt; 2            0</span></span>
+<span id="cb10-106"><a href="#cb10-106"></a><span class="co">#&gt; 4            0</span></span>
+<span id="cb10-107"><a href="#cb10-107"></a><span class="co">#&gt; 9            0</span></span>
+<span id="cb10-108"><a href="#cb10-108"></a><span class="co">#&gt; 10           0</span></span>
+<span id="cb10-109"><a href="#cb10-109"></a><span class="co">#&gt; 11           0</span></span>
+<span id="cb10-110"><a href="#cb10-110"></a><span class="kw"><a href="../reference/draw_table_html.html">draw_table_html</a></span>(out, uniq_dates)</span></code></pre></div>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; ">
 <table class="table table table-striped">
 <thead><tr>
@@ -782,9 +782,11 @@ Total_Score
 </table>
 </div>
 <p>The table above shows the outlying dates and the associated scores. The outlying dates correspond to the COVID-19 outbreak. We can see the decomposed univariate time series in the following plot and the spike around mid March in 2020.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw"><a href="../reference/plot_decomposed_all.html">plot_decomposed_all</a></span>(<span class="dt">obj=</span>out, <span class="dt">X =</span> df)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw"><a href="../reference/plot_decomposed_all.html">plot_decomposed_all</a></span>(<span class="dt">obj=</span>out, <span class="dt">X =</span> df)</span></code></pre></div>
 <p><img src="composits_files/figure-html/composite3-1.png" width="768"></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># animate_ts_ensemble(out, X= df,  max_frames = 1)</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># animate_ts_ensemble(out, X= df,  max_frames = 1)</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw"><a href="../reference/animate_ts_ensemble.html">animate_ts_ensemble</a></span>(out, <span class="dt">X=</span> df,  <span class="dt">max_frames =</span> <span class="dv">100</span>)</span></code></pre></div>
+<p><img src="compani.gif" width="90%"></p>
 <p>Next we apportion the outlying scores back to the states. This is another coordinate transformation from the outlier score space to the original coordinate space.</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>apportioned &lt;-<span class="st"> </span><span class="kw"><a href="../reference/apportion_scores_comp.html">apportion_scores_comp</a></span>(out)</span>
 <span id="cb14-2"><a href="#cb14-2"></a>apportioned1 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/cbind.html">cbind.data.frame</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(df), apportioned<span class="op">$</span>scores_out)</span>
