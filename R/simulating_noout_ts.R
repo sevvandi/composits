@@ -42,12 +42,17 @@ no_outlier_scores_1 <- function(dd, N, ncomp, sd, rept = 1, m1){
     y <- simulate_noout(dd, N, sd)
     out <- tsout_ensemble(y, m1, ncomp=ncomp)
     scores <- out$all$Total_Score
-    thres2[i] <- max(scores)
-    thres1[i] <- quantile(scores, probs=0.95)
-    # The two thresholds are equal - go for the std dev of the scores - max - std(scores)
-    if(thres2[i]==thres1[i]){
-      thres1[i] <- thres2[i] - sd(scores)
+    if(length(scores)>0){
+      thres2[i] <- max(scores)
+      thres1[i] <- quantile(scores, probs=0.95)
+      # The two thresholds are equal - go for the std dev of the scores - max - std(scores)
+      if(thres2[i]==thres1[i]){
+        thres1[i] <- thres2[i] - sd(scores)
+      }
+    }else{
+      thres2 <- thres1 <- NA
     }
+
   }
   ret <- list()
   ret$thres1 <- mean(thres1)
