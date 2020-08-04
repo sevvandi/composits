@@ -66,7 +66,6 @@ plot_decomposed <- function(obj, X = NULL, method = "pca"){
 #'
 #' The final graph shows the data points projected onto the
 #' first two components, together with the loadings as axes.
-#' Note that this only works well for centered and scaled data.
 #'
 #' @param obj The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.
 #' @param X The data matrix used as input to \code{mv_tsout_ens} (not needed if \code{obj} is output from \code{comp_tsout_ens}).
@@ -88,8 +87,7 @@ plot_decomposed <- function(obj, X = NULL, method = "pca"){
 #' X <- cbind.data.frame(x, x2, x3, x4)
 #'
 #' out1 <- mv_tsout_ens(X, compr=2, fast=FALSE)
-#' X_scaled <- scale(X)
-#' plot_biplot(out1, X = X_scaled, method = "pca")
+#' plot_biplot(out1, X = X, method = "pca")
 #'
 #' X <- X/rowSums(X)
 #' out2 <- comp_tsout_ens(X, compr=2, fast=FALSE)
@@ -127,17 +125,21 @@ plot_biplot <- function(obj, X = NULL, method = "pca"){
     ggplot2::geom_point() +
     ggplot2::scale_colour_manual(values = c("grey", "red")) +
     ggplot2::geom_segment(data = loading_mat,
-                 mapping = ggplot2::aes(x=0, xend=.data$comp1, y=0, yend=.data$comp2),
+                 mapping = ggplot2::aes(x=mean(ts_proj$comp1),
+                                        xend=.data$comp1 * max(abs(ts_proj$comp1)) - mean(ts_proj$comp1),
+                                        y=mean(ts_proj$comp2),
+                                        yend=.data$comp2 * max(abs(ts_proj$comp2)) - mean(ts_proj$comp2)),
                  color="forestgreen") +
     ggplot2::geom_text(data=loading_mat,
-              mapping = ggplot2::aes(x=.data$comp1, y=.data$comp2, label=.data$l),
+              mapping = ggplot2::aes(x=.data$comp1 * max(abs(ts_proj$comp1)) - mean(ts_proj$comp1),
+                                     y=.data$comp2 * max(abs(ts_proj$comp2)) - mean(ts_proj$comp2),
+                                     label=.data$l),
               size=4,
               color="forestgreen") +
     ggplot2::xlab(paste0(method, "_", 1)) +
     ggplot2::ylab(paste0(method, "_", 2)) +
     ggplot2::theme_bw() +
-    ggplot2::coord_fixed() +
-    ggplot2::theme(legend.position = "none")
+    ggplot2::theme(legend.position = "none", aspect.ratio = 1)
 }
 
 #' Plot all decomposed time series from comp_tsout_ens or mv_tsout_ens output.
