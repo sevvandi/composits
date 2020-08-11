@@ -139,7 +139,7 @@ plot_decomposed(obj=out, X = stpart,  method = "pca")
 
 
 ## Composite time series outliers
-For this example we use daily mortality counts in Spain organised by state. The dataset records mortality counts from the 18th of April 2018 until the 5th of May 2020. To make the data compositional we divide the state counts by the total count for each day. 
+For this example we use daily mortality counts in Spain organised by autonomous communities provided by the Spanish government. The dataset records mortality counts from the 18th of April 2018 until the 31th of July 2020. To make the data compositional we divide the autonomous communities counts by the total count for each day. 
 
 Compositional data live on a simplex, because the sums add up to a constant. Before analysing such data, it is important to make the data unconstrained. We make the data unconstrained by using a coordinate transformation called the *null space coordinate transformation*. We use the multivariate outlier detection ensemble discussed above on these unconstrained data. More details are available in our paper. 
 
@@ -183,7 +183,7 @@ saveGIF(
 
 <img src="compani.gif" width = "90%"/>
 
-Next we apportion the outlying scores back to the states. This is another coordinate transformation from the outlier score space to the original coordinate space. 
+Next we apportion the outlying scores back to the autonomous communities. This is another coordinate transformation from the outlier score space to the original coordinate space. 
 
 ```{r composite4}
 apportioned <- apportion_scores_comp(out)
