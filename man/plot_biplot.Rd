@@ -4,7 +4,7 @@
 \alias{plot_biplot}
 \title{Plot "biplot" for different decomposition methods.}
 \usage{
-plot_biplot(obj, X = NULL, method = "pca")
+plot_biplot(obj, X = NULL, method = "pca", edges = NULL)
 }
 \arguments{
 \item{obj}{The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.}
@@ -12,6 +12,8 @@ plot_biplot(obj, X = NULL, method = "pca")
 \item{X}{The data matrix used as input to \code{mv_tsout_ens} (not needed if \code{obj} is output from \code{comp_tsout_ens}).}
 
 \item{method}{The decomposition method, choose between "pca" (default), "dobin", "ics" or "ica".}
+
+\item{edges}{Set to "all" to connect points by time index, "outlying" to connect tagged outliers to previous and following points.}
 }
 \value{
 A ggplot showing the biplot.
@@ -19,7 +21,6 @@ A ggplot showing the biplot.
 \description{
 The final graph shows the data points projected onto the
 first two components, together with the loadings as axes.
-Note that this only works well for centered and scaled data.
 }
 \examples{
 set.seed(100)
@@ -33,8 +34,7 @@ x4 <- sample(1:100, n, replace=TRUE)
 X <- cbind.data.frame(x, x2, x3, x4)
 
 out1 <- mv_tsout_ens(X, compr=2, fast=FALSE)
-X_scaled <- scale(X)
-plot_biplot(out1, X = X_scaled, method = "pca")
+plot_biplot(out1, X = X, method = "pca")
 
 X <- X/rowSums(X)
 out2 <- comp_tsout_ens(X, compr=2, fast=FALSE)

@@ -70,6 +70,7 @@ plot_decomposed <- function(obj, X = NULL, method = "pca"){
 #' @param obj The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.
 #' @param X The data matrix used as input to \code{mv_tsout_ens} (not needed if \code{obj} is output from \code{comp_tsout_ens}).
 #' @param method The decomposition method, choose between "pca" (default), "dobin", "ics" or "ica".
+#' @param edges Set to "all" to connect points by time index, "outlying" to connect tagged outliers to previous and following points.
 #' @return A ggplot showing the biplot.
 #'
 #' @importFrom dplyr %>%
@@ -94,7 +95,7 @@ plot_decomposed <- function(obj, X = NULL, method = "pca"){
 #' plot_biplot(out2)
 #'
 #' @export
-plot_biplot <- function(obj, X = NULL, method = "pca"){
+plot_biplot <- function(obj, X = NULL, method = "pca", edges = NULL){
   # initial check that loadings for requested method are in obj
   loading_mat <- obj[[paste0(method, "_loadings")]]
   if(! is.matrix(loading_mat)){
@@ -119,7 +120,7 @@ plot_biplot <- function(obj, X = NULL, method = "pca"){
   loading_mat <- tibble::tibble(comp1 = loading_mat[,1], comp2 = loading_mat[,2]) %>%
     dplyr::mutate(l = paste0("V", 1:nrow(loading_mat)))
 
-  ggplot2::ggplot(ts_proj,
+  p <- ggplot2::ggplot(ts_proj,
                   ggplot2::aes(.data$comp1, .data$comp2,
                                color=(.data$t %in% obj$outliers[,"Indices"]))) +
     ggplot2::geom_point() +
@@ -140,6 +141,38 @@ plot_biplot <- function(obj, X = NULL, method = "pca"){
     ggplot2::ylab(paste0(method, "_", 2)) +
     ggplot2::theme_bw() +
     ggplot2::theme(legend.position = "none", aspect.ratio = 1)
+
+  if(! is.null(edges)){
+    if(edges == "outlying"){
+      idx <- obj$outliers[,"Indices"]
+      edges_mat <- matrix(nrow = 2*length(idx), ncol = 4)
+      j <- 1
+      for (i in idx){
+        edges_mat[j, 1] <- as.numeric(ts_proj[i-1, 1])
+        edges_mat[j, 2] <- as.numeric(ts_proj[i-1, 2])
+        edges_mat[j, 3] <- as.numeric(ts_proj[i, 1])
+        edges_mat[j, 4] <- as.numeric(ts_proj[i, 2])
+        edges_mat[j+1, 1] <- as.numeric(ts_proj[i, 1])
+        edges_mat[j+1, 2] <- as.numeric(ts_proj[i, 2])
+        edges_mat[j+1, 3] <- as.numeric(ts_proj[i+1, 1])
+        edges_mat[j+1, 4] <- as.numeric(ts_proj[i+1, 2])
+        j <- j+2
+      }
+      colnames(edges_mat) <- c("x1", "y1", "x2", "y2")
+      p <- p +
+        ggplot2::geom_segment(data = tibble::as_tibble(edges_mat),
+                              mapping = ggplot2::aes(x=.data$x1,
+                                                    xend=.data$x2,
+                                                    y=.data$y1,
+                                                    yend=.data$y2),
+                              color="grey")
+    }
+    if(edges == "all"){
+      p <- p +
+        ggplot2::geom_line(color="grey")
+    }
+  }
+  p
 }
 
 #' Plot all decomposed time series from comp_tsout_ens or mv_tsout_ens output.
