@@ -57,7 +57,10 @@ library(stringr)
 library(rnaturalearthdata)
 ```
 
-The goal of *composits* is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the outlier detection methods from R packages ``` forecast ```, ``` tsoutliers ```, ``` anomalize ``` and ```otsad ```. 
+The goal of *composits* is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the outlier detection methods from R packages ``` forecast ```, ``` tsoutliers ```, ``` anomalize ``` and ```otsad ```. All the options provided in those packages can be included in the calls for each of the methods used in the ensemble function so that the user can create a more customize ensemble.
+
+As describe in the paper four dimension reduction methods are used in the multivariate ensemble PCA, DOBIN, ICS and ICA. It is recomended that users
+verified the scaling and centering options of these methods for each particular example.
 
 ## Univariate time series outliers
 This example uses a univariate time series containing the daily gold prices from the R package ```forecast```.
