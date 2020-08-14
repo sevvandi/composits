@@ -51,7 +51,7 @@ animate_ts_ensemble <- function(obj=NULL, X = NULL, method = NULL, edges = NULL,
     return(NULL)
   }
   if(is.null(colnames(X))){
-    coord_name <- ifelse(is.null(method), "x", method)
+    coord_name <- ifelse(is.null(method), "X", method)
     colnames(X) <- paste0(coord_name, 1:ncol(X))
   }
   # color for tourr highlights outliers

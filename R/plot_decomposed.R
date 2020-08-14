@@ -118,7 +118,7 @@ plot_biplot <- function(obj, X = NULL, method = "pca", edges = NULL){
   ts_proj <- tibble::as_tibble(ts_proj) %>%
     dplyr::mutate(t = 1:nrow(X))
   loading_mat <- tibble::tibble(comp1 = loading_mat[,1], comp2 = loading_mat[,2]) %>%
-    dplyr::mutate(l = paste0("V", 1:nrow(loading_mat)))
+    dplyr::mutate(l = paste0("X", 1:nrow(loading_mat)))
 
   p <- ggplot2::ggplot(ts_proj,
                   ggplot2::aes(.data$comp1, .data$comp2,
@@ -127,13 +127,13 @@ plot_biplot <- function(obj, X = NULL, method = "pca", edges = NULL){
     ggplot2::scale_colour_manual(values = c("grey", "red")) +
     ggplot2::geom_segment(data = loading_mat,
                  mapping = ggplot2::aes(x=mean(ts_proj$comp1),
-                                        xend=.data$comp1 * max(abs(ts_proj$comp1)) - mean(ts_proj$comp1),
+                                        xend=.data$comp1 * (max(ts_proj$comp1)- min(ts_proj$comp1)) + mean(ts_proj$comp1),
                                         y=mean(ts_proj$comp2),
-                                        yend=.data$comp2 * max(abs(ts_proj$comp2)) - mean(ts_proj$comp2)),
+                                        yend=.data$comp2 * (max(ts_proj$comp2)- min(ts_proj$comp2)) + mean(ts_proj$comp2)),
                  color="forestgreen") +
     ggplot2::geom_text(data=loading_mat,
-              mapping = ggplot2::aes(x=.data$comp1 * max(abs(ts_proj$comp1)) - mean(ts_proj$comp1),
-                                     y=.data$comp2 * max(abs(ts_proj$comp2)) - mean(ts_proj$comp2),
+              mapping = ggplot2::aes(x=.data$comp1 * (max(ts_proj$comp1)- min(ts_proj$comp1)) + mean(ts_proj$comp1),
+                                     y=.data$comp2 * (max(ts_proj$comp2)- min(ts_proj$comp2)) + mean(ts_proj$comp2),
                                      label=.data$l),
               size=4,
               color="forestgreen") +
@@ -169,7 +169,7 @@ plot_biplot <- function(obj, X = NULL, method = "pca", edges = NULL){
     }
     if(edges == "all"){
       p <- p +
-        ggplot2::geom_line(color="grey")
+        ggplot2::geom_path(color="grey")
     }
   }
   p
