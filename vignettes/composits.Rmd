@@ -41,9 +41,7 @@ if (!requireNamespace("stringr", quietly = TRUE)) {
     stop("Package stringr is needed for the vignette. Please install it.",
       call. = FALSE)
 }
-if (!requireNamespace("rnaturalearthdata", quietly = TRUE)) {
-    stop("Package rnaturalearthdata is needed for the vignette. Please install it.", call. = FALSE)
-}
+
 ```
 
 
@@ -54,7 +52,8 @@ library(forecast)
 library(dplyr)
 library(tidyr)
 library(stringr)
-library(rnaturalearthdata)
+library(broom)
+library(rgdal)
 ```
 
 The goal of *composits* is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the outlier detection methods from R packages ``` forecast ```, ``` tsoutliers ```, ``` anomalize ``` and ```otsad ```. All the options provided in those packages can be included in the calls for each of the methods used in the ensemble function so that the user can create a more customize ensemble.
@@ -198,34 +197,50 @@ apportioned1
 
 Next we plot this using the map of Spain.
 
+
 ```{r composite5}
+shapefile_ccaa <- readOGR(dsn="ComunidadesAutonomas_ETRS89_30N/Comunidades_Autonomas_ETRS89_30N.shp")
+data_ccaa <- tidy(shapefile_ccaa)
+nombres_ccaa <- tibble(shapefile_ccaa$Texto) %>% 
+  mutate(id = as.character(seq(0, nrow(.)-1)))
+
+reg <- c("AN", "AR", "AS", "PM", "CN", "CB", "CL", "CM",
+         "CT", "VC", "EX", "GA", "MD", "MU", "NA", "PV",
+         "LO", "CE", "CE")
+
+nombres_ccaa <- tibble(reg) %>% 
+  mutate(id = as.character(seq(0, nrow(.)-1)))
+
+data_ccaa_mapa <- data_ccaa %>% 
+  left_join(nombres_ccaa, by = "id")
+
+
 df3 <- apportioned1 %>%
 mutate(reg = str_replace(reg, "RI", "LO")) %>%
   mutate(reg = str_replace(reg, "NC", "NA")) %>%
   mutate(reg = str_replace(reg, "MC", "MU")) %>%
   pivot_longer(-reg, names_to = "date", values_to = "score")
 
-
-spain <- rnaturalearth::ne_states(country = "spain", returnclass = "sf")
-sp_regions <- spain %>%
-  mutate(reg = str_sub(code_hasc, 4, 5)) %>%
-  group_by(reg) %>%
-  summarise()
-
-# combine map info with data
-# XXX dropping Canary islands for now
-sp_data <- inner_join(sp_regions, df3, by="reg") %>%
+sp_data <- inner_join(data_ccaa_mapa, df3, by="reg") %>%
   filter(reg != "CN")
 
-#template for drawing map
 sp_data %>%
   ggplot() +
-  geom_sf(aes(fill=score)) +
+  geom_polygon(aes(x= long, y = lat, group=group, fill=score),
+               color="black", size=0.2) +
   theme_bw() +
   scale_fill_distiller(palette = "YlOrBr", direction = 1) +
-  facet_wrap(~date, ncol=3)
+  xlab("") +
+  ylab("") +
+  facet_wrap(~date, ncol=3) +
+  theme(panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(), 
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks = element_blank())
 
 ```
+
 
 See our  [website](https://sevvandi.github.io/composits/index.html) or our paper [@composits] *** for more examples.   
 
