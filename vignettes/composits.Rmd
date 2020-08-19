@@ -41,6 +41,14 @@ if (!requireNamespace("stringr", quietly = TRUE)) {
     stop("Package stringr is needed for the vignette. Please install it.",
       call. = FALSE)
 }
+if (!requireNamespace("broom", quietly = TRUE)) {
+    stop("Package broom is needed for the vignette. Please install it.",
+      call. = FALSE)
+}
+if (!requireNamespace("rgdal", quietly = TRUE)) {
+    stop("Package rgdal is needed for the vignette. Please install it.",
+      call. = FALSE)
+}
 
 ```
 
@@ -232,6 +240,7 @@ sp_data %>%
   scale_fill_distiller(palette = "YlOrBr", direction = 1) +
   xlab("") +
   ylab("") +
+  coord_fixed() +
   facet_wrap(~date, ncol=3) +
   theme(panel.grid.major = element_blank(),
     panel.grid.minor = element_blank(), 

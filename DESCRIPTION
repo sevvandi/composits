@@ -41,9 +41,9 @@ Suggests:
     knitr,
     rmarkdown,
     tourr,
-    rnaturalearthdata,
     stringr,
-    rnaturalearth
+    broom,
+    rgdal
 VignetteBuilder: knitr
 Depends: 
     R (>= 3.4.0)
