@@ -23,7 +23,6 @@ method that uses the packages `forecast`, `tsoutliers`, `anomalize` and
 <!-- ``` -->
 
 
-development version from [GitHub](https://github.com/) with:
 The composits R package can be installed as follows: 
 
 ``` r
