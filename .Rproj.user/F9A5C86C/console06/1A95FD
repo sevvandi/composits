@@ -1505,4 +1505,41 @@ $[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km
 use 'git commit --no-verify' to override this check[0K
 [0K[?25h[?25l
 [0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git commit -m "update apportion scores and dataset"[0K[?25h[?25l$ git add .[0K[?25h
+$[0K[3G[?25h[?25l$ git commit -m "update apportion scores and dataset"[0K[?25h[?25l$ git add .[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l$ git commit -m "update apportion scores and dataset"[0K[?25h[?25l
+[0K[?25h[master d512ba7] update apportion scores and dataset[0K[?25l
+ 77 files changed, 2138 insertions(+), 739 deletions(-)[0K
+ rewrite .Rproj.user/F9A5C86C/console06/INDEX001 (86%)[0K
+ rewrite data/spanish_morte.rda (98%)[0K
+ rewrite docs/articles/composits_files/figure-html/composite1-1.png (99%)[0K
+ rewrite docs/articles/composits_files/figure-html/composite3-1.png (99%)[0K
+ rewrite docs/articles/composits_files/figure-html/composite5-1.png (98%)[0K
+ rewrite docs/articles/composits_files/figure-html/mvout2-1.png (99%)[0K
+ rewrite docs/articles/composits_files/figure-html/mvout3-1.png (99%)[0K
+ rewrite docs/articles/composits_files/figure-html/univaraite1-1.png (99%)[0K
+ create mode 100644 docs/reference/Simulations.html[0K
+ rewrite docs/reference/animate_ts_ensemble-5.png (90%)[0K
+ rewrite docs/reference/animate_ts_ensemble-6.png (95%)[0K
+ rewrite docs/reference/draw_table-1.png (83%)[0K
+ rewrite docs/reference/plot_biplot-1.png (99%)[0K
+ rewrite docs/reference/plot_biplot-2.png (99%)[0K
+ rewrite docs/reference/plot_decomposed-2.png (99%)[0K
+ rewrite docs/reference/plot_decomposed-3.png (99%)[0K
+ rewrite docs/reference/plot_decomposed_all-1.png (94%)[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[7G[?25h[8G[?25l$ git pu[0K[?25hs[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[19G[?25h[?25l$ git push origin mas[0K[?25ht[0Ke[0Kr[0K[?25l
+[0K[?25hEnumerating objects: 181, done.[0K[?25l
+Counting objects:  12% (22/181)[0K[1G[?25h[?25lCounting objects:  72% (131/181)[0K[1G[?25hCounting objects: 100% (181/181), done.[0K[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects:  36% (33/91)[0K[1G[?25h[?25lCompressing objects: 100% (91/91), done.[0K[1G[?25h[?25l
+Writing objects:  26% (25/93)[0K[1G[?25h[?25lWriting objects:  30% (28/93)[0K[1G[?25h[?25lWriting objects:  50% (47/93)[0K[1G[?25h[?25lWriting objects:  84% (79/93)[0K[1G[?25hWriting objects: 100% (93/93), 542.66 KiB | 3.69 MiB/s, done.[0K[?25l
+Total 93 (delta 66), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas:  12% (8/66)[0K[?25lremote: Resolving deltas:  13% (9/66)[0K[1G[?25hremote: Resolving deltas: 100% (66/66), completed with 62 local objects.[0K[?25l
+[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
+   3913a96..d512ba7  master -> master[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hit[0K a[0Kd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
+[0K[?25h
