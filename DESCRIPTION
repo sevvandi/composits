@@ -36,7 +36,8 @@ Imports:
     ggplot2,
     tidyr,
     kableExtra,
-    mathjaxr
+    mathjaxr,
+    tinytex
 RoxygenNote: 7.1.1
 RdMacros: mathjaxr
 Suggests: 
@@ -44,8 +45,7 @@ Suggests:
     rmarkdown,
     tourr,
     rnaturalearthdata,
-    stringr,
-    rnaturalearth
+    stringr
 VignetteBuilder: knitr
 Depends: 
     R (>= 3.4.0)
