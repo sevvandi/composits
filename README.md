@@ -118,6 +118,19 @@ out$outliers
 ```
 
 See our [website](https://sevvandi.github.io/composits/index.html) or
-our paper \[@composits\] for more examples.
+our paper (Kandanaarachchi et al. 2020) for more examples.
 
 # References
+
+<div id="refs" class="references hanging-indent">
+
+<div id="ref-composits">
+
+Kandanaarachchi, Sevvandi, Patricia Menendez, Ruben Loaiza-Maya, and
+Ursula Laa. 2020. “Outliers in Compositional Time Series Data.” Working
+Paper.
+<https://www.researchgate.net/publication/343712288_Outliers_in_compositional_time_series_data>.
+
+</div>
+
+</div>
