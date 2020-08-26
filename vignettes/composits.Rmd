@@ -44,6 +44,9 @@ if (!requireNamespace("stringr", quietly = TRUE)) {
 if (!requireNamespace("rnaturalearthdata", quietly = TRUE)) {
     stop("Package rnaturalearthdata is needed for the vignette. Please install it.", call. = FALSE)
 }
+if (!requireNamespace("animation", quietly = TRUE)) {
+    stop("Package animation is needed for the vignette. Please install it.", call. = FALSE)
+}
 ```
 
 
