@@ -13,7 +13,7 @@
 #' is an \mjeqn{N\times K}{ASCII representation} matrix of factor loadings,
 #' \mjeqn{\varepsilon_t\sim N(0,I_K)}{ASCII representation}
 #' and \mjeqn{b_t = \left(b_{t,1},\dots,b_{t,K}\right)^\top,}{ASCII representation}
-#' with \mjeqn{b_{t,k}\sim \text{Bernoulli}(p)}{ASCII representation}.
+#' with \mjeqn{b_{t,k}\sim \text{Bernoulli}(p)}}{ASCII representation}.
 #' Example mathjax function
 #'
 #' @param N The number of categories in the composition
