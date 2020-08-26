@@ -15,6 +15,6 @@ A list of two items.
 spanish_morte
 }
 \description{
-This dataset contains mortality counts in Spain by state from the 18th of April 2018 until the 5th of May 2020.
+This dataset contains mortality counts in Spain by state from the 12th of July 2018 until the 29th of July 2020.
 }
 \keyword{datasets}

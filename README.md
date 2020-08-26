@@ -22,14 +22,13 @@ method that uses the packages `forecast`, `tsoutliers`, `anomalize` and
 
 <!-- ``` -->
 
-
-The composits R package can be installed as follows: 
+You can install the development version from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("sevvandi/composits")
 ```
-
 
 ## Example
 
@@ -117,3 +116,8 @@ out$outliers
 #>   forecast tsoutliers otsad anomalize Gap_Score_1
 #> 1      0.5       0.75     0      0.75           3
 ```
+
+See our [website](https://sevvandi.github.io/composits/index.html) or
+our paper \[@composits\] for more examples.
+
+# References

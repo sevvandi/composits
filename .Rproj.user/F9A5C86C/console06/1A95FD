@@ -1,384 +1,4 @@
 
-[0K[?25hAuto-merging R/plot_decomposed.R[0K[?25l
-Auto-merging NAMESPACE[0K
-Auto-merging DESCRIPTION[0K
-[0K[?25hMerge made by the 'recursive' strategy.[0K[?25l
-[0K[?25h DESCRIPTION                |  4 [0;32m++[0;31m--[0m[0K[?25l
- NAMESPACE                  |  1 [0;32m+[0m[0K
- R/plot_decomposed.R        | 53 [0;32m+++++++++++++++++++++++++++++++++++++++++++++[0;31m-[0m[0K
- man/plot_decomposed.Rd     |  3 [0;32m++[0;31m-[0m[0K
- man/plot_decomposed_all.Rd | 19 [0;32m+++++++++++++++++[0m[0K
- 5 files changed, 76 insertions(+), 4 deletions(-)[0K
- create mode 100644 man/plot_decomposed_all.Rd[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git pull origin master[0K[?25h[?25l$[0K[3G[?25h[?25l$ R[0K[?25h[?25l$[0K[4G[?25h[3G[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Km[0Kposits[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25ha[0Kd[0Kd[0K[22G[?25l$ git commit -m "add d[0K[?25hr[0Ka[0Kw[0K_[0Kt[0Ka[0Kb[0Kl[0Ke[0K_[0Kh[0Kt[0Km[0Kl[0K"[0K[?25l
-[0K[?25h[master 41d1974] add draw_table_html[0K[?25l
- 1 file changed, 111 insertions(+), 1 deletion(-)[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
-[0K[?25hEnumerating objects: 151, done.[0K[?25l
-Counting objects: 100% (129/129), done.[0K
-Delta compression using up to 4 threads.[0K
-Compressing objects:  46% (43/93)[0K[1G[?25h[?25lCompressing objects:  86% (80/93)[0K[1G[?25hCompressing objects: 100% (93/93), done.[0K[?25l
-Writing objects:  27% (26/95)[0K[1G[?25h[?25lWriting objects:  53% (51/95)[0K[1G[?25h[?25lWriting objects:  77% (74/95)[0K[1G[?25hWriting objects: 100% (95/95), 543.33 KiB | 6.32 MiB/s, done.[0K[?25l
-Total 95 (delta 26), reused 0 (delta 0)[0K
-[0K[?25h[?25lremote: Resolving deltas:  69% (18/26)[0K[1G[?25hremote: Resolving deltas: 100% (26/26), completed with 16 local objects.[0K[?25l
-[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
-   dfc7a2f..41d1974  master -> master[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[?25l$ c[0K[?25h[?25l$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[15G[?25h[16G[?25l$ R CMD build co[0K[?25hm[0Kposits[0K[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ...[0K OK[0K[?25l
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-[0K[?25h* installing the package to build vignettes[0K[?25l
-[0K[?25h* creating vignettes ...[0K OK[0K[?25l
-[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
-[0K[?25h* checking for empty or unneeded directories[0K[?25l
-[0K[?25h[?25l* building 'composits_0.0.0.9000.ta[0K[33G[?25h[?25l* building 'composits_0.0.0.9000.tar.gz'[0K
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25h[?25l$ R CMD[0K[9G[?25h[?25l$ R CMD c[0K[?25hh[0Ke[0Kc[0Kk[0K[15G[?25l$ R CMD check c[0K[?25ho[0Km[0Kposits[0K_[0K0.0.0.9000.tar.gz[0K[43G[?25l
-[0K[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/c[0K[56G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K
-* using R version 3.6.1 (2019-07-05)[0K
-* using platform: x86_64-w64-mingw32 (64-bit)[0K
-* using session charset: ISO8859-1[0K[33G[?25h[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-* checking extension type ... Package[0K
-* this is package 'composits' version '0.0.0.9000'[0K
-* package encoding: UTF-8[0K
-* checking package namespace[0K[27G[?25h[?25l* checking package namespace information ... OK[0K
-* checking package dependencies ...[0K[?25h OK[0K[?25l
-* checking if this is a source package ... OK[0K
-* checking if[0K[11G[?25h[?25l* checking if there is a namespace ... OK[0K
-[0K[?25h* checking for executable files ...[0K OK[0K[?25l
-* checking for hidden files[0K[25G[?25h[?25l* checking for hidden files and directories ... OK[0K
-* checking for portable file names ...[0K[?25h OK[0K[?25l
-* checking whether package 'composits' can be installed ...[0K[?25h OK[0K[?25l
-* checking installed package size ...[0K[?25h OK[0K[?25l
-* checking package d[0K[18G[?25h[?25l* checking package directory ... OK[0K
-* checking 'build' directory ... OK[0K
-* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-* checking top-level files ... OK[0K
-* checking for left-over files ... OK[0K
-* checking index information ...[0K[?25h[?25l OK[0K[34G[?25h[?25l
-* checking package subdirectories ...[0K[?25h OK[0K[?25l
-* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
-* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
-* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
-* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking whether the namesp[0K[27G[?25h[?25l* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
-* checking dependenci[0K[20G[?25h[?25l* checking dependencies in R code ...[0K[?25h OK[0K[?25l
-* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
-* checking replacement functions ...[0K[?25h OK[0K[?25l
-* checking foreign func[0K[21G[?25h[?25l* checking foreign function calls ...[0K[?25h OK[0K[?25l
-* checking R code for possible problems ...[0K[?25h OK[0K[?25l
-* checking Rd files ...[0K[?25h OK[0K[?25l
-* checking Rd metadata ...[0K[?25h OK[0K[?25l
-* checking Rd cross-references ...[0K[?25h OK[0K[?25l
-* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
-* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
-* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
-* checkin[0K[7G[?25h[?25l* checking Rd contents ...[0K[?25h OK[0K[?25l
-* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
-* checking installed files from 'ins[0K[35G[?25h[?25l* checking installed files from 'inst/doc' ... OK[0K
-* checking files in 'vignettes' ...[0K[?25h OK[0K[?25l
-* checking examples ...[0K[?25h OK[0K[?25l
-[0K[?25h* checking for unstated dependencies in vignettes ...[0K OK[0K[?25l
-* checking package vignettes in[0K[30G[?25h[?25l* checking package vignettes in 'inst/doc' ... OK[0K
-* checking running R code from vignettes ...[0K
-[0K[?25h  'composits.Rmd'using 'UTF-8'... OK[0K[?25l
- NONE[0K
-* checking re-building of vignette outputs ...[0K[?25h OK[0K[?25l
-* checking PDF version of manual ...[0K[?25h OK[0K[?25l
-* DONE[0K
-[0K
-Status: OK[0K
-[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0m[0K[1G[?25h[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K[?25l
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25hh[0K[?25l$ R CMD c[0K[?25h[?25l$ R CMD[0K[9G[?25h[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0K[?25ld[0K[13G[?25h[14G[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kp[0Ko[0Ksits[0K[?25l
-[0K[?25h[?25l* ch[0K[2G[?25h[?25l* checking for file 'composits/DESCRIPTION' ... OK[0K
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-[0K[?25h* installing the package to build vignettes[0K[?25l
-[0K[?25h[?25l* creating vignett[0K[17G[?25h[?25l* creating vignettes ...[0K[?25h OK[0K[?25l
-[0K[?25h[?25l* checking for LF line-endings in source an[0K[41G[?25h[?25l* checking for LF line-endings in source and make files and shell scripts[0K
-* checking for empty or unneeded directories[0K
-* building 'composits_0.0.0.9000.tar.gz'[0K[1G[?25h[?25l
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R CMD build composits[0K[?25h[?25l$ R CMD check composits_0.0.0.9000.tar.gz[0K[43G[?25h[?25l
-[0K[?25h* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K[?25l
-* using R version 3.6.1 (2019-07-05)[0K
-* using platform: x86_64-w64-mingw32 (64-bit)[0K
-* using session charset[0K[1G[?25h* using session charset: ISO8859-1[0K[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-* checking extension type ... Package[0K[?25h[?25l
-* this is package 'composits' version '0.0.0.9000'[0K
-* packa[0K[7G[?25h[?25l* package encoding: UTF-8[0K
-* checking package namespace information ... OK[0K
-[0K[?25h* checking package dependencies ...[0K OK[0K[?25l
-* checking if th[0K[14G[?25h[?25l* checking if this is a source package ... OK[0K
-* checking if there is a namespace ... OK[0K
-[0K[?25h* checking for executable files ...[0K OK[0K[?25l
-* checking for hidden files and d[0K[32G[?25h[?25l* checking for hidden files and directories ... OK[0K
-* checking for po[0K[15G[?25h[?25l* checking for portable file names ... OK[0K
-* checking whether package 'composits' can be installed ...[0K[?25h OK[0K[?25l
-* checking installed package size ...[0K[?25h[?25l OK[0K[38G[?25h[?25l
-* checking package directory ... OK[0K
-* checking 'build' directory ... OK[0K
-* checking DE[0K[11G[?25h[?25l* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-* checking top-level files ... OK[0K
-* checking for left-over files[0K[29G[?25h[?25l* checking for left-over files ... OK[0K
-* checking index information ...[0K[?25h OK[0K[?25l
-* chec[0K[4G[?25h[?25l* checking package subdirectories ...[0K[?25h OK[0K[?25l
-* checking R files for non-ASCII characters ...[0K[?25h[?25l O[0K[48G[?25h[?25l* checking R files for non-ASCII characters ... OK[0K
-* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
-* checking whether the package can be loaded ...[0K[?25h[?25l OK[0K[50G[?25h[?25l
-* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
-* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
-* checking loading w[0K[18G[?25h[?25l* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
-* checking dependencies in R code ...[0K[?25h OK[0K[?25l
-* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
-* checking replacement functions ...[0K[?25h OK[0K[?25l
-* checking foreign function calls ...[0K[?25h OK[0K[?25l
-* checking R code for possible problems ...[0K[?25h OK[0K[?25l
-* checking Rd files ...[0K[?25h OK[0K[?25l
-* checking Rd metad[0K[17G[?25h[?25l* checking Rd metadata ...[0K[?25h OK[0K[?25l
-* checking Rd cross-references ...[0K[?25h OK[0K[?25l
-* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
-* checking for code/documentat[0K[28G[?25h[?25l* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
-* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
-* checking Rd contents ...[0K[?25h OK[0K[?25l
-* checking for unstated dep[0K[26G[?25h[?25l* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
-* checking installed files from 'inst/doc' ...[0K[?25h OK[0K[?25l
-* checking files in 'vignettes' ... OK[0K
-[0K[?25h* checking examples ...[0K OK[0K[?25l
-[0K[?25h* checking for unstated dependencies in vignettes ...[0K OK[0K[?25l
-* checking package vignettes in 'inst/doc' ... OK[0K
-[0K[?25h* checking running R code from vignettes ...[0K[?25l
-[0K[?25h  'composits.Rmd'using 'UTF-8'... OK[0K[?25l
- NONE[0K
-* checking re-building of vignette outputs ...[0K[?25h OK[0K[?25l
-* checking PDF version of manual ...[0K[?25h OK[0K[?25l
-* DONE[0K
-[0K
-Status: OK[0K
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[3G[?25h[4G[?25l$ cd[0K[?25h[6G[?25l$ cd .[0K[?25h.[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25h[?25l$ git[0K[7G[?25h[6G[?25l$ gi[0K[?25h[?25l$ g[0K[?25h[?25l$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd r[0K[?25he[0Kp[0Ko[0Ks[0K/[0Kc[0Ko[0Kmposits[0Km[0K[?25l$ cd repos/composits[0K[22G[?25h[21G[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
-error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
-fatal: updating files failed[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0K[?25lm[0K[9G[?25h[10G[?25l$ git comm[0K[?25h[?25li[0K[11G[?25h[12G[?25l$ git commit[0K[?25h[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25hm[0Ki[0Kn[0Ko[0K[?25lr[0K[22G[?25h[23G[24G[?25l$ git commit -m "minor u[0K[?25hp[0Kd[0Ka[0Kt[0Ke[0Ks[0K"[0K[?25l
-[0K[?25h[master 6d1c9de] minor updates[0K[?25l
- 3 files changed, 212 insertions(+), 3 deletions(-)[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[3G[?25h[4G[?25l$ gi[0K[?25ht[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Kg[0Ki[0K[?25l$ git push org[0K[?25h[?25l$ git push or[0K[?25hi[0Kg[0Ki[0K[?25ln[0K[17G[?25h[18G[19G[?25l$ git push origin m[0K[?25ha[0K[?25ls[0K[21G[?25h[22G[?25l$ git push origin mast[0K[?25he[0Kr[0K[?25l
-[0K[?25hEnumerating objects: 19, done.[0K[?25l
-Counting objects: 100% (19/19), done.[0K
-Delta compression using up to 4 threads.[0K
-Compressing objects: 100% (10/10), done.[0K
-W[0K[1G[?25hWriting objects: 100% (10/10), 2.33 KiB | 597.00 KiB/s, done.[0K[?25l
-Total 10 (delta 6), reused 0 (delta 0)[0K
-[0K[?25h[?25lremote: Resolving deltas:  50% (3/6)[0K[1G[?25hremote: Resolving deltas: 100% (6/6), completed with 6 local objects.[0K[?25l
-[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
-   41d1974..6d1c9de  master -> master[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Kl[0Kl[0K[12G[?25l$ git pull o[0K[?25h[?25lr[0K[13G[?25h[14G[?25l$ git pull ori[0K[?25hg[0Ki[0Kn[0K[19G[?25l$ git pull origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
-[0K[?25hremote: Enumerating objects: 11, done.[0K[?25l
-remote: Counting objects: 100% (11/11), done.[0K
-remote: Compressing objects: 100% (2/2), done.[0K
-remote: Total 6 (delta 4), reused 6 (delta 4), pack-reused 0[0K
-[0K[?25h[?25lUnpacking objects:  16% (1/6)[0K[1G[?25h[?25lUnpacking objects:  83% (5/6)[0K[1G[?25hUnpacking objects: 100% (6/6), done.[0K[?25l
-[0K[?25hFrom https://github.com/sevvandi/composits[0K[?25l
- * branch            master     -> FETCH_HEAD[0K
-   6d1c9de..f063243  master     -> origin/master[0K
-[0K[?25hUpdating 6d1c9de..f063243[0K[?25l
-Fast-forward[0K
-[0K[?25h .Rbuildignore       | 2 [0;32m++[0m[0K[?25l
- .gitignore          | 2 [0;32m++[0m[0K
- R/plot_decomposed.R | 6 [0;32m+++[0;31m---[0m[0K
- 3 files changed, 7 insertions(+), 3 deletions(-)[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ +[0K[?25h[?25l$[0K[3G[?25h[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kp[0Ko[0K[?25l$ R CMD build comp[0K[?25h[?25l$ R CMD build com[0K[?25h[?25l$ R CMD build co[0K[?25h[?25l$ R CMD build c[0K[?25h[?25l$ R CMD build[0K[15G[?25h[14G[?25l$ R CMD buil[0K[?25h[?25l$ R CMD bui[0K[13G[?25h[12G[?25l$ R CMD b[0K[?25h[?25l$ R CMD[0K[9G[?25h[?25l$ R C[0K[?25h[?25l$ R[0K[5G[?25h[?25l$[0K[4G[?25h[3G[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hi[0K[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kp[0K[?25lo[0K[19G[?25h[20G[?25l$ R CMD build compos[0K[?25hi[0Kt[0Ks[0K[?25l
-[0K[?25h[?25l* checking for file 'composits/DESCRIPTION' ...[0K[46G[?25h[?25l* checking for file 'composits/DESCRIPTION' ... OK[0K
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION m[0K[23G[?25h[?25l* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-[0K[?25h* installing the package to build vignettes[0K[?25l
-[0K[?25h* creating vignettes ...[0K[?25l OK[0K[25G[?25h[?25l
-[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
-* checki[0K[7G[?25h[?25l* checking for empty or unneeded directories[0K
-* looking to see if a 'data/[0K[26G[?25h[?25l* looking to see if a 'data/datalist' file should be added[0K
-[0K[?25h[?25l* b[0K[2G[?25h[?25l* building 'composits_0.0.0.9000.tar.gz'[0K
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R CMD build composits[0K[?25h[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-[0K[?25h* installing the package to build vignettes[0K[?25l
-[0K[?25h* creating vignettes ...[0K ERROR[0K[?25l
---- re-building '[0K[16G[?25h[?25l--- re-building 'composits.Rmd' using rmarkdown[0K
-Quitting from lines 95-101 (composits.Rmd)[0K
-Error: processing vignette 'composits.Rmd' failed with diagnostics:[0K
-object 'spanish_covid' not found[0K
---- failed re-building 'composits.Rmd'[0K
-[0K
-SUMMARY: processing[0K[?25h the following file failed:[0K[?25l
-  'composits.Rmd'[0K
-[0K
-Error: Vignette re-building failed.[0K
-Execution halted[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0Kd[0K[9G[?25l$ R CMd b[0K[?25hu[0Ki[0Kl[0K[?25l$ R CMd bui[0K[?25h[?25l$ R CMd bu[0K[?25h[?25l$ R CMd b[0K[?25h[?25l$ R CMd[0K[9G[?25h[8G[?25l$ R CM[0K[?25hD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kposits[0K[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-[0K[?25h* installing the package to build vignettes[0K[?25l
-[0K[?25h* creating vignettes ...[0K ERROR[0K[?25l
---- re-building 'composits[0K[24G[?25h[?25l--- re-building 'composits.Rmd' using rmarkdown[0K
-Quitting from lines 131-157 (composits.Rmd)[0K
-Error: processing vignette 'composits.Rmd' failed with diagnostics:[0K
-object 'apportioned1' not found[0K
---- failed re-building[0K[19G[?25h[?25l--- failed re-building 'composits.Rmd'[0K
-[0K
-SUMMARY: processing the following file failed:[0K
-  'composits.Rmd'[0K
-[0K
-Error: Vignette re-building failed.[0K
-Execution halted[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R CMD build composits[0K[?25h[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-[0K[?25h* installing the package to build vignettes[0K[?25l
-[0K[?25h* creating vignettes ...[0K OK[0K[?25l
-[0K[?25h[?25l* checking for LF line-endings i[0K[30G[?25h[?25l* checking for LF line-endings in source and make files and shell scripts[0K
-* checking for empty or unneeded directories[0K
-* looking to see[0K[15G[?25h[?25l* looking to see if a 'data/datalist' file should be added[0K
-[0K[?25h* building 'composits_0.0.0.9000.tar.gz'[0K[?25l
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD I[0K[?25hN[0KS[0KT[0KA[0KL[0KL[0K[17G[?25l$ R CMD INSTALL c[0K[?25ho[0Km[0Kposits[0K_[0K0.0.0.9000.tar.gz[0K[45G[?25l
-[0K[?25h* installing to library 'C:/Users/Sevvandi/Documents/R/win-library/3.6'[0K[?25l
-[0K[?25h[?25l* installing *source* package 'com[0K[33G[?25h[?25l* installing *source* package 'composits' ...[0K
-[0K[?25h** using staged installation[0K[?25l
-[0K[?25h** R[0K[?25l
-[0K[?25h** data[0K[?25l
-[0K[?25h*** moving datasets to lazyload DB[0K[?25l
-[0K[?25h** inst[0K[?25l
-[0K[?25h** byte-compile and prepare package for lazy loading[0K[?25l
-[0K[?25h** help[0K[?25l
-[0K[?25h*** installing help indices[0K[?25l
-[0K[?25h  converting help for package 'composits'[0K[?25l
-    finding HTML links ...[0K[?25h done[0K[?25l
-    animate_ts_ensemble                     html[0K[51G[?25h[?25l
-    apportion_scores_comp                   html[0K[51G[?25h[?25l
-    apportion_scores_mv                     html[0K
-    co[0K[4G[?25h[?25l    comp_tsout_ens                          html[0K[51G[?25h[?25l
-    draw_table                              h[0K[44G[?25h[?25l    draw_table                              html[0K
-    draw_table_html                         html[0K[51G[?25h[?25l
-    get_coords[0K[26G[?25h[?25l    get_coords                              html[0K
-    mv_tsout_ens[0K[42G[?25h[?25l    mv_tsout_ens                            html[0K[51G[?25h[?25l
-[0K[?25h    plot_biplot                             html[0K[?25l
-    plot_[0K[8G[?25h[?25l    plot_decomposed                         html[0K[51G[?25h[?25l
-    plot_decomposed_all                     html[0K[51G[?25h[?25l
-    uv_tsout_ens                            ht[0K[45G[?25h[?25l    uv_tsout_ens                            html[0K
-** building package indices[0K
-[0K[?25h** installing vignettes[0K[?25l
-[0K[?25h** testing if installed package can be loaded from temporary location[0K[?25l
-*** arch - i386[0K
-[0K[?25h*** arch - x64[0K[?25l
-[0K[?25h[?25l** testing if inst[0K[17G[?25h[?25l** testing if installed package can be loaded from final location[0K
-*** arch - i386[0K
-[0K[?25h*** arch - x64[0K[?25l
-[0K[?25h** testing if installed package keeps a record of temporary installation path[0K[?25l
-[0K[?25h* DONE (composits)[0K[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kposits.Rproj[0K[31G[?25l
-[0K[?25h ERROR[0K[?25l
-cannot change to directory 'composits.Rproj'[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ R CMD build composits.Rproj[0K[31G[?25h[30G[?25l$ R CMD build composits.Rpro[0K[?25h[?25l$ R CMD build composits.Rpr[0K[?25h[?25l$ R CMD build composits.Rp[0K[?25h[?25l$ R CMD build composits.R[0K[?25h[?25l$ R CMD build composits.[0K[?25h[?25l$ R CMD build composits[0K[?25h[?25l
-[0K[?25h ERROR[0K[?25l
-cannot change to directory 'composits'[0K
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
-[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ cd ..[0K[?25h[?25l$ R CMD build composits[0K[?25h[?25l
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-[0K[?25h* preparing 'composits':[0K[?25l
-* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
-[0K[?25h* installing the package to build vignettes[0K[?25l
-[0K[?25h* creating vignettes ...[0K OK[0K[?25l
-[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
-* checking for empty or unneeded direct[0K[38G[?25h[?25l* checking for empty or unneeded directories[0K
-* looking to see if a 'data/datalist' file should be added[0K
-[0K[?25h[?25l* building 'composits_0.0.0.9000.tar.gz'[0K[39G[?25h[?25l
-[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
-$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[5G[?25h[6G[?25l$ R CM[0K[?25hD[0K[9G[?25l$ R CMD c[0K[?25hh[0Ke[0Kc[0Kk[0K[15G[?25l$ R CMD check c[0K[?25ho[0Km[0Kposits[0K_[0K0[0K.0.0.9000.tar.gz[0K[43G[?25l
-[0K[?25h[?25l* using log direc[0K[16G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K
-* using R version 3.6.1 (2019-07-05)[0K
-* using plat[0K[11G[?25h[?25l* using platform: x86_64-w64-mingw32 (64-bit)[0K
-* using session charset: ISO8859-1[0K
-[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
-* checking extension type ... Package[0K
-* this is package 'composits' versi[0K[34G[?25h[?25l* this is package 'composits' version '0.0.0.9000'[0K
-* package encoding: UTF-8[0K
 * checking package namespace information ... OK[0K
 * checking package dependencies ...[0K[?25h OK[0K[?25l
 * checking if this is a source package ... OK[0K
@@ -1086,4 +706,803 @@ $[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Km[0Kpos
 [0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
 [0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
 $[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0K[?25h
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/INDEX.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25hm[0Ki[0Kn[0Ko[0Kr[0K[24G[?25l$ git commit -m "minor c[0K[?25hh[0Ka[0Kn[0Kg[0Ke[0Ks[0K"[0K[?25l
+[0K[?25h[master dbe4b43] minor changes[0K[?25l
+ 4 files changed, 143 insertions(+), 203 deletions(-)[0K
+ rewrite .Rproj.user/F9A5C86C/console06/INDEX001 (85%)[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hEnumerating objects: 23, done.[0K[?25l
+Counting objects: 100% (23/23), done.[0K
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (11/11), done.[0K
+Writing objects: 100% (12/12), 1.99 KiB | 339.00 KiB/s, done.[0K
+Total 12 (delta 6), reused 0 (delta 0)[0K
+[0K[?25h[?25lremote: Resolving deltas:  50% (3/6)[0K[1G[?25hremote: Resolving deltas: 100% (6/6), completed with 6 local objects.[0K[?25l
+[0K[?25hTo https://github.com/sevvandi/composits.git[0K[?25l
+   9663f92..dbe4b43  master -> master[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[1A[57G[?25h[?25l
+[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Kl[0Kl[0K[12G[?25l$ git pull o[0K[12G[?25h[13G[?25l$ git pull or[0K[?25hi[0Kg[0Ki[0Kn[0K[19G[?25l$ git pull origin m[0K[?25ha[0Ks[0Kt[0Ke[0K[?25lr[0K[24G[?25h[25G[?25l
+[0K[?25hremote: Enumerating objects: 22, done.[0K[?25l
+remote: Counting objects: 100% (22/22), done.[0K
+remote: Compressing objects: 100% (8/8), done.[0K
+remote: Total 16 (delta 11), reused 13 (delta 8), pack-reused 0[0K
+[0K[?25h[?25lUnpacking objects:  12% (2/16)[0K[1G[?25h[?25lUnpacking objects:  18% (3/16)[0K[1G[?25h[?25lUnpacking objects:  25% (4/16)[0K[1G[?25h[?25lUnpacking objects:  31% (5/16)[0K[1G[?25h[?25lUnpacking objects:  37% (6/16)[0K[1G[?25h[?25lUnpacking objects:  50% (8/16)[0K[1G[?25h[?25lUnpacking objects:  56% (9/16)[0K[1G[?25h[?25lUnpacking objects:  68% (11/16)[0K[1G[?25h[?25lUnpacking objects:  81% (13/16)[0K[1G[?25h[?25lUnpacking objects:  87% (14/16)[0K[1G[?25h[?25lUnpacking objects:  93% (15/16)[0K[1G[?25hUnpacking objects: 100% (16/16), done.[0K[?25l
+[0K[?25hFrom https://github.com/sevvandi/composits[0K[?25l
+ * branch            master     -> FETCH_HEAD[0K
+[0K[?25h   dbe4b43..3bd3ca1  master     -> origin/master[0K[?25l
+[0K[?25hUpdating dbe4b43..3bd3ca1[0K[?25l
+Fast-forward[0K
+[0K[?25h NAMESPACE               |   1 [0;32m+[0m[0K[?25l
+ R/Simulation_function.R | 119 [0;32m++++++++++++++++++++++++++++++++++++++++++++++++[0m[0K
+ R/plot_decomposed.R     |  53 [0;32m+++++++++++++++++[0;31m----[0m[0K
+ man/Simulations.Rd      |  92 [0;32m+++++++++++++++++++++++++++++++++++++[0m[0K
+ man/plot_biplot.Rd      |   8 [0;32m++[0;31m--[0m[0K
+ 5 files changed, 260 insertions(+), 13 deletions(-)[0K
+ create mode 100644 R/Simulation_function.R[0K
+ create mode 100644 man/Simulations.Rd[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Kl[0Kl[0K[12G[?25l$ git pull o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git pull origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hremote: Enumerating objects: 21, done.[0K[?25l
+remote: Counting objects: 100% (21/21), done.[0K
+remote: Compressing objects: 100% (8/8), done.[0K
+remote: Total 15 (delta 11), reused 11 (delta 7), pack-reused 0[0K
+Unpacking objects:   6% (1/15)[0K[1G[?25h[?25lUnpacking objects:  20% (3/15)[0K[1G[?25h[?25lUnpacking objects:  40% (6/15)[0K[1G[?25h[?25lUnpacking objects:  60% (9/15)[0K[1G[?25h[?25lUnpacking objects:  73% (11/15)[0K[1G[?25h[?25lUnpacking objects:  93% (14/15)[0K[1G[?25hUnpacking objects: 100% (15/15), done.[0K[?25l
+[0K[?25hFrom https://github.com/sevvandi/composits[0K[?25l
+ * branch            master     -> FETCH_HEAD[0K
+[0K[?25h   3bd3ca1..11c94c7  master     -> origin/master[0K[?25l
+[0K[?25hUpdating 3bd3ca1..11c94c7[0K[?25l
+Fast-forward[0K
+[0K[?25h R/animate_ts_ensemble.R |  2 [0;32m+[0;31m-[0m[0K[?25l
+ R/plot_decomposed.R     | 12 [0;32m++++++[0;31m------[0m[0K
+ vignettes/composits.Rmd |  9 [0;32m++++++[0;31m---[0m[0K
+ 3 files changed, 13 insertions(+), 10 deletions(-)[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[?25l$ git commi[0K[?25h[?25l$ git comm[0K[?25h[?25l$ git com[0K[?25h[?25l$ git co[0K[?25h[?25l$ git c[0K[?25h[?25l$ git[0K[7G[?25h[6G[?25l$ gi[0K[?25h[?25l$ g[0K[?25h[?25l$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kp[0Ko[0Ks[0Ki[0Kt[0Ks[0K[?25l
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+[0K[?25h* preparing 'composits':[0K[?25l
+* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+[0K[?25hWarning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko[?25l
+sits/man/Simulations.Rd:47: unknown macro '\loadmathjax'[0K
+Warning: C:/Use[0K[14G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:48: unknown macro '\mjdeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:48:[0K[26G[?25h[?25lsits/man/Simulations.Rd:48: unknown macro '\textrm'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:50: unknown macro '\mjdeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp[0K[44G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:50: unknown macro '\mu'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d[0K[74G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:50: unknown macro '\varepsilon'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:50: unknown macro '\textrm'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm4[0K[50G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:52: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:52: unknown[0K[35G[?25h[?25lsits/man/Simulations.Rd:52: unknown macro '\left'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:52: unknown macro '\right'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm[0K[50G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:52: unknown macro '\top'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:5[0K[24G[?25h[?25lsits/man/Simulations.Rd:54: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:55: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:55: unknown macro '\mje[0K[46G[?25h[?25lsits/man/Simulations.Rd:55: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:56: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/T[0K[41G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:56: unknown macro '\times'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko[80G[?25h[?25l
+sits/man/Simulations.Rd:57: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:57: unknown macro[0K[?25h '\varepsilon'[0K[?25l
+Warning: C:/Users/Sevvandi/AppD[0K[?25hata/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko[?25l
+sits/man/Simulations.[0K[20G[?25h[?25lsits/man/Simulations.Rd:57: unknown macro '\sim'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/T[0K[?25hemp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko[?25l
+sits/man/Simulations.Rd:58: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:58: unknown macro '\left'[0K[?25h[?25l
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:58: unknown macro '\right'[0K
+Warning:[0K[7G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:58: unknown macro '\top'[0K
+Warning: C:/Users/Sevvandi/A[0K[?25hppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b[0K5d/comp[0Ko[?25l
+sits/man/Simulations.Rd:59:[0K[26G[?25h[?25lsits/man/Simulations.Rd:59: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0Ko
+sits/man/Simulations.Rd:59: u[0K[28G[?25h[?25lsits/man/Simulations.Rd:59: unknown macro '\sim'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpm44rgi/Rbuild2ed43fdb2b5d/comp[0K[?25h[0Ko[?25l
+sits/man/Simulations.Rd:59: unknown macro '\text'[0K
+[0K[?25h* installing the package to build vignettes[0K[?25l
+[0K[?25h* creating vignettes ...[0K OK[0K[?25l
+[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
+[0K[?25h* checking for empty or unneeded directories[0K[?25l
+* looking to see if a 'data/datalist' file should be added[0K
+[0K[?25h[?25l* buildin[0K[5G[?25h[?25l* building 'composits_0.0.0.9000.tar.gz'[0K
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD I[0K[?25hN[0KS[0KT[0KA[0KL[0KL[0K[17G[?25l$ R CMD INSTALL c[0K[?25ho[0Km[0Kp[0Ko[0Ksits[0K_[0K0[0K.0.0.9000.tar.gz[0K[45G[?25l
+[0K[?25h* installing to library 'C:/Users/Sevvandi/Documents/R/win-library/3.6'[0K[?25l
+[0K[?25h* installing *source* package 'composits' ...[0K[?25l
+[0K[?25h** using staged installation[0K[?25l
+[0K[?25h** R[0K[?25l
+[0K[?25h** data[0K[?25l
+*** moving datasets to lazyload DB[0K
+[0K[?25h** inst[0K[?25l
+[0K[?25h[?25l** byte-compile and prepare package for la[0K[40G[?25h[?25l** byte-compile and prepare package for lazy loading[0K
+[0K[?25h** help[0K[?25l
+[0K[?25hWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km[?25l
+posits/man/Simulations.Rd:47: unknown macro '\loadmathjax'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/[0K[55G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:48: unknown macro '\mjdeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL[0K[64G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:48: unknown macro '\textrm'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:50: unknown macro '\mjdeqn'[0K
+War[0K[2G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:50: unknown macro '\mu'[0K
+Warning: C:/Users/Sevvandi[0K[25G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:50: unknown macro '\varepsilon'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:50: unknown macro '\textrm'[0K
+Warnin[0K[5G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:52: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/[0K[26G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:52: unknown macro '\left'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQ[0K[?25heDXZ/R.INSTALL88c2f584e24/co[0Km[?25l
+posits/man/Simulations.Rd:52: unknown macro '\right'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:52: unknown macro '\t[0K[46G[?25h[?25lposits/man/Simulations.Rd:52: unknown macro '\top'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:54: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulatio[0K[19G[?25h[?25lposits/man/Simulations.Rd:55: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:55: unknown macro '\mjeqn'[0K
+Warni[0K[3G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:56: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Loca[0K[38G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:56: unknown macro '\times'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/ma[0K[7G[?25h[?25lposits/man/Simulations.Rd:57: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:57: unknown macro '\varepsilon'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584[0K[73G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:57: unknown macro '\sim'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Si[0K[12G[?25h[?25lposits/man/Simulations.Rd:58: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:58: unknown macro '\left'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL8[0K[66G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:58: unknown macro '\right'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:58: un[0K[30G[?25h[?25lposits/man/Simulations.Rd:58: unknown macro '\top'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:59: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88[0K[67G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.Rd:59: unknown macro '\sim'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpiQeDXZ/R.INSTALL88c2f584e24/co[0Km
+posits/man/Simulations.[0K[22G[?25h[?25lposits/man/Simulations.Rd:59: unknown macro '\text'[0K
+[0K[?25h[?25l***[0K[2G[?25h[?25l*** installing help indices[0K
+[0K[?25h  converting help for package 'composits'[0K[?25l
+    finding HTML links ...[0K[?25h done[0K[?25l
+    Simulations                             html[0K[51G[?25h[?25l
+    animate_ts_ensemble                     html[0K[51G[?25h[?25l
+    apportion_scores_comp                   html[0K[51G[?25h[?25l
+    apportion_scores_mv                     html[0K
+    comp_tsout_ens                          html[0K[51G[?25h[?25l
+    draw_table[0K[29G[?25h[?25l    draw_table                              html[0K
+    draw_table_html                         h[0K[43G[?25h[?25l    draw_table_html                         html[0K
+    get_coords                              html[0K[51G[?25h[?25l
+    mv_tsout_ens                            html[0K[51G[?25h[?25l
+    plot_biplot                             html[0K[51G[?25h[?25l
+    plot_de[0K[10G[?25h[?25l    plot_decomposed                         html[0K[51G[?25h[?25l
+    plot_decomposed_all                     html[0K[51G[?25h[?25l
+    spani[0K[8G[?25h[?25l    spanish_morte                           html[0K
+    uv_tsout_ens                            html[0K[51G[?25h[?25l
+** building package indices[0K[26G[?25h[?25l
+[0K[?25h** installing vignettes[0K[?25l
+[0K[?25h** testing if installed package can be loaded from temporary location[0K[?25l
+*** arch - i386[0K
+[0K[?25h[?25l*** arch - x6[0K[12G[?25h[?25l*** arch - x64[0K
+[0K[?25h** testing if installed package can be loaded from final location[0K[?25l
+*** arch - i386[0K
+[0K[?25h*** arch - x64[0K[?25l
+[0K[?25h** testing if installed package keeps a record of temporary installation path[0K[?25l
+[0K[?25h* DONE (composits)[0K[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[1A[57G[?25h[?25l
+[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Kl[0Kl[0K[12G[?25l$ git pull o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git pull origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hFrom https://github.com/sevvandi/composits[0K[?25l
+ * branch            master     -> FETCH_HEAD[0K
+[0K[?25hAlready up to date.[0K[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build co[0K[?25hm[0Kp[0Ko[0Ksits[0K[?25l
+[0K[?25h* checking for file 'composits/DESCRIPTION' ...[0K OK[0K[?25l
+[0K[?25h[?25l* prepa[0K[1G[?25h* preparing 'composits':[0K[?25l
+* checking DESCRIPTION meta-information ...[0K[43G[?25h[44G[?25l* checking DESCRIPTION meta-information ... OK[0K
+[0K[?25h[?25lWa[0K[1G[?25hWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbui[0Kl[0Kd[0Kac850c44202/compo[0Ks[?25l
+it[0K[1G[?25hits/man/Simulations.Rd:47[0K: unknown macro '\loadmathjax'[0K[?25l
+Warning: C:/Users/Sevvandi/Ap[0K[28G[?25h[?25lWarning: C:/Users/Sevvandi/AppDat[0K[?25ha[0K[?25l/Local/Temp/Rt[0K[47G[?25h[49G[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuild[0K[62G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/co[0K[?25hmpo[0Ks[?25l
+its/man/S[0K[8G[?25h[?25lits/man/Simulations.Rd:48: unknown macro '[0K[42G[?25h[?25lits/man/Simulations.Rd:48: unknown macro '\mjdeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmp[0K[?25hY3nKDZ/Rbuildac850c44202/compo[0Ks[?25l
+its/man/Simulations.Rd:48: unknown macro '\textrm'[0K
+Warning: C:/Users/Sevvandi/AppData/Loc[0K[38G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local[0K[?25h[?25l/Temp/Rt[0K[47G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmp[0K[?25hY3nKDZ/Rbuildac850c44202/compo[0Ks[?25l
+its/man/Simulations.R[0K[?25hd:50: unknown macro '\mjdeqn'[0K[?25l
+W[0K[?25h[?25larnin[0K[5G[?25h[?25lWarning: C:/Users[0K[?25h/Sevv[0Kandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850[0Kc44202/compo[0Ks[?25l
+its/man/Simulations.Rd:50: unknown macro '\mu'[0K[45G[?25h[?25l
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/compo[0Ks
+i[0K[?25h[?25lts/man/Simul[0K[11G[?25h[?25lits/man/Simulat[0K[?25h[?25lions.Rd:50: unknown macro[0K[39G[?25h[?25lits/man/Simulations.Rd:50: unknown macro '[0K[?25h[?25l\vare[0K[46G[?25h[?25lits/man/Simulations.Rd:50: unknown macro '\varepsilon'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/co[0K[?25hmpo[0Ks[?25l
+its/man/Sim[0K[?25h[?25lulati[0K[14G[?25h[?25lits/man/Simulations.Rd:50: unknown macro '\te[0K[?25hxtrm'[0K[?25l
+Warning: C:/Us[0K[?25hers/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ[0K/Rbuildac850c44202/compo[0Ks[?25l
+its/man/Simulations.Rd:52: unkno[0K[32G[?25h[?25lits/man/Simulations.Rd:52: unknown macro '\mjeqn'[0K
+Warn[0K[?25hing: C:/Users/Sevvandi/AppD[0K[?25lata/Local/Temp/Rtm[0K[48G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/comp[0K[?25ho[0Ks[?25l
+its/man/Simulations.Rd:52: unknown macro '\left'[0K
+Warning: C:/Users/Se[0K[?25hvvandi/AppDa[0Kta/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/compo[0Ks[?25l
+its/man/S[0K[8G[?25h[?25lits/man/Sim[0K[?25h[?25lulations.Rd:52: unknown macro[0K[39G[?25h[?25lits/man/Simulations.Rd:52: unknown macro '\right'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nK[0K[54G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850[0K[68G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202[0K[?25h/compo[0Ks[?25l
+its/man/Simulatio[0K[15G[?25h[?25lits/man/Simulations.Rd:52: unk[0K[?25hnown macro '\top'[0K[?25l
+Warning: C:/Us[0K[13G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/Rtm[0K[?25hp[0KY3[0K[?25lnKDZ/[0K[56G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/compo[0Ks
+[0K[?25hits/man/Simulations[0K[?25l.Rd:5[0K[23G[?25h[?25lits/man/Simulations.Rd:54:[0K[28G[?25h[?25lits/man/Simulations.Rd:54: unknown macro '\m[0K[43G[?25h[?25lits/man/Simulations.Rd:54: unknown macro '\mjeqn'[0K
+Wa[0K[?25h[?25lrning: C:/Users/Sevvandi/AppData[0K[33G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3[0K[?25h[?25lnKDZ/Rbuildac850c44202/co[0K[77G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/compo[0Ks
+its/[0K[?25h[?25lman/Simulations.Rd:55: unknown macro '\m[0K[44G[?25h[?25lits/man/Simulations.Rd:55: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/[0K[?25hTemp/RtmpY3nKDZ/Rbuildac850c44202/compo[0Ks[?25l
+its/man/Simulations.Rd:55: unknown macro '\mjeqn'[0K
+Wa[0K[?25h[?25lrning: C:/Users/Sevvandi/AppData/Local/Te[0K[42G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/compo[0Ks
+i[0K[?25hts/man/Si[0Kmulations.Rd:56: unknown macro '\mjeqn'[0K[?25l
+Warning: C:/Users/Sevvandi/AppData/Local/Tem[0K[?25h[?25lp/RtmpY3nKDZ[0K[55G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/compo[0Ks
+its/man/S[0K[?25himulations.Rd:56: unkno[0Kwn macro '\times'[0K[?25l
+Warning: C:[0K[?25h[?25l/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rb[0K[59G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/compo[0Ks
+its/man/Simulations.Rd:57: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevva[0K[23G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3[0K[?25hnKDZ/Rbuildac850c4420[0K2/compo[0Ks[?25l
+its/man/Simulations.Rd:[0K[20G[?25h[?25lits/man/Simulations.Rd:57: unknown macro '\varepsilon'[0K
+Warning: C:/Users/Sevvandi/App[0K[29G[?25h[?25lWarning: C:/Users/Sevvandi/AppD[0K[?25h[?25lata/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/c[0K[76G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/compo[0Ks[81G[?25h[?25l
+its/man/Simulations[0K[?25h.R[0Kd:57: un[0Kknown macro '\sim'[0K[?25l
+Warning: C:/Users/[0K[17G[?25h[?25lWarning: C:/Users/Sevvandi/AppData[0K[34G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850[0K[?25hc44202/compo[0Ks[?25l
+its/man/Simulations.Rd:58:[0K[?25h unknown macro '\mjeqn'[0K[?25l
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/[0K[46G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/compo[0Ks[81G[?25h[?25l
+its/man/Simulations.Rd:58: unknown macro '\left'[0K
+Warn[0K[3G[?25h[?25lWarning: C:/User[0K[16G[?25h[?25lWarning: C:/Users/Sevvandi/A[0K[?25h[?25lppData/Local/[0K[40G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/compo[0Ks
+its/man/Simulations.Rd:58: unknown macro '\rig[0K[?25hht'[0K[?25l
+Warning: C:/Us[0K[?25hers/Sevvandi/AppData/Lo[0K[?25lcal/Temp[0K[44G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/compo[0K[78G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/compo[0Ks
+its/man/Simulations.Rd:58: unknown macro '\top'[0K
+Warning: C:/[0K[?25hUsers/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbui[0K[?25lldac[0K[64G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850[0K[?25hc44202/compo[0Ks[?25l
+its/man/Simula[0K[?25h[?25ltions.Rd:5[0K[23G[?25h[?25lits/man/Simulations.Rd:59: unknown macro '\mjeqn'[0K
+[0K[?25hW[0K[?25larn[0K[4G[?25h[?25lWarning: C:/Users/Se[0K[?25hvvandi/Ap[0KpData/[0K[?25lLocal/Tem[0K[43G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/[0K[?25hRtmpY3nK[0K[?25lDZ/Rbu[0K[59G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/compo[0Ks
+its/man/Simulations.Rd:59: unknown macro '[0K[41G[?25h[?25lits/man/Simulations.Rd:59: unknown macro '\sim'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3n[0K[53G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpY3nKDZ/Rbuildac850c44202/compo[0Ks
+it[0K[2G[?25h[?25lits/man/Simulations.Rd:59: unknown macro '\text'[0K
+[0K[?25h[?25l*[0K[1G[?25h* installing the package[0K[26G[?25l* installing the package to build v[0K[34G[?25h[?25l* installing the package to build vignettes[0K
+[0K[?25h[?25l* cre[0K[3G[?25h[?25l* creating vignettes ...[0K[?25h[0m[0K]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Kl[0Kl[0K[12G[?25l$ git pull o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git pull origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hremote: Enumerating objects: 18, done.[0K[?25l
+remote: Counting objects:  11% (2/18)[0K[?25h[1Gremote: Counting objects:  33% (6/18)[0K[?25lremote: Counting objects: 100% (18/18), done.[0K[39G[?25h[?25l
+remote: Compressing objects: 100% (11/11), done.[0K
+remote: Total 12 (delta 9), reused 2 (delta 1), pack-reused 0[0K
+[0K[?25h[?25lUnpacking objects:  25% (3/12)[0K[1G[?25h[?25lUnpacking objects:  41% (5/12)[0K[1G[?25h[?25lUnpacking objects:  75% (9/12)[0K[1G[?25h[?25lUnpacking objects:  91% (11/12)[0K[1G[?25hUnpacking objects: 100% (12/12), done.[0K[?25l
+[0K[?25hFrom https://github.com/sevvandi/composits[0K[?25l
+ * branch            master     -> FETCH_HEAD[0K
+   11c94c7..3913a96  master     -> origin/master[0K
+[0K[?25hUpdating 11c94c7..3913a96[0K[?25l
+Fast-forward[0K
+[0K[?25h R/Simulation_function.R | 38 [0;32m+++++++++[0;31m-----------------------------[0m[0K[?25l
+ README.md               | 16 [0;32m+++[0;31m-------------[0m[0K
+ man/Simulations.Rd      | 30 [0;32m+++++++++[0;31m---------------------[0m[0K
+ 3 files changed, 21 insertions(+), 63 deletions(-)[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0K[?25l$ R CMD bui[0K[?25h[?25l$ R CMD bu[0K[?25h[?25l$ R CMD b[0K[11G[?25h[10G[?25l$ R CMD[0K[9G[?25h[?25l$ R[0K[?25h[?25l$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h[?25l.[0K[7G[?25h[8G[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kp[0Ko[0Ksits[0K[?25l
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+[0K[?25h* preparing 'composits':[0K[?25l
+* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+[0K[?25h[?25lWarning: C:/U[0K[11G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:39: unknown macro '\loadmathjax'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:40: unknown macro[0K[40G[?25h[?25lsits/man/Simulations.Rd:40: unknown macro '\mjdeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:40: unknown macro '\textrm'[0K
+Warning: C:/Users/Sevvandi/Ap[0K[28G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:42: unknown macro '\mjdeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man[0K[7G[?25h[?25lsits/man/Simulations.Rd:42: unknown macro '\mu'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:42: unknown macro '\varepsilon'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc4[0K[68G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:42: unknown macro '\textrm'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:[0K[23G[?25h[?25lsits/man/Simulations.Rd:44: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:44: unknown macro '\left'[0K
+[0K[?25hWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko[?25l
+sits/man/Simulations.Rd:44: unknown macro '\right'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:44: unkn[0K[31G[?25h[?25lsits/man/Simulations.Rd:44: unknown macro '\top'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:46: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/Ap[0K[29G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:47: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rt[0K[48G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:47: unknown macro '\mjeqn'[0K
+Warning: C:/Users/S[0K[?25hevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko[?25l
+sits/man/Simulations.Rd:48: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/Ap[0K[27G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:48: unknown macro '\times'[0K
+[0K[?25hWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rb[0K[?25luild[0K[62G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:49: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulat[0K[16G[?25h[?25lsits/man/Simulations.Rd:49: unknown macro '\varepsilon'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:49: unknown macro '\sim'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulation[0K[17G[?25h[?25lsits/man/Simulations.Rd:50: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:50: unknown macro '\left'[0K
+Warning[0K[6G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:50: unknown macro '\right'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:50: unknown macro '\top'[0K
+Warning: C:/Users[0K[15G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:51: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild1[0K[63G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:51: unknown macro '\sim'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpUTOrAQ/Rbuild15cc433a3919/comp[0Ko
+sits/man/Simulations.Rd:51: unk[0K[30G[?25h[?25lsits/man/Simulations.Rd:51: unknown macro '\text'[0K
+[0K[?25h* installing the package to build vignettes[0K[?25l
+[0K[?25h* creating vignettes ...[0K OK[0K[?25l
+[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
+[0K[?25h* checking for empty or unneeded directories[0K[?25l
+* looking to see if a 'data/datalist' file should[0K[49G[?25h[?25l* looking to see if a 'data/datalist' file should be added[0K
+[0K[?25h* building 'composits_0.0.0.9000.tar.gz'[0K[?25l
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R CMD build composits[0K[3G[?25h[24G[?25l$ cd ..[0K[?25h[?25l$ R CMD build composits[0K[?25h[?25l$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD c[0K[?25hh[0Ke[0Kc[0Kk[0K[15G[?25l$ R CMD check c[0K[?25ho[0Km[0Kp[0Ko[0Ksits[0K_[0K0[0K.0.0.9000.tar.gz[0K[43G[?25l
+[0K[?25h[?25l* using log directory 'C:/Users/Se[0K[33G[?25h[?25l* using log directory 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck'[0K
+* us[0K[3G[?25h[?25l* using R version 3.6.1 (2019-07-05)[0K
+* using platform:[0K[16G[?25h[?25l* using platform: x86_64-w64-mingw32 (64-bit)[0K
+* using session charse[0K[20G[?25h[?25l* using session charset: ISO8859-1[0K
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+* checking extension type ... Package[0K
+* this is package 'composits' version '0.0.0.9000'[0K
+* package encoding: U[0K[20G[?25h[?25l* package encoding: UTF-8[0K
+* checking package namespace information ... OK[0K
+* checking package dependencies ...[0K[?25h OK[0K[?25l
+* checking if this is a source package ... OK[0K
+* checking if there is a namesp[0K[29G[?25h[?25l* checking if there is a namespace ... OK[0K
+[0K[?25h[?25l* checking for executab[0K[22G[?25h[?25l* checking for executable files ...[0K[?25h OK[0K[?25l
+* checki[0K[7G[?25h[?25l* checking for hidden files and directories ...[0K[?25h OK[0K[?25l
+* checking[0K[?25h for portable file names ... OK[0K[?25l
+* c[0K[2G[?25h[?25l* checking whether package 'composits' can be installed ...[0K[?25h WARNING[0K[?25l
+Found the following significant warnings:[0K
+[0K[?25h  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt[?25l
+s/man/Simulations.Rd:39: unknown macro '\loadmathjax'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:40: unknown macro '\mjdeqn'[0K
+  Warning: C:/Users/Sevv[0K[23G[?25h[?25l  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:40: unknown macro '\textrm'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.R[0K[18G[?25h[?25ls/man/Simulations.Rd:42: unknown macro '\mjdeqn'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:42: unknown macro '\mu'[0K
+  Warning: C:/Users/Sevvandi/Docum[0K[33G[?25h[?25l  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:42: unknown macro '\varepsilon'[0K
+  Warning: C:/Users/Sevvandi/Documents/r[0K[?25hepos/composits.Rcheck/00_pkg_src/composi[0Kt[?25l
+s/man/Simulations.Rd:42: un[0K[27G[?25h[?25ls/man/Simulations.Rd:42: unknown macro '\textrm'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:44: unknown macro '\mjeqn'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/[0K[44G[?25h[?25l  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:44: unknown macro '\left'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:44: unknown macro '\right'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rc[0K[55G[?25h[?25l  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:44: unknown macro '\top'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:46: unk[0K[27G[?25h[?25ls/man/Simulations.Rd:46: unknown macro '\mjeqn'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:47: unknown macro '\mjeqn'[0K
+  Warning: C:/Users/Sevvandi/[0K[27G[?25h[?25l  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:48: unknown macro '\mjeqn'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:48: unknown macro '\times'[0K
+  Warning: C:/Us[0K[15G[?25h[?25l  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:49: unknown macro '\mjeqn'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_p[0K[65G[?25h[?25l  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:49: unknown macro '\varepsilon'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:49: unknown macro '\sim'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck[0K[59G[?25h[?25l  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:50: unknown macro '\mjeqn'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:50: unknown macro '\left'[0K[45G[?25h[?25l
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:50: unknown macro '\right'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src[0K[71G[?25h[?25l  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:50: unknown macro '\top'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:51: unknown macro '\mjeqn'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/[0K[5G[?25h[?25ls/man/Simulations.Rd:51: unknown macro '\sim'[0K
+  Warning: C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00_pkg_src/composi[0Kt
+s/man/Simulations.Rd:51: unknown macro '\text'[0K
+See 'C:/Users/S[0K[14G[?25h[?25lSee 'C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00install.out' for detai[0Kl
+s.[0K
+* checking installed package size ...[0K[?25h OK[0K[?25l
+* checking package directory ... OK[0K
+* checking 'build' directory ... OK[0K
+* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+* checking top-level files ... OK[0K
+* checking for left-over files ... OK[0K
+[0K[?25h* checking index information ...[0K OK[0K[?25l
+* checking package subdirectories ...[0K[?25h OK[0K[?25l
+* checking R files for non-ASCII characters ...[0K[?25h OK[0K[?25l
+* checking R files for syntax errors ...[0K[?25h OK[0K[?25l
+* checking whether the package can be loaded .[0K[45G[?25h[?25l* checking whether the package can be loaded ...[0K[?25h OK[0K[?25l
+* checking whether the package can be loaded with stated de[0K[57G[?25h[?25l* checking whether the package can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whether the package can[0K[34G[?25h[?25l* checking whether the package can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking whether the namespace can be loaded with stated dependencies ...[0K[?25h OK[0K[?25l
+* checking whether the namesp[0K[28G[?25h[?25l* checking whether the namespace can be unloaded cleanly ...[0K[?25h OK[0K[?25l
+* checking[0K[9G[?25h[?25l* checking loading without being on the library search pat[0K[57G[?25h[?25l* checking loading without being on the library search path ...[0K[?25h OK[0K[?25l
+* checking dependencies in R code ...[0K[?25h OK[0K[?25l
+* checking S3 generic/m[0K[21G[?25h[?25l* checking S3 generic/method consistency ...[0K[?25h OK[0K[?25l
+* chec[0K[5G[?25h[?25l* checking replacement functions ...[0K[?25h OK[0K[?25l
+* checking foreign function calls ...[0K[?25h OK[0K[?25l
+* checking R code for possible problems ...[0K[?25h OK[0K[?25l
+* checkin[0K[8G[?25h[?25l* checking Rd files ...[0K[?25h WARNING[0K[?25l
+prepare_Rd: man/Simulations.Rd:39: unknown macro '\loadmathjax'[0K
+prepare_Rd: man/Simulations.Rd:40:[0K[33G[?25h[?25lprepare_Rd: man/Simulations.Rd:40: unknown macro '\mjdeqn'[0K
+prepare_Rd: man/Simulations.Rd:40: unknown macro '\textrm'[0K
+prepare_Rd: man/Simulations.Rd:42: unknown macro '\mjdeqn'[0K
+prepare_Rd: man/Simulations.Rd:42: unkno[0K[38G[?25h[?25lprepare_Rd: man/Simulations.Rd:42: unknown macro '\mu'[0K
+prepare_Rd: man/Simulations.Rd:42: unknown macro '\varepsilon'[0K
+prepare_Rd: man/Simulations.Rd:42: unknown macro '\textrm'[0K
+prepare_Rd: man/Simulations.Rd:44: unknown macro '\[0K[50G[?25h[?25lprepare_Rd: man/Simulations.Rd:44: unknown macro '\mjeqn'[0K
+prepare_Rd: man/Simulations.Rd:44: unknown macro '\left'[0K
+prepare_Rd: man/Simulations.Rd:44: unknown macro '\right'[0K
+prepare_Rd: man/Simulations.Rd:44: unknown macro '\top'[0K
+prepare_Rd: man/Simulations.Rd:46: unknown macro '\mjeq[0K[54G[?25h[?25lprepare_Rd: man/Simulations.Rd:46: unknown macro '\mjeqn'[0K
+prepare_Rd: man/Simulations.Rd:47: unknown macro '\mjeqn'[0K
+prepare_Rd: man/Simulations.Rd:48: unknown macro '\mjeqn'[0K
+prepare_Rd: man/Simulations.Rd:48: unknown macro '\times'[0K
+prepare_Rd: m[0K[12G[?25h[?25lprepare_Rd: man/Simulations.Rd:49: unknown macro '\mjeqn'[0K
+prepare_Rd: man/Simulations.Rd:49: unknown macro '\varepsilon'[0K
+prepare_Rd: man/Simulations.Rd:49: unknown macro '\sim'[0K
+pre[0K[2G[?25h[?25lprepare_Rd: man/Simulations.Rd:50: unknown macro '\mjeqn'[0K
+prepare_Rd: man/Simulations.Rd:50: unknown macro '\left'[0K
+prepare_Rd: man/Simulations[0K[26G[?25h[?25lprepare_Rd: man/Simulations.Rd:50: unknown macro '\right'[0K
+prepare_Rd: man/Simulations.Rd:50: unknown macro '\top'[0K
+prepare_Rd: man/Simulations.Rd:51: unknown macro '\mjeqn'[0K
+prepare_Rd: man/Simulations.Rd:51: unknown macro '\sim'[0K
+prepare_Rd: man/[0K[?25hSimulations.Rd:51: unknown macro '\text'[0K[?25l
+* checking Rd metadata ...[0K[?25h OK[0K[?25l
+* checking Rd cross-references ...[0K[?25h[?25l OK[0K[37G[?25h[?25l
+* checking for missing documentation entr[0K[40G[?25h[?25l* checking for missing documentation entries ...[0K[?25h OK[0K[?25l
+* checking for code/documenta[0K[27G[?25h[?25l* checking for code/documentation mismatches ...[0K[?25h OK[0K[?25l
+* checking Rd \usag[0K[18G[?25h[?25l* checking Rd \usage sections ...[0K[?25h OK[0K[?25l
+* checking Rd contents ...[0K[?25h OK[0K[?25l
+* checking for unstated dependencies in examples ...[0K[?25h OK[0K[?25l
+* checking contents of 'data' directory .[0K[39G[?25h[?25l* checking contents of 'data' directory ...[0K[?25h OK[0K[?25l
+* checking data for non-ASCII characters ...[0K[?25h OK[0K[?25l
+* checking data for AS[0K[21G[?25h[?25l* checking data for ASCII and uncompressed saves ...[0K[?25h OK[0K[?25l
+[0K[?25h* checking installed files from 'inst/doc' ...[0K OK[0K[?25l
+* checking files in 'vignettes' ...[0K[?25h OK[0K[?25l
+* checking examples ...[0K[?25h OK[0K[?25l
+* checking for unstated dependencies in[0K[39G[?25h[?25l* checking for unstated dependencies in vignettes ...[0K[?25h OK[0K[?25l
+* checking package vignettes in 'inst/doc' ... OK[0K
+* checking[0K[8G[?25h[?25l* checking running R code from vignettes ...[0K
+[0K[?25h  'composits.Rmd'using 'UTF-8'... OK[0K[?25l
+ NONE[0K
+* checking re-building of vignette outputs ...[0K[?25h OK[0K[?25l
+* checking PDF version of manual ...[0K[?25h OK[0K[?25l
+* DONE[0K
+[0K
+Status: 2 WARNINGs[0K
+See[0K
+  'C:/Users/Sevvandi/Documents[0K[29G[?25h[?25l  'C:/Users/Sevvandi/Documents/repos/composits.Rcheck/00check.log'[0K
+for details.[0K
+[0K
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD b[0K[?25hu[0Ki[0Kl[0Kd[0K[15G[?25l$ R CMD build c[0K[?25ho[0Km[0Kp[0Ko[0Ksits[0K[?25l
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+[0K[?25h* preparing 'composits':[0K[?25l
+* checking DESCRIPTION me[0K[23G[?25h[?25l* checking DESCRIPTION meta-information ... OK[0K
+[0K[?25hWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko[?25l
+sits/man/Simulation[0K[18G[?25h[?25lsits/man/Simulations.Rd:39: unknown macro '\loadmathjax'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:40: unknown macro '\mjdeqn'[0K
+[0K[?25hWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko[?25l
+sits/man/Simulations.Rd:40: unknown macro '\textrm'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:42: unknown macro '\mjdeqn'[0K[49G[?25h[?25l
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:42: unknown macro '\mu'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtm[0K[48G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:42: unknown macro '\varepsilon'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/[0K[7G[?25h[?25lsits/man/Simulations.Rd:42: unknown macro '\textrm'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:44: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild2[0K[63G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:44: unknown macro '\left'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/m[0K[6G[?25h[?25lsits/man/Simulations.Rd:44: unknown macro '\right'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:44: unknown macro '\top'[0K
+Warning: C:/Users/Sevvandi/AppData/Loca[0K[38G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:46: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca[0K[73G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:47: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:47: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolH[0K[52G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:48: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.[0K[19G[?25h[?25lsits/man/Simulations.Rd:48: unknown macro '\times'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:49: unknown macro '\mjeqn'[0K
+Warning: C:/U[0K[12G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:49: unknown macro '\varepsilon'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:49: unknown ma[0K[37G[?25h[?25lsits/man/Simulations.Rd:49: unknown macro '\sim'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:50: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO[0K[53G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:50: unknown macro '\left'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:50: unknown macro '\right'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Tem[0K[42G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:50: unknown macro '\top'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulati[0K[?25hons.Rd:51: unknown macro '\mjeqn'[0K[?25l
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:51: unknown macro '\sim'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c6117[0K[70G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpolHO5A/Rbuild220c611727ca/comp[0Ko
+sits/man/Simulations.Rd:51: unknown macro '\text'[0K
+[0K[?25h* installing the package to build vignettes[0K[?25l
+[0K[?25h* creating vignettes ...[0K OK[0K[?25l
+[0K[?25h* checking for LF line-endings in source and make files and shell scripts[0K[?25l
+[0K[?25h* checking for empty or unneeded directories[0K[?25l
+[0K[?25h* looking to see if a 'data/datalist' file should be added[0K[?25l
+[0K[?25h[?25l* building 'composit[0K[18G[?25h[?25l* building 'composits_0.0.0.9000.tar.gz'[0K
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25h[?25l$ R[0K[5G[?25h[4G[?25l$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Km[0Kp[0Ko[0Ksits[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
+[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
+error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
+fatal: updating files failed[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F9A5C86C/sources/prop/INDEX.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25hu[0Kp[0Kd[0Ka[0Kt[0Ke[0K[25G[?25l$ git commit -m "update a[0K[?25hp[0Kp[0Ko[0Kr[0Kt[0Ki[0Ko[0Kn[0K[35G[?25l$ git commit -m "update apportion s[0K[?25h[?25lc[0K[36G[?25h[37G[?25l$ git commit -m "update apportion sco[0K[?25hr[0Ke[0Ks[0K"[0K[?25l
+[0K[?25hREADME.md is out of date; please re-knit README.Rmd[0K[?25l
+use 'git commit --no-verify' to override this check[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[?25l$ gi[0K[?25h[?25l$ g[0K[?25h[?25l$[0K[3G[?25h[?25l$ R[0K[3G[?25h[4G[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD I[0K[?25h[?25l$ R CMD[0K[9G[?25h[8G[?25l$ R[0K[?25h[?25l$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd .[0K[?25h.[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R[0K[?25h[5G[?25l$ R C[0K[?25hM[0KD[0K[9G[?25l$ R CMD I[0K[?25hN[0KS[0KTA[0KL[0KL[0K[17G[?25l$ R CMD INSTALL c[0K[?25ho[0Km[0Kp[0Ko[0Ksits[0K_[0K0[0K.0.0.9000.tar.gz[0K[45G[?25l
+[0K[?25h* installing to library 'C:/Users/Sevvandi/Documents/R/win-library/3.6'[0K[?25l
+[0K[?25h[?25l* installing *source* package[0K[28G[?25h[?25l* installing *source* package 'composits' ...[0K
+[0K[?25h** using staged installation[0K[?25l
+[0K[?25h** R[0K[?25l
+[0K[?25h** data[0K[?25l
+*** moving datasets to lazyload DB[0K
+[0K[?25h** inst[0K[?25l
+[0K[?25h** byte-compile and prepare package for lazy loading[0K[?25l
+[0K[?25h** help[0K[?25l
+[0K[?25hWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp[?25l
+osits/man/Simulations.Rd:39: unknown m[0K[37G[?25h[?25losits/man/Simulations.Rd:39: unknown macro '\loadmathjax'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:40: unknown macro '\mjdeqn'[0K
+Warning:[0K[7G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:40: unknown macro '\textrm'[0K
+Warning: C:/Users/Sevvandi/A[0K[28G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:42: unknown macro '\mjdeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpq[0K[50G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:42: unknown macro '\mu'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:42: unknown macro '\varepsilon'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmp[0K[26G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:42: unknown macro '\textrm'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osi[0K[2G[?25h[?25losits/man/Simulations.Rd:44: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:44: u[0K[29G[?25h[?25losits/man/Simulations.Rd:44: unknown macro '\left'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:44: unknown macro '\right'[0K
+[0K[?25hWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp[?25l
+osits/man/Simulations.Rd:44: unknown macro '\top'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits[0K[5G[?25h[?25losits/man/Simulations.Rd:46: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:47: unknown ma[0K[38G[?25h[?25losits/man/Simulations.Rd:47: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:47: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevv[0K[21G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:48: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:48: unknown macro '\times[0K[50G[?25h[?25losits/man/Simulations.Rd:48: unknown macro '\times'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:49: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvand[0K[24G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:49: unknown macro '\varepsilon'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpq[0K[50G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:49: unknown macro '\sim'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:50: unknown macro '\mjeqn'[0K
+[0K[?25hWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp[?25l
+osits/man/Simulations.Rd:50: unknown macro '\left'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.I[0K[58G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:50: unknown macro '\right'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.I[0K[?25hNSTALL1e8446f7a1/com[0Kp[?25l
+osits/man/Simulations.Rd:50: unkno[0K[?25hwn macro '\top'[0K[?25l
+Warning: C:/Users/Sevvand[0K[24G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:51: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppD[0K[30G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:51: unknown macro '\sim'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpqQKzmE/R.INSTALL1e8446f7a1/com[0Kp
+osits/man/Simulations.Rd:51: unknown macr[0K[40G[?25h[?25losits/man/Simulations.Rd:51: unknown macro '\text'[0K
+[0K[?25h*** installing help indices[0K[?25l
+[0K[?25h  converting help for package 'composits'[0K[?25l
+    finding HTML links ...[0K[?25h done[0K[?25l
+[0K[?25h    Simulations                             html[0K[51G[?25l
+    animate_ts_ensemble                     h[0K[44G[?25h[?25l    animate_ts_ensemble                     html[0K[51G[?25h[?25l
+    apportion_scores_comp                   html[0K[51G[?25h[?25l
+    apportion_scores_mv                     html[0K[51G[?25h[?25l
+    comp_tsout_ens                          html[0K[51G[?25h[?25l
+    draw_table                              h[0K[45G[?25h[?25l    draw_table                              html[0K[51G[?25h[?25l
+    d[0K[4G[?25h[?25l    draw_table_html                         html[0K[51G[?25h[?25l
+    get_coords                              html[0K
+    mv_tsout_ens                            html[0K[51G[?25h[?25l
+    plot_biplot                             html[0K[51G[?25h[?25l
+    plot_decomposed                         html[0K[51G[?25h[?25l
+[0K[?25h    plot_decomposed_all                     html[0K[?25l
+    spanish_morte                           html[0K[51G[?25h[?25l
+    uv_tsout_ens                            html[0K[51G[?25h[?25l
+** building package indices[0K
+[0K[?25h** installing vignettes[0K[?25l
+[0K[?25h** testing if installed package can be loaded from temporary location[0K[?25l
+*** arch - i386[0K
+[0K[?25h*** arch - x64[0K[?25l
+[0K[?25h[?25l** testing if install[0K[20G[?25h[?25l** testing if installed package can be loaded from final location[0K[64G[?25h[?25l
+*** arch - i386[0K
+[0K[?25h*** arch - x64[0K[?25l
+[0K[?25h[?25l** testing if installed package keeps a record[0K[45G[?25h[?25l** testing if installed package keeps a record of temporary installation path[0K
+[0K[?25h* DONE (composits)[0K[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ R CMD INSTALL composits_0.0.0.9000.tar.gz[0K[45G[?25h[?25l$ cd ..[0K[?25h[?25l$ git commit -m "update apportion scores"[0K[?25h[?25l$ git add .[0K[?25h[?25l$ cd composits[0K[?25h[?25l$ R CMD build composits[0K[?25h[?25l
+[0K[?25h* checking for file 'composits/DESCRIPTION' ... OK[0K[?25l
+[0K[?25h* preparing 'composits':[0K[?25l
+* checking DESCRIPTION meta-information ...[0K[?25h OK[0K[?25l
+Warning:[0K[7G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:39: unknown macro '\loadmathjax'[0K
+Warning: C:/Users/Sevvandi/AppData/Loca[0K[38G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:40: unknown macro '\mjdeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:40: unknown macro '\text[0K[46G[?25h[?25lits/man/Simulations.Rd:40: unknown macro '\textrm'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:42: unknown macro '\mjdeqn'[0K
+Warning: C:/Use[0K[14G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:42: unknown macro '\mu'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBo[0K[52G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:42: unknown macro '\varepsilon'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/S[0K[8G[?25h[?25lits/man/Simulations.Rd:42: unknown macro '\textrm'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:44: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp[0K[44G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:44: unknown macro '\left'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:44: unknown macro '\ri[0K[44G[?25h[?25lits/man/Simulations.Rd:44: unknown macro '\right'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:44: unknown macro '\top'[0K
+Warning: C:/Use[0K[14G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:46: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd5[0K[?25h0d4/c[0Kompo[0Ks[?25l
+its/man/Simulations.Rd:47: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks[81G[?25h[?25l
+its/man/Simulations.Rd:47: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/[0K[2G[?25h[?25lits/man/Simulations.Rd:48: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:48: unknown macro '\times'[0K
+Warning: C:/Users/Sevvandi/Ap[0K[29G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:49: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmpwd[0K[46G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:49: unknown macro '\varepsilon'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/co[0K[75G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:49: unknown macro '\sim'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:50: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppD[0K[29G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:50: unknown macro '\left'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/Rtmp[0K[48G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:50: unknown macro '\right'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:50: unknown macro '\top'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Tem[0K[42G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:51: unknown macro '\mjeqn'[0K
+Warning: C:/Users/Sevvandi/AppData/Loc[0K[38G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:51: unknown macro '\sim'[0K
+Warning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBo[0K[53G[?25h[?25lWarning: C:/Users/Sevvandi/AppData/Local/Temp/RtmpwdBoaM/Rbuild70c26dd50d4/compo[0Ks
+its/man/Simulations.Rd:51: unknown macro '\text'[0K
+[0K[?25h[?25l* installing the package to build vignettes[0K[43G[?25h[?25l
+[0K[?25h* creating vignettes ...[0K OK[0K[?25l
+[0K[?25h[?25l* checking for LF line-endings in s[0K[33G[?25h[?25l* checking for LF line-endings in source and make files and shell scripts[0K
+[0K[?25h* checking for empty or unneeded directories[0K[?25l
+[0K[?25h* looking to see if a 'data/datalist' file should be added[0K[?25l
+[0K[?25h[?25l* bu[0K[3G[?25h[?25l* building 'composits_0.0.0.9000.tar.gz'[0K
+[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos[0m[0K
+$[0K[3G[?25h[?25l$ c[0K[?25hd[0K[6G[?25l$ cd c[0K[?25ho[0Km[0Kposits[0K[?25l
+[0K[?25h]0;:/c/Users/Sevvandi/Documents/repos/composits[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
+[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
+error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
+fatal: updating files failed[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
+[0K[?25herror: open(".Rproj.user/F9A5C86C/console06/1A95FD"): Permission denied[0K[?25l
+error: unable to index file .Rproj.user/F9A5C86C/console06/1A95FD[0K
+fatal: updating files failed[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
+[0K[?25hwarning: LF will be replaced by CRLF in docs/articles/composits.html.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in docs/index.html.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in man/spanish_morte.Rd.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25hu[0Kp[0Kd[0Ka[0Kt[0Ke[0K[25G[?25l$ git commit -m "update d[0K[?25ha[0Kt[0Ka[0Ks[0Ke[0Kt[0K[33G[?25l$ git commit -m "update dataset a[0K[?25hn[0Kd[0K[37G[?25l$ git commit -m "update dataset and g[0K[?25h[?25l$ git commit -m "update dataset and[0K[37G[?25h[36G[?25l$ git commit -m "update dataset an[0K[?25h[?25l$ git commit -m "update dataset a[0K[?25h[?25l$ git commit -m "update dataset[0K[33G[?25h[32G[33G[32G[?25l$ git commit -m "update datase[0K[?25h[?25l$ git commit -m "update datas[0K[?25h[?25l$ git commit -m "update d[0K[?25h[?25l$ git commit -m "update[0K[25G[?25h[24G[25G[?25l$ git commit -m "update a[0K[?25hp[0Kp[0Kor[0Kt[0Ki[0K[?25lo[0K[32G[?25h[33G[?25l$ git commit -m "update apportion[0K[?25h[35G[?25l$ git commit -m "update apportion s[0K[?25hc[0Ko[0Kr[0Ke[0Ks[0K[42G[?25l$ git commit -m "update apportion scores a[0K[?25hn[0Kd[0K[46G[?25l$ git commit -m "update apportion scores and d[0K[?25ha[0Kt[0Ka[0Ks[0Ke[0Kt[0K"[0K[?25l
+[0K[?25hREADME.md is out of date; please re-knit README.Rmd[0K[?25l
+use 'git commit --no-verify' to override this check[0K
+[0K[?25h[?25l
+[0;32mSevvandi@Prushtaya [0;35m [0;33m~/Documents/repos/composits[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git commit -m "update apportion scores and dataset"[0K[?25h[?25l$ git add .[0K[?25h

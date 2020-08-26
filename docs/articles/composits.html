@@ -90,7 +90,8 @@
 <span id="cb1-15"><a href="#cb1-15"></a><span class="co">#&gt; Warning: package 'tidyr' was built under R version 3.6.3</span></span>
 <span id="cb1-16"><a href="#cb1-16"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(stringr)</span>
 <span id="cb1-17"><a href="#cb1-17"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(rnaturalearthdata)</span></code></pre></div>
-<p>The goal of <em>composits</em> is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the outlier detection methods from R packages <code>forecast</code>, <code>tsoutliers</code>, <code>anomalize</code> and <code>otsad</code>.</p>
+<p>The goal of <em>composits</em> is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the outlier detection methods from R packages <code>forecast</code>, <code>tsoutliers</code>, <code>anomalize</code> and <code>otsad</code>. All the options provided in those packages can be included in the calls for each of the methods used in the ensemble function so that the user can create a more customize ensemble.</p>
+<p>As describe in the paper four dimension reduction methods are used in the multivariate ensemble PCA, DOBIN, ICS and ICA. It is recomended that users verified the scaling and centering options of these methods for each particular example.</p>
 <div id="univariate-time-series-outliers" class="section level2">
 <h2 class="hasAnchor">
 <a href="#univariate-time-series-outliers" class="anchor"></a>Univariate time series outliers</h2>
@@ -190,15 +191,23 @@
 <span id="cb5-50"><a href="#cb5-50"></a>out<span class="op">$</span>outliers</span>
 <span id="cb5-51"><a href="#cb5-51"></a><span class="co">#&gt;    Indices Total_Score Num_Coords Num_Methods     DOBIN       PCA</span></span>
 <span id="cb5-52"><a href="#cb5-52"></a><span class="co">#&gt; 11      36      1.6928          3           3 0.5460645 0.6552774</span></span>
-<span id="cb5-53"><a href="#cb5-53"></a><span class="co">#&gt; 20     205      0.8160          3           2 0.2733508 0.4059739</span></span>
-<span id="cb5-54"><a href="#cb5-54"></a><span class="co">#&gt; 32     316      1.4400          3           2 0.4710592 0.6156465</span></span>
-<span id="cb5-55"><a href="#cb5-55"></a><span class="co">#&gt; 41     331      1.5008          3           3 0.2728727 0.4093091</span></span>
-<span id="cb5-56"><a href="#cb5-56"></a><span class="co">#&gt;          ICA forecast tsoutliers otsad anomalize Gap_Score_1</span></span>
-<span id="cb5-57"><a href="#cb5-57"></a><span class="co">#&gt; 11 0.4914581        0      1.248 0.320    0.1248           2</span></span>
-<span id="cb5-58"><a href="#cb5-58"></a><span class="co">#&gt; 20 0.1366754        0      0.624 0.192    0.0000           0</span></span>
-<span id="cb5-59"><a href="#cb5-59"></a><span class="co">#&gt; 32 0.3532944        0      1.248 0.192    0.0000           1</span></span>
-<span id="cb5-60"><a href="#cb5-60"></a><span class="co">#&gt; 41 0.8186182        0      1.248 0.128    0.1248           1</span></span>
-<span id="cb5-61"><a href="#cb5-61"></a><span class="kw"><a href="../reference/draw_table_html.html">draw_table_html</a></span>(out)</span></code></pre></div>
+<span id="cb5-53"><a href="#cb5-53"></a><span class="co">#&gt; 18     127      0.3120          1           1 0.3120000 0.0000000</span></span>
+<span id="cb5-54"><a href="#cb5-54"></a><span class="co">#&gt; 20     205      0.8160          3           2 0.2733508 0.4059739</span></span>
+<span id="cb5-55"><a href="#cb5-55"></a><span class="co">#&gt; 32     316      1.4400          3           2 0.4710592 0.6156465</span></span>
+<span id="cb5-56"><a href="#cb5-56"></a><span class="co">#&gt; 34     319      0.6880          2           2 0.1720000 0.0000000</span></span>
+<span id="cb5-57"><a href="#cb5-57"></a><span class="co">#&gt; 41     331      1.5008          3           3 0.2728727 0.4093091</span></span>
+<span id="cb5-58"><a href="#cb5-58"></a><span class="co">#&gt; 42     366      0.3120          1           1 0.0000000 0.3120000</span></span>
+<span id="cb5-59"><a href="#cb5-59"></a><span class="co">#&gt; 48     546      0.3120          1           1 0.3120000 0.0000000</span></span>
+<span id="cb5-60"><a href="#cb5-60"></a><span class="co">#&gt;          ICA forecast tsoutliers otsad anomalize Gap_Score_2</span></span>
+<span id="cb5-61"><a href="#cb5-61"></a><span class="co">#&gt; 11 0.4914581        0      1.248 0.320    0.1248          72</span></span>
+<span id="cb5-62"><a href="#cb5-62"></a><span class="co">#&gt; 18 0.0000000        0      0.312 0.000    0.0000           5</span></span>
+<span id="cb5-63"><a href="#cb5-63"></a><span class="co">#&gt; 20 0.1366754        0      0.624 0.192    0.0000          30</span></span>
+<span id="cb5-64"><a href="#cb5-64"></a><span class="co">#&gt; 32 0.3532944        0      1.248 0.192    0.0000          60</span></span>
+<span id="cb5-65"><a href="#cb5-65"></a><span class="co">#&gt; 34 0.5160000        0      0.624 0.064    0.0000          23</span></span>
+<span id="cb5-66"><a href="#cb5-66"></a><span class="co">#&gt; 41 0.8186182        0      1.248 0.128    0.1248          63</span></span>
+<span id="cb5-67"><a href="#cb5-67"></a><span class="co">#&gt; 42 0.0000000        0      0.312 0.000    0.0000           5</span></span>
+<span id="cb5-68"><a href="#cb5-68"></a><span class="co">#&gt; 48 0.0000000        0      0.312 0.000    0.0000           5</span></span>
+<span id="cb5-69"><a href="#cb5-69"></a><span class="kw"><a href="../reference/draw_table_html.html">draw_table_html</a></span>(out)</span></code></pre></div>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; overflow-x: scroll; width:1000px; ">
 <table class="table table table-striped">
 <thead><tr>
@@ -233,7 +242,7 @@ anomalize
 Num_Methods
 </th>
 <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
-Gap_Score_1
+Gap_Score_2
 </th>
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
 Total_Score
@@ -272,7 +281,7 @@ Total_Score
 3
 </td>
 <td style="text-align:right;">
-2
+72
 </td>
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: pink !important;">1.69</span>
@@ -310,7 +319,7 @@ Total_Score
 3
 </td>
 <td style="text-align:right;">
-1
+63
 </td>
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.5</span>
@@ -348,7 +357,7 @@ Total_Score
 2
 </td>
 <td style="text-align:right;">
-1
+60
 </td>
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.44</span>
@@ -386,10 +395,162 @@ Total_Score
 2
 </td>
 <td style="text-align:right;">
-0
+30
 </td>
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0.82</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+319
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.17</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.52</span>
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.62</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.06</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0.69</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+127
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.31</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.31</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0.31</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+366
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.31</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.31</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0.31</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+546
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.31</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.31</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0.31</span>
 </td>
 </tr>
 </tbody>
@@ -407,7 +568,7 @@ Total_Score
 <div id="composite-time-series-outliers" class="section level2">
 <h2 class="hasAnchor">
 <a href="#composite-time-series-outliers" class="anchor"></a>Composite time series outliers</h2>
-<p>For this example we use daily mortality counts in Spain organised by state. The dataset records mortality counts from the 18th of April 2018 until the 5th of May 2020. To make the data compositional we divide the state counts by the total count for each day.</p>
+<p>For this example we use daily mortality counts in Spain organised by autonomous communities provided by the Spanish government. The dataset records mortality counts from the 18th of April 2018 until the 31th of July 2020. To make the data compositional we divide the autonomous communities counts by the total count for each day.</p>
 <p>Compositional data live on a simplex, because the sums add up to a constant. Before analysing such data, it is important to make the data unconstrained. We make the data unconstrained by using a coordinate transformation called the <em>null space coordinate transformation</em>. We use the multivariate outlier detection ensemble discussed above on these unconstrained data. More details are available in our paper.</p>
 <p>First let us load this data and plot it.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="st">'spanish_morte'</span>)</span>
@@ -436,99 +597,94 @@ Total_Score
 <span id="cb10-15"><a href="#cb10-15"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
 <span id="cb10-16"><a href="#cb10-16"></a><span class="co">#&gt; frequency = 7 days</span></span>
 <span id="cb10-17"><a href="#cb10-17"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb10-18"><a href="#cb10-18"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb10-19"><a href="#cb10-19"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb10-20"><a href="#cb10-20"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb10-21"><a href="#cb10-21"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb10-22"><a href="#cb10-22"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb10-23"><a href="#cb10-23"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb10-24"><a href="#cb10-24"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb10-25"><a href="#cb10-25"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb10-26"><a href="#cb10-26"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb10-27"><a href="#cb10-27"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb10-28"><a href="#cb10-28"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb10-29"><a href="#cb10-29"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb10-30"><a href="#cb10-30"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb10-31"><a href="#cb10-31"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb10-32"><a href="#cb10-32"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb10-33"><a href="#cb10-33"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb10-34"><a href="#cb10-34"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb10-35"><a href="#cb10-35"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb10-36"><a href="#cb10-36"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb10-37"><a href="#cb10-37"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb10-38"><a href="#cb10-38"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb10-39"><a href="#cb10-39"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb10-40"><a href="#cb10-40"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb10-41"><a href="#cb10-41"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb10-42"><a href="#cb10-42"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb10-43"><a href="#cb10-43"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb10-44"><a href="#cb10-44"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb10-45"><a href="#cb10-45"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb10-46"><a href="#cb10-46"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb10-47"><a href="#cb10-47"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb10-48"><a href="#cb10-48"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb10-49"><a href="#cb10-49"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb10-50"><a href="#cb10-50"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb10-51"><a href="#cb10-51"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb10-52"><a href="#cb10-52"></a></span>
-<span id="cb10-53"><a href="#cb10-53"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb10-54"><a href="#cb10-54"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb10-55"><a href="#cb10-55"></a></span>
-<span id="cb10-56"><a href="#cb10-56"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb10-57"><a href="#cb10-57"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb10-58"><a href="#cb10-58"></a></span>
-<span id="cb10-59"><a href="#cb10-59"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb10-60"><a href="#cb10-60"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb10-61"><a href="#cb10-61"></a><span class="co">#&gt; Warning in locate.outliers.oloop(y = y, fit = fit, types = types, cval =</span></span>
-<span id="cb10-62"><a href="#cb10-62"></a><span class="co">#&gt; cval, : stopped when 'maxit.oloop = 4' was reached</span></span>
-<span id="cb10-63"><a href="#cb10-63"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb10-64"><a href="#cb10-64"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb10-65"><a href="#cb10-65"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb10-66"><a href="#cb10-66"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb10-67"><a href="#cb10-67"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb10-68"><a href="#cb10-68"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb10-69"><a href="#cb10-69"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb10-70"><a href="#cb10-70"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb10-71"><a href="#cb10-71"></a></span>
-<span id="cb10-72"><a href="#cb10-72"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb10-73"><a href="#cb10-73"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb10-74"><a href="#cb10-74"></a></span>
-<span id="cb10-75"><a href="#cb10-75"></a><span class="co">#&gt; Warning in locate.outliers.iloop(resid = resid, pars = pars, cval = cval, :</span></span>
-<span id="cb10-76"><a href="#cb10-76"></a><span class="co">#&gt; stopped when 'maxit.iloop' was reached</span></span>
-<span id="cb10-77"><a href="#cb10-77"></a><span class="co">#&gt; Warning in locate.outliers.oloop(y = y, fit = fit, types = types, cval =</span></span>
-<span id="cb10-78"><a href="#cb10-78"></a><span class="co">#&gt; cval, : stopped when 'maxit.oloop = 4' was reached</span></span>
-<span id="cb10-79"><a href="#cb10-79"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb10-80"><a href="#cb10-80"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb10-81"><a href="#cb10-81"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb10-82"><a href="#cb10-82"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb10-83"><a href="#cb10-83"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb10-84"><a href="#cb10-84"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb10-85"><a href="#cb10-85"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb10-86"><a href="#cb10-86"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb10-87"><a href="#cb10-87"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
-<span id="cb10-88"><a href="#cb10-88"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
-<span id="cb10-89"><a href="#cb10-89"></a><span class="co">#&gt; frequency = 7 days</span></span>
-<span id="cb10-90"><a href="#cb10-90"></a><span class="co">#&gt; trend = 91 days</span></span>
-<span id="cb10-91"><a href="#cb10-91"></a>out<span class="op">$</span>outliers</span>
-<span id="cb10-92"><a href="#cb10-92"></a><span class="co">#&gt;    Indices Total_Score Num_Coords Num_Methods     DOBIN       PCA</span></span>
-<span id="cb10-93"><a href="#cb10-93"></a><span class="co">#&gt; 2      695    2.120801          3           3 0.0000000 0.5166784</span></span>
-<span id="cb10-94"><a href="#cb10-94"></a><span class="co">#&gt; 4      697    2.043603          3           3 0.0000000 0.6421355</span></span>
-<span id="cb10-95"><a href="#cb10-95"></a><span class="co">#&gt; 9      702    2.036455          3           4 0.0000000 0.5396272</span></span>
-<span id="cb10-96"><a href="#cb10-96"></a><span class="co">#&gt; 10     703    2.508935          3           3 0.0000000 0.8194186</span></span>
-<span id="cb10-97"><a href="#cb10-97"></a><span class="co">#&gt; 11     704    2.472480          4           4 0.2796322 0.8432410</span></span>
-<span id="cb10-98"><a href="#cb10-98"></a><span class="co">#&gt;          ICS       ICA  forecast tsoutliers     otsad anomalize</span></span>
-<span id="cb10-99"><a href="#cb10-99"></a><span class="co">#&gt; 2  0.8209934 0.7831288 0.0000000  0.7912795 0.8791994 0.4503217</span></span>
-<span id="cb10-100"><a href="#cb10-100"></a><span class="co">#&gt; 4  0.8247397 0.5767273 0.0000000  0.2637598 0.8791994 0.9006433</span></span>
-<span id="cb10-101"><a href="#cb10-101"></a><span class="co">#&gt; 9  1.0941922 0.4026352 0.2930665  0.2637598 0.8791994 0.6004289</span></span>
-<span id="cb10-102"><a href="#cb10-102"></a><span class="co">#&gt; 10 0.8743195 0.8151969 0.8791994  0.0000000 0.8791994 0.7505361</span></span>
-<span id="cb10-103"><a href="#cb10-103"></a><span class="co">#&gt; 11 0.7204347 0.6291724 0.8791994  0.2637598 0.8791994 0.4503217</span></span>
-<span id="cb10-104"><a href="#cb10-104"></a><span class="co">#&gt;    Gap_Score_1</span></span>
-<span id="cb10-105"><a href="#cb10-105"></a><span class="co">#&gt; 2            0</span></span>
-<span id="cb10-106"><a href="#cb10-106"></a><span class="co">#&gt; 4            0</span></span>
-<span id="cb10-107"><a href="#cb10-107"></a><span class="co">#&gt; 9            0</span></span>
-<span id="cb10-108"><a href="#cb10-108"></a><span class="co">#&gt; 10           0</span></span>
-<span id="cb10-109"><a href="#cb10-109"></a><span class="co">#&gt; 11           0</span></span>
-<span id="cb10-110"><a href="#cb10-110"></a><span class="kw"><a href="../reference/draw_table_html.html">draw_table_html</a></span>(out, uniq_dates)</span></code></pre></div>
+<span id="cb10-18"><a href="#cb10-18"></a><span class="co">#&gt; Warning in locate.outliers.oloop(y = y, fit = fit, types = types, cval =</span></span>
+<span id="cb10-19"><a href="#cb10-19"></a><span class="co">#&gt; cval, : stopped when 'maxit.oloop = 4' was reached</span></span>
+<span id="cb10-20"><a href="#cb10-20"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-21"><a href="#cb10-21"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-22"><a href="#cb10-22"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-23"><a href="#cb10-23"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-24"><a href="#cb10-24"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-25"><a href="#cb10-25"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-26"><a href="#cb10-26"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-27"><a href="#cb10-27"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-28"><a href="#cb10-28"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-29"><a href="#cb10-29"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-30"><a href="#cb10-30"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-31"><a href="#cb10-31"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-32"><a href="#cb10-32"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-33"><a href="#cb10-33"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-34"><a href="#cb10-34"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-35"><a href="#cb10-35"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-36"><a href="#cb10-36"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-37"><a href="#cb10-37"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-38"><a href="#cb10-38"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-39"><a href="#cb10-39"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-40"><a href="#cb10-40"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-41"><a href="#cb10-41"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-42"><a href="#cb10-42"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-43"><a href="#cb10-43"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-44"><a href="#cb10-44"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-45"><a href="#cb10-45"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-46"><a href="#cb10-46"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-47"><a href="#cb10-47"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-48"><a href="#cb10-48"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-49"><a href="#cb10-49"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-50"><a href="#cb10-50"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-51"><a href="#cb10-51"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-52"><a href="#cb10-52"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-53"><a href="#cb10-53"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-54"><a href="#cb10-54"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-55"><a href="#cb10-55"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-56"><a href="#cb10-56"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-57"><a href="#cb10-57"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-58"><a href="#cb10-58"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-59"><a href="#cb10-59"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-60"><a href="#cb10-60"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-61"><a href="#cb10-61"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-62"><a href="#cb10-62"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-63"><a href="#cb10-63"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-64"><a href="#cb10-64"></a><span class="co">#&gt; Converting from tbl_df to tbl_time.</span></span>
+<span id="cb10-65"><a href="#cb10-65"></a><span class="co">#&gt; Auto-index message: index = date</span></span>
+<span id="cb10-66"><a href="#cb10-66"></a><span class="co">#&gt; frequency = 7 days</span></span>
+<span id="cb10-67"><a href="#cb10-67"></a><span class="co">#&gt; trend = 91 days</span></span>
+<span id="cb10-68"><a href="#cb10-68"></a>out<span class="op">$</span>outliers</span>
+<span id="cb10-69"><a href="#cb10-69"></a><span class="co">#&gt;    Indices Total_Score Num_Coords Num_Methods DOBIN       PCA       ICS</span></span>
+<span id="cb10-70"><a href="#cb10-70"></a><span class="co">#&gt; 9      608    1.333810          3           3     0 0.2659128 0.6785748</span></span>
+<span id="cb10-71"><a href="#cb10-71"></a><span class="co">#&gt; 14     614    1.245822          3           2     0 0.4823768 0.4103209</span></span>
+<span id="cb10-72"><a href="#cb10-72"></a><span class="co">#&gt; 17     617    2.527133          3           4     0 0.5900087 1.0411267</span></span>
+<span id="cb10-73"><a href="#cb10-73"></a><span class="co">#&gt; 18     618    2.058266          3           4     0 0.7032293 0.7282780</span></span>
+<span id="cb10-74"><a href="#cb10-74"></a><span class="co">#&gt; 19     619    2.011199          3           3     0 0.6871481 0.7116240</span></span>
+<span id="cb10-75"><a href="#cb10-75"></a><span class="co">#&gt; 20     620    2.320759          3           3     0 0.9789607 0.7211629</span></span>
+<span id="cb10-76"><a href="#cb10-76"></a><span class="co">#&gt; 21     621    1.718309          3           3     0 0.5712493 0.7288769</span></span>
+<span id="cb10-77"><a href="#cb10-77"></a><span class="co">#&gt; 22     622    1.905486          3           3     0 0.7245766 0.7503857</span></span>
+<span id="cb10-78"><a href="#cb10-78"></a><span class="co">#&gt; 23     623    1.490212          3           2     0 0.5770036 0.4908127</span></span>
+<span id="cb10-79"><a href="#cb10-79"></a><span class="co">#&gt; 24     624    1.490212          3           2     0 0.5770036 0.4908127</span></span>
+<span id="cb10-80"><a href="#cb10-80"></a><span class="co">#&gt; 25     625    1.490212          3           2     0 0.5770036 0.4908127</span></span>
+<span id="cb10-81"><a href="#cb10-81"></a><span class="co">#&gt; 26     626    1.490212          3           2     0 0.5770036 0.4908127</span></span>
+<span id="cb10-82"><a href="#cb10-82"></a><span class="co">#&gt; 27     627    1.180651          3           2     0 0.5472661 0.2327586</span></span>
+<span id="cb10-83"><a href="#cb10-83"></a><span class="co">#&gt; 28     628    1.180651          3           2     0 0.5472661 0.2327586</span></span>
+<span id="cb10-84"><a href="#cb10-84"></a><span class="co">#&gt; 30     630    1.490212          3           2     0 0.5770036 0.4908127</span></span>
+<span id="cb10-85"><a href="#cb10-85"></a><span class="co">#&gt; 31     631    1.490212          3           2     0 0.5770036 0.4908127</span></span>
+<span id="cb10-86"><a href="#cb10-86"></a><span class="co">#&gt; 38     638    1.105713          3           3     0 0.4284070 0.2488990</span></span>
+<span id="cb10-87"><a href="#cb10-87"></a><span class="co">#&gt;          ICA  forecast tsoutliers     otsad anomalize Gap_Score_2</span></span>
+<span id="cb10-88"><a href="#cb10-88"></a><span class="co">#&gt; 9  0.3893229 0.0000000  0.2751652 0.6842925 0.3743527           1</span></span>
+<span id="cb10-89"><a href="#cb10-89"></a><span class="co">#&gt; 14 0.3531239 0.0000000  0.0000000 0.6842925 0.5615291           0</span></span>
+<span id="cb10-90"><a href="#cb10-90"></a><span class="co">#&gt; 17 0.8959980 0.3095609  0.8254957 0.4561950 0.9358818           4</span></span>
+<span id="cb10-91"><a href="#cb10-91"></a><span class="co">#&gt; 18 0.6267591 0.6191218  0.2751652 0.2280975 0.9358818           2</span></span>
+<span id="cb10-92"><a href="#cb10-92"></a><span class="co">#&gt; 19 0.6124265 0.6191218  0.0000000 0.4561950 0.9358818           2</span></span>
+<span id="cb10-93"><a href="#cb10-93"></a><span class="co">#&gt; 20 0.6206358 0.9286827  0.0000000 0.4561950 0.9358818           3</span></span>
+<span id="cb10-94"><a href="#cb10-94"></a><span class="co">#&gt; 21 0.4181830 0.9286827  0.0000000 0.2280975 0.5615291           2</span></span>
+<span id="cb10-95"><a href="#cb10-95"></a><span class="co">#&gt; 22 0.4305234 0.9286827  0.0000000 0.2280975 0.7487054           2</span></span>
+<span id="cb10-96"><a href="#cb10-96"></a><span class="co">#&gt; 23 0.4223955 0.9286827  0.0000000 0.0000000 0.5615291           1</span></span>
+<span id="cb10-97"><a href="#cb10-97"></a><span class="co">#&gt; 24 0.4223955 0.9286827  0.0000000 0.0000000 0.5615291           1</span></span>
+<span id="cb10-98"><a href="#cb10-98"></a><span class="co">#&gt; 25 0.4223955 0.9286827  0.0000000 0.0000000 0.5615291           1</span></span>
+<span id="cb10-99"><a href="#cb10-99"></a><span class="co">#&gt; 26 0.4223955 0.9286827  0.0000000 0.0000000 0.5615291           1</span></span>
+<span id="cb10-100"><a href="#cb10-100"></a><span class="co">#&gt; 27 0.4006261 0.6191218  0.0000000 0.0000000 0.5615291           0</span></span>
+<span id="cb10-101"><a href="#cb10-101"></a><span class="co">#&gt; 28 0.4006261 0.6191218  0.0000000 0.0000000 0.5615291           0</span></span>
+<span id="cb10-102"><a href="#cb10-102"></a><span class="co">#&gt; 30 0.4223955 0.9286827  0.0000000 0.0000000 0.5615291           1</span></span>
+<span id="cb10-103"><a href="#cb10-103"></a><span class="co">#&gt; 31 0.4223955 0.9286827  0.0000000 0.0000000 0.5615291           1</span></span>
+<span id="cb10-104"><a href="#cb10-104"></a><span class="co">#&gt; 38 0.4284070 0.0000000  0.2751652 0.4561950 0.3743527           0</span></span>
+<span id="cb10-105"><a href="#cb10-105"></a><span class="kw"><a href="../reference/draw_table_html.html">draw_table_html</a></span>(out, uniq_dates)</span></code></pre></div>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:100%; ">
 <table class="table table table-striped">
 <thead><tr>
@@ -566,7 +722,7 @@ anomalize
 Num_Methods
 </th>
 <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
-Gap_Score_1
+Gap_Score_2
 </th>
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
 Total_Score
@@ -575,31 +731,195 @@ Total_Score
 <tbody>
 <tr>
 <td style="text-align:left;">
+2020-03-19
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.59</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">1.04</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.9</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.31</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.83</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.46</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.94</span>
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: pink !important;">2.53</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-22
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.98</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.72</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.62</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.93</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.46</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.94</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">2.32</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 2020-03-20
 </td>
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.82</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.7</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.87</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.73</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.82</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.63</span>
 </td>
 <td style="text-align:right;">
 3
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.88</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.62</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.28</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.23</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.94</span>
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">2.06</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-21
 </td>
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.88</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.69</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.71</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.61</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.62</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.46</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.94</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">2.01</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-24
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.72</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.75</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.43</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.93</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.23</span>
 </td>
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.75</span>
@@ -608,110 +928,315 @@ Total_Score
 3
 </td>
 <td style="text-align:right;">
-0
+2
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: pink !important;">2.51</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.91</span>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-2020-03-21
-</td>
-<td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.28</span>
-</td>
-<td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.84</span>
-</td>
-<td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.72</span>
-</td>
-<td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.63</span>
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.88</span>
-</td>
-<td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.26</span>
-</td>
-<td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.88</span>
-</td>
-<td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.45</span>
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">2.47</span>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-2020-03-12
+2020-03-23
 </td>
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.52</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.57</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.82</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.73</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.78</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.42</span>
 </td>
 <td style="text-align:right;">
 3
 </td>
 <td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.93</span>
+</td>
+<td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.79</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.23</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.88</span>
-</td>
-<td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.45</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.56</span>
 </td>
 <td style="text-align:right;">
 3
 </td>
 <td style="text-align:right;">
-0
+2
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">2.12</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.72</span>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-2020-03-14
+2020-03-25
 </td>
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
-</td>
-<td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.64</span>
-</td>
-<td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.82</span>
 </td>
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.58</span>
 </td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.49</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.42</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.93</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.56</span>
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.49</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-26
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.58</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.49</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.42</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.93</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.56</span>
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.49</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-27
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.58</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.49</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.42</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.93</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.56</span>
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.49</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-28
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.58</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.49</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.42</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.93</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.56</span>
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.49</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-04-01
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.58</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.49</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.42</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.93</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.56</span>
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.49</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-04-02
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.58</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.49</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.42</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.93</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.56</span>
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.49</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-10
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.27</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.68</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.39</span>
+</td>
 <td style="text-align:right;">
 3
 </td>
@@ -719,36 +1244,77 @@ Total_Score
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.26</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.28</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.88</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.68</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.9</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.37</span>
 </td>
 <td style="text-align:right;">
 3
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.33</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-16
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.48</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.41</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.35</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.68</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.56</span>
+</td>
+<td style="text-align:right;">
+2
 </td>
 <td style="text-align:right;">
 0
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">2.04</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.25</span>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-2020-03-19
+2020-03-29
 </td>
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.54</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.55</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">1.09</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.23</span>
 </td>
 <td style="text-align:left;">
 <span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.4</span>
@@ -757,25 +1323,107 @@ Total_Score
 3
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.29</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.62</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.26</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.88</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.6</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.56</span>
 </td>
 <td style="text-align:right;">
-4
+2
 </td>
 <td style="text-align:right;">
 0
 </td>
 <td style="text-align:left;">
-<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">2.04</span>
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.18</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-30
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.55</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.23</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.4</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.62</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.56</span>
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.18</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-04-09
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.43</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.25</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;">0.43</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">0</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.28</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.46</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;">0.37</span>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;">1.11</span>
 </td>
 </tr>
 </tbody>
@@ -787,32 +1435,72 @@ Total_Score
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># animate_ts_ensemble(out, X= df,  max_frames = 1)</span></span></code></pre></div>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw"><a href="../reference/animate_ts_ensemble.html">animate_ts_ensemble</a></span>(out, <span class="dt">X=</span> df,  <span class="dt">max_frames =</span> <span class="dv">100</span>)</span></code></pre></div>
 <p><img src="compani.gif" width="90%"></p>
-<p>Next we apportion the outlying scores back to the states. This is another coordinate transformation from the outlier score space to the original coordinate space.</p>
+<p>Next we apportion the outlying scores back to the autonomous communities. This is another coordinate transformation from the outlier score space to the original coordinate space.</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>apportioned &lt;-<span class="st"> </span><span class="kw"><a href="../reference/apportion_scores_comp.html">apportion_scores_comp</a></span>(out)</span>
 <span id="cb14-2"><a href="#cb14-2"></a>apportioned1 &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/cbind.html">cbind.data.frame</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(df), apportioned<span class="op">$</span>scores_out)</span>
 <span id="cb14-3"><a href="#cb14-3"></a><span class="kw"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(apportioned1)[<span class="dv">1</span>] &lt;-<span class="st"> 'reg'</span></span>
 <span id="cb14-4"><a href="#cb14-4"></a><span class="kw"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(apportioned1)[<span class="dv">2</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/dim.html">dim</a></span>(apportioned1)[<span class="dv">2</span>]] &lt;-<span class="st">  </span><span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(uniq_dates[out<span class="op">$</span>outliers<span class="op">$</span>Indices])</span>
 <span id="cb14-5"><a href="#cb14-5"></a>apportioned1</span>
-<span id="cb14-6"><a href="#cb14-6"></a><span class="co">#&gt;    reg 2020-03-12 2020-03-14 2020-03-19 2020-03-20 2020-03-21</span></span>
-<span id="cb14-7"><a href="#cb14-7"></a><span class="co">#&gt; 1   AN 0.15055958 0.17335622 0.21902052 0.31210341 0.48378219</span></span>
-<span id="cb14-8"><a href="#cb14-8"></a><span class="co">#&gt; 2   AR 0.03003061 0.03034766 0.03785814 0.03226527 0.10542713</span></span>
-<span id="cb14-9"><a href="#cb14-9"></a><span class="co">#&gt; 3   AS 0.08404859 0.10677569 0.12881391 0.13010713 0.13180330</span></span>
-<span id="cb14-10"><a href="#cb14-10"></a><span class="co">#&gt; 4   IB 0.02493671 0.04400215 0.05520004 0.05744338 0.07131965</span></span>
-<span id="cb14-11"><a href="#cb14-11"></a><span class="co">#&gt; 5   CN 0.11443559 0.17682907 0.23092405 0.21282314 0.22606829</span></span>
-<span id="cb14-12"><a href="#cb14-12"></a><span class="co">#&gt; 6   CB 0.12494091 0.17539031 0.23695759 0.18748619 0.18794817</span></span>
-<span id="cb14-13"><a href="#cb14-13"></a><span class="co">#&gt; 7   CL 0.09809916 0.18792644 0.22940334 0.24460654 0.26134899</span></span>
-<span id="cb14-14"><a href="#cb14-14"></a><span class="co">#&gt; 8   CM 0.39111714 0.54834064 0.67458818 0.65027637 0.59629654</span></span>
-<span id="cb14-15"><a href="#cb14-15"></a><span class="co">#&gt; 9   CT 0.52616585 0.29441268 0.20691674 0.35121367 0.31358123</span></span>
-<span id="cb14-16"><a href="#cb14-16"></a><span class="co">#&gt; 10  VC 0.15687845 0.20303355 0.21097511 0.27190170 0.25994077</span></span>
-<span id="cb14-17"><a href="#cb14-17"></a><span class="co">#&gt; 11  EX 0.03280486 0.03161331 0.03573184 0.03662403 0.03905331</span></span>
-<span id="cb14-18"><a href="#cb14-18"></a><span class="co">#&gt; 12  GA 0.15576387 0.21458688 0.25538417 0.27598653 0.27694030</span></span>
-<span id="cb14-19"><a href="#cb14-19"></a><span class="co">#&gt; 13  MD 0.56892650 0.73580970 0.72663215 1.02100521 0.96624263</span></span>
-<span id="cb14-20"><a href="#cb14-20"></a><span class="co">#&gt; 14  MC 0.04788760 0.07889489 0.09041971 0.10313026 0.12306151</span></span>
-<span id="cb14-21"><a href="#cb14-21"></a><span class="co">#&gt; 15  NC 0.03750631 0.05831556 0.07883114 0.06577324 0.06619862</span></span>
-<span id="cb14-22"><a href="#cb14-22"></a><span class="co">#&gt; 16  PV 0.09435077 0.11296348 0.14153485 0.12558104 0.12817648</span></span>
-<span id="cb14-23"><a href="#cb14-23"></a><span class="co">#&gt; 17  RI 0.05176816 0.10546210 0.15239376 0.11231582 0.12570481</span></span>
-<span id="cb14-24"><a href="#cb14-24"></a><span class="co">#&gt; 18  CE 0.08834749 0.11816627 0.16161807 0.12329326 0.12182697</span></span>
-<span id="cb14-25"><a href="#cb14-25"></a><span class="co">#&gt; 19  ML 0.06078399 0.09923577 0.14096056 0.10435005 0.11601745</span></span></code></pre></div>
+<span id="cb14-6"><a href="#cb14-6"></a><span class="co">#&gt;    reg 2020-03-10 2020-03-16 2020-03-19 2020-03-20 2020-03-21 2020-03-22</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a><span class="co">#&gt; 1   AN 0.18779585 0.22885067 0.28553464 0.33792887 0.31833476 0.44720375</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a><span class="co">#&gt; 2   AR 0.06995244 0.04781114 0.10897212 0.07701845 0.07718908 0.07778338</span></span>
+<span id="cb14-9"><a href="#cb14-9"></a><span class="co">#&gt; 3   AS 0.04285187 0.04413626 0.05680638 0.05705547 0.05466836 0.07036824</span></span>
+<span id="cb14-10"><a href="#cb14-10"></a><span class="co">#&gt; 4   IB 0.03148093 0.03092108 0.04246123 0.04086880 0.03940013 0.04905948</span></span>
+<span id="cb14-11"><a href="#cb14-11"></a><span class="co">#&gt; 5   CN 0.12863464 0.10534214 0.17698833 0.15368582 0.14965588 0.17616045</span></span>
+<span id="cb14-12"><a href="#cb14-12"></a><span class="co">#&gt; 6   CB 0.26734903 0.16675842 0.38897287 0.28434033 0.28393723 0.28658839</span></span>
+<span id="cb14-13"><a href="#cb14-13"></a><span class="co">#&gt; 7   CL 0.19051377 0.13528618 0.27049659 0.21351242 0.21096953 0.22769388</span></span>
+<span id="cb14-14"><a href="#cb14-14"></a><span class="co">#&gt; 8   CM 0.23877296 0.20249297 0.33366370 0.28844389 0.28220042 0.32326320</span></span>
+<span id="cb14-15"><a href="#cb14-15"></a><span class="co">#&gt; 9   CT 0.44411025 0.46645384 0.79995515 0.71942976 0.69682572 0.84549077</span></span>
+<span id="cb14-16"><a href="#cb14-16"></a><span class="co">#&gt; 10  VC 0.19367239 0.17913538 0.26898573 0.24323494 0.23701907 0.27790038</span></span>
+<span id="cb14-17"><a href="#cb14-17"></a><span class="co">#&gt; 11  EX 0.09474733 0.06454023 0.13568715 0.10430940 0.10351446 0.10874271</span></span>
+<span id="cb14-18"><a href="#cb14-18"></a><span class="co">#&gt; 12  GA 0.19036919 0.16595018 0.26116787 0.23363355 0.22699888 0.27063456</span></span>
+<span id="cb14-19"><a href="#cb14-19"></a><span class="co">#&gt; 13  MD 0.50460337 0.49673750 0.75815615 0.64957346 0.63541672 0.72852453</span></span>
+<span id="cb14-20"><a href="#cb14-20"></a><span class="co">#&gt; 14  MC 0.14078262 0.10354263 0.19876605 0.16014426 0.15777139 0.17337757</span></span>
+<span id="cb14-21"><a href="#cb14-21"></a><span class="co">#&gt; 15  NC 0.03565162 0.02382922 0.05336957 0.04044660 0.04016417 0.04202169</span></span>
+<span id="cb14-22"><a href="#cb14-22"></a><span class="co">#&gt; 16  PV 0.11913728 0.08531787 0.16981750 0.13381997 0.13239747 0.14175318</span></span>
+<span id="cb14-23"><a href="#cb14-23"></a><span class="co">#&gt; 17  RI 0.07964980 0.04847897 0.11618781 0.08437617 0.08434256 0.08456358</span></span>
+<span id="cb14-24"><a href="#cb14-24"></a><span class="co">#&gt; 18  CE 0.09933221 0.06063033 0.14357275 0.10487096 0.10474327 0.10558308</span></span>
+<span id="cb14-25"><a href="#cb14-25"></a><span class="co">#&gt; 19  ML 0.05775545 0.03580550 0.08385528 0.06193622 0.06176238 0.06290570</span></span>
+<span id="cb14-26"><a href="#cb14-26"></a><span class="co">#&gt;    2020-03-23 2020-03-24 2020-03-25 2020-03-26 2020-03-27 2020-03-28</span></span>
+<span id="cb14-27"><a href="#cb14-27"></a><span class="co">#&gt; 1  0.30430377 0.32140013 0.27374383 0.27374383 0.27374383 0.27374383</span></span>
+<span id="cb14-28"><a href="#cb14-28"></a><span class="co">#&gt; 2  0.07610662 0.07433716 0.05719015 0.05719015 0.05719015 0.05719015</span></span>
+<span id="cb14-29"><a href="#cb14-29"></a><span class="co">#&gt; 3  0.05959884 0.05994781 0.05279438 0.05279438 0.05279438 0.05279438</span></span>
+<span id="cb14-30"><a href="#cb14-30"></a><span class="co">#&gt; 4  0.04229239 0.04222769 0.03698680 0.03698680 0.03698680 0.03698680</span></span>
+<span id="cb14-31"><a href="#cb14-31"></a><span class="co">#&gt; 5  0.15859986 0.16041631 0.12600688 0.12600688 0.12600688 0.12600688</span></span>
+<span id="cb14-32"><a href="#cb14-32"></a><span class="co">#&gt; 6  0.28418421 0.28308452 0.19947106 0.19947106 0.19947106 0.19947106</span></span>
+<span id="cb14-33"><a href="#cb14-33"></a><span class="co">#&gt; 7  0.21598839 0.21589844 0.16182498 0.16182498 0.16182498 0.16182498</span></span>
+<span id="cb14-34"><a href="#cb14-34"></a><span class="co">#&gt; 8  0.29287144 0.28938278 0.24221559 0.24221559 0.24221559 0.24221559</span></span>
+<span id="cb14-35"><a href="#cb14-35"></a><span class="co">#&gt; 9  0.61394993 0.66029048 0.55795710 0.55795710 0.55795710 0.55795710</span></span>
+<span id="cb14-36"><a href="#cb14-36"></a><span class="co">#&gt; 10 0.24681710 0.24170995 0.21427599 0.21427599 0.21427599 0.21427599</span></span>
+<span id="cb14-37"><a href="#cb14-37"></a><span class="co">#&gt; 11 0.10486157 0.10439451 0.07720094 0.07720094 0.07720094 0.07720094</span></span>
+<span id="cb14-38"><a href="#cb14-38"></a><span class="co">#&gt; 12 0.24061760 0.24141953 0.19850428 0.19850428 0.19850428 0.19850428</span></span>
+<span id="cb14-39"><a href="#cb14-39"></a><span class="co">#&gt; 13 0.64736970 0.61523641 0.59418144 0.59418144 0.59418144 0.59418144</span></span>
+<span id="cb14-40"><a href="#cb14-40"></a><span class="co">#&gt; 14 0.16254656 0.16264437 0.12385437 0.12385437 0.12385437 0.12385437</span></span>
+<span id="cb14-41"><a href="#cb14-41"></a><span class="co">#&gt; 15 0.03923493 0.03977152 0.02850375 0.02850375 0.02850375 0.02850375</span></span>
+<span id="cb14-42"><a href="#cb14-42"></a><span class="co">#&gt; 16 0.13477831 0.13388368 0.10205450 0.10205450 0.10205450 0.10205450</span></span>
+<span id="cb14-43"><a href="#cb14-43"></a><span class="co">#&gt; 17 0.08393875 0.08411964 0.05798899 0.05798899 0.05798899 0.05798899</span></span>
+<span id="cb14-44"><a href="#cb14-44"></a><span class="co">#&gt; 18 0.10502681 0.10508465 0.07252405 0.07252405 0.07252405 0.07252405</span></span>
+<span id="cb14-45"><a href="#cb14-45"></a><span class="co">#&gt; 19 0.06159780 0.06176548 0.04282939 0.04282939 0.04282939 0.04282939</span></span>
+<span id="cb14-46"><a href="#cb14-46"></a><span class="co">#&gt;    2020-03-29 2020-03-30 2020-04-01 2020-04-02 2020-04-09</span></span>
+<span id="cb14-47"><a href="#cb14-47"></a><span class="co">#&gt; 1  0.23226961 0.23226961 0.27374383 0.27374383 0.17336392</span></span>
+<span id="cb14-48"><a href="#cb14-48"></a><span class="co">#&gt; 2  0.03151780 0.03151780 0.05719015 0.05719015 0.03283808</span></span>
+<span id="cb14-49"><a href="#cb14-49"></a><span class="co">#&gt; 3  0.04355975 0.04355975 0.05279438 0.05279438 0.02154476</span></span>
+<span id="cb14-50"><a href="#cb14-50"></a><span class="co">#&gt; 4  0.02978636 0.02978636 0.03698680 0.03698680 0.01555677</span></span>
+<span id="cb14-51"><a href="#cb14-51"></a><span class="co">#&gt; 5  0.08177355 0.08177355 0.12600688 0.12600688 0.05765405</span></span>
+<span id="cb14-52"><a href="#cb14-52"></a><span class="co">#&gt; 6  0.08450321 0.08450321 0.19947106 0.19947106 0.10839043</span></span>
+<span id="cb14-53"><a href="#cb14-53"></a><span class="co">#&gt; 7  0.08831749 0.08831749 0.16182498 0.16182498 0.08111837</span></span>
+<span id="cb14-54"><a href="#cb14-54"></a><span class="co">#&gt; 8  0.17346836 0.17346836 0.24221559 0.24221559 0.11097469</span></span>
+<span id="cb14-55"><a href="#cb14-55"></a><span class="co">#&gt; 9  0.48196683 0.48196683 0.55795710 0.55795710 0.38051383</span></span>
+<span id="cb14-56"><a href="#cb14-56"></a><span class="co">#&gt; 10 0.17011307 0.17011307 0.21427599 0.21427599 0.09446458</span></span>
+<span id="cb14-57"><a href="#cb14-57"></a><span class="co">#&gt; 11 0.03966153 0.03966153 0.07720094 0.07720094 0.03979536</span></span>
+<span id="cb14-58"><a href="#cb14-58"></a><span class="co">#&gt; 12 0.14135049 0.14135049 0.19850428 0.19850428 0.08844143</span></span>
+<span id="cb14-59"><a href="#cb14-59"></a><span class="co">#&gt; 13 0.52199738 0.52199738 0.59418144 0.59418144 0.25970449</span></span>
+<span id="cb14-60"><a href="#cb14-60"></a><span class="co">#&gt; 14 0.07134354 0.07134354 0.12385437 0.12385437 0.06078094</span></span>
+<span id="cb14-61"><a href="#cb14-61"></a><span class="co">#&gt; 15 0.01394001 0.01394001 0.02850375 0.02850375 0.01660820</span></span>
+<span id="cb14-62"><a href="#cb14-62"></a><span class="co">#&gt; 16 0.05764362 0.05764362 0.10205450 0.10205450 0.05117750</span></span>
+<span id="cb14-63"><a href="#cb14-63"></a><span class="co">#&gt; 17 0.02277145 0.02277145 0.05798899 0.05798899 0.03242405</span></span>
+<span id="cb14-64"><a href="#cb14-64"></a><span class="co">#&gt; 18 0.02841316 0.02841316 0.07252405 0.07252405 0.03978967</span></span>
+<span id="cb14-65"><a href="#cb14-65"></a><span class="co">#&gt; 19 0.01735797 0.01735797 0.04282939 0.04282939 0.02394576</span></span></code></pre></div>
 <p>Next we plot this using the map of Spain.</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>df3 &lt;-<span class="st"> </span>apportioned1 <span class="op">%&gt;%</span></span>
 <span id="cb15-2"><a href="#cb15-2"></a><span class="kw">mutate</span>(<span class="dt">reg =</span> <span class="kw">str_replace</span>(reg, <span class="st">"RI"</span>, <span class="st">"LO"</span>)) <span class="op">%&gt;%</span></span>
@@ -838,16 +1526,16 @@ Total_Score
 <span id="cb15-22"><a href="#cb15-22"></a><span class="st">  </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>score)) <span class="op">+</span></span>
 <span id="cb15-23"><a href="#cb15-23"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
 <span id="cb15-24"><a href="#cb15-24"></a><span class="st">  </span><span class="kw">scale_fill_distiller</span>(<span class="dt">palette =</span> <span class="st">"YlOrBr"</span>, <span class="dt">direction =</span> <span class="dv">1</span>) <span class="op">+</span></span>
-<span id="cb15-25"><a href="#cb15-25"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>date, <span class="dt">ncol=</span><span class="dv">3</span>)</span></code></pre></div>
+<span id="cb15-25"><a href="#cb15-25"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>date, <span class="dt">ncol=</span><span class="dv">6</span>)</span></code></pre></div>
 <p><img src="composits_files/figure-html/composite5-1.png" width="768"></p>
-<p>See our <a href="https://sevvandi.github.io/composits/index.html">website</a> or our paper <span class="citation">(Kandanaarachchi et al. 2020)</span> *** for more examples.</p>
+<p>See our <a href="https://sevvandi.github.io/composits/index.html">website</a> or our paper <span class="citation">(Kandanaarachchi et al. 2020)</span> for more examples.</p>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1 class="hasAnchor">
 <a href="#references" class="anchor"></a>References</h1>
 <div id="refs" class="references hanging-indent">
 <div id="ref-composits">
-<p>Kandanaarachchi, Sevvandi, Patricia Menendez, Ruben Loaiza-Maya, and Ursula Laa. 2020. “Outliers in Compositional Time Series Data.” Working Paper. <a href="TBA">TBA</a>.</p>
+<p>Kandanaarachchi, Sevvandi, Patricia Menendez, Ruben Loaiza-Maya, and Ursula Laa. 2020. “Outliers in Compositional Time Series Data.” Working Paper. <a href="https://www.researchgate.net/publication/343712288_Outliers_in_compositional_time_series_data">https://www.researchgate.net/publication/343712288_Outliers_in_compositional_time_series_data</a>.</p>
 </div>
 </div>
 </div>

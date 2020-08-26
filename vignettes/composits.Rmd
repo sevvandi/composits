@@ -223,10 +223,10 @@ sp_data %>%
   geom_sf(aes(fill=score)) +
   theme_bw() +
   scale_fill_distiller(palette = "YlOrBr", direction = 1) +
-  facet_wrap(~date, ncol=3)
+  facet_wrap(~date, ncol=6)
 
 ```
 
-See our  [website](https://sevvandi.github.io/composits/index.html) or our paper [@composits] *** for more examples.   
+See our  [website](https://sevvandi.github.io/composits/index.html) or our paper [@composits] for more examples. 
 
 # References

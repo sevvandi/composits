@@ -18,6 +18,7 @@ A list with the following components:
 Apportions outlier scores to composites.
 }
 \examples{
+set.seed(1)
 n <- 600
 x <- sample(1:100, n, replace=TRUE)
 x[25] <- 200

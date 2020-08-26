@@ -3,10 +3,11 @@
 #' @param obj The output of \code{comp_tsout_ens}
 #'
 #' @return A list with the following components:
-#' \item{\code{scores_ori}}{The apportioned outlier scores.}
-#' \item{\code{scores_scaled}}{The apportioned outlier scores rescaled so that the sum of the multivariate outlier scores is equal to the total outlier score at that time point.}
+#' \item{\code{scores_out}}{The apportioned outlier scores of selected outliers as per code{mv_tsout_ens}.}
+#' \item{\code{scores_all}}{The apportioned outlier scores of all identified outliers.}
 #'
 #' @examples
+#' set.seed(1)
 #' n <- 600
 #' x <- sample(1:100, n, replace=TRUE)
 #' x[25] <- 200
@@ -34,40 +35,52 @@ apportion_scores_mv <- function(obj){
   scores_ics <- outmat3D[ , ,3] %*% diag(decomp_wts[ ,3])
   scores_ica <- outmat3D[ , ,4] %*% diag(decomp_wts[ ,4])
 
-  a_dobin <-  obj$dobin_loadings%*% t(scores_dobin)
-  a_pca <-  obj$pca_loadings%*% t(scores_pca)
-  a_ics <-  obj$ics_loadings%*% t(scores_ics)
-  a_ica <-  obj$ica_loadings%*% t(scores_ica)
+  if(length(obj$dobin_loadings)==1){
+    # loadings are NA - probably because of fast = TRUE
+    a_dobin <- 0
+  }else{
+    a_dobin <- obj$dobin_loadings%*% t(scores_dobin)
+  }
+
+  if(length(obj$pca_loadings)==1){
+    a_pca <- 0
+  }else{
+    a_pca <- obj$pca_loadings%*% t(scores_pca)
+  }
+
+  if(length(obj$ics_loadings)==1){
+    a_ics <- 0
+  }else{
+    a_ics <- obj$ics_loadings%*% t(scores_ics)
+  }
+
+  if(length(obj$ica_loadings)==1){
+    a_ica <- 0
+  }else{
+    a_ica <- obj$ica_loadings%*% t(scores_ica)
+  }
 
   a <- abs(a_dobin) + abs(a_pca) + abs(a_ics) + abs(a_ica)
 
   # Rescaling the value to match the outlier score
   obj$all <- as.data.frame(obj$all)
+  indsout <- obj$outliers$Indices
   inds <- obj$all$Indices
   tscore <- obj$all$Total_Score
-  a2 <- a[ ,inds]
-  if(is.null(dim(a2))){
-    a_sums <- sum(a2)
-    ratio <- tscore/a_sums
-    a2 <- a2*ratio
-  }else{
-    a_sums <- apply(a2, 2, sum)
-    ratio <- tscore/a_sums
-    a2 <- sweep(a2, 2, FUN="*", ratio)
-  }
 
 
-  ascaled <- a
-  ascaled[ ,inds] <- a2
-  a_ori <- t(a[ ,inds])
-  rownames(a_ori) <- paste(inds)
 
-  a_scaled <- t(ascaled[ ,inds])
-  rownames(a_scaled) <- paste(inds)
+  a_all <- t(a[ ,inds])
+  a_all <- as.data.frame(a_all)
+  rownames(a_all) <- paste(inds)
+
+  a_ori <- a[ ,indsout]
+  a_ori <- as.data.frame(a_ori)
+  colnames(a_ori) <- paste(indsout)
 
   out <- list()
-  out$scores_ori<- a_ori
-  out$scores_scaled <- a_scaled
+  out$scores_out<- a_ori
+  out$scores_all <- t(a_all)
   return(out)
 }
 

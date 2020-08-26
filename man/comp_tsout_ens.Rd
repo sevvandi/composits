@@ -10,7 +10,7 @@ comp_tsout_ens(
   ncomp = 2,
   sds = 1,
   rept = 1,
-  compr = 1,
+  compr = 2,
   rat = 0.05,
   fast = TRUE
 )
