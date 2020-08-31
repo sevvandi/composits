@@ -240,7 +240,7 @@ sp_data %>%
   xlab("") +
   ylab("") +
   coord_fixed() +
-  facet_wrap(~date, ncol=3) +
+  facet_wrap(~date, ncol=5) +
   theme(panel.grid.major = element_blank(),
     panel.grid.minor = element_blank(), 
     axis.text.x = element_blank(),

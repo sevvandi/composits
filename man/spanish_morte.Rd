@@ -4,11 +4,13 @@
 \name{spanish_morte}
 \alias{spanish_morte}
 \title{A dataset containing mortality counts in Spain by state.}
-\format{A list of two items.
+\format{
+A list of two items.
 \describe{
  \item{1}{The compositional dataset of mortality proportions by state.}
  \item{2}{The relevant dates.}
-}}
+}
+}
 \usage{
 spanish_morte
 }

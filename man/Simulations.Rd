@@ -36,8 +36,7 @@ A list with the following components:
 \item{\code{outliers_timeloc}}{A vector with the time location of all the outliers.}
 }
 \description{
-Function to simulate compositional time series data
-using the following model:
+
 }
 \examples{
 set.seed(2000)

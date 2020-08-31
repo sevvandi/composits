@@ -4,8 +4,16 @@
 \alias{mv_tsout_ens}
 \title{Performs multivariate time series outlier ensembling.}
 \usage{
-mv_tsout_ens(x, m1 = NULL, ncomp = 2, sds = 1, rept = 1,
-  compr = 2, rat = 0.05, fast = TRUE)
+mv_tsout_ens(
+  x,
+  m1 = NULL,
+  ncomp = 2,
+  sds = 1,
+  rept = 1,
+  compr = 2,
+  rat = 0.05,
+  fast = TRUE
+)
 }
 \arguments{
 \item{x}{A  data frame or a matrix object containing a multivariate time series}
