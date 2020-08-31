@@ -36,20 +36,8 @@ A list with the following components:
 \item{\code{outliers_timeloc}}{A vector with the time location of all the outliers.}
 }
 \description{
-\loadmathjax
-\mjdeqn{x_t = Ar_t, (\textrm{observation  equation})}{
-ASCII representation}
-\mjdeqn{r_t = \mu + Br_{t-1} + D\varepsilon_t + Cb_t, (\textrm{transition equation})}{
-ASCII representation}
-where \mjeqn{r_t = \left(r_t^1,\dots,r_t^K\right)^\top}{
-ASCII representation} is a
-\mjeqn{K}{ASCII representation}-dimensional vector of underlying factors (or states) driving
-\mjeqn{x_t,}{ASCII representation} \mjeqn{A}{ASCII representation}
-is an \mjeqn{N\times K}{ASCII representation} matrix of factor loadings,
-\mjeqn{\varepsilon_t\sim N(0,I_K)}{ASCII representation}
-and \mjeqn{b_t = \left(b_{t,1},\dots,b_{t,K}\right)^\top,}{ASCII representation}
-with \mjeqn{b_{t,k}\sim \text{Bernoulli}(p)}{ASCII representation}.
-Example mathjax function
+Function to simulate compositional time series data
+using the following model:
 }
 \examples{
 set.seed(2000)

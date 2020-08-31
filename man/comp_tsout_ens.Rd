@@ -4,16 +4,8 @@
 \alias{comp_tsout_ens}
 \title{Performs composite time series outlier ensembling.}
 \usage{
-comp_tsout_ens(
-  x,
-  m1 = NULL,
-  ncomp = 2,
-  sds = 1,
-  rept = 1,
-  compr = 2,
-  rat = 0.05,
-  fast = TRUE
-)
+comp_tsout_ens(x, m1 = NULL, ncomp = 2, sds = 1, rept = 1,
+  compr = 2, rat = 0.05, fast = TRUE)
 }
 \arguments{
 \item{x}{A  data frame or a matrix object containing a multivariate time series}

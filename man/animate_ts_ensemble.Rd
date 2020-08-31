@@ -4,13 +4,8 @@
 \alias{animate_ts_ensemble}
 \title{Show tour animation of the data points.}
 \usage{
-animate_ts_ensemble(
-  obj = NULL,
-  X = NULL,
-  method = NULL,
-  edges = NULL,
-  max_frames = Inf
-)
+animate_ts_ensemble(obj = NULL, X = NULL, method = NULL,
+  edges = NULL, max_frames = Inf)
 }
 \arguments{
 \item{obj}{The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.}

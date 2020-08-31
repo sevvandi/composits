@@ -49,7 +49,6 @@ if (!requireNamespace("rgdal", quietly = TRUE)) {
     stop("Package rgdal is needed for the vignette. Please install it.",
       call. = FALSE)
 }
-
 ```
 
 
