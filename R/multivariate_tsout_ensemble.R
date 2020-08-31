@@ -36,7 +36,7 @@
 #'
 #' @importFrom stats prcomp rnorm runif
 #' @export
-mv_tsout_ens <- function(x, m1 =NULL, ncomp=2,  sds=1, rept=1, compr=1, rat=0.05, fast=TRUE){ # wts = NULL,
+mv_tsout_ens <- function(x, m1 =NULL, ncomp=2,  sds=1, rept=1, compr=2, rat=0.05, fast=TRUE){ # wts = NULL,
   d <- dim(x)[2]
   n <- dim(x)[1]
   if(is.null(m1)){
@@ -98,7 +98,7 @@ mv_tsout_ens <- function(x, m1 =NULL, ncomp=2,  sds=1, rept=1, compr=1, rat=0.05
   }else if(compr==2){
     outthres <- outthres2
   }else if(compr==3){
-    outthres <- merge(outthres1, outthres2, all=TRUE)
+    outthres <- merge(outthres1, outthres2, all = TRUE)
   }
 
   outthres <- as.data.frame(outthres)

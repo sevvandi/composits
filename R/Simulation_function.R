@@ -1,7 +1,6 @@
 #' Function to simulate compositional time series data
 #' using the following model:
 #'
-#'
 #' \loadmathjax
 #' \mjdeqn{x_t = Ar_t, (\textrm{observation  equation})}{
 #' ASCII representation}
@@ -15,10 +14,7 @@
 #' \mjeqn{\varepsilon_t\sim N(0,I_K)}{ASCII representation}
 #' and \mjeqn{b_t = \left(b_{t,1},\dots,b_{t,K}\right)^\top,}{ASCII representation}
 #' with \mjeqn{b_{t,k}\sim \text{Bernoulli}(p)}{ASCII representation}.
-#'
-#'
 #' Example mathjax function
-#'
 #'
 #' @param N The number of categories in the composition
 #' @param TT The time series length
@@ -28,25 +24,18 @@
 #' @param C  The K x K matrix determining the magnitude of the persistent outliers
 #' @param mu The K-dimensional intercept vector in the transition equation
 #' @param D A K x K matrix determining the variance-covariance matrix of the error term
-#' @param discreout An R x 3 matrix of discretionary outliers. R denotes the
-#' number of discretionary outliers. The first, second and third columns
-#' denote the time position, the composite position and the magnitude of the
-#' outliers
+#' @param outliers_discre An R x 3 matrix of discretionary outliers. R denotes the number of discretionary outliers. The first, second and third columns denote the time position, the composite position and the magnitude of the outliers
 #' @param q Probability of persistent outlier eventuating
 #'
-#' @return It provides a list with the following  objects:
-#' @return datasim: A TT x K  data frame with the generated time series compositional data
-#' @return outliers_persist: A matrix indicating the time location of the persistant outliers (first column)
-#' and the factors (or states) where the outlier eventuates (second column)
-#' @return outliers_discre: A matrix equivalent to the function argument provided by the user
-#' @return outliers_timeloc: A vector with the time location of all the outliers
-#'
-#'
+#' @return A list with the following components:
+#' \item{\code{datasim}}{A TT x K  data frame with the generated time series compositional data. }
+#' \item{\code{outliers_persist}}{A matrix indicating the time location of the persistant outliers (first column) and the factors (or states) where the outlier eventuates (second column). }
+#' \item{\code{outliers_discre}}{A matrix equivalent to the function argument provided by the user.}
+#' \item{\code{outliers_timeloc}}{A vector with the time location of all the outliers.}
 #'
 #' @references Sevvandi et.al. (2020). Outliers in compositional time series data
 #'
 #' @examples
-#'
 #' set.seed(2000)
 #' N <- 30
 #' K <- 2
@@ -56,10 +45,9 @@
 #' C <- matrix(c(5,0,0,4), K, K)
 #' mu <- c(0.3, 0.7)
 #' D <- matrix(c(0.4,0,0,0.4), K, K)
-#' outliers_discre <- matrix(c(117, 2, 10, 40, 8, 200), 2, 3, byrow =T)
+#' outliers_discre <- matrix(c(117, 2, 10, 40, 8, 200), 2, 3, byrow = TRUE)
 #' q <- 0.005
-#'
-#' y =  Simulations(N = N,
+#' y <-  Simulations(N = N,
 #'                  TT = TT,
 #'                  K = K,
 #'                  A = A,
@@ -70,16 +58,8 @@
 #'                  outliers_discre = outliers_discre,
 #'                  q = q)
 #'
-#'@importFrom dplyr %>%
-#'@importFrom stats frequency quantile supsmu ts var
-#'@importFrom rlang .data
-#'
 #'@export
-#'
-#'
-#'
-Simulations <- function(N, TT, K, A, B, C, mu, D, outliers_discre, q) {
-
+Simulations <- function(N, TT, K, A, B, C, mu, D, outliers_discre, q){
 
 X            = matrix(NA, TT + 1, N)
 r            = matrix(NA, TT + 1, K)

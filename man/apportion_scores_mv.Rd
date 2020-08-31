@@ -11,13 +11,14 @@ apportion_scores_mv(obj)
 }
 \value{
 A list with the following components:
-\item{\code{scores_ori}}{The apportioned outlier scores.}
-\item{\code{scores_scaled}}{The apportioned outlier scores rescaled so that the sum of the multivariate outlier scores is equal to the total outlier score at that time point.}
+\item{\code{scores_out}}{The apportioned outlier scores of selected outliers as per code{mv_tsout_ens}.}
+\item{\code{scores_all}}{The apportioned outlier scores of all identified outliers.}
 }
 \description{
 Apportions outlier scores to composites.
 }
 \examples{
+set.seed(1)
 n <- 600
 x <- sample(1:100, n, replace=TRUE)
 x[25] <- 200

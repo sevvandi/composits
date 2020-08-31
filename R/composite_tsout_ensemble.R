@@ -31,7 +31,7 @@
 #' out <- comp_tsout_ens(X, compr=2, fast=FALSE)
 #'
 #' @export
-comp_tsout_ens <- function(x, m1 =NULL, ncomp=2,  sds=1, rept=1, compr=1, rat=0.05, fast=TRUE){
+comp_tsout_ens <- function(x, m1 =NULL, ncomp=2,  sds=1, rept=1, compr=2, rat=0.05, fast=TRUE){
   coord_obj <- get_coords(x)
   y <- coord_obj$y
   res <- mv_tsout_ens(y, m1, ncomp,  sds, rept, compr, rat, fast)

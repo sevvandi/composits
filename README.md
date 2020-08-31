@@ -22,23 +22,12 @@ method that uses the packages `forecast`, `tsoutliers`, `anomalize` and
 
 <!-- ``` -->
 
-As this is a private repo you need to generate a token (PAT) to install
-this using *install\_github*. This is explained at
-<http://devtools.r-lib.org/reference/install_github>. And the
-development version from [GitHub](https://github.com/) with:
+You can install the development version from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("sevvandi/composits", auth_token ='yourtoken')
-```
-
-Or you can do the following on your RStudio Terminal after you pull the
-repo.
-
-``` r
-cd ..
-R CMD build composits
-R CMD INSTALL composits_0.0.0.9000.tar.gz
+devtools::install_github("sevvandi/composits")
 ```
 
 ## Example
@@ -127,3 +116,21 @@ out$outliers
 #>   forecast tsoutliers otsad anomalize Gap_Score_1
 #> 1      0.5       0.75     0      0.75           3
 ```
+
+See our [website](https://sevvandi.github.io/composits/index.html) or
+our paper (Kandanaarachchi et al. 2020) for more examples.
+
+# References
+
+<div id="refs" class="references hanging-indent">
+
+<div id="ref-composits">
+
+Kandanaarachchi, Sevvandi, Patricia Menendez, Ruben Loaiza-Maya, and
+Ursula Laa. 2020. “Outliers in Compositional Time Series Data.” Working
+Paper.
+<https://www.researchgate.net/publication/343712288_Outliers_in_compositional_time_series_data>.
+
+</div>
+
+</div>

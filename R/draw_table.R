@@ -160,7 +160,7 @@ draw_table_html <- function(obj, uniq_dates=NULL){
       otsad = kableExtra::cell_spec(.data$otsad, "html", color="black", background = ifelse(.data$otsad > 0, "lightblue", "white")),
       Total_Score = kableExtra::cell_spec(.data$Total_Score, "html", color="black", background = ifelse(.data$Total_Score ==max(.data$Total_Score), "pink", "white"))) %>%
       kableExtra::kable(format = "html", escape = F) %>%
-      kableExtra::kable_styling("striped", full_width = F) %>%  kableExtra::scroll_box(width = "100%", height = "400px")
+      kableExtra::kable_styling("striped", full_width = F) %>%  kableExtra::scroll_box(width = "1000px", height = "400px")
   }else{
     out2 %>% dplyr::mutate(
       # inds = row.names(.data),
@@ -173,6 +173,6 @@ draw_table_html <- function(obj, uniq_dates=NULL){
       otsad = kableExtra::cell_spec(.data$otsad, "html", color="black", background = ifelse(.data$otsad > 0, "lightblue", "white")),
       Total_Score = kableExtra::cell_spec(.data$Total_Score, "html", color="black", background = ifelse(.data$Total_Score ==max(.data$Total_Score), "pink", "white"))) %>%
       kableExtra::kable(format = "html", escape = F) %>%
-      kableExtra::kable_styling("striped", full_width = F) %>%  kableExtra::scroll_box(width = "1000px", height = "200px")
+      kableExtra::kable_styling("striped", full_width = F) %>%  kableExtra::scroll_box(width = "1150px", height = "200px")
   }
 }

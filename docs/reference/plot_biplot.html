@@ -37,8 +37,7 @@
 
 <meta property="og:title" content="Plot "biplot" for different decomposition methods. — plot_biplot" />
 <meta property="og:description" content="The final graph shows the data points projected onto the
-first two components, together with the loadings as axes.
-Note that this only works well for centered and scaled data." />
+first two components, together with the loadings as axes." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -112,11 +111,10 @@ Note that this only works well for centered and scaled data." />
 
     <div class="ref-description">
     <p>The final graph shows the data points projected onto the
-first two components, together with the loadings as axes.
-Note that this only works well for centered and scaled data.</p>
+first two components, together with the loadings as axes.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>plot_biplot</span>(<span class='no'>obj</span>, <span class='kw'>X</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"pca"</span>)</pre>
+    <pre class="usage"><span class='fu'>plot_biplot</span>(<span class='no'>obj</span>, <span class='kw'>X</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"pca"</span>, <span class='kw'>edges</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -132,6 +130,10 @@ Note that this only works well for centered and scaled data.</p>
     <tr>
       <th>method</th>
       <td><p>The decomposition method, choose between "pca" (default), "dobin", "ics" or "ica".</p></td>
+    </tr>
+    <tr>
+      <th>edges</th>
+      <td><p>Set to "all" to connect points by time index, "outlying" to connect tagged outliers to previous and following points.</p></td>
     </tr>
     </table>
 
@@ -166,8 +168,7 @@ Note that this only works well for centered and scaled data.</p>
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
-#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='input'><span class='no'>X_scaled</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span>(<span class='no'>X</span>)
-<span class='fu'>plot_biplot</span>(<span class='no'>out1</span>, <span class='kw'>X</span> <span class='kw'>=</span> <span class='no'>X_scaled</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"pca"</span>)</div><div class='img'><img src='plot_biplot-1.png' alt='' width='700' height='433' /></div><div class='input'>
+#&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='input'><span class='fu'>plot_biplot</span>(<span class='no'>out1</span>, <span class='kw'>X</span> <span class='kw'>=</span> <span class='no'>X</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"pca"</span>)</div><div class='img'><img src='plot_biplot-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='no'>X</span> <span class='kw'>&lt;-</span> <span class='no'>X</span>/<span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowSums</a></span>(<span class='no'>X</span>)
 <span class='no'>out2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='comp_tsout_ens.html'>comp_tsout_ens</a></span>(<span class='no'>X</span>, <span class='kw'>compr</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>fast</span><span class='kw'>=</span><span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
 #&gt; <span class='message'>Auto-index message: index = date</span></div><div class='output co'>#&gt; <span class='message'>frequency = 7 days</span></div><div class='output co'>#&gt; <span class='message'>trend = 91 days</span></div><div class='output co'>#&gt; <span class='message'>Converting from tbl_df to tbl_time.</span>
