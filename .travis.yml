@@ -5,3 +5,8 @@ cache: packages
 repos:
   CRAN: https://cran.rstudio.com
   rforge: http://R-Forge.R-project.org
+addons:
+  apt:
+    packages:
+    - libgdal-dev
+    - libnetcdf-dev
