@@ -89,7 +89,22 @@
 <span id="cb1-14"><a href="#cb1-14"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tidyr)</span>
 <span id="cb1-15"><a href="#cb1-15"></a><span class="co">#&gt; Warning: package 'tidyr' was built under R version 3.6.3</span></span>
 <span id="cb1-16"><a href="#cb1-16"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(stringr)</span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(rnaturalearthdata)</span></code></pre></div>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(broom)</span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="co">#&gt; Warning: package 'broom' was built under R version 3.6.3</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(rgdal)</span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="co">#&gt; Warning: package 'rgdal' was built under R version 3.6.3</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="co">#&gt; Loading required package: sp</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="co">#&gt; Warning: package 'sp' was built under R version 3.6.3</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="co">#&gt; rgdal: version: 1.5-8, (SVN revision 990)</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="co">#&gt; Geospatial Data Abstraction Library extensions to R successfully loaded</span></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="co">#&gt; Loaded GDAL runtime: GDAL 3.0.4, released 2020/01/28</span></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="co">#&gt; Path to GDAL shared files: C:/Users/Sevvandi/Documents/R/win-library/3.6/rgdal/gdal</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="co">#&gt; GDAL binary built with GEOS: TRUE </span></span>
+<span id="cb1-28"><a href="#cb1-28"></a><span class="co">#&gt; Loaded PROJ runtime: Rel. 6.3.1, February 10th, 2020, [PJ_VERSION: 631]</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="co">#&gt; Path to PROJ shared files: C:/Users/Sevvandi/Documents/R/win-library/3.6/rgdal/proj</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="co">#&gt; Linking to sp version:1.4-2</span></span>
+<span id="cb1-31"><a href="#cb1-31"></a><span class="co">#&gt; To mute warnings of possible GDAL/OSR exportToProj4() degradation,</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="co">#&gt; use options("rgdal_show_exportToProj4_warnings"="none") before loading rgdal.</span></span></code></pre></div>
 <p>The goal of <em>composits</em> is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the outlier detection methods from R packages <code>forecast</code>, <code>tsoutliers</code>, <code>anomalize</code> and <code>otsad</code>. All the options provided in those packages can be included in the calls for each of the methods used in the ensemble function so that the user can create a more customize ensemble.</p>
 <p>As describe in the paper four dimension reduction methods are used in the multivariate ensemble PCA, DOBIN, ICS and ICA. It is recomended that users verified the scaling and centering options of these methods for each particular example.</p>
 <div id="univariate-time-series-outliers" class="section level2">
@@ -1444,93 +1459,231 @@ Total_Score
 <span id="cb14-4"><a href="#cb14-4"></a><span class="kw"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(apportioned1)[<span class="dv">2</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/dim.html">dim</a></span>(apportioned1)[<span class="dv">2</span>]] &lt;-<span class="st">  </span><span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(uniq_dates[out<span class="op">$</span>outliers<span class="op">$</span>Indices])</span>
 <span id="cb14-5"><a href="#cb14-5"></a>apportioned1</span>
 <span id="cb14-6"><a href="#cb14-6"></a><span class="co">#&gt;    reg 2020-03-10 2020-03-16 2020-03-19 2020-03-20 2020-03-21 2020-03-22</span></span>
-<span id="cb14-7"><a href="#cb14-7"></a><span class="co">#&gt; 1   AN 0.38563618 0.34040773 0.57586119 0.48227565 0.53971658 0.55468822</span></span>
-<span id="cb14-8"><a href="#cb14-8"></a><span class="co">#&gt; 2   AR 0.05992126 0.03620485 0.08724240 0.06037975 0.05975103 0.06176543</span></span>
-<span id="cb14-9"><a href="#cb14-9"></a><span class="co">#&gt; 3   AS 0.05655685 0.04709851 0.07732481 0.06451162 0.07162569 0.07577525</span></span>
-<span id="cb14-10"><a href="#cb14-10"></a><span class="co">#&gt; 4   IB 0.03821745 0.03098769 0.05145879 0.04257370 0.04696934 0.04989712</span></span>
-<span id="cb14-11"><a href="#cb14-11"></a><span class="co">#&gt; 5   CN 0.15893684 0.11680390 0.22755717 0.17796516 0.18989292 0.19525204</span></span>
-<span id="cb14-12"><a href="#cb14-12"></a><span class="co">#&gt; 6   CB 0.26177659 0.15617933 0.37753064 0.27070430 0.27198322 0.27423799</span></span>
-<span id="cb14-13"><a href="#cb14-13"></a><span class="co">#&gt; 7   CL 0.20182260 0.13337153 0.28636144 0.21501202 0.22262122 0.22766083</span></span>
-<span id="cb14-14"><a href="#cb14-14"></a><span class="co">#&gt; 8   CM 0.24774425 0.18184713 0.33020273 0.26196979 0.28087132 0.29762799</span></span>
-<span id="cb14-15"><a href="#cb14-15"></a><span class="co">#&gt; 9   CT 0.50310048 0.42691636 0.85257935 0.68167089 0.74615260 0.72772162</span></span>
-<span id="cb14-16"><a href="#cb14-16"></a><span class="co">#&gt; 10  VC 0.19295411 0.14948833 0.24433326 0.20093219 0.21985963 0.23873378</span></span>
-<span id="cb14-17"><a href="#cb14-17"></a><span class="co">#&gt; 11  EX 0.09552172 0.06075147 0.13494957 0.09991537 0.10232351 0.10448771</span></span>
-<span id="cb14-18"><a href="#cb14-18"></a><span class="co">#&gt; 12  GA 0.22719664 0.17204355 0.31601579 0.25178411 0.27156793 0.28332639</span></span>
-<span id="cb14-19"><a href="#cb14-19"></a><span class="co">#&gt; 13  MD 0.37967564 0.30533079 0.44032041 0.34555922 0.39004000 0.46052495</span></span>
-<span id="cb14-20"><a href="#cb14-20"></a><span class="co">#&gt; 14  MC 0.15255889 0.10343342 0.21592917 0.16383325 0.17092154 0.17538043</span></span>
-<span id="cb14-21"><a href="#cb14-21"></a><span class="co">#&gt; 15  NC 0.03654917 0.02311893 0.05447687 0.03992512 0.04073363 0.04056023</span></span>
-<span id="cb14-22"><a href="#cb14-22"></a><span class="co">#&gt; 16  PV 0.12035040 0.07898677 0.16773388 0.12598403 0.13029722 0.13424888</span></span>
-<span id="cb14-23"><a href="#cb14-23"></a><span class="co">#&gt; 17  RI 0.07874582 0.04647180 0.11507824 0.08249955 0.08258791 0.08241029</span></span>
-<span id="cb14-24"><a href="#cb14-24"></a><span class="co">#&gt; 18  CE 0.09995278 0.05948086 0.14517878 0.10447009 0.10484801 0.10501743</span></span>
-<span id="cb14-25"><a href="#cb14-25"></a><span class="co">#&gt; 19  ML 0.05920845 0.03580456 0.08626131 0.06240498 0.06291353 0.06302489</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a><span class="co">#&gt; 1   AN 0.38622711 0.34075500 0.57666481 0.48264418 0.54032876 0.55511207</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a><span class="co">#&gt; 2   AR 0.05988806 0.03618534 0.08719113 0.06040657 0.05979154 0.06174161</span></span>
+<span id="cb14-9"><a href="#cb14-9"></a><span class="co">#&gt; 3   AS 0.05659419 0.04712045 0.07737005 0.06452938 0.07165884 0.07580203</span></span>
+<span id="cb14-10"><a href="#cb14-10"></a><span class="co">#&gt; 4   IB 0.03823483 0.03099791 0.05147814 0.04258025 0.04698306 0.04990959</span></span>
+<span id="cb14-11"><a href="#cb14-11"></a><span class="co">#&gt; 5   CN 0.15902440 0.11685536 0.22767082 0.17801435 0.18997821 0.19531484</span></span>
+<span id="cb14-12"><a href="#cb14-12"></a><span class="co">#&gt; 6   CB 0.26175974 0.15616942 0.37750309 0.27068916 0.27196113 0.27422590</span></span>
+<span id="cb14-13"><a href="#cb14-13"></a><span class="co">#&gt; 7   CL 0.20185315 0.13338948 0.28639562 0.21502371 0.22264550 0.22768274</span></span>
+<span id="cb14-14"><a href="#cb14-14"></a><span class="co">#&gt; 8   CM 0.24775392 0.18185281 0.33018739 0.26194734 0.28085285 0.29763492</span></span>
+<span id="cb14-15"><a href="#cb14-15"></a><span class="co">#&gt; 9   CT 0.50431424 0.42762966 0.85431484 0.68251269 0.74749487 0.72859221</span></span>
+<span id="cb14-16"><a href="#cb14-16"></a><span class="co">#&gt; 10  VC 0.19293107 0.14947479 0.24426837 0.20088425 0.21980219 0.23871726</span></span>
+<span id="cb14-17"><a href="#cb14-17"></a><span class="co">#&gt; 11  EX 0.09552250 0.06075192 0.13494692 0.09991216 0.10232061 0.10448826</span></span>
+<span id="cb14-18"><a href="#cb14-18"></a><span class="co">#&gt; 12  GA 0.22729704 0.17210255 0.31613644 0.25183083 0.27165605 0.28339841</span></span>
+<span id="cb14-19"><a href="#cb14-19"></a><span class="co">#&gt; 13  MD 0.37921337 0.30505912 0.43954995 0.34512912 0.38941930 0.46019338</span></span>
+<span id="cb14-20"><a href="#cb14-20"></a><span class="co">#&gt; 14  MC 0.15259102 0.10345230 0.21596658 0.16384700 0.17094854 0.17540348</span></span>
+<span id="cb14-21"><a href="#cb14-21"></a><span class="co">#&gt; 15  NC 0.03656349 0.02312734 0.05449727 0.03993497 0.04074939 0.04057050</span></span>
+<span id="cb14-22"><a href="#cb14-22"></a><span class="co">#&gt; 16  PV 0.12035061 0.07898689 0.16772736 0.12597735 0.13029062 0.13424903</span></span>
+<span id="cb14-23"><a href="#cb14-23"></a><span class="co">#&gt; 17  RI 0.07874987 0.04647417 0.11508422 0.08250255 0.08259259 0.08241319</span></span>
+<span id="cb14-24"><a href="#cb14-24"></a><span class="co">#&gt; 18  CE 0.09995556 0.05948249 0.14518239 0.10447166 0.10485072 0.10501943</span></span>
+<span id="cb14-25"><a href="#cb14-25"></a><span class="co">#&gt; 19  ML 0.05921401 0.03580783 0.08626892 0.06240850 0.06291934 0.06302888</span></span>
 <span id="cb14-26"><a href="#cb14-26"></a><span class="co">#&gt;    2020-03-23 2020-03-24 2020-03-25 2020-03-26 2020-03-27 2020-03-28</span></span>
-<span id="cb14-27"><a href="#cb14-27"></a><span class="co">#&gt; 1  0.44533318 0.46190335 0.41547200 0.41547200 0.41547200 0.41547200</span></span>
-<span id="cb14-28"><a href="#cb14-28"></a><span class="co">#&gt; 2  0.06267242 0.06095742 0.04418848 0.04418848 0.04418848 0.04418848</span></span>
-<span id="cb14-29"><a href="#cb14-29"></a><span class="co">#&gt; 3  0.06413321 0.06447144 0.05748433 0.05748433 0.05748433 0.05748433</span></span>
-<span id="cb14-30"><a href="#cb14-30"></a><span class="co">#&gt; 4  0.04300515 0.04294244 0.03782088 0.03782088 0.03782088 0.03782088</span></span>
-<span id="cb14-31"><a href="#cb14-31"></a><span class="co">#&gt; 5  0.17440838 0.17616892 0.14256066 0.14256066 0.14256066 0.14256066</span></span>
-<span id="cb14-32"><a href="#cb14-32"></a><span class="co">#&gt; 6  0.27339501 0.27232916 0.19061887 0.19061887 0.19061887 0.19061887</span></span>
-<span id="cb14-33"><a href="#cb14-33"></a><span class="co">#&gt; 7  0.21570659 0.21561941 0.16278166 0.16278166 0.16278166 0.16278166</span></span>
-<span id="cb14-34"><a href="#cb14-34"></a><span class="co">#&gt; 8  0.27144433 0.26806304 0.22194676 0.22194676 0.22194676 0.22194676</span></span>
-<span id="cb14-35"><a href="#cb14-35"></a><span class="co">#&gt; 9  0.57576942 0.62068372 0.52105690 0.52105690 0.52105690 0.52105690</span></span>
-<span id="cb14-36"><a href="#cb14-36"></a><span class="co">#&gt; 10 0.21424945 0.20929949 0.18245242 0.18245242 0.18245242 0.18245242</span></span>
-<span id="cb14-37"><a href="#cb14-37"></a><span class="co">#&gt; 11 0.10117609 0.10072340 0.07414794 0.07414794 0.07414794 0.07414794</span></span>
-<span id="cb14-38"><a href="#cb14-38"></a><span class="co">#&gt; 12 0.25113173 0.25190898 0.20998136 0.20998136 0.20998136 0.20998136</span></span>
-<span id="cb14-39"><a href="#cb14-39"></a><span class="co">#&gt; 13 0.42463221 0.39348791 0.37266014 0.37266014 0.37266014 0.37266014</span></span>
-<span id="cb14-40"><a href="#cb14-40"></a><span class="co">#&gt; 14 0.16404928 0.16414408 0.12624181 0.12624181 0.12624181 0.12624181</span></span>
-<span id="cb14-41"><a href="#cb14-41"></a><span class="co">#&gt; 15 0.03870275 0.03922283 0.02821695 0.02821695 0.02821695 0.02821695</span></span>
-<span id="cb14-42"><a href="#cb14-42"></a><span class="co">#&gt; 16 0.12837992 0.12751283 0.09640436 0.09640436 0.09640436 0.09640436</span></span>
-<span id="cb14-43"><a href="#cb14-43"></a><span class="co">#&gt; 17 0.08207583 0.08225116 0.05671943 0.05671943 0.05671943 0.05671943</span></span>
-<span id="cb14-44"><a href="#cb14-44"></a><span class="co">#&gt; 18 0.10435671 0.10441277 0.07259715 0.07259715 0.07259715 0.07259715</span></span>
-<span id="cb14-45"><a href="#cb14-45"></a><span class="co">#&gt; 19 0.06203918 0.06220170 0.04369992 0.04369992 0.04369992 0.04369992</span></span>
+<span id="cb14-27"><a href="#cb14-27"></a><span class="co">#&gt; 1  0.44575702 0.46232719 0.41589585 0.41589585 0.41589585 0.41589585</span></span>
+<span id="cb14-28"><a href="#cb14-28"></a><span class="co">#&gt; 2  0.06264861 0.06093360 0.04416467 0.04416467 0.04416467 0.04416467</span></span>
+<span id="cb14-29"><a href="#cb14-29"></a><span class="co">#&gt; 3  0.06415998 0.06449821 0.05751111 0.05751111 0.05751111 0.05751111</span></span>
+<span id="cb14-30"><a href="#cb14-30"></a><span class="co">#&gt; 4  0.04301762 0.04295491 0.03783335 0.03783335 0.03783335 0.03783335</span></span>
+<span id="cb14-31"><a href="#cb14-31"></a><span class="co">#&gt; 5  0.17447118 0.17623172 0.14262346 0.14262346 0.14262346 0.14262346</span></span>
+<span id="cb14-32"><a href="#cb14-32"></a><span class="co">#&gt; 6  0.27338292 0.27231707 0.19060678 0.19060678 0.19060678 0.19060678</span></span>
+<span id="cb14-33"><a href="#cb14-33"></a><span class="co">#&gt; 7  0.21572850 0.21564131 0.16280356 0.16280356 0.16280356 0.16280356</span></span>
+<span id="cb14-34"><a href="#cb14-34"></a><span class="co">#&gt; 8  0.27145126 0.26806998 0.22195369 0.22195369 0.22195369 0.22195369</span></span>
+<span id="cb14-35"><a href="#cb14-35"></a><span class="co">#&gt; 9  0.57664000 0.62155430 0.52192748 0.52192748 0.52192748 0.52192748</span></span>
+<span id="cb14-36"><a href="#cb14-36"></a><span class="co">#&gt; 10 0.21423293 0.20928297 0.18243590 0.18243590 0.18243590 0.18243590</span></span>
+<span id="cb14-37"><a href="#cb14-37"></a><span class="co">#&gt; 11 0.10117665 0.10072396 0.07414850 0.07414850 0.07414850 0.07414850</span></span>
+<span id="cb14-38"><a href="#cb14-38"></a><span class="co">#&gt; 12 0.25120374 0.25198100 0.21005337 0.21005337 0.21005337 0.21005337</span></span>
+<span id="cb14-39"><a href="#cb14-39"></a><span class="co">#&gt; 13 0.42430064 0.39315634 0.37232857 0.37232857 0.37232857 0.37232857</span></span>
+<span id="cb14-40"><a href="#cb14-40"></a><span class="co">#&gt; 14 0.16407232 0.16416712 0.12626486 0.12626486 0.12626486 0.12626486</span></span>
+<span id="cb14-41"><a href="#cb14-41"></a><span class="co">#&gt; 15 0.03871302 0.03923310 0.02822721 0.02822721 0.02822721 0.02822721</span></span>
+<span id="cb14-42"><a href="#cb14-42"></a><span class="co">#&gt; 16 0.12838007 0.12751297 0.09640451 0.09640451 0.09640451 0.09640451</span></span>
+<span id="cb14-43"><a href="#cb14-43"></a><span class="co">#&gt; 17 0.08207873 0.08225406 0.05672233 0.05672233 0.05672233 0.05672233</span></span>
+<span id="cb14-44"><a href="#cb14-44"></a><span class="co">#&gt; 18 0.10435871 0.10441477 0.07259914 0.07259914 0.07259914 0.07259914</span></span>
+<span id="cb14-45"><a href="#cb14-45"></a><span class="co">#&gt; 19 0.06204317 0.06220569 0.04370391 0.04370391 0.04370391 0.04370391</span></span>
 <span id="cb14-46"><a href="#cb14-46"></a><span class="co">#&gt;    2020-03-29 2020-03-30 2020-04-01 2020-04-02 2020-04-09</span></span>
-<span id="cb14-47"><a href="#cb14-47"></a><span class="co">#&gt; 1  0.37366636 0.32218289 0.41547200 0.41547200 0.30908712</span></span>
-<span id="cb14-48"><a href="#cb14-48"></a><span class="co">#&gt; 2  0.01831097 0.01926569 0.04418848 0.04418848 0.02655698</span></span>
-<span id="cb14-49"><a href="#cb14-49"></a><span class="co">#&gt; 3  0.04817591 0.03877617 0.05748433 0.05748433 0.03661362</span></span>
-<span id="cb14-50"><a href="#cb14-50"></a><span class="co">#&gt; 4  0.03056289 0.02427571 0.03782088 0.03782088 0.02313290</span></span>
-<span id="cb14-51"><a href="#cb14-51"></a><span class="co">#&gt; 5  0.09797385 0.08431909 0.14256066 0.14256066 0.09150882</span></span>
-<span id="cb14-52"><a href="#cb14-52"></a><span class="co">#&gt; 6  0.07473229 0.07214891 0.19061887 0.19061887 0.10684824</span></span>
-<span id="cb14-53"><a href="#cb14-53"></a><span class="co">#&gt; 7  0.08868675 0.07784082 0.16278166 0.16278166 0.09604951</span></span>
-<span id="cb14-54"><a href="#cb14-54"></a><span class="co">#&gt; 8  0.15265015 0.12012588 0.22194676 0.22194676 0.12425369</span></span>
-<span id="cb14-55"><a href="#cb14-55"></a><span class="co">#&gt; 9  0.44445936 0.43308204 0.52105690 0.52105690 0.45718394</span></span>
-<span id="cb14-56"><a href="#cb14-56"></a><span class="co">#&gt; 10 0.13793657 0.10260872 0.18245242 0.18245242 0.09686195</span></span>
-<span id="cb14-57"><a href="#cb14-57"></a><span class="co">#&gt; 11 0.03630854 0.03212618 0.07414794 0.07414794 0.04213456</span></span>
-<span id="cb14-58"><a href="#cb14-58"></a><span class="co">#&gt; 12 0.15237084 0.12594254 0.20998136 0.20998136 0.13014399</span></span>
-<span id="cb14-59"><a href="#cb14-59"></a><span class="co">#&gt; 13 0.29989923 0.19898189 0.37266014 0.37266014 0.13694977</span></span>
-<span id="cb14-60"><a href="#cb14-60"></a><span class="co">#&gt; 14 0.07331136 0.06351842 0.12624181 0.12624181 0.07540181</span></span>
-<span id="cb14-61"><a href="#cb14-61"></a><span class="co">#&gt; 15 0.01353682 0.01331816 0.02821695 0.02821695 0.01806864</span></span>
-<span id="cb14-62"><a href="#cb14-62"></a><span class="co">#&gt; 16 0.05163858 0.04404829 0.09640436 0.09640436 0.05437237</span></span>
-<span id="cb14-63"><a href="#cb14-63"></a><span class="co">#&gt; 17 0.02122046 0.02140557 0.05671943 0.05671943 0.03316280</span></span>
-<span id="cb14-64"><a href="#cb14-64"></a><span class="co">#&gt; 18 0.02813376 0.02770162 0.07259715 0.07259715 0.04203725</span></span>
-<span id="cb14-65"><a href="#cb14-65"></a><span class="co">#&gt; 19 0.01802496 0.01759707 0.04369992 0.04369992 0.02579090</span></span></code></pre></div>
+<span id="cb14-47"><a href="#cb14-47"></a><span class="co">#&gt; 1  0.37409020 0.32227075 0.41589585 0.41589585 0.30941864</span></span>
+<span id="cb14-48"><a href="#cb14-48"></a><span class="co">#&gt; 2  0.01828716 0.01927814 0.04416467 0.04416467 0.02658312</span></span>
+<span id="cb14-49"><a href="#cb14-49"></a><span class="co">#&gt; 3  0.04820269 0.03877493 0.05751111 0.05751111 0.03662777</span></span>
+<span id="cb14-50"><a href="#cb14-50"></a><span class="co">#&gt; 4  0.03057536 0.02427302 0.03783335 0.03783335 0.02313738</span></span>
+<span id="cb14-51"><a href="#cb14-51"></a><span class="co">#&gt; 5  0.09803665 0.08432545 0.14262346 0.14262346 0.09155128</span></span>
+<span id="cb14-52"><a href="#cb14-52"></a><span class="co">#&gt; 6  0.07472020 0.07215710 0.19060678 0.19060678 0.10683310</span></span>
+<span id="cb14-53"><a href="#cb14-53"></a><span class="co">#&gt; 7  0.08870865 0.07783632 0.16280356 0.16280356 0.09605760</span></span>
+<span id="cb14-54"><a href="#cb14-54"></a><span class="co">#&gt; 8  0.15265708 0.12009232 0.22195369 0.22195369 0.12422412</span></span>
+<span id="cb14-55"><a href="#cb14-55"></a><span class="co">#&gt; 9  0.44532995 0.43336674 0.52192748 0.52192748 0.45796911</span></span>
+<span id="cb14-56"><a href="#cb14-56"></a><span class="co">#&gt; 10 0.13792005 0.10256405 0.18243590 0.18243590 0.09680779</span></span>
+<span id="cb14-57"><a href="#cb14-57"></a><span class="co">#&gt; 11 0.03630909 0.03212175 0.07414850 0.07414850 0.04213045</span></span>
+<span id="cb14-58"><a href="#cb14-58"></a><span class="co">#&gt; 12 0.15244285 0.12593794 0.21005337 0.21005337 0.13018078</span></span>
+<span id="cb14-59"><a href="#cb14-59"></a><span class="co">#&gt; 13 0.29956766 0.19922483 0.37232857 0.37232857 0.13651622</span></span>
+<span id="cb14-60"><a href="#cb14-60"></a><span class="co">#&gt; 14 0.07333440 0.06351547 0.12626486 0.12626486 0.07541211</span></span>
+<span id="cb14-61"><a href="#cb14-61"></a><span class="co">#&gt; 15 0.01354709 0.01332143 0.02822721 0.02822721 0.01807781</span></span>
+<span id="cb14-62"><a href="#cb14-62"></a><span class="co">#&gt; 16 0.05163873 0.04403995 0.09640451 0.09640451 0.05436412</span></span>
+<span id="cb14-63"><a href="#cb14-63"></a><span class="co">#&gt; 17 0.02122336 0.02140676 0.05672233 0.05672233 0.03316566</span></span>
+<span id="cb14-64"><a href="#cb14-64"></a><span class="co">#&gt; 18 0.02813575 0.02770182 0.07259914 0.07259914 0.04203860</span></span>
+<span id="cb14-65"><a href="#cb14-65"></a><span class="co">#&gt; 19 0.01802895 0.01759796 0.04370391 0.04370391 0.02579408</span></span></code></pre></div>
 <p>Next we plot this using the map of Spain.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>df3 &lt;-<span class="st"> </span>apportioned1 <span class="op">%&gt;%</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="kw">mutate</span>(<span class="dt">reg =</span> <span class="kw">str_replace</span>(reg, <span class="st">"RI"</span>, <span class="st">"LO"</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">reg =</span> <span class="kw">str_replace</span>(reg, <span class="st">"NC"</span>, <span class="st">"NA"</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">reg =</span> <span class="kw">str_replace</span>(reg, <span class="st">"MC"</span>, <span class="st">"MU"</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="op">-</span>reg, <span class="dt">names_to =</span> <span class="st">"date"</span>, <span class="dt">values_to =</span> <span class="st">"score"</span>)</span>
-<span id="cb15-6"><a href="#cb15-6"></a></span>
-<span id="cb15-7"><a href="#cb15-7"></a></span>
-<span id="cb15-8"><a href="#cb15-8"></a>spain &lt;-<span class="st"> </span>rnaturalearth<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/rnaturalearth/man/ne_states.html">ne_states</a></span>(<span class="dt">country =</span> <span class="st">"spain"</span>, <span class="dt">returnclass =</span> <span class="st">"sf"</span>)</span>
-<span id="cb15-9"><a href="#cb15-9"></a>sp_regions &lt;-<span class="st"> </span>spain <span class="op">%&gt;%</span></span>
-<span id="cb15-10"><a href="#cb15-10"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">reg =</span> <span class="kw">str_sub</span>(code_hasc, <span class="dv">4</span>, <span class="dv">5</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb15-11"><a href="#cb15-11"></a><span class="st">  </span><span class="kw">group_by</span>(reg) <span class="op">%&gt;%</span></span>
-<span id="cb15-12"><a href="#cb15-12"></a><span class="st">  </span><span class="kw">summarise</span>()</span>
-<span id="cb15-13"><a href="#cb15-13"></a></span>
-<span id="cb15-14"><a href="#cb15-14"></a><span class="co"># combine map info with data</span></span>
-<span id="cb15-15"><a href="#cb15-15"></a><span class="co"># XXX dropping Canary islands for now</span></span>
-<span id="cb15-16"><a href="#cb15-16"></a>sp_data &lt;-<span class="st"> </span><span class="kw">inner_join</span>(sp_regions, df3, <span class="dt">by=</span><span class="st">"reg"</span>) <span class="op">%&gt;%</span></span>
-<span id="cb15-17"><a href="#cb15-17"></a><span class="st">  </span><span class="kw"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span>(reg <span class="op">!=</span><span class="st"> "CN"</span>)</span>
-<span id="cb15-18"><a href="#cb15-18"></a></span>
-<span id="cb15-19"><a href="#cb15-19"></a><span class="co">#template for drawing map</span></span>
-<span id="cb15-20"><a href="#cb15-20"></a>sp_data <span class="op">%&gt;%</span></span>
-<span id="cb15-21"><a href="#cb15-21"></a><span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
-<span id="cb15-22"><a href="#cb15-22"></a><span class="st">  </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>score)) <span class="op">+</span></span>
-<span id="cb15-23"><a href="#cb15-23"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
-<span id="cb15-24"><a href="#cb15-24"></a><span class="st">  </span><span class="kw">scale_fill_distiller</span>(<span class="dt">palette =</span> <span class="st">"YlOrBr"</span>, <span class="dt">direction =</span> <span class="dv">1</span>) <span class="op">+</span></span>
-<span id="cb15-25"><a href="#cb15-25"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>date, <span class="dt">ncol=</span><span class="dv">6</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>shapefile_ccaa &lt;-<span class="st"> </span><span class="kw">readOGR</span>(<span class="dt">dsn=</span><span class="st">"ComunidadesAutonomas_ETRS89_30N/Comunidades_Autonomas_ETRS89_30N.shp"</span>)</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="co">#&gt; Warning in OGRSpatialRef(dsn, layer, morphFromESRI = morphFromESRI, dumpSRS</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="co">#&gt; = dumpSRS, : Discarded datum European_Terrestrial_Reference_System_1989</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="co">#&gt; in CRS definition: +proj=utm +zone=30 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="co">#&gt; +units=m +no_defs</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a><span class="co">#&gt; OGR data source with driver: ESRI Shapefile </span></span>
+<span id="cb15-7"><a href="#cb15-7"></a><span class="co">#&gt; Source: "C:\Users\Sevvandi\Documents\repos\composits\vignettes\ComunidadesAutonomas_ETRS89_30N\Comunidades_Autonomas_ETRS89_30N.shp", layer: "Comunidades_Autonomas_ETRS89_30N"</span></span>
+<span id="cb15-8"><a href="#cb15-8"></a><span class="co">#&gt; with 19 features</span></span>
+<span id="cb15-9"><a href="#cb15-9"></a><span class="co">#&gt; It has 3 fields</span></span>
+<span id="cb15-10"><a href="#cb15-10"></a>data_ccaa &lt;-<span class="st"> </span><span class="kw">tidy</span>(shapefile_ccaa)</span>
+<span id="cb15-11"><a href="#cb15-11"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</span></span>
+<span id="cb15-12"><a href="#cb15-12"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-13"><a href="#cb15-13"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-14"><a href="#cb15-14"></a></span>
+<span id="cb15-15"><a href="#cb15-15"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-16"><a href="#cb15-16"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-17"><a href="#cb15-17"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</span></span>
+<span id="cb15-18"><a href="#cb15-18"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-19"><a href="#cb15-19"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-20"><a href="#cb15-20"></a></span>
+<span id="cb15-21"><a href="#cb15-21"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-22"><a href="#cb15-22"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-23"><a href="#cb15-23"></a></span>
+<span id="cb15-24"><a href="#cb15-24"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-25"><a href="#cb15-25"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-26"><a href="#cb15-26"></a></span>
+<span id="cb15-27"><a href="#cb15-27"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-28"><a href="#cb15-28"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-29"><a href="#cb15-29"></a></span>
+<span id="cb15-30"><a href="#cb15-30"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-31"><a href="#cb15-31"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-32"><a href="#cb15-32"></a></span>
+<span id="cb15-33"><a href="#cb15-33"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-34"><a href="#cb15-34"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-35"><a href="#cb15-35"></a></span>
+<span id="cb15-36"><a href="#cb15-36"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-37"><a href="#cb15-37"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-38"><a href="#cb15-38"></a></span>
+<span id="cb15-39"><a href="#cb15-39"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-40"><a href="#cb15-40"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-41"><a href="#cb15-41"></a></span>
+<span id="cb15-42"><a href="#cb15-42"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-43"><a href="#cb15-43"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-44"><a href="#cb15-44"></a></span>
+<span id="cb15-45"><a href="#cb15-45"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-46"><a href="#cb15-46"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-47"><a href="#cb15-47"></a></span>
+<span id="cb15-48"><a href="#cb15-48"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-49"><a href="#cb15-49"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-50"><a href="#cb15-50"></a></span>
+<span id="cb15-51"><a href="#cb15-51"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-52"><a href="#cb15-52"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-53"><a href="#cb15-53"></a></span>
+<span id="cb15-54"><a href="#cb15-54"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-55"><a href="#cb15-55"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-56"><a href="#cb15-56"></a></span>
+<span id="cb15-57"><a href="#cb15-57"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-58"><a href="#cb15-58"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-59"><a href="#cb15-59"></a></span>
+<span id="cb15-60"><a href="#cb15-60"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-61"><a href="#cb15-61"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-62"><a href="#cb15-62"></a></span>
+<span id="cb15-63"><a href="#cb15-63"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-64"><a href="#cb15-64"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-65"><a href="#cb15-65"></a></span>
+<span id="cb15-66"><a href="#cb15-66"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-67"><a href="#cb15-67"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-68"><a href="#cb15-68"></a></span>
+<span id="cb15-69"><a href="#cb15-69"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-70"><a href="#cb15-70"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-71"><a href="#cb15-71"></a></span>
+<span id="cb15-72"><a href="#cb15-72"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-73"><a href="#cb15-73"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-74"><a href="#cb15-74"></a></span>
+<span id="cb15-75"><a href="#cb15-75"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-76"><a href="#cb15-76"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-77"><a href="#cb15-77"></a></span>
+<span id="cb15-78"><a href="#cb15-78"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-79"><a href="#cb15-79"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-80"><a href="#cb15-80"></a></span>
+<span id="cb15-81"><a href="#cb15-81"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-82"><a href="#cb15-82"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-83"><a href="#cb15-83"></a></span>
+<span id="cb15-84"><a href="#cb15-84"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-85"><a href="#cb15-85"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-86"><a href="#cb15-86"></a></span>
+<span id="cb15-87"><a href="#cb15-87"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-88"><a href="#cb15-88"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-89"><a href="#cb15-89"></a></span>
+<span id="cb15-90"><a href="#cb15-90"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-91"><a href="#cb15-91"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-92"><a href="#cb15-92"></a></span>
+<span id="cb15-93"><a href="#cb15-93"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-94"><a href="#cb15-94"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-95"><a href="#cb15-95"></a></span>
+<span id="cb15-96"><a href="#cb15-96"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-97"><a href="#cb15-97"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-98"><a href="#cb15-98"></a></span>
+<span id="cb15-99"><a href="#cb15-99"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-100"><a href="#cb15-100"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-101"><a href="#cb15-101"></a></span>
+<span id="cb15-102"><a href="#cb15-102"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-103"><a href="#cb15-103"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-104"><a href="#cb15-104"></a></span>
+<span id="cb15-105"><a href="#cb15-105"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-106"><a href="#cb15-106"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-107"><a href="#cb15-107"></a></span>
+<span id="cb15-108"><a href="#cb15-108"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-109"><a href="#cb15-109"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-110"><a href="#cb15-110"></a></span>
+<span id="cb15-111"><a href="#cb15-111"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-112"><a href="#cb15-112"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-113"><a href="#cb15-113"></a></span>
+<span id="cb15-114"><a href="#cb15-114"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-115"><a href="#cb15-115"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-116"><a href="#cb15-116"></a></span>
+<span id="cb15-117"><a href="#cb15-117"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-118"><a href="#cb15-118"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-119"><a href="#cb15-119"></a></span>
+<span id="cb15-120"><a href="#cb15-120"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-121"><a href="#cb15-121"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-122"><a href="#cb15-122"></a></span>
+<span id="cb15-123"><a href="#cb15-123"></a><span class="co">#&gt; Warning in bind_rows_(x, .id): binding character and factor vector,</span></span>
+<span id="cb15-124"><a href="#cb15-124"></a><span class="co">#&gt; coercing into character vector</span></span>
+<span id="cb15-125"><a href="#cb15-125"></a><span class="co">#&gt; Regions defined for each Polygons</span></span>
+<span id="cb15-126"><a href="#cb15-126"></a>nombres_ccaa &lt;-<span class="st"> </span><span class="kw">tibble</span>(shapefile_ccaa<span class="op">$</span>Texto) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb15-127"><a href="#cb15-127"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">id =</span> <span class="kw"><a href="https://rdrr.io/r/base/character.html">as.character</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(<span class="dv">0</span>, <span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(.)<span class="op">-</span><span class="dv">1</span>)))</span>
+<span id="cb15-128"><a href="#cb15-128"></a></span>
+<span id="cb15-129"><a href="#cb15-129"></a>reg &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"AN"</span>, <span class="st">"AR"</span>, <span class="st">"AS"</span>, <span class="st">"PM"</span>, <span class="st">"CN"</span>, <span class="st">"CB"</span>, <span class="st">"CL"</span>, <span class="st">"CM"</span>,</span>
+<span id="cb15-130"><a href="#cb15-130"></a>         <span class="st">"CT"</span>, <span class="st">"VC"</span>, <span class="st">"EX"</span>, <span class="st">"GA"</span>, <span class="st">"MD"</span>, <span class="st">"MU"</span>, <span class="st">"NA"</span>, <span class="st">"PV"</span>,</span>
+<span id="cb15-131"><a href="#cb15-131"></a>         <span class="st">"LO"</span>, <span class="st">"CE"</span>, <span class="st">"CE"</span>)</span>
+<span id="cb15-132"><a href="#cb15-132"></a></span>
+<span id="cb15-133"><a href="#cb15-133"></a>nombres_ccaa &lt;-<span class="st"> </span><span class="kw">tibble</span>(reg) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb15-134"><a href="#cb15-134"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">id =</span> <span class="kw"><a href="https://rdrr.io/r/base/character.html">as.character</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(<span class="dv">0</span>, <span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(.)<span class="op">-</span><span class="dv">1</span>)))</span>
+<span id="cb15-135"><a href="#cb15-135"></a></span>
+<span id="cb15-136"><a href="#cb15-136"></a>data_ccaa_mapa &lt;-<span class="st"> </span>data_ccaa <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb15-137"><a href="#cb15-137"></a><span class="st">  </span><span class="kw">left_join</span>(nombres_ccaa, <span class="dt">by =</span> <span class="st">"id"</span>)</span>
+<span id="cb15-138"><a href="#cb15-138"></a></span>
+<span id="cb15-139"><a href="#cb15-139"></a></span>
+<span id="cb15-140"><a href="#cb15-140"></a>df3 &lt;-<span class="st"> </span>apportioned1 <span class="op">%&gt;%</span></span>
+<span id="cb15-141"><a href="#cb15-141"></a><span class="kw">mutate</span>(<span class="dt">reg =</span> <span class="kw">str_replace</span>(reg, <span class="st">"RI"</span>, <span class="st">"LO"</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb15-142"><a href="#cb15-142"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">reg =</span> <span class="kw">str_replace</span>(reg, <span class="st">"NC"</span>, <span class="st">"NA"</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb15-143"><a href="#cb15-143"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">reg =</span> <span class="kw">str_replace</span>(reg, <span class="st">"MC"</span>, <span class="st">"MU"</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb15-144"><a href="#cb15-144"></a><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="op">-</span>reg, <span class="dt">names_to =</span> <span class="st">"date"</span>, <span class="dt">values_to =</span> <span class="st">"score"</span>)</span>
+<span id="cb15-145"><a href="#cb15-145"></a></span>
+<span id="cb15-146"><a href="#cb15-146"></a>sp_data &lt;-<span class="st"> </span><span class="kw">inner_join</span>(data_ccaa_mapa, df3, <span class="dt">by=</span><span class="st">"reg"</span>) <span class="op">%&gt;%</span></span>
+<span id="cb15-147"><a href="#cb15-147"></a><span class="st">  </span><span class="kw"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span>(reg <span class="op">!=</span><span class="st"> "CN"</span>)</span>
+<span id="cb15-148"><a href="#cb15-148"></a></span>
+<span id="cb15-149"><a href="#cb15-149"></a>sp_data <span class="op">%&gt;%</span></span>
+<span id="cb15-150"><a href="#cb15-150"></a><span class="st">  </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
+<span id="cb15-151"><a href="#cb15-151"></a><span class="st">  </span><span class="kw">geom_polygon</span>(<span class="kw">aes</span>(<span class="dt">x=</span> long, <span class="dt">y =</span> lat, <span class="dt">group=</span>group, <span class="dt">fill=</span>score),</span>
+<span id="cb15-152"><a href="#cb15-152"></a>               <span class="dt">color=</span><span class="st">"black"</span>, <span class="dt">size=</span><span class="fl">0.2</span>) <span class="op">+</span></span>
+<span id="cb15-153"><a href="#cb15-153"></a><span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span></span>
+<span id="cb15-154"><a href="#cb15-154"></a><span class="st">  </span><span class="kw">scale_fill_distiller</span>(<span class="dt">palette =</span> <span class="st">"YlOrBr"</span>, <span class="dt">direction =</span> <span class="dv">1</span>) <span class="op">+</span></span>
+<span id="cb15-155"><a href="#cb15-155"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">""</span>) <span class="op">+</span></span>
+<span id="cb15-156"><a href="#cb15-156"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">""</span>) <span class="op">+</span></span>
+<span id="cb15-157"><a href="#cb15-157"></a><span class="st">  </span><span class="kw">coord_fixed</span>() <span class="op">+</span></span>
+<span id="cb15-158"><a href="#cb15-158"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>date, <span class="dt">ncol=</span><span class="dv">5</span>) <span class="op">+</span></span>
+<span id="cb15-159"><a href="#cb15-159"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">panel.grid.major =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb15-160"><a href="#cb15-160"></a>    <span class="dt">panel.grid.minor =</span> <span class="kw">element_blank</span>(), </span>
+<span id="cb15-161"><a href="#cb15-161"></a>    <span class="dt">axis.text.x =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb15-162"><a href="#cb15-162"></a>    <span class="dt">axis.text.y =</span> <span class="kw">element_blank</span>(),</span>
+<span id="cb15-163"><a href="#cb15-163"></a>    <span class="dt">axis.ticks =</span> <span class="kw">element_blank</span>())</span></code></pre></div>
 <p><img src="composits_files/figure-html/composite5-1.png" width="768"></p>
-<p>See our <a href="https://sevvandi.github.io/composits/index.html">website</a> or our paper <span class="citation">(Kandanaarachchi et al. 2020)</span> for more examples.</p>
+<p>See our <a href="https://sevvandi.github.io/composits/index.html">website</a> or our paper <span class="citation">(Kandanaarachchi et al. 2020)</span> *** for more examples.</p>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1 class="hasAnchor">
