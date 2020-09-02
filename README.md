@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.org/sevvandi/composits.svg?branch=master)](https://travis-ci.org/sevvandi/composits)
 <!-- badges: end -->
 
 The goal of *composits* is to find outliers in compositional,

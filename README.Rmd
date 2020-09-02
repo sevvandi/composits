@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 # composits
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.org/sevvandi/composits.svg?branch=master)](https://travis-ci.org/sevvandi/composits)
 <!-- badges: end -->
 
 The goal of *composits* is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the packages ```forecast```, ```tsoutliers```, ```anomalize``` and ```otsad```. 

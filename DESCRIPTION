@@ -35,11 +35,8 @@ Imports:
     grid,
     ggplot2,
     tidyr,
-    kableExtra,
-    mathjaxr,
-    tinytex
+    kableExtra
 RoxygenNote: 7.1.1
-RdMacros: mathjaxr
 Suggests: 
     knitr,
     rmarkdown,

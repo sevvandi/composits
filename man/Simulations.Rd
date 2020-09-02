@@ -2,8 +2,7 @@
 % Please edit documentation in R/Simulation_function.R
 \name{Simulations}
 \alias{Simulations}
-\title{Function to simulate compositional time series data
-using the following model:}
+\title{Function to simulate compositional time series data}
 \usage{
 Simulations(N, TT, K, A, B, C, mu, D, outliers_discre, q)
 }
@@ -36,7 +35,7 @@ A list with the following components:
 \item{\code{outliers_timeloc}}{A vector with the time location of all the outliers.}
 }
 \description{
-
+Function to simulate compositional time series data
 }
 \examples{
 set.seed(2000)
@@ -61,7 +60,5 @@ y <-  Simulations(N = N,
                  outliers_discre = outliers_discre,
                  q = q)
 
-}
-\references{
-Sevvandi et.al. (2020). Outliers in compositional time series data
+
 }
