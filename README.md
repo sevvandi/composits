@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# composits
+# composits <a href='https:/sevvandi.github.io/composits'><img src='man/figures/logo.png' align="right" height="138" /></a>
 
 <!-- badges: start -->
 
@@ -39,7 +39,6 @@ library(composits)
 set.seed(100)
 n <- 600
 x <- sample(1:100, n, replace=TRUE)
-x[25] <- 200
 x[320] <- 300
 x2 <- sample(1:100, n, replace=TRUE)
 x3 <- sample(1:100, n, replace=TRUE)
@@ -108,15 +107,15 @@ out <- mv_tsout_ens(X)
 #> Warning in outthres1$gapscore1 <- rep(0, length(indthres1)): Coercing LHS
 #> to a list
 out$all
-#>     Indices Total_Score Num_Coords Num_Methods     DOBIN       PCA
-#> res     320           2          3           3 0.6082453 0.7074787
-#>          ICA forecast tsoutliers otsad anomalize
-#> res 0.684276      0.5       0.75     0      0.75
+#>     Indices Total_Score Num_Coords Num_Methods     DOBIN      PCA
+#> res     320        1.75          3           3 0.3144603 0.728004
+#>           ICA forecast tsoutliers otsad anomalize
+#> res 0.7075357      0.5        0.5     0      0.75
 out$outliers
-#>   Indices Total_Score Num_Coords Num_Methods     DOBIN       PCA      ICA
-#> 1     320           2          3           3 0.6082453 0.7074787 0.684276
+#>   Indices Total_Score Num_Coords Num_Methods     DOBIN      PCA       ICA
+#> 1     320        1.75          3           3 0.3144603 0.728004 0.7075357
 #>   forecast tsoutliers otsad anomalize Gap_Score_1
-#> 1      0.5       0.75     0      0.75           3
+#> 1      0.5        0.5     0      0.75           2
 ```
 
 See our [website](https://sevvandi.github.io/composits/index.html) or
