@@ -9,6 +9,7 @@
 #' @importFrom rlang .data
 #'
 #' @examples
+#' \dontrun{
 #' set.seed(100)
 #' n <- 600
 #' x <- sample(1:100, n, replace=TRUE)
@@ -26,6 +27,7 @@
 #' X <- X/rowSums(X)
 #' out2 <- comp_tsout_ens(X, compr=2, fast=FALSE)
 #' plot_decomposed(out2)
+#' }
 #'
 #' @export
 plot_decomposed <- function(obj, X = NULL, method = "pca"){
@@ -77,6 +79,7 @@ plot_decomposed <- function(obj, X = NULL, method = "pca"){
 #' @importFrom rlang .data
 #'
 #' @examples
+#' \dontrun{
 #' set.seed(100)
 #' n <- 600
 #' x <- sample(1:100, n, replace=TRUE)
@@ -93,6 +96,7 @@ plot_decomposed <- function(obj, X = NULL, method = "pca"){
 #' X <- X/rowSums(X)
 #' out2 <- comp_tsout_ens(X, compr=2, fast=FALSE)
 #' plot_biplot(out2)
+#' }
 #'
 #' @export
 plot_biplot <- function(obj, X = NULL, method = "pca", edges = NULL){

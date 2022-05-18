@@ -1,5 +1,5 @@
 ---
-title: "Introduction to composits"
+title: "composits"
 output: rmarkdown::html_vignette
 bibliography: bibliography.bib
 vignette: >

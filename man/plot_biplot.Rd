@@ -23,6 +23,7 @@ The final graph shows the data points projected onto the
 first two components, together with the loadings as axes.
 }
 \examples{
+\dontrun{
 set.seed(100)
 n <- 600
 x <- sample(1:100, n, replace=TRUE)
@@ -39,5 +40,6 @@ plot_biplot(out1, X = X, method = "pca")
 X <- X/rowSums(X)
 out2 <- comp_tsout_ens(X, compr=2, fast=FALSE)
 plot_biplot(out2)
+}
 
 }

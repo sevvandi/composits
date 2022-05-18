@@ -7,6 +7,7 @@
 #' \item{\code{scores_all}}{The apportioned scores for outliers for timepoints in \code{mv_tsout_ens$all} or \code{comp_tsout_ens$all}.}
 #'
 #' @examples
+#' \dontrun{
 #' set.seed(1)
 #' n <- 600
 #' x <- sample(1:100, n, replace=TRUE)
@@ -19,6 +20,7 @@
 #' X <- X/rowSums(X)
 #' out <- comp_tsout_ens(X, compr=2, fast=FALSE)
 #' apportioned <- apportion_scores_comp(out)
+#' }
 #'
 #' @export
 apportion_scores_comp <- function(obj){

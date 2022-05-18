@@ -20,6 +20,7 @@ A ggplot showing the time series from the selected decomposition method.
 Plot decomposed time series from comp_tsout_ens or mv_tsout_ens output.
 }
 \examples{
+\dontrun{
 set.seed(100)
 n <- 600
 x <- sample(1:100, n, replace=TRUE)
@@ -37,5 +38,6 @@ plot_decomposed(out1, X = X, method = "all")
 X <- X/rowSums(X)
 out2 <- comp_tsout_ens(X, compr=2, fast=FALSE)
 plot_decomposed(out2)
+}
 
 }
