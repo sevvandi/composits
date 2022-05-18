@@ -14,10 +14,12 @@ method that uses the packages `forecast`, `tsoutliers`, `anomalize` and
 
 ## Installation
 
-<!-- You can install the released version of composits from [CRAN](https://CRAN.R-project.org) with: -->
-<!-- ``` r -->
-<!-- install.packages("composits") -->
-<!-- ``` -->
+You can install the released version of composits from
+[CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("composits")
+```
 
 You can install the development version from
 [GitHub](https://github.com/) with:

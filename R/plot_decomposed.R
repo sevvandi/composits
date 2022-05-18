@@ -186,6 +186,7 @@ plot_biplot <- function(obj, X = NULL, method = "pca", edges = NULL){
 #' @return A ggplot showing the time series with facets by decomposition method.
 #'
 #' @examples
+#' \dontrun{
 #' set.seed(100)
 #' n <- 600
 #' x <- sample(1:100, n, replace=TRUE)
@@ -197,6 +198,7 @@ plot_biplot <- function(obj, X = NULL, method = "pca", edges = NULL){
 #' X <- cbind.data.frame(x, x2, x3, x4)
 #' out <- mv_tsout_ens(X, m1=c(1,2,4), compr=2)
 #' plot_decomposed_all(out, X=X)
+#' }
 #'
 #' @importFrom dplyr %>%
 #' @importFrom rlang .data

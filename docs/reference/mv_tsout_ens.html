@@ -105,7 +105,8 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">600</span></span>
 <span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="va">n</span>, replace<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">x</span><span class="op">[</span><span class="fl">25</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">200</span></span>
@@ -115,55 +116,7 @@
 <span class="r-in"><span class="va">x4</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="va">n</span>, replace<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind.data.frame</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">x2</span>, <span class="va">x3</span>, <span class="va">x4</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu">mv_tsout_ens</span><span class="op">(</span><span class="va">X</span>, m1<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">4</span><span class="op">)</span>, compr<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-in"></span>
+<span class="r-in"><span class="op">}</span></span>
 <span class="r-in"></span>
 </code></pre></div>
     </div>

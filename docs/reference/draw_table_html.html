@@ -60,7 +60,8 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">600</span></span>
 <span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="va">n</span>, replace<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">x</span><span class="op">[</span><span class="fl">25</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">200</span></span>
@@ -70,122 +71,8 @@
 <span class="r-in"><span class="va">x4</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span>, <span class="va">n</span>, replace<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind.data.frame</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">x2</span>, <span class="va">x3</span>, <span class="va">x4</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu"><a href="mv_tsout_ens.html">mv_tsout_ens</a></span><span class="op">(</span><span class="va">X</span>, compr<span class="op">=</span><span class="fl">2</span>, fast<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Converting from tbl_df to tbl_time.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Auto-index message: index = date</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> frequency = 7 days</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> trend = 90.5 days</span>
 <span class="r-in"><span class="fu">draw_table_html</span><span class="op">(</span><span class="va">out</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:1000px; "&gt;&lt;table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  &lt;thead&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;tr&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt;   &lt;/th&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Indices &lt;/th&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; DOBIN &lt;/th&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; PCA &lt;/th&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; ICS &lt;/th&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; ICA &lt;/th&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Num_Coords &lt;/th&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; forecast &lt;/th&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; tsoutliers &lt;/th&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; otsad &lt;/th&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; anomalize &lt;/th&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; Num_Methods &lt;/th&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; Total_Score &lt;/th&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;/tr&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  &lt;/thead&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;tbody&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;tr&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; 2 &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:right;"&gt; 320 &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;"&gt;0.56&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;"&gt;0.65&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;"&gt;0.9&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;"&gt;0.63&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;"&gt;0.75&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;"&gt;1&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;"&gt;0&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;"&gt;1&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: pink !important;"&gt;2.75&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;/tr&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;tr&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:right;"&gt; 25 &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;"&gt;0&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;"&gt;0&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightgreen !important;"&gt;0.5&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;"&gt;0&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;"&gt;0&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;"&gt;0.25&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;"&gt;0&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: lightblue !important;"&gt;0.25&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: white !important;"&gt;0.5&lt;/span&gt; &lt;/td&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;/tr&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;/tbody&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;/table&gt;&lt;/div&gt;</span>
+<span class="r-in"><span class="op">}</span></span>
 <span class="r-in"></span>
 </code></pre></div>
     </div>

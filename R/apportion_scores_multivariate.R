@@ -7,6 +7,7 @@
 #' \item{\code{scores_all}}{The apportioned outlier scores of all identified outliers.}
 #'
 #' @examples
+#' \dontrun{
 #' set.seed(1)
 #' n <- 600
 #' x <- sample(1:100, n, replace=TRUE)
@@ -18,6 +19,7 @@
 #' X <- cbind.data.frame(x, x2, x3, x4)
 #' out <- mv_tsout_ens(X, compr=2, fast=FALSE)
 #' apportioned <- apportion_scores_mv(out)
+#' }
 #'
 #' @export
 apportion_scores_mv <- function(obj){

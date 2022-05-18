@@ -5,6 +5,7 @@
 #' @return Draws a table using R packages \code{grid} and \code{gridExtra}.
 #'
 #' @examples
+#' \dontrun{
 #' set.seed(100)
 #' n <- 600
 #' x <- sample(1:100, n, replace=TRUE)
@@ -16,6 +17,7 @@
 #' X <- cbind.data.frame(x, x2, x3, x4)
 #' out <- mv_tsout_ens(X, compr=2, fast=FALSE)
 #' draw_table(out)
+#' }
 #'
 #' @export
 draw_table <- function(obj, uniq_dates=NULL){
@@ -109,6 +111,7 @@ draw_table <- function(obj, uniq_dates=NULL){
 #' @inheritParams draw_table
 #'
 #' @examples
+#' \dontrun{
 #' set.seed(100)
 #' n <- 600
 #' x <- sample(1:100, n, replace=TRUE)
@@ -120,6 +123,7 @@ draw_table <- function(obj, uniq_dates=NULL){
 #' X <- cbind.data.frame(x, x2, x3, x4)
 #' out <- mv_tsout_ens(X, compr=2, fast=FALSE)
 #' draw_table_html(out)
+#' }
 #'
 #' @importFrom rlang .data
 #' @export

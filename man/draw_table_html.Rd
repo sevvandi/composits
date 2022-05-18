@@ -15,6 +15,7 @@ draw_table_html(obj, uniq_dates = NULL)
 Draws an html table from comp_tsout_ens or mv_tsout_ens output.
 }
 \examples{
+\dontrun{
 set.seed(100)
 n <- 600
 x <- sample(1:100, n, replace=TRUE)
@@ -26,5 +27,6 @@ x4 <- sample(1:100, n, replace=TRUE)
 X <- cbind.data.frame(x, x2, x3, x4)
 out <- mv_tsout_ens(X, compr=2, fast=FALSE)
 draw_table_html(out)
+}
 
 }

@@ -30,7 +30,7 @@
 #'
 #'@export
 uv_tsout_ens <- function(x, frequency=1, dates=NULL){
-  if(class(x)=="ts"){
+  if(inherits(x, "ts")){
     frequency = frequency(x)
     xts <- x
   }else{

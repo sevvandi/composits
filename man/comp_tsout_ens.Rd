@@ -51,7 +51,7 @@ A list with the following components:
 Performs composite time series outlier ensembling.
 }
 \examples{
-# Note - This example needs to be updated using the simulation function.
+\dontrun{
 set.seed(100)
 n <- 600
 x <- sample(1:100, n, replace=TRUE)
@@ -63,5 +63,6 @@ x4 <- sample(1:100, n, replace=TRUE)
 X <- cbind.data.frame(x, x2, x3, x4)
 X <- X/rowSums(X)
 out <- comp_tsout_ens(X, compr=2, fast=FALSE)
+}
 
 }

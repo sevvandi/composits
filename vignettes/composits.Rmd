@@ -250,6 +250,6 @@ sp_data %>%
 ```
 
 
-See our  [website](https://sevvandi.github.io/composits/index.html) or our paper [@composits] *** for more examples.   
+See our  [website](https://sevvandi.github.io/composits/index.html) or our paper [@composits] for more examples.   
 
 # References

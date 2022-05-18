@@ -17,7 +17,7 @@
 #'
 #'
 #' @examples
-#' # Note - This example needs to be updated using the simulation function.
+#' \dontrun{
 #' set.seed(100)
 #' n <- 600
 #' x <- sample(1:100, n, replace=TRUE)
@@ -29,6 +29,7 @@
 #' X <- cbind.data.frame(x, x2, x3, x4)
 #' X <- X/rowSums(X)
 #' out <- comp_tsout_ens(X, compr=2, fast=FALSE)
+#' }
 #'
 #' @export
 comp_tsout_ens <- function(x, m1 =NULL, ncomp=2,  sds=1, rept=1, compr=2, rat=0.05, fast=TRUE){
