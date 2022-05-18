@@ -3,6 +3,10 @@
 
 # composits <a href='https:/sevvandi.github.io/composits'><img src='man/figures/logo.png' align="right" height="138" /></a>
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/sevvandi/composits/workflows/R-CMD-check/badge.svg)](https://github.com/sevvandi/composits/actions)
+<!-- badges: end -->
+
 The goal of *composits* is to find outliers in compositional,
 multivariate and univariate time series. It is an outlier ensemble
 method that uses the packages `forecast`, `tsoutliers`, `anomalize` and
