@@ -43,7 +43,7 @@ Suggests:
     tourr,
     stringr,
     broom,
-    rgdal
+    maptools
 VignetteBuilder: knitr
 Depends: 
     R (>= 3.4.0)
