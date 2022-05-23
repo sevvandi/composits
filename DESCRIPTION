@@ -13,7 +13,7 @@ Authors@R: c(
   role = c("aut"), comment = c(ORCID = "0000-0003-4132-8355"))
   )
 Maintainer: Sevvandi Kandanaarachchi <sevvandik@gmail.com>
-Description: A compositional, multivariate and univariate time series uutlier ensemble. 
+Description: A compositional, multivariate and univariate time series outlier ensemble. 
     It uses the four R packages forecast, tsoutliers, otsad and anomalize to detect time
     series outliers. 
 License: GPL-3
@@ -47,3 +47,4 @@ Suggests:
 VignetteBuilder: knitr
 Depends: 
     R (>= 3.4.0)
+URL: https://sevvandi.github.io/composits/

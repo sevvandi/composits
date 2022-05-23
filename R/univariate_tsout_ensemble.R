@@ -14,6 +14,7 @@
 #'
 #'
 #' @examples
+#' \dontrun{
 #' set.seed(100)
 #' n <- 500
 #' x <- sample(1:100, n, replace=TRUE)
@@ -23,6 +24,7 @@
 #' plot(ts(df$value))
 #' out <- uv_tsout_ens(x)
 #' out
+#' }
 #'
 #'@importFrom dplyr %>%
 #'@importFrom stats frequency quantile supsmu ts var

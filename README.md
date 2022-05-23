@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# composits <a href='https:/sevvandi.github.io/composits'><img src='man/figures/logo.png' align="right" height="138" /></a>
+# composits <a href='https://sevvandi.github.io/composits/'><img src='man/figures/logo.png' align="right" height="138" /></a>
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/sevvandi/composits/workflows/R-CMD-check/badge.svg)](https://github.com/sevvandi/composits/actions)
@@ -49,51 +49,51 @@ out <- mv_tsout_ens(X)
 #> Converting from tbl_df to tbl_time.
 #> Auto-index message: index = date
 #> frequency = 7 days
-#> trend = 90.5 days
+#> trend = 91 days
 #> Converting from tbl_df to tbl_time.
 #> Auto-index message: index = date
 #> frequency = 7 days
-#> trend = 90.5 days
+#> trend = 91 days
 #> Converting from tbl_df to tbl_time.
 #> Auto-index message: index = date
 #> frequency = 7 days
-#> trend = 90.5 days
+#> trend = 91 days
 #> Converting from tbl_df to tbl_time.
 #> Auto-index message: index = date
 #> frequency = 7 days
-#> trend = 90.5 days
+#> trend = 91 days
 #> Converting from tbl_df to tbl_time.
 #> Auto-index message: index = date
 #> frequency = 7 days
-#> trend = 90.5 days
+#> trend = 91 days
 #> Converting from tbl_df to tbl_time.
 #> Auto-index message: index = date
 #> frequency = 7 days
-#> trend = 90.5 days
+#> trend = 91 days
 #> Converting from tbl_df to tbl_time.
 #> Auto-index message: index = date
 #> frequency = 7 days
-#> trend = 90.5 days
+#> trend = 91 days
 #> Converting from tbl_df to tbl_time.
 #> Auto-index message: index = date
 #> frequency = 7 days
-#> trend = 90.5 days
+#> trend = 91 days
 #> Converting from tbl_df to tbl_time.
 #> Auto-index message: index = date
 #> frequency = 7 days
-#> trend = 90.5 days
+#> trend = 91 days
 #> Converting from tbl_df to tbl_time.
 #> Auto-index message: index = date
 #> frequency = 7 days
-#> trend = 90.5 days
+#> trend = 91 days
 #> Converting from tbl_df to tbl_time.
 #> Auto-index message: index = date
 #> frequency = 7 days
-#> trend = 90.5 days
+#> trend = 91 days
 #> Converting from tbl_df to tbl_time.
 #> Auto-index message: index = date
 #> frequency = 7 days
-#> trend = 90.5 days
+#> trend = 91 days
 out$all
 #>     Indices Total_Score Num_Coords Num_Methods     DOBIN      PCA       ICA
 #> res     320        1.75          3           3 0.3144603 0.728004 0.7075357
